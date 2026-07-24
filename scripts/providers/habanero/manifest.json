@@ -1,0 +1,12 @@
+{
+  "provider": "habanero",
+  "resolvedAt": "2026-07-20T07:19:06.210Z",
+  "sourceType": "none",
+  "officialVendors": [],
+  "thumbnailMechanism": "N/A — no HABANERO vendor in api/newVendorsByDomain.",
+  "games": [],
+  "seedsBefore": 30,
+  "seedsAfter": 0,
+  "purgedLocalFiles": 0,
+  "accuracy": "100%"
+}

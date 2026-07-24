@@ -1,0 +1,616 @@
+{
+  "public/images/promotions/tpower-welcome-package.webp": {
+    "size": 150554,
+    "mtimeMs": 1784481503740.0547,
+    "stampedAt": "2026-07-19T17:18:23.771Z",
+    "fromSource": true,
+    "safeMargin": true,
+    "width": 1600,
+    "height": 900
+  },
+  "public/images/promotions/tpower-weekly-reload.webp": {
+    "size": 120858,
+    "mtimeMs": 1784481504070.9443,
+    "stampedAt": "2026-07-19T17:18:24.074Z",
+    "fromSource": true,
+    "safeMargin": true,
+    "width": 1600,
+    "height": 900
+  },
+  "public/images/promotions/tpower-cashback.webp": {
+    "size": 141482,
+    "mtimeMs": 1784481504338.313,
+    "stampedAt": "2026-07-19T17:18:24.342Z",
+    "fromSource": true,
+    "safeMargin": true,
+    "width": 1600,
+    "height": 900
+  },
+  "public/images/promotions/tpower-vip-rewards.webp": {
+    "size": 124164,
+    "mtimeMs": 1784481504624.7046,
+    "stampedAt": "2026-07-19T17:18:24.628Z",
+    "fromSource": true,
+    "safeMargin": true,
+    "width": 1600,
+    "height": 900
+  },
+  "public/images/promotions/tpower-merdeka-seasonal.webp": {
+    "size": 228646,
+    "mtimeMs": 1784481504942.5928,
+    "stampedAt": "2026-07-19T17:18:24.947Z",
+    "fromSource": true,
+    "safeMargin": true,
+    "width": 1600,
+    "height": 900
+  },
+  "public/images/news/tpower-platform-performance-update.webp": {
+    "size": 90648,
+    "mtimeMs": 1784481505261.799,
+    "stampedAt": "2026-07-19T17:18:25.267Z",
+    "fromSource": true,
+    "safeMargin": true,
+    "width": 1600,
+    "height": 900
+  },
+  "public/images/news/tpower-live-casino-tables.webp": {
+    "size": 78510,
+    "mtimeMs": 1784481505533.4402,
+    "stampedAt": "2026-07-19T17:18:25.537Z",
+    "fromSource": true,
+    "safeMargin": true,
+    "width": 1600,
+    "height": 900
+  },
+  "public/images/news/tpower-duitnow-ewallet-tips.webp": {
+    "size": 133794,
+    "mtimeMs": 1784481505807.32,
+    "stampedAt": "2026-07-19T17:18:25.812Z",
+    "fromSource": true,
+    "safeMargin": true,
+    "width": 1600,
+    "height": 900
+  },
+  "public/images/news/tpower-vip-host-coverage.webp": {
+    "size": 158572,
+    "mtimeMs": 1784481506783.2112,
+    "stampedAt": "2026-07-19T17:18:26.869Z",
+    "fromSource": true,
+    "safeMargin": true,
+    "width": 1600,
+    "height": 900
+  },
+  "public/blog/how-to-deposit-tpower.webp": {
+    "size": 8294,
+    "mtimeMs": 1784481509109.8567,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:29.132Z",
+    "safeMargin": true
+  },
+  "public/blog/how-to-download-tpower.webp": {
+    "size": 8592,
+    "mtimeMs": 1784481510455.6218,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:30.473Z",
+    "safeMargin": true
+  },
+  "public/blog/how-to-register-tpower.webp": {
+    "size": 8500,
+    "mtimeMs": 1784481511511.8735,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:31.520Z",
+    "safeMargin": true
+  },
+  "public/blog/how-to-withdraw-tpower.webp": {
+    "size": 8586,
+    "mtimeMs": 1784481512257.2134,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:32.272Z",
+    "safeMargin": true
+  },
+  "public/blog/payments.webp": {
+    "size": 6400,
+    "mtimeMs": 1784481513207.604,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:33.232Z",
+    "safeMargin": true
+  },
+  "public/blog/providers.webp": {
+    "size": 6112,
+    "mtimeMs": 1784481513985.139,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:34.002Z",
+    "safeMargin": true
+  },
+  "public/blog/responsible-play.webp": {
+    "size": 7564,
+    "mtimeMs": 1784481515014.483,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:35.036Z",
+    "safeMargin": true
+  },
+  "public/blog/tpower-login-guide.webp": {
+    "size": 7794,
+    "mtimeMs": 1784481515918.2454,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:35.933Z",
+    "safeMargin": true
+  },
+  "public/blog/tpower-mobile-app.webp": {
+    "size": 7770,
+    "mtimeMs": 1784481516759.0376,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:36.771Z",
+    "safeMargin": true
+  },
+  "public/blog/vip.webp": {
+    "size": 5122,
+    "mtimeMs": 1784481517287.8965,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:37.298Z",
+    "safeMargin": true
+  },
+  "public/games/ae-sexy-baccarat.webp": {
+    "size": 4802,
+    "mtimeMs": 1784481517636.0557,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:37.644Z",
+    "safeMargin": true
+  },
+  "public/games/arcade-blast.webp": {
+    "size": 4142,
+    "mtimeMs": 1784481517957.8347,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:37.966Z",
+    "safeMargin": true
+  },
+  "public/games/crash-x.webp": {
+    "size": 3428,
+    "mtimeMs": 1784481518275.115,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:38.281Z",
+    "safeMargin": true
+  },
+  "public/games/crazy-time.webp": {
+    "size": 3526,
+    "mtimeMs": 1784481518600.6023,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:38.611Z",
+    "safeMargin": true
+  },
+  "public/games/daily-draw.webp": {
+    "size": 3796,
+    "mtimeMs": 1784481518914.3723,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:38.927Z",
+    "safeMargin": true
+  },
+  "public/games/fishing-war.webp": {
+    "size": 3940,
+    "mtimeMs": 1784481519231.4292,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:39.246Z",
+    "safeMargin": true
+  },
+  "public/games/football-markets.webp": {
+    "size": 4448,
+    "mtimeMs": 1784481519553.385,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:39.563Z",
+    "safeMargin": true
+  },
+  "public/games/gates-of-olympus.webp": {
+    "size": 4578,
+    "mtimeMs": 1784481519854.6316,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:39.862Z",
+    "safeMargin": true
+  },
+  "public/games/hot-hot-fruit.webp": {
+    "size": 3428,
+    "mtimeMs": 1784481520196.7136,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:40.206Z",
+    "safeMargin": true
+  },
+  "public/games/lightning-baccarat.webp": {
+    "size": 4694,
+    "mtimeMs": 1784481520509.768,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:40.519Z",
+    "safeMargin": true
+  },
+  "public/games/live-blackjack.webp": {
+    "size": 4110,
+    "mtimeMs": 1784481520820.8618,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:40.831Z",
+    "safeMargin": true
+  },
+  "public/games/lucky-numbers.webp": {
+    "size": 4378,
+    "mtimeMs": 1784481521134.472,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:41.146Z",
+    "safeMargin": true
+  },
+  "public/games/mahjong-ways-2.webp": {
+    "size": 4408,
+    "mtimeMs": 1784481521446.9092,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:41.461Z",
+    "safeMargin": true
+  },
+  "public/games/mega-fishing.webp": {
+    "size": 4184,
+    "mtimeMs": 1784481521779.243,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:41.795Z",
+    "safeMargin": true
+  },
+  "public/games/sweet-bonanza.webp": {
+    "size": 4252,
+    "mtimeMs": 1784481522105.2869,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:42.111Z",
+    "safeMargin": true
+  },
+  "public/images/404.webp": {
+    "size": 8272,
+    "mtimeMs": 1784481522606.7407,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:42.616Z",
+    "safeMargin": true
+  },
+  "public/images/app-preview.webp": {
+    "size": 15400,
+    "mtimeMs": 1784481523227.9988,
+    "edge": 38,
+    "logoWidth": 40,
+    "stampedAt": "2026-07-19T17:18:43.237Z",
+    "safeMargin": true
+  },
+  "public/images/categories/arcade.webp": {
+    "size": 6696,
+    "mtimeMs": 1784481523748.8416,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:43.757Z",
+    "safeMargin": true
+  },
+  "public/images/categories/crash.webp": {
+    "size": 6412,
+    "mtimeMs": 1784481524268.3418,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:44.276Z",
+    "safeMargin": true
+  },
+  "public/images/categories/fishing.webp": {
+    "size": 6304,
+    "mtimeMs": 1784481524813.2817,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:44.819Z",
+    "safeMargin": true
+  },
+  "public/images/categories/live-casino.webp": {
+    "size": 4808,
+    "mtimeMs": 1784481525322.8164,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:45.327Z",
+    "safeMargin": true
+  },
+  "public/images/categories/lottery.webp": {
+    "size": 6400,
+    "mtimeMs": 1784481525812.214,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:45.820Z",
+    "safeMargin": true
+  },
+  "public/images/categories/poker.webp": {
+    "size": 5580,
+    "mtimeMs": 1784481526317.2292,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:46.332Z",
+    "safeMargin": true
+  },
+  "public/images/categories/slots.webp": {
+    "size": 5610,
+    "mtimeMs": 1784481526813.9163,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:46.819Z",
+    "safeMargin": true
+  },
+  "public/images/categories/sports.webp": {
+    "size": 6508,
+    "mtimeMs": 1784481527342.4224,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:47.346Z",
+    "safeMargin": true
+  },
+  "public/images/download/lobby-bg-1.webp": {
+    "size": 15902,
+    "mtimeMs": 1784481527906.1494,
+    "edge": 38,
+    "logoWidth": 40,
+    "stampedAt": "2026-07-19T17:18:47.914Z",
+    "safeMargin": true
+  },
+  "public/images/download/lobby-bg-2.webp": {
+    "size": 16020,
+    "mtimeMs": 1784481528550.3174,
+    "edge": 38,
+    "logoWidth": 40,
+    "stampedAt": "2026-07-19T17:18:48.559Z",
+    "safeMargin": true
+  },
+  "public/images/download/use-app-en.webp": {
+    "size": 7948,
+    "mtimeMs": 1784481529138.059,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:18:49.145Z",
+    "safeMargin": true
+  },
+  "public/images/download/use-pc-en.webp": {
+    "size": 9884,
+    "mtimeMs": 1784481530514.3328,
+    "edge": 56,
+    "logoWidth": 51,
+    "stampedAt": "2026-07-19T17:18:50.520Z",
+    "safeMargin": true
+  },
+  "public/images/games/ae-sexy-baccarat.webp": {
+    "size": 4760,
+    "mtimeMs": 1784481530794.7263,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:50.804Z",
+    "safeMargin": true
+  },
+  "public/images/games/arcade-blast.webp": {
+    "size": 4144,
+    "mtimeMs": 1784481531139.155,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:51.146Z",
+    "safeMargin": true
+  },
+  "public/images/games/crash-x.webp": {
+    "size": 3422,
+    "mtimeMs": 1784481531419.6343,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:51.436Z",
+    "safeMargin": true
+  },
+  "public/images/games/crazy-time.webp": {
+    "size": 3524,
+    "mtimeMs": 1784481531737.7935,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:51.740Z",
+    "safeMargin": true
+  },
+  "public/images/games/daily-draw.webp": {
+    "size": 3780,
+    "mtimeMs": 1784481532010.917,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:52.014Z",
+    "safeMargin": true
+  },
+  "public/images/games/fishing-war.webp": {
+    "size": 3914,
+    "mtimeMs": 1784481532310.1917,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:52.322Z",
+    "safeMargin": true
+  },
+  "public/images/games/football-markets.webp": {
+    "size": 4446,
+    "mtimeMs": 1784481532566.048,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:52.570Z",
+    "safeMargin": true
+  },
+  "public/images/games/gates-of-olympus.webp": {
+    "size": 4542,
+    "mtimeMs": 1784481532842.954,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:52.849Z",
+    "safeMargin": true
+  },
+  "public/images/games/hot-hot-fruit.webp": {
+    "size": 3406,
+    "mtimeMs": 1784481533192.1238,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:53.200Z",
+    "safeMargin": true
+  },
+  "public/images/games/lightning-baccarat.webp": {
+    "size": 4680,
+    "mtimeMs": 1784481533477.9438,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:53.484Z",
+    "safeMargin": true
+  },
+  "public/images/games/live-blackjack.webp": {
+    "size": 4060,
+    "mtimeMs": 1784481533744.405,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:53.755Z",
+    "safeMargin": true
+  },
+  "public/images/games/lucky-numbers.webp": {
+    "size": 4422,
+    "mtimeMs": 1784481534036.0713,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:54.044Z",
+    "safeMargin": true
+  },
+  "public/images/games/mahjong-ways-2.webp": {
+    "size": 4440,
+    "mtimeMs": 1784481534315.4758,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:54.321Z",
+    "safeMargin": true
+  },
+  "public/images/games/mega-fishing.webp": {
+    "size": 4206,
+    "mtimeMs": 1784481534673.4314,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:54.703Z",
+    "safeMargin": true
+  },
+  "public/images/games/sweet-bonanza.webp": {
+    "size": 4250,
+    "mtimeMs": 1784481535018.4692,
+    "edge": 48,
+    "logoWidth": 43,
+    "stampedAt": "2026-07-19T17:18:55.038Z",
+    "safeMargin": true
+  },
+  "public/images/hero.webp": {
+    "size": 209294,
+    "mtimeMs": 1784481536768.2578,
+    "edge": 92,
+    "logoWidth": 86,
+    "stampedAt": "2026-07-19T17:18:56.781Z",
+    "safeMargin": true
+  },
+  "public/images/promotions/tpower-promo-campaign-banner.webp": {
+    "size": 127632,
+    "mtimeMs": 1784481537773.2195,
+    "edge": 92,
+    "logoWidth": 86,
+    "stampedAt": "2026-07-19T17:18:57.779Z",
+    "safeMargin": true
+  },
+  "public/images/promotions/tpower-promo-play-smarter-banner.webp": {
+    "size": 98686,
+    "mtimeMs": 1784481538691.5925,
+    "edge": 92,
+    "logoWidth": 86,
+    "stampedAt": "2026-07-19T17:18:58.701Z",
+    "safeMargin": true
+  },
+  "public/images/promotions/tpower-promotions-cta.webp": {
+    "size": 134908,
+    "mtimeMs": 1784481539641.8875,
+    "edge": 92,
+    "logoWidth": 86,
+    "stampedAt": "2026-07-19T17:18:59.647Z",
+    "safeMargin": true
+  },
+  "public/images/promotions/tpower-promotions-hero.webp": {
+    "size": 164020,
+    "mtimeMs": 1784481540845.6013,
+    "edge": 92,
+    "logoWidth": 86,
+    "stampedAt": "2026-07-19T17:19:00.854Z",
+    "safeMargin": true
+  },
+  "public/og/default.png": {
+    "size": 92456,
+    "mtimeMs": 1784481541021.442,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:19:01.028Z",
+    "safeMargin": true
+  },
+  "public/og/default.webp": {
+    "size": 11688,
+    "mtimeMs": 1784481541486.888,
+    "edge": 69,
+    "logoWidth": 65,
+    "stampedAt": "2026-07-19T17:19:01.494Z",
+    "safeMargin": true
+  },
+  "public/images/download/install/step-01-download-apk.webp": {
+    "size": 154208,
+    "mtimeMs": 1784810461832.4492,
+    "stampedAt": "2026-07-23T12:41:39.043Z",
+    "safeMargin": true,
+    "width": 1600,
+    "height": 1280,
+    "fromSource": true
+  },
+  "public/images/download/install/step-02-allow-unknown.webp": {
+    "size": 111416,
+    "mtimeMs": 1784810339543.4514,
+    "stampedAt": "2026-07-23T12:39:16.723Z",
+    "safeMargin": true,
+    "width": 1600,
+    "height": 1280,
+    "fromSource": true
+  },
+  "public/images/download/install/step-03-install.webp": {
+    "size": 117184,
+    "mtimeMs": 1784810340179.2317,
+    "stampedAt": "2026-07-23T12:39:16.725Z",
+    "safeMargin": true,
+    "width": 1600,
+    "height": 1280,
+    "fromSource": true
+  },
+  "public/images/download/install/step-04-login.webp": {
+    "size": 159710,
+    "mtimeMs": 1784810340806.396,
+    "stampedAt": "2026-07-23T12:39:16.727Z",
+    "safeMargin": true,
+    "width": 1600,
+    "height": 1280,
+    "fromSource": true
+  },
+  "public/images/download/install/step-05-welcome-bonus.webp": {
+    "size": 193736,
+    "mtimeMs": 1784810341457.1677,
+    "stampedAt": "2026-07-23T12:39:16.728Z",
+    "safeMargin": true,
+    "width": 1600,
+    "height": 1280,
+    "fromSource": true
+  }
+}

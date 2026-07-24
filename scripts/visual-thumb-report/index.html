@@ -1,0 +1,208 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/>
+<title>Official vs local thumbnail comparison</title>
+<style>
+  body{font-family:Segoe UI,system-ui,sans-serif;background:#111;color:#eee;margin:0;padding:24px}
+  h1{margin:0 0 8px}
+  .meta{opacity:.9;margin-bottom:24px;max-width:1000px;line-height:1.5}
+  .row{border-top:1px solid #333;padding:20px 0}
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  figure{margin:0;background:#1a1a1a;border-radius:8px;overflow:hidden}
+  img{width:100%;display:block;background:#000;min-height:140px;object-fit:cover}
+  figcaption{padding:8px;font-size:12px;opacity:.85}
+  .bad{color:#f87171;font-weight:600}
+  .warn{color:#fbbf24}
+  details{margin-top:10px}
+</style></head><body>
+<h1>Official vs local — screenshot comparison</h1>
+<p class="meta">
+  Generated 2026-07-20T06:19:56.099Z. <span class="warn">Prior pipeline “106 missing” reports were ignored.</span><br/>
+  Method: Chromium opens www.tpower3.com, scrapes lobby DOM thumbs, clicks each vendor (guest → Sign In gate),
+  loads official card image URLs from the SPA shelf the cards use, replaces mismatched local files,
+  screenshots local <code>/en/providers/{slug}/games</code>.<br/>
+  Lobby DOM hot-game cards: 50. Official vendors: 52.
+  Local: http://localhost:3001.
+</p>
+<section class="row">
+  <h2>Pragmatic Play <small>(pragmatic-play)</small></h2>
+  <p class="note">Official shelf card URLs: <b>700</b>. Login gate on click: <b>YES</b>.
+  Replaced 0. Seed files removed 0. Mismatch remaining 0. Duplicate groups 0.</p>
+  <div class="cols">
+    <figure><img src="shots/official-shelf-pragmatic-play.png" onerror="this.style.opacity=.15"/><figcaption>Official page (vendor click / lobby)</figcaption></figure>
+    <figure><img src="shots/official-cards-pragmatic-play.png" onerror="this.style.opacity=.15"/><figcaption>Official card thumbnails (live URLs)</figcaption></figure>
+    <figure><img src="shots/local-provider-pragmatic-play.png" onerror="this.style.opacity=.15"/><figcaption>Local downloaded page</figcaption></figure>
+  </div>
+  <details open><summary>Differences</summary>
+    <ul><li>Guest click on PRAGMATIC-SLOT opens Sign In — full shelf DOM is login-gated.</li><li>Guest click on PRAGMATIC-LIVE opens Sign In — full shelf DOM is login-gated.</li></ul>
+  </details>
+</section>
+<section class="row">
+  <h2>Pg Soft <small>(pg-soft)</small></h2>
+  <p class="note"><span class="bad">NOT on official TPOWER lobby</span> — local page cannot match.
+  Replaced 0. Seed files removed 0. Mismatch remaining 0. Duplicate groups 0.</p>
+  <div class="cols">
+    <figure><img src="shots/official-shelf-pg-soft.png" onerror="this.style.opacity=.15"/><figcaption>Official page (vendor click / lobby)</figcaption></figure>
+    <figure><img src="shots/official-cards-pg-soft.png" onerror="this.style.opacity=.15"/><figcaption>Official card thumbnails (live URLs)</figcaption></figure>
+    <figure><img src="shots/local-provider-pg-soft.png" onerror="this.style.opacity=.15"/><figcaption>Local downloaded page</figcaption></figure>
+  </div>
+  <details open><summary>Differences</summary>
+    <ul><li>Provider does not exist on official TPOWER lobby (www.tpower3.com). Every local seed thumbnail is an incorrect mapping.</li></ul>
+  </details>
+</section>
+<section class="row">
+  <h2>Evolution <small>(evolution)</small></h2>
+  <p class="note"><span class="bad">NOT on official TPOWER lobby</span> — local page cannot match.
+  Replaced 0. Seed files removed 0. Mismatch remaining 0. Duplicate groups 0.</p>
+  <div class="cols">
+    <figure><img src="shots/official-shelf-evolution.png" onerror="this.style.opacity=.15"/><figcaption>Official page (vendor click / lobby)</figcaption></figure>
+    <figure><img src="shots/official-cards-evolution.png" onerror="this.style.opacity=.15"/><figcaption>Official card thumbnails (live URLs)</figcaption></figure>
+    <figure><img src="shots/local-provider-evolution.png" onerror="this.style.opacity=.15"/><figcaption>Local downloaded page</figcaption></figure>
+  </div>
+  <details open><summary>Differences</summary>
+    <ul><li>Provider does not exist on official TPOWER lobby (www.tpower3.com). Every local seed thumbnail is an incorrect mapping.</li></ul>
+  </details>
+</section>
+<section class="row">
+  <h2>Jili <small>(jili)</small></h2>
+  <p class="note">Official shelf card URLs: <b>221</b>. Login gate on click: <b>YES</b>.
+  Replaced 0. Seed files removed 0. Mismatch remaining 0. Duplicate groups 0.</p>
+  <div class="cols">
+    <figure><img src="shots/official-shelf-jili.png" onerror="this.style.opacity=.15"/><figcaption>Official page (vendor click / lobby)</figcaption></figure>
+    <figure><img src="shots/official-cards-jili.png" onerror="this.style.opacity=.15"/><figcaption>Official card thumbnails (live URLs)</figcaption></figure>
+    <figure><img src="shots/local-provider-jili.png" onerror="this.style.opacity=.15"/><figcaption>Local downloaded page</figcaption></figure>
+  </div>
+  <details open><summary>Differences</summary>
+    <ul><li>Guest click on JILI opens Sign In — full shelf DOM is login-gated.</li></ul>
+  </details>
+</section>
+<section class="row">
+  <h2>Jdb <small>(jdb)</small></h2>
+  <p class="note">Official shelf card URLs: <b>78</b>. Login gate on click: <b>YES</b>.
+  Replaced 0. Seed files removed 0. Mismatch remaining 0. Duplicate groups 0.</p>
+  <div class="cols">
+    <figure><img src="shots/official-shelf-jdb.png" onerror="this.style.opacity=.15"/><figcaption>Official page (vendor click / lobby)</figcaption></figure>
+    <figure><img src="shots/official-cards-jdb.png" onerror="this.style.opacity=.15"/><figcaption>Official card thumbnails (live URLs)</figcaption></figure>
+    <figure><img src="shots/local-provider-jdb.png" onerror="this.style.opacity=.15"/><figcaption>Local downloaded page</figcaption></figure>
+  </div>
+  <details open><summary>Differences</summary>
+    <ul><li>Guest click on JDB-SLOT opens Sign In — full shelf DOM is login-gated.</li><li>Guest click on JDB-FISHING opens Sign In — full shelf DOM is login-gated.</li></ul>
+  </details>
+</section>
+<section class="row">
+  <h2>Sexy Baccarat <small>(sexy-baccarat)</small></h2>
+  <p class="note">Official shelf card URLs: <b>3</b>. Login gate on click: <b>YES</b>.
+  Replaced 0. Seed files removed 0. Mismatch remaining 0. Duplicate groups 0.</p>
+  <div class="cols">
+    <figure><img src="shots/official-shelf-sexy-baccarat.png" onerror="this.style.opacity=.15"/><figcaption>Official page (vendor click / lobby)</figcaption></figure>
+    <figure><img src="shots/official-cards-sexy-baccarat.png" onerror="this.style.opacity=.15"/><figcaption>Official card thumbnails (live URLs)</figcaption></figure>
+    <figure><img src="shots/local-provider-sexy-baccarat.png" onerror="this.style.opacity=.15"/><figcaption>Local downloaded page</figcaption></figure>
+  </div>
+  <details open><summary>Differences</summary>
+    <ul><li>Guest click on AE SEXY opens Sign In — full shelf DOM is login-gated.</li><li>Alias write failed for dragontiger: UNKNOWN: unknown error, copyfile 'C:\Users\maxch\OneDrive\Desktop\tpcsnmy\public\images\games\sexy-gaming\dragontiger.webp.46068.1784528250596.tmp' -> 'C:\Users\maxch\OneDrive\Desktop\tpcsnmy\public\images\games\sexy-gaming\dragontiger.webp'</li><li>Alias write failed for roulette: UNKNOWN: unknown error, copyfile 'C:\Users\maxch\OneDrive\Desktop\tpcsnmy\public\images\games\sexy-gaming\roulette.webp.46068.1784528250621.tmp' -> 'C:\Users\maxch\OneDrive\Desktop\tpcsnmy\public\images\games\sexy-gaming\roulette.webp'</li><li>Alias write failed for baccarat-classic: UNKNOWN: unknown error, copyfile 'C:\Users\maxch\OneDrive\Desktop\tpcsnmy\public\images\games\sexy-gaming\baccarat-classic.webp.46068.1784528250623.tmp' -> 'C:\Users\maxch\OneDrive\Desktop\tpcsnmy\public\images\games\sexy-gaming\baccarat-classic.webp'</li></ul>
+  </details>
+</section>
+<section class="row">
+  <h2>Sexy Gaming <small>(sexy-gaming)</small></h2>
+  <p class="note">Official shelf card URLs: <b>3</b>. Login gate on click: <b>YES</b>.
+  Replaced 0. Seed files removed 0. Mismatch remaining 0. Duplicate groups 0.</p>
+  <div class="cols">
+    <figure><img src="shots/official-shelf-sexy-gaming.png" onerror="this.style.opacity=.15"/><figcaption>Official page (vendor click / lobby)</figcaption></figure>
+    <figure><img src="shots/official-cards-sexy-gaming.png" onerror="this.style.opacity=.15"/><figcaption>Official card thumbnails (live URLs)</figcaption></figure>
+    <figure><img src="shots/local-provider-sexy-gaming.png" onerror="this.style.opacity=.15"/><figcaption>Local downloaded page</figcaption></figure>
+  </div>
+  <details open><summary>Differences</summary>
+    <ul><li>Guest click on AE SEXY opens Sign In — full shelf DOM is login-gated.</li><li>Alias write failed for baccarat-classic: UNKNOWN: unknown error, copyfile 'C:\Users\maxch\OneDrive\Desktop\tpcsnmy\public\images\games\sexy-gaming\baccarat-classic.webp.46068.1784528293456.tmp' -> 'C:\Users\maxch\OneDrive\Desktop\tpcsnmy\public\images\games\sexy-gaming\baccarat-classic.webp'</li><li>Alias write failed for dragontiger: UNKNOWN: unknown error, copyfile 'C:\Users\maxch\OneDrive\Desktop\tpcsnmy\public\images\games\sexy-gaming\dragontiger.webp.46068.1784528293459.tmp' -> 'C:\Users\maxch\OneDrive\Desktop\tpcsnmy\public\images\games\sexy-gaming\dragontiger.webp'</li><li>Alias write failed for roulette: UNKNOWN: unknown error, copyfile 'C:\Users\maxch\OneDrive\Desktop\tpcsnmy\public\images\games\sexy-gaming\roulette.webp.46068.1784528293472.tmp' -> 'C:\Users\maxch\OneDrive\Desktop\tpcsnmy\public\images\games\sexy-gaming\roulette.webp'</li><li>17 local cards failed to load images (missing → fallback).</li><li>Local page shows ~40 cards vs 3 official shelf games — seed/catalogue inflation.</li></ul>
+  </details>
+</section>
+<section class="row">
+  <h2>Dream Gaming <small>(dream-gaming)</small></h2>
+  <p class="note">Official shelf card URLs: <b>1</b>. Login gate on click: <b>YES</b>.
+  Replaced 0. Seed files removed 0. Mismatch remaining 0. Duplicate groups 0.</p>
+  <div class="cols">
+    <figure><img src="shots/official-shelf-dream-gaming.png" onerror="this.style.opacity=.15"/><figcaption>Official page (vendor click / lobby)</figcaption></figure>
+    <figure><img src="shots/official-cards-dream-gaming.png" onerror="this.style.opacity=.15"/><figcaption>Official card thumbnails (live URLs)</figcaption></figure>
+    <figure><img src="shots/local-provider-dream-gaming.png" onerror="this.style.opacity=.15"/><figcaption>Local downloaded page</figcaption></figure>
+  </div>
+  <details open><summary>Differences</summary>
+    <ul><li>Guest click on DREAMGAMING opens Sign In — full shelf DOM is login-gated.</li><li>Local page shows ~40 cards vs 1 official shelf games — seed/catalogue inflation.</li></ul>
+  </details>
+</section>
+<section class="row">
+  <h2>Microgaming <small>(microgaming)</small></h2>
+  <p class="note"><span class="bad">NOT on official TPOWER lobby</span> — local page cannot match.
+  Replaced 0. Seed files removed 0. Mismatch remaining 0. Duplicate groups 0.</p>
+  <div class="cols">
+    <figure><img src="shots/official-shelf-microgaming.png" onerror="this.style.opacity=.15"/><figcaption>Official page (vendor click / lobby)</figcaption></figure>
+    <figure><img src="shots/official-cards-microgaming.png" onerror="this.style.opacity=.15"/><figcaption>Official card thumbnails (live URLs)</figcaption></figure>
+    <figure><img src="shots/local-provider-microgaming.png" onerror="this.style.opacity=.15"/><figcaption>Local downloaded page</figcaption></figure>
+  </div>
+  <details open><summary>Differences</summary>
+    <ul><li>Provider does not exist on official TPOWER lobby (www.tpower3.com). Every local seed thumbnail is an incorrect mapping.</li></ul>
+  </details>
+</section>
+<section class="row">
+  <h2>Playn Go <small>(playn-go)</small></h2>
+  <p class="note"><span class="bad">NOT on official TPOWER lobby</span> — local page cannot match.
+  Replaced 0. Seed files removed 0. Mismatch remaining 0. Duplicate groups 0.</p>
+  <div class="cols">
+    <figure><img src="shots/official-shelf-playn-go.png" onerror="this.style.opacity=.15"/><figcaption>Official page (vendor click / lobby)</figcaption></figure>
+    <figure><img src="shots/official-cards-playn-go.png" onerror="this.style.opacity=.15"/><figcaption>Official card thumbnails (live URLs)</figcaption></figure>
+    <figure><img src="shots/local-provider-playn-go.png" onerror="this.style.opacity=.15"/><figcaption>Local downloaded page</figcaption></figure>
+  </div>
+  <details open><summary>Differences</summary>
+    <ul><li>Provider does not exist on official TPOWER lobby (www.tpower3.com). Every local seed thumbnail is an incorrect mapping.</li></ul>
+  </details>
+</section>
+<section class="row">
+  <h2>Spribe <small>(spribe)</small></h2>
+  <p class="note"><span class="bad">NOT on official TPOWER lobby</span> — local page cannot match.
+  Replaced 0. Seed files removed 0. Mismatch remaining 0. Duplicate groups 0.</p>
+  <div class="cols">
+    <figure><img src="shots/official-shelf-spribe.png" onerror="this.style.opacity=.15"/><figcaption>Official page (vendor click / lobby)</figcaption></figure>
+    <figure><img src="shots/official-cards-spribe.png" onerror="this.style.opacity=.15"/><figcaption>Official card thumbnails (live URLs)</figcaption></figure>
+    <figure><img src="shots/local-provider-spribe.png" onerror="this.style.opacity=.15"/><figcaption>Local downloaded page</figcaption></figure>
+  </div>
+  <details open><summary>Differences</summary>
+    <ul><li>Provider does not exist on official TPOWER lobby (www.tpower3.com). Every local seed thumbnail is an incorrect mapping.</li></ul>
+  </details>
+</section>
+<section class="row">
+  <h2>Spadegaming <small>(spadegaming)</small></h2>
+  <p class="note">Official shelf card URLs: <b>113</b>. Login gate on click: <b>YES</b>.
+  Replaced 112. Seed files removed 0. Mismatch remaining 1. Duplicate groups 0.</p>
+  <div class="cols">
+    <figure><img src="shots/official-shelf-spadegaming.png" onerror="this.style.opacity=.15"/><figcaption>Official page (vendor click / lobby)</figcaption></figure>
+    <figure><img src="shots/official-cards-spadegaming.png" onerror="this.style.opacity=.15"/><figcaption>Official card thumbnails (live URLs)</figcaption></figure>
+    <figure><img src="shots/local-provider-spadegaming.png" onerror="this.style.opacity=.15"/><figcaption>Local downloaded page</figcaption></figure>
+  </div>
+  <details open><summary>Differences</summary>
+    <ul><li>Guest click on SPADEGAMING opens Sign In — full shelf DOM is login-gated.</li><li>Download failed: Wong Choy SA</li></ul>
+  </details>
+</section>
+<section class="row">
+  <h2>Habanero <small>(habanero)</small></h2>
+  <p class="note"><span class="bad">NOT on official TPOWER lobby</span> — local page cannot match.
+  Replaced 0. Seed files removed 0. Mismatch remaining 0. Duplicate groups 0.</p>
+  <div class="cols">
+    <figure><img src="shots/official-shelf-habanero.png" onerror="this.style.opacity=.15"/><figcaption>Official page (vendor click / lobby)</figcaption></figure>
+    <figure><img src="shots/official-cards-habanero.png" onerror="this.style.opacity=.15"/><figcaption>Official card thumbnails (live URLs)</figcaption></figure>
+    <figure><img src="shots/local-provider-habanero.png" onerror="this.style.opacity=.15"/><figcaption>Local downloaded page</figcaption></figure>
+  </div>
+  <details open><summary>Differences</summary>
+    <ul><li>Provider does not exist on official TPOWER lobby (www.tpower3.com). Every local seed thumbnail is an incorrect mapping.</li><li>12 local cards failed to load images (missing → fallback).</li></ul>
+  </details>
+</section>
+<section class="row">
+  <h2>Sbo <small>(sbo)</small></h2>
+  <p class="note"><span class="bad">NOT on official TPOWER lobby</span> — local page cannot match.
+  Replaced 0. Seed files removed 0. Mismatch remaining 0. Duplicate groups 0.</p>
+  <div class="cols">
+    <figure><img src="shots/official-shelf-sbo.png" onerror="this.style.opacity=.15"/><figcaption>Official page (vendor click / lobby)</figcaption></figure>
+    <figure><img src="shots/official-cards-sbo.png" onerror="this.style.opacity=.15"/><figcaption>Official card thumbnails (live URLs)</figcaption></figure>
+    <figure><img src="shots/local-provider-sbo.png" onerror="this.style.opacity=.15"/><figcaption>Local downloaded page</figcaption></figure>
+  </div>
+  <details open><summary>Differences</summary>
+    <ul><li>Provider does not exist on official TPOWER lobby (www.tpower3.com). Every local seed thumbnail is an incorrect mapping.</li></ul>
+  </details>
+</section>
+</body></html>

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "generatedAt": "2026-07-20T07:19:10.373Z",
+  "note": "Provider-specific resolver (sexy-gaming)",
+  "overrides": {
+    "seed-dream-gaming-dg-live": "/images/games/dream-gaming/dg-live.webp",
+    "dream-gaming:dg-live": "/images/games/dream-gaming/dg-live.webp",
+    "seed-sexy-gaming-baccarat-classic": "/images/games/sexy-gaming/baccarat-classic.webp",
+    "sexy-gaming:baccarat-classic": "/images/games/sexy-gaming/baccarat-classic.webp",
+    "seed-sexy-gaming-dragontiger": "/images/games/sexy-gaming/dragontiger.webp",
+    "sexy-gaming:dragontiger": "/images/games/sexy-gaming/dragontiger.webp",
+    "seed-sexy-gaming-roulette": "/images/games/sexy-gaming/roulette.webp",
+    "sexy-gaming:roulette": "/images/games/sexy-gaming/roulette.webp"
+  }
+}

@@ -1,0 +1,107 @@
+import type { Locale } from "@/config/site";
+import type { NewsItem } from "@/types";
+import { FadeIn } from "@/components/common/fade-in";
+import { NewsCard } from "@/components/news/news-card";
+import { asNewsCopy } from "@/components/news/news-copy";
+
+type NewsShelfProps = {
+  locale: Locale;
+  dictionary: { news: unknown };
+  items: NewsItem[];
+};
+
+export function NewsTrendingShelf({
+  locale,
+  dictionary,
+  items,
+}: NewsShelfProps) {
+  const t = asNewsCopy(dictionary.news);
+  if (items.length === 0) return null;
+
+  return (
+    <section className="space-y-4 sm:space-y-5">
+      <h2 className="text-lg font-bold tracking-tight text-foreground sm:text-2xl">
+        {t.trendingArticles ??
+          (locale === "zh" ? "热门文章" : "Trending articles")}
+      </h2>
+      <div className="overflow-x-auto pb-1">
+        <div className="grid min-w-[880px] grid-cols-4 gap-3 sm:gap-4 md:min-w-0">
+          {items.slice(0, 4).map((item, index) => (
+            <FadeIn key={item.id} delay={index * 0.04}>
+              <NewsCard
+                item={item}
+                locale={locale}
+                dictionary={dictionary}
+                showTrending
+              />
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function NewsEditorsPicks({
+  locale,
+  dictionary,
+  items,
+}: NewsShelfProps) {
+  const t = asNewsCopy(dictionary.news);
+  if (items.length === 0) return null;
+
+  return (
+    <section className="space-y-4 sm:space-y-5">
+      <h2 className="text-lg font-bold tracking-tight text-foreground sm:text-2xl">
+        {t.editorsPicks ??
+          (locale === "zh" ? "编辑精选" : "Editor's picks")}
+      </h2>
+      <div className="overflow-x-auto pb-1">
+        <div className="grid min-w-[920px] grid-cols-2 gap-3 sm:gap-4 md:min-w-0">
+          {items.slice(0, 4).map((item, index) => (
+            <FadeIn key={item.id} delay={index * 0.04}>
+              <NewsCard
+                item={item}
+                locale={locale}
+                dictionary={dictionary}
+                variant="horizontal"
+              />
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function NewsRecommended({
+  locale,
+  dictionary,
+  items,
+}: NewsShelfProps) {
+  const t = asNewsCopy(dictionary.news);
+  if (items.length === 0) return null;
+
+  return (
+    <section className="space-y-4 sm:space-y-5">
+      <h2 className="text-lg font-bold tracking-tight text-foreground sm:text-2xl">
+        {t.recommended ??
+          (locale === "zh" ? "为你推荐" : "Recommended for you")}
+      </h2>
+      <div className="overflow-x-auto pb-1">
+        <div className="grid min-w-[840px] grid-cols-3 gap-3 sm:gap-5 md:min-w-0">
+          {items.slice(0, 3).map((item, index) => (
+            <FadeIn key={item.id} delay={index * 0.04}>
+              <NewsCard
+                item={item}
+                locale={locale}
+                dictionary={dictionary}
+                variant="large"
+              />
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

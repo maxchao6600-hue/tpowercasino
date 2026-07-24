@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TPOWER Casino
 
-## Getting Started
+Premium bilingual (English / Chinese) online gaming brand website for Malaysia.
 
-First, run the development server:
+Built with Next.js 15, React 19, TypeScript, Tailwind CSS, Framer Motion, and OpenNext for Cloudflare deployment.
+
+## Stack
+
+- Next.js 15 App Router
+- React 19 + TypeScript
+- Tailwind CSS 4
+- Framer Motion
+- Shadcn-style UI primitives (Radix)
+- Lucide Icons
+- `@opennextjs/cloudflare` + Wrangler
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). Locale routing redirects to `/en` or `/zh`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Local Next.js development |
+| `npm run build` | Production Next.js build |
+| `npm run lint` | ESLint |
+| `npm run assets` | Regenerate SVG brand/content assets |
+| `npm run preview` | Build + preview on Cloudflare Workers runtime |
+| `npm run deploy` | Build + deploy with OpenNext / Wrangler |
 
-## Learn More
+## Environment
 
-To learn more about Next.js, take a look at the following resources:
+Copy `.env.example` to `.env.local`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+NEXT_PUBLIC_SITE_URL=https://www.tpower.my
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Architecture
 
-## Deploy on Vercel
+```
+src/
+  app/[locale]/     Locale-aware routes (EN/ZH)
+  components/       UI, layout, home, common
+  config/           Site, navigation, i18n
+  content/          Dictionaries
+  data/             Games, providers, promotions, blog, FAQ
+  lib/              SEO, schema, utils
+  types/            Shared TypeScript types
+public/             Images, icons, logos, OG assets
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment (Cloudflare)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Set `NEXT_PUBLIC_SITE_URL` in your Cloudflare project environment.
+2. Run `npm run deploy` (requires Wrangler auth).
+3. Attach a custom domain in the Cloudflare dashboard.
+
+This project is configured with `wrangler.jsonc` and `open-next.config.ts` for OpenNext on Cloudflare Workers / Pages-compatible hosting.

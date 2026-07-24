@@ -1,0 +1,36 @@
+{
+  "provider": "sexy-gaming",
+  "resolvedAt": "2026-07-20T07:19:10.374Z",
+  "sourceType": "api-shelf-json",
+  "officialVendors": [
+    {
+      "name": "AE SEXY",
+      "id": 25
+    }
+  ],
+  "thumbnailMechanism": "frontend/api/game/list → data.games[].image (GCS CDN PNG)",
+  "games": [
+    {
+      "seedName": "Baccarat Classic",
+      "slug": "baccarat-classic",
+      "officialId": 2649,
+      "imageUrl": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177695476616.png",
+      "localPath": "/images/games/sexy-gaming/baccarat-classic.webp"
+    },
+    {
+      "seedName": "DragonTiger",
+      "slug": "dragontiger",
+      "officialId": 2648,
+      "imageUrl": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177695480557.png",
+      "localPath": "/images/games/sexy-gaming/dragontiger.webp"
+    },
+    {
+      "seedName": "Roulette",
+      "slug": "roulette",
+      "officialId": 2646,
+      "imageUrl": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177695471387.png",
+      "localPath": "/images/games/sexy-gaming/roulette.webp"
+    }
+  ],
+  "accuracy": "100%"
+}

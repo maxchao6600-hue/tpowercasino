@@ -1,0 +1,200 @@
+[
+  {
+    "name": "PRAGMATIC-SLOT",
+    "vendorId": 54,
+    "listCount": 700,
+    "sameImage": 700,
+    "differentImage": 0,
+    "missingInOld": 0,
+    "sampleDiffs": [],
+    "sampleList": [
+      {
+        "id": 21547,
+        "name": "Sunnydaze Asylum",
+        "image": "https://api.prerelease-env.biz/game_pic/square/138/vswayssndzaslm.jpg"
+      },
+      {
+        "id": 21534,
+        "name": "The Dog House Megaways 1000",
+        "image": "https://api.prerelease-env.biz/game_pic/square/138/vswaysdh1000.jpg"
+      },
+      {
+        "id": 21530,
+        "name": "Out of the Woods",
+        "image": "https://api.prerelease-env.biz/game_pic/square/138/vs25bstackwild.jpg"
+      }
+    ]
+  },
+  {
+    "name": "PRAGMATIC-LIVE",
+    "vendorId": 54,
+    "listCount": 700,
+    "sameImage": 700,
+    "differentImage": 0,
+    "missingInOld": 0,
+    "sampleDiffs": [],
+    "sampleList": [
+      {
+        "id": 21547,
+        "name": "Sunnydaze Asylum",
+        "image": "https://api.prerelease-env.biz/game_pic/square/138/vswayssndzaslm.jpg"
+      },
+      {
+        "id": 21534,
+        "name": "The Dog House Megaways 1000",
+        "image": "https://api.prerelease-env.biz/game_pic/square/138/vswaysdh1000.jpg"
+      },
+      {
+        "id": 21530,
+        "name": "Out of the Woods",
+        "image": "https://api.prerelease-env.biz/game_pic/square/138/vs25bstackwild.jpg"
+      }
+    ]
+  },
+  {
+    "name": "DREAMGAMING",
+    "vendorId": 29,
+    "listCount": 1,
+    "sameImage": 1,
+    "differentImage": 0,
+    "missingInOld": 0,
+    "sampleDiffs": [],
+    "sampleList": [
+      {
+        "id": 3278,
+        "name": "DG Live",
+        "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/173218176456.png"
+      }
+    ]
+  },
+  {
+    "name": "AE SEXY",
+    "vendorId": 25,
+    "listCount": 3,
+    "sameImage": 3,
+    "differentImage": 0,
+    "missingInOld": 0,
+    "sampleDiffs": [],
+    "sampleList": [
+      {
+        "id": 2649,
+        "name": "Baccarat Classic",
+        "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177695476616.png"
+      },
+      {
+        "id": 2648,
+        "name": "DragonTiger",
+        "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177695480557.png"
+      },
+      {
+        "id": 2646,
+        "name": "Roulette",
+        "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177695471387.png"
+      }
+    ]
+  },
+  {
+    "name": "JDB-SLOT",
+    "vendorId": 66,
+    "listCount": 78,
+    "sameImage": 78,
+    "differentImage": 0,
+    "missingInOld": 0,
+    "sampleDiffs": [],
+    "sampleList": [
+      {
+        "id": 19494,
+        "name": "Golden Goal",
+        "image": "https://g-tcdl.com/cdn/SIXDI/GameCard/JDB/14108.png"
+      },
+      {
+        "id": 15266,
+        "name": "Koi Trio",
+        "image": "https://g-tcdl.com/cdn/SIXDI/GameCard/JDB/14100.png"
+      },
+      {
+        "id": 7468,
+        "name": "Five Dragons Fishing",
+        "image": "https://g-tcdl.com/cdn/SIXDI/GameCard/JDB/7004.png"
+      }
+    ]
+  },
+  {
+    "name": "JDB-FISHING",
+    "vendorId": 66,
+    "listCount": 78,
+    "sameImage": 78,
+    "differentImage": 0,
+    "missingInOld": 0,
+    "sampleDiffs": [],
+    "sampleList": [
+      {
+        "id": 19494,
+        "name": "Golden Goal",
+        "image": "https://g-tcdl.com/cdn/SIXDI/GameCard/JDB/14108.png"
+      },
+      {
+        "id": 15266,
+        "name": "Koi Trio",
+        "image": "https://g-tcdl.com/cdn/SIXDI/GameCard/JDB/14100.png"
+      },
+      {
+        "id": 7468,
+        "name": "Five Dragons Fishing",
+        "image": "https://g-tcdl.com/cdn/SIXDI/GameCard/JDB/7004.png"
+      }
+    ]
+  },
+  {
+    "name": "JILI",
+    "vendorId": 61,
+    "listCount": 221,
+    "sameImage": 221,
+    "differentImage": 0,
+    "missingInOld": 0,
+    "sampleDiffs": [],
+    "sampleList": [
+      {
+        "id": 18039,
+        "name": "100 Blazing Clover",
+        "image": "https://icon.kz344.net/game-icon/jili_591.png"
+      },
+      {
+        "id": 6900,
+        "name": "Super Ace",
+        "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/pgs_jpg/jili_49.jpg"
+      },
+      {
+        "id": 6888,
+        "name": "Jackpot Fishing",
+        "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/pgs_jpg/jili_32.jpg"
+      }
+    ]
+  },
+  {
+    "name": "SPADEGAMING",
+    "vendorId": 81,
+    "listCount": 113,
+    "sameImage": 113,
+    "differentImage": 0,
+    "missingInOld": 0,
+    "sampleDiffs": [],
+    "sampleList": [
+      {
+        "id": 13114,
+        "name": "Legacy Of Kong Maxways",
+        "image": "https://merchantapi.hugedolphin.com/thumbnail/en_US/S-LK03.jpg"
+      },
+      {
+        "id": 13153,
+        "name": "Fiery Sevens",
+        "image": "https://merchantapi.hugedolphin.com/thumbnail/en_US/S-FS01.jpg"
+      },
+      {
+        "id": 13141,
+        "name": "Fiery Sevens Exclusive",
+        "image": "https://merchantapi.hugedolphin.com/thumbnail/en_US/S-FS02.jpg"
+      }
+    ]
+  }
+]

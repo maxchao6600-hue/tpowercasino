@@ -1,0 +1,111 @@
+{
+  "generatedAt": "2026-07-20T07:10:46.035Z",
+  "officialDomain": "www.tpower3.com",
+  "vendorCount": 53,
+  "vendorsWithEvolInName": [],
+  "totalGamesIndexed": 6249,
+  "shelfHits": [
+    {
+      "vendor_id": 176,
+      "vendor_name": "AFB Gaming",
+      "hitCount": 1,
+      "sample": [
+        {
+          "id": 19965,
+          "name": "Mewtwo's Revenge Evolution",
+          "image": "https://api.vip68b.uk/icons/308x218/mewtwosRevengeEvolution.png"
+        }
+      ]
+    },
+    {
+      "vendor_id": 85,
+      "vendor_name": "EPICWIN",
+      "hitCount": 1,
+      "sample": [
+        {
+          "id": 10714,
+          "name": "Ninja Evolution",
+          "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177308534383.png"
+        }
+      ]
+    }
+  ],
+  "exactSeedTitleMatches": [
+    {
+      "title": "Sic Bo",
+      "hits": [
+        {
+          "id": 6941,
+          "name": "Sic Bo",
+          "vendor": "JILI",
+          "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/pgs_jpg/jili_125.jpg"
+        }
+      ]
+    }
+  ],
+  "browser": {
+    "domProbe": {
+      "evoImgs": [],
+      "bgImages": [],
+      "bodyHasEvolution": false
+    },
+    "netApis": [
+      {
+        "path": "/frontend/api/agent/template",
+        "code": 200,
+        "dataLen": 0,
+        "hasEvo": false
+      },
+      {
+        "path": "/frontend/api/vendor/game-types",
+        "code": 200,
+        "dataLen": 89,
+        "hasEvo": false
+      },
+      {
+        "path": "/frontend/api/marquee/texts",
+        "code": 200,
+        "dataLen": 0,
+        "hasEvo": false
+      },
+      {
+        "path": "/frontend/api/advertise/list",
+        "code": 200,
+        "dataLen": 0,
+        "hasEvo": false
+      },
+      {
+        "path": "/frontend/api/announcement-message/latest",
+        "code": 200,
+        "dataLen": 0,
+        "hasEvo": false
+      },
+      {
+        "path": "/frontend/api/lobby/games",
+        "code": 200,
+        "dataLen": 15,
+        "hasEvo": false
+      },
+      {
+        "path": "/frontend/api/information/list",
+        "code": 200,
+        "dataLen": 21,
+        "hasEvo": false
+      },
+      {
+        "path": "/frontend/api/advertise/list",
+        "code": 200,
+        "dataLen": 13,
+        "hasEvo": false
+      },
+      {
+        "path": "/frontend/api/lobby/vendors",
+        "code": 200,
+        "dataLen": 51,
+        "hasEvo": false
+      }
+    ],
+    "netEvoImages": []
+  },
+  "conclusion": "Evolution content found on non-Evolution vendor shelves — resolver must target those shelves."
+}

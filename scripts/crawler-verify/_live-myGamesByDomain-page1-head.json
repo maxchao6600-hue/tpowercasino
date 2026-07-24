@@ -1,0 +1,44 @@
+{
+  "code": 1000,
+  "message": "Success",
+  "pagination": {
+    "per_page": 2,
+    "total": 4802,
+    "pages": 2401,
+    "previous": "",
+    "current": 1,
+    "next": 2
+  },
+  "data": [
+    {
+      "id": 17811,
+      "vendor_id": 98,
+      "vendor_name": "Rich Gaming",
+      "type_id": 2,
+      "name": "Bank Fever 2",
+      "lottery_pool": "0.000",
+      "image": "https://g-tcdl.com/cdn/SIXDI/GameCard/RG/3300.png",
+      "is_new": 1,
+      "is_hot": 1,
+      "is_favourite": 0,
+      "event_bet": "",
+      "event_win": "",
+      "disable": 0
+    },
+    {
+      "id": 17757,
+      "vendor_id": 105,
+      "vendor_name": "GFG",
+      "type_id": 2,
+      "name": "Gatotkaca",
+      "lottery_pool": "0.000",
+      "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/176310070955.png",
+      "is_new": 1,
+      "is_hot": 1,
+      "is_favourite": 0,
+      "event_bet": "",
+      "event_win": "",
+      "disable": 0
+    }
+  ]
+}

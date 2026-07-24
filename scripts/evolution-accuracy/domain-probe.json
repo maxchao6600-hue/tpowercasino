@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://www.tpower3.com/",
+    "ok": true,
+    "hit": {
+      "title": "T Power",
+      "textHasEvolution": false,
+      "links": [],
+      "imgs": [],
+      "sampleText": "Sign In navigate_before Previous navigate_next Next Surprise Event VIP Transfer Beginner Tutorial Hot Games RTP: 98.77 RTP: 98.35 RTP: 98.64 RTP: 98.69 RTP: 98.60 RTP: 98.64 RTP: 98.64 RTP: 98.70 RTP: 98.61 RTP: 98.97 RTP: 98.70 RTP: 98.82 RTP: 98.70 RTP: 98.68 RTP: 98.88 Recently Played World Cup Live Stream All Slots Live Texas Hold’em Sports Lottery 08-03 00:00 10-31 00:00 Recommended Videos Se"
+    },
+    "apis": [
+      "https://d5y9.apit.5t1p6.com/frontend/api/vendor/game-types",
+      "https://d5y9.apit.5t1p6.com/frontend/api/lobby/vendors",
+      "https://d5y9.apit.5t1p6.com/frontend/api/lobby/games",
+      "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/vworld/game/lfc888/en/BNG_387.png",
+      "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/vworld/game/lfc888/en/BNG_360.png",
+      "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket/games/PlayTech/gpas_archer_pop.png",
+      "https://api.prerelease-env.biz/game_pic/square/138/vs20olympgold.jpg",
+      "https://api.prerelease-env.biz/game_pic/square/138/vswaysreelbtl.jpg",
+      "https://api.prerelease-env.biz/game_pic/square/138/vs20starprss.jpg",
+      "https://api.prerelease-env.biz/game_pic/square/138/vs20wraanu.jpg",
+      "https://api.prerelease-env.biz/game_pic/square/138/vs20swbon2500.jpg",
+      "https://api.prerelease-env.biz/game_pic/square/138/vs20candyia.jpg",
+      "https://api.prerelease-env.biz/game_pic/square/138/vs20sugrushss.jpg",
+      "https://api.prerelease-env.biz/game_pic/square/138/vs20payanyvol.jpg"
+    ],
+    "shot": "scripts/.tmp-live-scrape/evo-domain-https%3A%2F%2Fwww.tpower3.com%2F.png"
+  },
+  {
+    "url": "https://www.t-power3.com/",
+    "ok": true,
+    "hit": {
+      "title": "TPower3 | Official Online Gaming Platform Malaysia & Singapore",
+      "textHasEvolution": true,
+      "links": [],
+      "imgs": [],
+      "sampleText": "中 En Login Log In To Unlock All Features VIP Member Balance MYR 10,888.00 Chips MYR 10,888.00 SignUp Info Popular All Games Slots Live Sports Lottery Fishing Cockfight Horse racing Notification Invite Friends Support Register 👉Click Here To Join TPower3 TPower3 | Official TPower Online Gaming Platform TPower3 is one of the most trusted and popular online gaming platforms in Asia, especially among"
+    },
+    "apis": [],
+    "shot": "scripts/.tmp-live-scrape/evo-domain-https%3A%2F%2Fwww.t-power3.com%2F.png"
+  },
+  {
+    "url": "https://tpower.ai/",
+    "ok": true,
+    "hit": {
+      "title": "Tpower | Malaysia Online Casino | Slots, Live Casino & Sports",
+      "textHasEvolution": false,
+      "links": [],
+      "imgs": [],
+      "sampleText": "Register Login Home Live Casino Slots Our Games Promotion Download Tpower official website Asia The Biggest and Most Trusted Gambling Site Available In Malaysia, Enjoy Highly Welcome & Promotion Bonus, Enjoy Live, Slots, Sportsbooks. Trusted Platform with a Comprehensive Game selection, best security standards and highly responsive customer service. Access your account, and start playing your favo"
+    },
+    "apis": [],
+    "shot": "scripts/.tmp-live-scrape/evo-domain-https%3A%2F%2Ftpower.ai%2F.png"
+  },
+  {
+    "url": "https://tpower99my.com/games-library/",
+    "ok": true,
+    "hit": {
+      "title": "Games Library - TPOWER Official",
+      "textHasEvolution": true,
+      "links": [
+        {
+          "href": "https://tpower99my.com/wp-content/uploads/2026/04/SLOT-EVOLUTION.png",
+          "text": ""
+        }
+      ],
+      "imgs": [],
+      "sampleText": "Skip to content HOME LOGIN REGISTER DOWNLOAD GAMES LIBRARY NEWS & PROMOTIONS 4D RESULTS ABOUT US CUSTOMER SERVICES FAQS HELP Login Register THE ULTIMATE TPOWER GAMES LIBRARY What Games are on TPower? TPower hosts a comprehensive suite of gambling products including video slots, live dealer tables, sportsbook betting, and traditional 4D lottery. Every game is sourced from licensed providers like Pr"
+    },
+    "apis": [],
+    "shot": "scripts/.tmp-live-scrape/evo-domain-https%3A%2F%2Ftpower99my.com%2Fgames-lib.png"
+  }
+]

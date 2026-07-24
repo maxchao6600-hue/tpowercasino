@@ -1,0 +1,70 @@
+---
+description: Permanent bilingual SEO architecture — EN and ZH are independent landing pages
+alwaysApply: true
+---
+
+# Bilingual SEO Architecture (Permanent)
+
+This project is **NOT** a translated bilingual website.
+
+It is **TWO independent SEO websites** sharing one UI.
+
+- English targets English Google search intent.
+- Chinese targets Malaysian Chinese Google search intent.
+- Both must compete independently in rankings.
+
+## Never translate
+
+- Never directly translate English paragraphs into Chinese.
+- Never keep the same sentence structure.
+- Never use AI-style literal translation.
+- Chinese copy must be rewritten from scratch.
+
+## Content parity only
+
+Maintain: same page purpose, UI, user journey, features.
+
+Do **NOT** maintain: same sentences, wording, paragraph order, or heading wording.
+
+## Chinese SEO focus (MY Chinese)
+
+Prefer natural clusters such as:
+
+TPOWER / TPOWER线上博彩 / TPOWER官网 / TPOWER官方平台 / TPOWER官方网站 / TPOWER官方入口 / TPOWER下载 / TPOWER APP / TPOWER APK / TPOWER注册 / TPOWER优惠 / TPOWER登录 / 真人视讯 / 真人娱乐城（品类 SEO） / 老虎机 / 体育博彩 / 捕鱼游戏 / 网上博彩 / 手机博彩
+
+Primary Chinese brand: **TPOWER线上博彩** (see `chinese-brand-positioning.mdc`). Do not default to TPOWER娱乐城.
+
+## Headings & CTAs
+
+Rewrite headings naturally for Chinese search intent.
+
+CTA examples: 立即注册 / 立即下载 / 立即体验 / 领取优惠 / 马上开始 / 查看全部游戏 / 进入游戏大厅 / 进入TPOWER官方平台 / 查看更多优惠
+
+## FAQ
+
+Chinese FAQ must differ from English and mirror real Chinese queries:
+
+TPOWER靠谱吗？ / TPOWER怎么注册？ / TPOWER怎么下载APP？ / TPOWER可以提现吗？ / TPOWER有哪些优惠？ / TPOWER支持哪些银行？ / TPOWER有真人视讯吗？ / TPOWER手机版怎么下载？
+
+## Long-form
+
+- Rewrite Chinese articles from scratch.
+- Average paragraph: 50–90 Chinese characters.
+- Avoid huge text blocks.
+- Natural Malaysian Chinese wording.
+
+## Workflow for every page
+
+1. Build English first.
+2. Create Chinese from scratch.
+3. Research Chinese search intent.
+4. Rewrite headings, CTA, FAQ, long-form.
+5. Build a unique Chinese keyword cluster.
+
+## Quality gate
+
+English readers believe it was written in English.  
+Chinese readers believe it was written in Chinese.  
+Neither audience should be able to tell another language version exists.
+
+Apply to every existing and future page without exception.

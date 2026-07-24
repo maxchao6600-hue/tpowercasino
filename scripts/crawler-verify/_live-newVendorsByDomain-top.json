@@ -1,0 +1,42 @@
+{
+  "code": 1000,
+  "message": "Success",
+  "data": [
+    {
+      "item_type": 1,
+      "id": 170,
+      "game_id": 0,
+      "type_id": 0,
+      "path": "",
+      "name": "WUDI",
+      "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691322841.png",
+      "front_page_image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691311167.jpeg",
+      "app_icon": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket/games/Wudi/wudi_logo.png",
+      "is_new": 0,
+      "is_hot": 0,
+      "only_one_game": 0,
+      "need_login": 0,
+      "giftcode": 1,
+      "status": 1,
+      "maintenance_end_time": null
+    },
+    {
+      "item_type": 1,
+      "id": 171,
+      "game_id": 0,
+      "type_id": 0,
+      "path": "",
+      "name": "Fuma",
+      "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178374056084.png",
+      "front_page_image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691310398.jpeg",
+      "app_icon": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178306401149.png",
+      "is_new": 0,
+      "is_hot": 0,
+      "only_one_game": 0,
+      "need_login": 0,
+      "giftcode": 1,
+      "status": 1,
+      "maintenance_end_time": null
+    }
+  ]
+}

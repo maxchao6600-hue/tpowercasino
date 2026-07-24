@@ -1,0 +1,46 @@
+[
+  {
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/games",
+    "code": 200,
+    "dataType": "array(15)",
+    "first": {
+      "id": 14790,
+      "vendor_id": 54,
+      "vendor_name": "PRAGMATIC-LIVE",
+      "type_id": 2,
+      "rtp": "98.77",
+      "name": "Gates of Olympus Super Scatter",
+      "lottery_pool": "0.000",
+      "image": "https://api.prerelease-env.biz/game_pic/square/138/vs20olympgold.jpg",
+      "is_new": 1,
+      "is_hot": 1,
+      "disable": 0
+    }
+  },
+  {
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/vendors",
+    "code": 200,
+    "dataType": "array(50)",
+    "first": {
+      "item_type": 1,
+      "id": 170,
+      "game_id": 0,
+      "type_id": 0,
+      "path": "",
+      "name": "WUDI",
+      "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691322841.png",
+      "front_page_image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691311167.jpeg",
+      "app_icon": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket/games/Wudi/wudi_logo.png",
+      "is_new": false,
+      "is_hot": false,
+      "is_event": false,
+      "only_one_game": false,
+      "need_login": false,
+      "giftcode": 0,
+      "status": 1,
+      "currency_name": "MYR",
+      "rate": 1,
+      "maintenance_end_time": null
+    }
+  }
+]

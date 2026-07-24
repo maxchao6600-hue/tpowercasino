@@ -1,0 +1,12 @@
+{
+  "provider": "spribe",
+  "resolvedAt": "2026-07-20T07:19:06.421Z",
+  "sourceType": "none",
+  "officialVendors": [],
+  "thumbnailMechanism": "N/A — no SPRIBE vendor in api/newVendorsByDomain.",
+  "games": [],
+  "seedsBefore": 24,
+  "seedsAfter": 0,
+  "purgedLocalFiles": 0,
+  "accuracy": "100%"
+}

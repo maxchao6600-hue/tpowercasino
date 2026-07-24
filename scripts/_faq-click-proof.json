@@ -1,0 +1,190 @@
+{
+  "pageErrors": [],
+  "overlay": {
+    "topTag": "SPAN",
+    "topText": "How do I create a TPOWER account?",
+    "topClass": "min-w-0 flex-1",
+    "contains": true,
+    "ageGateOpen": false
+  },
+  "before": {
+    "label": "before",
+    "ariaExpanded": "false",
+    "dataState": "closed",
+    "ariaControls": null,
+    "itemTag": "DIV",
+    "itemState": "closed",
+    "itemClass": "border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-o",
+    "regionExists": true,
+    "regionHidden": true,
+    "regionState": "closed",
+    "regionTextLen": 0,
+    "regionText": "",
+    "regionRectH": 0,
+    "computed": {
+      "display": "none",
+      "visibility": "visible",
+      "opacity": "1",
+      "height": "auto",
+      "overflow": "hidden",
+      "animationName": "accordion-up"
+    },
+    "chevronTransform": "none",
+    "react": {
+      "hasFiber": true,
+      "hasProps": true,
+      "hasOnClick": true,
+      "propKeys": [
+        "type",
+        "aria-controls",
+        "aria-expanded",
+        "data-state",
+        "data-disabled",
+        "disabled",
+        "aria-disabled",
+        "data-orientation",
+        "id",
+        "className",
+        "children",
+        "data-radix-collection-item",
+        "onClick",
+        "ref"
+      ]
+    }
+  },
+  "afterPlaywrightClick": {
+    "label": "afterPlaywrightClick",
+    "ariaExpanded": "true",
+    "dataState": "open",
+    "ariaControls": "radix-_R_4qn5eqt5rlb_",
+    "itemTag": "DIV",
+    "itemState": "open",
+    "itemClass": "border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-o",
+    "regionExists": true,
+    "regionHidden": false,
+    "regionState": "open",
+    "regionTextLen": 225,
+    "regionText": "Open the registration flow, provide accurate personal details, verify your contact information, and complete any required identity checks before depositing. Acc",
+    "regionRectH": 79.25,
+    "computed": {
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "height": "79.25px",
+      "overflow": "hidden",
+      "animationName": "accordion-down"
+    },
+    "chevronTransform": "none",
+    "react": {
+      "hasFiber": true,
+      "hasProps": true,
+      "hasOnClick": true,
+      "propKeys": [
+        "type",
+        "aria-controls",
+        "aria-expanded",
+        "data-state",
+        "data-disabled",
+        "disabled",
+        "aria-disabled",
+        "data-orientation",
+        "id",
+        "className",
+        "children",
+        "data-radix-collection-item",
+        "onClick",
+        "ref"
+      ]
+    }
+  },
+  "afterDomClick": {
+    "label": "afterDomClick",
+    "ariaExpanded": "false",
+    "dataState": "closed",
+    "ariaControls": null,
+    "itemTag": "DIV",
+    "itemState": "closed",
+    "itemClass": "border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-o",
+    "regionExists": true,
+    "regionHidden": true,
+    "regionState": "closed",
+    "regionTextLen": 0,
+    "regionText": "",
+    "regionRectH": 0,
+    "computed": {
+      "display": "none",
+      "visibility": "visible",
+      "opacity": "1",
+      "height": "auto",
+      "overflow": "hidden",
+      "animationName": "accordion-up"
+    },
+    "chevronTransform": "none",
+    "react": {
+      "hasFiber": true,
+      "hasProps": true,
+      "hasOnClick": true,
+      "propKeys": [
+        "type",
+        "aria-controls",
+        "aria-expanded",
+        "data-state",
+        "data-disabled",
+        "disabled",
+        "aria-disabled",
+        "data-orientation",
+        "id",
+        "className",
+        "children",
+        "data-radix-collection-item",
+        "onClick",
+        "ref"
+      ]
+    }
+  },
+  "afterEnter": {
+    "label": "afterEnter",
+    "ariaExpanded": "true",
+    "dataState": "open",
+    "ariaControls": "radix-_R_4qn5eqt5rlb_",
+    "itemTag": "DIV",
+    "itemState": "open",
+    "itemClass": "border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-o",
+    "regionExists": true,
+    "regionHidden": false,
+    "regionState": "open",
+    "regionTextLen": 225,
+    "regionText": "Open the registration flow, provide accurate personal details, verify your contact information, and complete any required identity checks before depositing. Acc",
+    "regionRectH": 79.25,
+    "computed": {
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "height": "79.25px",
+      "overflow": "hidden",
+      "animationName": "accordion-down"
+    },
+    "chevronTransform": "none",
+    "react": {
+      "hasFiber": true,
+      "hasProps": true,
+      "hasOnClick": true,
+      "propKeys": [
+        "type",
+        "aria-controls",
+        "aria-expanded",
+        "data-state",
+        "data-disabled",
+        "disabled",
+        "aria-disabled",
+        "data-orientation",
+        "id",
+        "className",
+        "children",
+        "data-radix-collection-item",
+        "onClick",
+        "ref"
+      ]
+    }
+  }
+}

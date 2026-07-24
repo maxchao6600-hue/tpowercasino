@@ -1,0 +1,72 @@
+---
+description: Site-wide long-form landing page quality, EEAT, SEO, and content depth standards (VIP page is the benchmark).
+alwaysApply: true
+---
+
+# TPOWER Page Quality Standard (VIP Benchmark)
+
+The **VIP page** (`/[locale]/vip`) is the content-depth and EEAT benchmark for the entire website.
+
+Future major landing pages must **not** be thin marketing shells. Match VIP-level depth, structure, and SEO hygiene unless the user explicitly requests a thinner page.
+
+## Minimum content depth
+
+| Page | Target words |
+|------|----------------|
+| Home | 3000–3500 |
+| Providers | 2500–3500 |
+| Promotions | 2500–3000 |
+| Download | 2200–2800 |
+| Games | 3000–4000 |
+| Slots | 3000–3500 |
+| Live Casino | 3000–3500 |
+| Sports | 2500–3000 |
+| Fishing | 2500–3000 |
+| Crash Games | 2000–2500 |
+| Lottery | 2000–2500 |
+| VIP | 2500–3500 |
+| FAQ | 2000+ |
+| Each provider page | 1200–1800 |
+| Each game page | 800–1200 |
+
+## Section checklist (use as applicable)
+
+Hero · Trust bar/marquee · Benefits · Features · Comparison table · Timeline/process · Statistics · Popular games · Provider showcase · Testimonials · FAQ · Related guides · Internal links · Latest articles · Responsible gaming · Final CTA
+
+## SEO checklist (every major page)
+
+- SEO title + meta description
+- Open Graph + Twitter cards
+- Canonical URL (+ hreflang via `buildMetadata`)
+- Breadcrumb schema
+- Organization schema (hub/pillar pages)
+- FAQ schema where FAQs exist
+- Article schema where applicable
+- Internal linking + proper heading hierarchy
+- Image alt text, optimized sizes, lazy loading where appropriate
+- Semantic HTML and Core Web Vitals awareness
+
+Use `buildMetadata` from `src/lib/seo.ts` and schema helpers from `src/lib/schema.ts`.
+
+## Content / EEAT rules
+
+- Original, useful copy — no filler, no duplicate paragraphs, no keyword stuffing
+- Demonstrate Experience, Expertise, Authority, Trustworthiness
+- Natural English; Chinese pages rewritten from scratch (see bilingual + Chinese brand rules)
+- Primary Chinese brand: **TPOWER线上博彩** (not default 娱乐城)
+- Keep TPOWER red/black visual system (Games / VIP quality UI)
+
+## Conversion & engagement
+
+- Strong hero CTAs
+- Clear process/timelines
+- Comparison aids for decision-making
+- FAQ that mirrors real search questions
+- Related guides for internal PageRank and time-on-page
+- Premium final CTA (Register + Download App pattern)
+
+## Responsive
+
+Follow `tpower-desktop-first-responsive.mdc`: desktop composition is canonical; mobile only scales (horizontal scroll for card rows; no layout redesign).
+
+When expanding or creating landing pages, default to this VIP-comparable standard.

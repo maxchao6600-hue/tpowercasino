@@ -1,0 +1,134 @@
+{
+  "generatedAt": "2026-07-20T07:16:54.929Z",
+  "officialDomain": "www.tpower3.com",
+  "seedTitleCount": 30,
+  "microgamingVendor": null,
+  "vendorsScanned": 53,
+  "totalGamesIndexed": 6249,
+  "playtechSlotMgUrlHints": 0,
+  "exactSeedMatches": [],
+  "partialNameCollisions": [
+    {
+      "seed": "Wacky Panda",
+      "vendor": "V-POWER",
+      "name": "Panda",
+      "image": "https://cdn.vpower12.com/manage/game-icon/3025.png"
+    },
+    {
+      "seed": "Dragon Dance",
+      "vendor": "V-POWER",
+      "name": "DRAGON",
+      "image": "https://cdn.vpower12.com/manage/game-icon/3020.png"
+    },
+    {
+      "seed": "Lucky Firecracker",
+      "vendor": "PEGASUS",
+      "name": "Cracker",
+      "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177303840571.png"
+    },
+    {
+      "seed": "Immortal Romance",
+      "vendor": "EPICWIN",
+      "name": "Roma",
+      "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177309189218.png"
+    },
+    {
+      "seed": "Dragon Dance",
+      "vendor": "JDB-SLOT",
+      "name": "Dragon",
+      "image": "https://g-tcdl.com/cdn/SIXDI/GameCard/JDB/14010.png"
+    },
+    {
+      "seed": "Dragon Dance",
+      "vendor": "JDB-FISHING",
+      "name": "Dragon",
+      "image": "https://g-tcdl.com/cdn/SIXDI/GameCard/JDB/14010.png"
+    },
+    {
+      "seed": "Sterling Silver",
+      "vendor": "Kiss H5",
+      "name": "Silver",
+      "image": "https://gth.kissh5.com/thumbs/web/260044.png"
+    },
+    {
+      "seed": "Starlite Fruits",
+      "vendor": "Kiss H5",
+      "name": "Fruit",
+      "image": "https://gth.kissh5.com/thumbs/web/260031.png"
+    },
+    {
+      "seed": "Wacky Panda",
+      "vendor": "Kiss H5",
+      "name": "Panda",
+      "image": "https://gth.kissh5.com/thumbs/web/260006.png"
+    },
+    {
+      "seed": "Immortal Romance",
+      "vendor": "Rich Gaming",
+      "name": "Roma",
+      "image": "https://g-tcdl.com/cdn/SIXDI/GameCard/RG/300.png"
+    },
+    {
+      "seed": "Fishin' Frenzy",
+      "vendor": "918KISS",
+      "name": "fish",
+      "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178306305080.png"
+    },
+    {
+      "seed": "Immortal Romance",
+      "vendor": "SPADEGAMING",
+      "name": "Roma",
+      "image": "https://merchantapi.hugedolphin.com/thumbnail/en_US/S-RM01.jpg"
+    },
+    {
+      "seed": "Fishin' Frenzy",
+      "vendor": "RG Slot",
+      "name": "FISH",
+      "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/173995342377.png"
+    },
+    {
+      "seed": "Titans of the Sun Hyperion",
+      "vendor": "ACE333",
+      "name": "rion",
+      "image": "https://cdn1.mega999.net/v3/h5lobby/gameIcon/rion.png"
+    },
+    {
+      "seed": "Starlite Fruits",
+      "vendor": "ACE333",
+      "name": "fruit",
+      "image": "https://cdn1.mega999.net/v3/h5lobby/gameIcon/fruit.png"
+    },
+    {
+      "seed": "Deco Diamonds Deluxe",
+      "vendor": "ACE333",
+      "name": "diamonds",
+      "image": "https://cdn1.mega999.net/v3/h5lobby/gameIcon/diamonds.png"
+    },
+    {
+      "seed": "Fishin' Frenzy",
+      "vendor": "MEGA888",
+      "name": "fish",
+      "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178306475240.png"
+    },
+    {
+      "seed": "Fishin' Frenzy",
+      "vendor": "PUSSY888",
+      "name": "fish",
+      "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178306533750.png"
+    },
+    {
+      "seed": "Sterling Silver",
+      "vendor": "PUSSY888",
+      "name": "Silver",
+      "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178306533750.png"
+    },
+    {
+      "seed": "Wacky Panda",
+      "vendor": "PUSSY888",
+      "name": "Panda",
+      "image": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178306533750.png"
+    }
+  ],
+  "sourceType": "none",
+  "conclusion": "No Microgaming vendor and zero exact seed-title matches across all 53 official shelves."
+}

@@ -16,6 +16,11 @@
 # next.js
 /.next/
 /out/
+.open-next
+.wrangler
+.dev.vars
+.lighthouse-*.json
+.asset-cache/
 
 # production
 /build
@@ -23,6 +28,7 @@
 # misc
 .DS_Store
 *.pem
+scripts/.tmp-tpower3/
 
 # debug
 npm-debug.log*

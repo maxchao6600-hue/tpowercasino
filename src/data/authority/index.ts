@@ -1,0 +1,11 @@
+export { authorityAbout } from "./about";
+export { authorityWhyChoose } from "./why-choose";
+export { authoritySecurity } from "./security";
+export { authorityFairGaming } from "./fair-gaming";
+export { authorityResponsible } from "./responsible";
+export { authorityPrivacyData } from "./privacy-data";
+export { authorityAmlKyc } from "./aml-kyc";
+export { authorityCustomerCommitment } from "./customer-commitment";
+export { authorityEditorial } from "./editorial";
+export { authoritySupportCenter } from "./support-center";
+export type { AuthorityPageContent } from "./types";

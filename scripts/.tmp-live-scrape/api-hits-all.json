@@ -1,0 +1,802 @@
+[
+  {
+    "status": 200,
+    "url": "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+  },
+  {
+    "status": 200,
+    "url": "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+  },
+  {
+    "status": 200,
+    "url": "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+  },
+  {
+    "status": 200,
+    "url": "https://www.tpower3.com/static/js/vendor.a144d440594fe1e8e06c.js"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/agent/template"
+  },
+  {
+    "status": 200,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/event.png?v=20260720_040009240"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/logo/Tpower%20app6.png?t=123"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/logo/Tpower%20app6.png?t=123"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/logo/Tpower%20app6.png?t=123"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/logo/Tpower%20app6.png?t=123"
+  },
+  {
+    "status": 200,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/tutorial.png?v=20260720_040009240"
+  },
+  {
+    "status": 200,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/transfer.png?v=20260720_040009240"
+  },
+  {
+    "status": 200,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/vip.png?v=20260720_040009240"
+  },
+  {
+    "status": 204,
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G7BTS7K7ZT&gtm=45je67f0v9170057784za200zd9170057784&_p=1784526271840&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=937532841.1784526272&frm=0&ngs=1&pscdl=noapi&rcb=7&sr=1400x"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/tpower-videos.json?t=1784526271786"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/announcement-message/latest"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/marquee/texts"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/information/list"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/vendor/game-types"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/vendors"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/games"
+  },
+  {
+    "status": 200,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/hot_game.png?v=20260720_040009240"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177304322589.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/17834103297.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/vworld/game/lfc888/en/BNG_387.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/vworld/game/lfc888/en/BNG_360.png"
+  },
+  {
+    "status": 200,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/vendor_recently_played.png?v=20260720_040009240"
+  },
+  {
+    "status": 200,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/vendor_world_cup_live.png?v=20260720_040009240"
+  },
+  {
+    "status": 200,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/vendor_live.png?v=20260720_040009240"
+  },
+  {
+    "status": 200,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/vendor_texas_holdem.png?v=20260720_040009240"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket/games/PlayTech/gpas_archer_pop.png"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/advertise/list"
+  },
+  {
+    "status": 200,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/vendor_slot.png?v=20260720_040009240"
+  },
+  {
+    "status": 200,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/vendor_all_active.png?v=20260720_040009240"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177304268386.png"
+  },
+  {
+    "status": 200,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/vendor_sports.png?v=20260720_040009240"
+  },
+  {
+    "status": 200,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/vendor_lottery.png?v=20260720_040009240"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/advertise/list"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691322841.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178374056084.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177771447129.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178089448743.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177918231459.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177744656452.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/17769127683.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/17769124761.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691262730.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/1776912870100.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691250727.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/17769127378.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691257554.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691268884.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691252838.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691164688.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691244049.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691259265.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/17833914892.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691285298.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691275193.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691205826.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691224490.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/17769126701.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/17769123271.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691238086.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691335092.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691234819.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178238212530.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177933324876.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177744653944.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178132105568.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691222588.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691208161.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691220598.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691210231.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/17769120376.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691171698.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691212570.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691226280.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691218420.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691196498.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691236686.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178090934347.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691239752.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177918236795.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/home.png?t=1784526270811"
+  },
+  {
+    "status": 200,
+    "url": "https://api.prerelease-env.biz/game_pic/square/138/vs20olympgold.jpg"
+  },
+  {
+    "status": 200,
+    "url": "https://api.prerelease-env.biz/game_pic/square/138/vs20starprss.jpg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177639382725.png"
+  },
+  {
+    "status": 200,
+    "url": "https://api.prerelease-env.biz/game_pic/square/138/vs20swbon2500.jpg"
+  },
+  {
+    "status": 200,
+    "url": "https://api.prerelease-env.biz/game_pic/square/138/vs20candyia.jpg"
+  },
+  {
+    "status": 200,
+    "url": "https://api.prerelease-env.biz/game_pic/square/138/vs20wraanu.jpg"
+  },
+  {
+    "status": 200,
+    "url": "https://api.prerelease-env.biz/game_pic/square/138/vswaysreelbtl.jpg"
+  },
+  {
+    "status": 200,
+    "url": "https://api.prerelease-env.biz/game_pic/square/138/vs20payanyvol.jpg"
+  },
+  {
+    "status": 200,
+    "url": "https://api.prerelease-env.biz/game_pic/square/138/vs20sugrushss.jpg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178374057316.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178400391385.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177702210411.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177702184538.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177702578662.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177702209574.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177702143951.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177702155862.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/173972310847.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177702196896.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177702143039.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177702169182.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178392693464.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177702579389.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178400391837.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/176517575374.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/17770219601.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177768551787.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177702168364.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178091150159.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177702183647.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/176517576372.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/17770215661.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178297392775.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178297393180.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178392692944.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178167544720.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178091149230.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178167545348.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177691241494.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/178374058618.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/173972416937.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/173972490245.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/173972653055.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/173972776219.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/173973303455.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/173972692138.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/173972937364.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/173981112739.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/173981016726.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/173973510429.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/173981539018.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177786223757.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177786213869.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/17397341153.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/17778620254.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177786234947.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177786189378.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177786177918.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177786168243.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177786150113.jpeg"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/tpower-videos.json?t=1784526275115"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/vendor/game-types"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/marquee/texts"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/games"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/advertise/list"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/vendors"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/information/list"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/announcement-message/latest"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/advertise/list"
+  },
+  {
+    "status": 204,
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G7BTS7K7ZT&gtm=45je67f0v9170057784za200zd9170057784&_p=1784526271840&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=937532841.1784526272&frm=0&ngs=1&pscdl=noa"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/tpower-videos.json?t=1784526277820"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/advertise/list"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/marquee/texts"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/information/list"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/vendors"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/vendor/game-types"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/advertise/list"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/games"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/announcement-message/latest"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/tpower-videos.json?t=1784526280481"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/vendor/game-types"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/marquee/texts"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/games"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/advertise/list"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/information/list"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/vendors"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/advertise/list"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/announcement-message/latest"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/tpower-videos.json?t=1784526283160"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/vendor/game-types"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/information/list"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/vendors"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/advertise/list"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/marquee/texts"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/announcement-message/latest"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/advertise/list"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/games"
+  },
+  {
+    "status": 200,
+    "url": "https://www.tpower3.com/en/games"
+  },
+  {
+    "status": 200,
+    "url": "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+  },
+  {
+    "status": 200,
+    "url": "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+  },
+  {
+    "status": 200,
+    "url": "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+  },
+  {
+    "status": 304,
+    "url": "https://www.tpower3.com/static/js/vendor.a144d440594fe1e8e06c.js"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/logo/Tpower%20app6.png?t=123"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/logo/Tpower%20app6.png?t=123"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/logo/Tpower%20app6.png?t=123"
+  },
+  {
+    "status": 200,
+    "url": "https://d5y9.apit.5t1p6.com/frontend/api/agent/template"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/177639382725.png"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/logo/Tpower%20app6.png?t=123"
+  },
+  {
+    "status": 304,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/vip.png?v=20260720_040009240"
+  },
+  {
+    "status": 304,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/transfer.png?v=20260720_040009240"
+  },
+  {
+    "status": 304,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/tutorial.png?v=20260720_040009240"
+  },
+  {
+    "status": 304,
+    "url": "https://www.tpower3.com/static/img/C1321/lobby/event.png?v=20260720_040009240"
+  },
+  {
+    "status": 204,
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-G7BTS7K7ZT&gtm=45je67f0v9170057784za200zd9170057784&_p=1784526286684&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=937532841.1784526272&frm=0&ngs=1&pscdl=noapi&rc"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/home.png?t=1784526286301"
+  },
+  {
+    "status": 200,
+    "url": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/TPower/tpower-videos.json?t=1784526286711"
+  }
+]

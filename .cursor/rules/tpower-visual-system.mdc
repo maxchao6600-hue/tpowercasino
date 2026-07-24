@@ -1,0 +1,76 @@
+---
+description: Global TPOWER visual system — Games page is the quality benchmark
+alwaysApply: true
+---
+
+# TPOWER Global Visual System
+
+The **Games page** (`/[locale]/games`) is the visual quality benchmark for the entire website.
+
+Every page must feel like one premium product — not an independent landing page.
+
+## Canonical building blocks
+
+- `AtmosphereHero` / upgraded `PageHeader` — full-bleed atmosphere image, dark overlay, red radial, fade to black
+- `AtmosphereMedia` — every photo/illustration uses gradient blending (never a hard rectangle)
+- `PremiumCta` — left copy + buttons, right blended artwork (never empty)
+- `ProvidersMarquee` via `ProvidersMarqueeSlot` in `SiteShell` — site-wide above the footer
+
+## Hero rules
+
+- Large full-width background image
+- Dark overlay + large radial red gradient
+- Smooth fade to black — no hard image edges
+- Image = atmosphere, not a banner
+
+## Image rules
+
+Stack treatment on every image:
+
+1. Image
+2. Dark overlay
+3. Radial gradient
+4. Fade into page background
+
+## CTA rules
+
+Follow Games CTA / `PremiumCta`:
+
+- Left ~58%: headline, description, buttons
+- Right ~42%: high-quality illustration (phone, casino, promo, product)
+- Never leave the right side empty
+
+## Provider marquee
+
+Site-wide branding element above the footer:
+
+- Single row, infinite scroll
+- Colored logos always visible
+- No grayscale-only / hover-to-reveal
+- Responsive spacing and logo size
+
+## Section rhythm
+
+Alternate content ↔ visual ↔ statistics ↔ CTA. Avoid long text-only blocks.
+
+## Spacing & surfaces
+
+- Large section padding
+- Rounded containers
+- Dark cards, subtle borders, soft shadows
+- Red accent gradients
+
+## Responsive (desktop-first)
+
+Desktop is the master composition. Mobile must **scale** the same layout — not restack, reorder, or simplify.
+
+See `tpower-desktop-first-responsive.mdc` (always apply). Prefer `overflow-x-auto` card rows and persistent multi-column grids over `flex-col` / `grid-cols-1` breakpoints.
+
+## Philosophy
+Apple / Stripe / Linear / Vercel premium SaaS **plus** high-end casino branding.
+
+Avoid: cheap casino templates, gold everywhere, flashing neon, AI-looking layouts, overcrowded sections.
+
+## Completion gate
+
+A page is not complete until it matches Games-page quality. If a page looks older than Games, redesign it to this system before shipping.

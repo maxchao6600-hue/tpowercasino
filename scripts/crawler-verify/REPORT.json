@@ -1,0 +1,320 @@
+{
+  "generatedAt": "2026-07-20T07:33:26.135Z",
+  "crawlerEndpoints": {
+    "apiBase": "https://d5y9.apit.5t1p6.com/",
+    "origin": "https://www.tpower3.com",
+    "domain": "www.tpower3.com",
+    "vendorList": {
+      "method": "POST",
+      "url": "https://d5y9.apit.5t1p6.com/api/newVendorsByDomain",
+      "bodyPlain": {
+        "domain": "www.tpower3.com"
+      }
+    },
+    "gameBulk": {
+      "method": "POST",
+      "url": "https://d5y9.apit.5t1p6.com/api/myGamesByDomain",
+      "bodyPlain": {
+        "domain": "www.tpower3.com",
+        "page": 1,
+        "per_page": 500
+      }
+    }
+  },
+  "providers": [
+    {
+      "provider": "PG Soft",
+      "crawler": {
+        "urlsCrawled": [
+          "https://d5y9.apit.5t1p6.com/api/newVendorsByDomain",
+          "https://d5y9.apit.5t1p6.com/api/myGamesByDomain (paginated, per_page=500)"
+        ],
+        "vendorListEndpoint": "api/newVendorsByDomain",
+        "gameListEndpoint": "api/myGamesByDomain",
+        "matchedVendors": [],
+        "myGamesByDomainCount": 0,
+        "myGamesByDomainSample": null
+      },
+      "officialSpaShelf": {
+        "endpoint": "frontend/api/game/list",
+        "note": "Endpoint the SPA uses when a vendor tile is opened (NOT used by crawl-tpower-games.mjs)",
+        "matchedVendorCount": 0,
+        "gameCount": 0,
+        "responses": []
+      },
+      "proof": "Official API vendor list has no matching vendor; bulk crawl and SPA shelf both return 0",
+      "officialWebsite": {
+        "pageUrl": "https://www.tpower3.com/",
+        "lobbyVendorImagesMatchingProvider": [],
+        "apitNetworkCallsOnLoad": [
+          {
+            "url": "https://d5y9.apit.5t1p6.com/frontend/api/vendor/game-types",
+            "method": "POST",
+            "postData": "{\"params\":\"ebhZJW9wmn2d3QbhpWYjs7kAl7M7bQPAFKj+mnv7NWg=\",\"key\":\"39d32f497ded81ae2211ac84fb6be093\"}",
+            "code": 200,
+            "dataType": "array[89]"
+          },
+          {
+            "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/vendors",
+            "method": "POST",
+            "postData": "{\"params\":\"ebhZJW9wmn2d3QbhpWYjs0uFpQMZjyQwf+A0QnppCVZ1g+ovIZWSYXAnl9cKAZd5\",\"key\":\"62b353d75893763a5f8093dd5cf9b2d9\"}",
+            "code": 200,
+            "dataType": "array[51]"
+          }
+        ]
+      }
+    },
+    {
+      "provider": "Evolution",
+      "crawler": {
+        "urlsCrawled": [
+          "https://d5y9.apit.5t1p6.com/api/newVendorsByDomain",
+          "https://d5y9.apit.5t1p6.com/api/myGamesByDomain (paginated, per_page=500)"
+        ],
+        "vendorListEndpoint": "api/newVendorsByDomain",
+        "gameListEndpoint": "api/myGamesByDomain",
+        "matchedVendors": [],
+        "myGamesByDomainCount": 0,
+        "myGamesByDomainSample": null
+      },
+      "officialSpaShelf": {
+        "endpoint": "frontend/api/game/list",
+        "note": "Endpoint the SPA uses when a vendor tile is opened (NOT used by crawl-tpower-games.mjs)",
+        "matchedVendorCount": 0,
+        "gameCount": 0,
+        "responses": []
+      },
+      "proof": "Official API vendor list has no matching vendor; bulk crawl and SPA shelf both return 0",
+      "officialWebsite": {
+        "pageUrl": "https://www.tpower3.com/",
+        "lobbyVendorImagesMatchingProvider": [],
+        "apitNetworkCallsOnLoad": [
+          {
+            "url": "https://d5y9.apit.5t1p6.com/frontend/api/vendor/game-types",
+            "method": "POST",
+            "postData": "{\"params\":\"ebhZJW9wmn2d3QbhpWYjs7kAl7M7bQPAFKj+mnv7NWg=\",\"key\":\"39d32f497ded81ae2211ac84fb6be093\"}",
+            "code": 200,
+            "dataType": "array[89]"
+          },
+          {
+            "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/vendors",
+            "method": "POST",
+            "postData": "{\"params\":\"ebhZJW9wmn2d3QbhpWYjs0uFpQMZjyQwf+A0QnppCVZ1g+ovIZWSYXAnl9cKAZd5\",\"key\":\"62b353d75893763a5f8093dd5cf9b2d9\"}",
+            "code": 200,
+            "dataType": "array[51]"
+          }
+        ]
+      }
+    },
+    {
+      "provider": "Microgaming",
+      "crawler": {
+        "urlsCrawled": [
+          "https://d5y9.apit.5t1p6.com/api/newVendorsByDomain",
+          "https://d5y9.apit.5t1p6.com/api/myGamesByDomain (paginated, per_page=500)"
+        ],
+        "vendorListEndpoint": "api/newVendorsByDomain",
+        "gameListEndpoint": "api/myGamesByDomain",
+        "matchedVendors": [],
+        "myGamesByDomainCount": 0,
+        "myGamesByDomainSample": null
+      },
+      "officialSpaShelf": {
+        "endpoint": "frontend/api/game/list",
+        "note": "Endpoint the SPA uses when a vendor tile is opened (NOT used by crawl-tpower-games.mjs)",
+        "matchedVendorCount": 0,
+        "gameCount": 0,
+        "responses": []
+      },
+      "proof": "Official API vendor list has no matching vendor; bulk crawl and SPA shelf both return 0",
+      "officialWebsite": {
+        "pageUrl": "https://www.tpower3.com/",
+        "lobbyVendorImagesMatchingProvider": [],
+        "apitNetworkCallsOnLoad": [
+          {
+            "url": "https://d5y9.apit.5t1p6.com/frontend/api/vendor/game-types",
+            "method": "POST",
+            "postData": "{\"params\":\"ebhZJW9wmn2d3QbhpWYjs7kAl7M7bQPAFKj+mnv7NWg=\",\"key\":\"39d32f497ded81ae2211ac84fb6be093\"}",
+            "code": 200,
+            "dataType": "array[89]"
+          },
+          {
+            "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/vendors",
+            "method": "POST",
+            "postData": "{\"params\":\"ebhZJW9wmn2d3QbhpWYjs0uFpQMZjyQwf+A0QnppCVZ1g+ovIZWSYXAnl9cKAZd5\",\"key\":\"62b353d75893763a5f8093dd5cf9b2d9\"}",
+            "code": 200,
+            "dataType": "array[51]"
+          }
+        ]
+      }
+    },
+    {
+      "provider": "Play'n GO",
+      "crawler": {
+        "urlsCrawled": [
+          "https://d5y9.apit.5t1p6.com/api/newVendorsByDomain",
+          "https://d5y9.apit.5t1p6.com/api/myGamesByDomain (paginated, per_page=500)"
+        ],
+        "vendorListEndpoint": "api/newVendorsByDomain",
+        "gameListEndpoint": "api/myGamesByDomain",
+        "matchedVendors": [],
+        "myGamesByDomainCount": 0,
+        "myGamesByDomainSample": null
+      },
+      "officialSpaShelf": {
+        "endpoint": "frontend/api/game/list",
+        "note": "Endpoint the SPA uses when a vendor tile is opened (NOT used by crawl-tpower-games.mjs)",
+        "matchedVendorCount": 0,
+        "gameCount": 0,
+        "responses": []
+      },
+      "proof": "Official API vendor list has no matching vendor; bulk crawl and SPA shelf both return 0",
+      "officialWebsite": {
+        "pageUrl": "https://www.tpower3.com/",
+        "lobbyVendorImagesMatchingProvider": [],
+        "apitNetworkCallsOnLoad": [
+          {
+            "url": "https://d5y9.apit.5t1p6.com/frontend/api/vendor/game-types",
+            "method": "POST",
+            "postData": "{\"params\":\"ebhZJW9wmn2d3QbhpWYjs7kAl7M7bQPAFKj+mnv7NWg=\",\"key\":\"39d32f497ded81ae2211ac84fb6be093\"}",
+            "code": 200,
+            "dataType": "array[89]"
+          },
+          {
+            "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/vendors",
+            "method": "POST",
+            "postData": "{\"params\":\"ebhZJW9wmn2d3QbhpWYjs0uFpQMZjyQwf+A0QnppCVZ1g+ovIZWSYXAnl9cKAZd5\",\"key\":\"62b353d75893763a5f8093dd5cf9b2d9\"}",
+            "code": 200,
+            "dataType": "array[51]"
+          }
+        ]
+      }
+    },
+    {
+      "provider": "Habanero",
+      "crawler": {
+        "urlsCrawled": [
+          "https://d5y9.apit.5t1p6.com/api/newVendorsByDomain",
+          "https://d5y9.apit.5t1p6.com/api/myGamesByDomain (paginated, per_page=500)"
+        ],
+        "vendorListEndpoint": "api/newVendorsByDomain",
+        "gameListEndpoint": "api/myGamesByDomain",
+        "matchedVendors": [],
+        "myGamesByDomainCount": 0,
+        "myGamesByDomainSample": null
+      },
+      "officialSpaShelf": {
+        "endpoint": "frontend/api/game/list",
+        "note": "Endpoint the SPA uses when a vendor tile is opened (NOT used by crawl-tpower-games.mjs)",
+        "matchedVendorCount": 0,
+        "gameCount": 0,
+        "responses": []
+      },
+      "proof": "Official API vendor list has no matching vendor; bulk crawl and SPA shelf both return 0",
+      "officialWebsite": {
+        "pageUrl": "https://www.tpower3.com/",
+        "lobbyVendorImagesMatchingProvider": [],
+        "apitNetworkCallsOnLoad": [
+          {
+            "url": "https://d5y9.apit.5t1p6.com/frontend/api/vendor/game-types",
+            "method": "POST",
+            "postData": "{\"params\":\"ebhZJW9wmn2d3QbhpWYjs7kAl7M7bQPAFKj+mnv7NWg=\",\"key\":\"39d32f497ded81ae2211ac84fb6be093\"}",
+            "code": 200,
+            "dataType": "array[89]"
+          },
+          {
+            "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/vendors",
+            "method": "POST",
+            "postData": "{\"params\":\"ebhZJW9wmn2d3QbhpWYjs0uFpQMZjyQwf+A0QnppCVZ1g+ovIZWSYXAnl9cKAZd5\",\"key\":\"62b353d75893763a5f8093dd5cf9b2d9\"}",
+            "code": 200,
+            "dataType": "array[51]"
+          }
+        ]
+      }
+    },
+    {
+      "provider": "Spribe",
+      "crawler": {
+        "urlsCrawled": [
+          "https://d5y9.apit.5t1p6.com/api/newVendorsByDomain",
+          "https://d5y9.apit.5t1p6.com/api/myGamesByDomain (paginated, per_page=500)"
+        ],
+        "vendorListEndpoint": "api/newVendorsByDomain",
+        "gameListEndpoint": "api/myGamesByDomain",
+        "matchedVendors": [],
+        "myGamesByDomainCount": 0,
+        "myGamesByDomainSample": null
+      },
+      "officialSpaShelf": {
+        "endpoint": "frontend/api/game/list",
+        "note": "Endpoint the SPA uses when a vendor tile is opened (NOT used by crawl-tpower-games.mjs)",
+        "matchedVendorCount": 0,
+        "gameCount": 0,
+        "responses": []
+      },
+      "proof": "Official API vendor list has no matching vendor; bulk crawl and SPA shelf both return 0",
+      "officialWebsite": {
+        "pageUrl": "https://www.tpower3.com/",
+        "lobbyVendorImagesMatchingProvider": [],
+        "apitNetworkCallsOnLoad": [
+          {
+            "url": "https://d5y9.apit.5t1p6.com/frontend/api/vendor/game-types",
+            "method": "POST",
+            "postData": "{\"params\":\"ebhZJW9wmn2d3QbhpWYjs7kAl7M7bQPAFKj+mnv7NWg=\",\"key\":\"39d32f497ded81ae2211ac84fb6be093\"}",
+            "code": 200,
+            "dataType": "array[89]"
+          },
+          {
+            "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/vendors",
+            "method": "POST",
+            "postData": "{\"params\":\"ebhZJW9wmn2d3QbhpWYjs0uFpQMZjyQwf+A0QnppCVZ1g+ovIZWSYXAnl9cKAZd5\",\"key\":\"62b353d75893763a5f8093dd5cf9b2d9\"}",
+            "code": 200,
+            "dataType": "array[51]"
+          }
+        ]
+      }
+    },
+    {
+      "provider": "SBO Sports",
+      "crawler": {
+        "urlsCrawled": [
+          "https://d5y9.apit.5t1p6.com/api/newVendorsByDomain",
+          "https://d5y9.apit.5t1p6.com/api/myGamesByDomain (paginated, per_page=500)"
+        ],
+        "vendorListEndpoint": "api/newVendorsByDomain",
+        "gameListEndpoint": "api/myGamesByDomain",
+        "matchedVendors": [],
+        "myGamesByDomainCount": 0,
+        "myGamesByDomainSample": null
+      },
+      "officialSpaShelf": {
+        "endpoint": "frontend/api/game/list",
+        "note": "Endpoint the SPA uses when a vendor tile is opened (NOT used by crawl-tpower-games.mjs)",
+        "matchedVendorCount": 0,
+        "gameCount": 0,
+        "responses": []
+      },
+      "proof": "Official API vendor list has no matching vendor; bulk crawl and SPA shelf both return 0",
+      "officialWebsite": {
+        "pageUrl": "https://www.tpower3.com/",
+        "lobbyVendorImagesMatchingProvider": [],
+        "apitNetworkCallsOnLoad": [
+          {
+            "url": "https://d5y9.apit.5t1p6.com/frontend/api/vendor/game-types",
+            "method": "POST",
+            "postData": "{\"params\":\"ebhZJW9wmn2d3QbhpWYjs7kAl7M7bQPAFKj+mnv7NWg=\",\"key\":\"39d32f497ded81ae2211ac84fb6be093\"}",
+            "code": 200,
+            "dataType": "array[89]"
+          },
+          {
+            "url": "https://d5y9.apit.5t1p6.com/frontend/api/lobby/vendors",
+            "method": "POST",
+            "postData": "{\"params\":\"ebhZJW9wmn2d3QbhpWYjs0uFpQMZjyQwf+A0QnppCVZ1g+ovIZWSYXAnl9cKAZd5\",\"key\":\"62b353d75893763a5f8093dd5cf9b2d9\"}",
+            "code": 200,
+            "dataType": "array[51]"
+          }
+        ]
+      }
+    }
+  ]
+}

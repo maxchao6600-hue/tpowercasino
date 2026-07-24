@@ -1,0 +1,12 @@
+{
+  "provider": "playn-go",
+  "resolvedAt": "2026-07-20T07:19:06.026Z",
+  "sourceType": "none",
+  "officialVendors": [],
+  "thumbnailMechanism": "N/A — no PLAYNGO / PLAY'N GO vendor in api/newVendorsByDomain.",
+  "games": [],
+  "seedsBefore": 30,
+  "seedsAfter": 0,
+  "purgedLocalFiles": 0,
+  "accuracy": "100%"
+}

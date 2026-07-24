@@ -1,0 +1,29 @@
+{
+  "provider": "Microgaming",
+  "myGamesByDomain": {
+    "endpoint": "api/myGamesByDomain",
+    "url": "https://d5y9.apit.5t1p6.com/api/myGamesByDomain",
+    "requestBodyPlain": {
+      "domain": "www.tpower3.com",
+      "page": 1,
+      "per_page": 500
+    },
+    "proof": "0 games with matching vendor_name in full bulk response",
+    "bulkFirstPageMeta": {
+      "code": 1000,
+      "total": 4802,
+      "pages": 10
+    }
+  },
+  "newVendorsByDomain": {
+    "endpoint": "api/newVendorsByDomain",
+    "url": "https://d5y9.apit.5t1p6.com/api/newVendorsByDomain",
+    "requestBodyPlain": {
+      "domain": "www.tpower3.com"
+    },
+    "matchedVendors": []
+  },
+  "frontendGameList": {
+    "proof": "No vendor tile — frontend/api/game/list never called with vendor_id"
+  }
+}

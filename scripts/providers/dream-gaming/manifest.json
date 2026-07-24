@@ -1,0 +1,22 @@
+{
+  "provider": "dream-gaming",
+  "resolvedAt": "2026-07-20T07:19:08.406Z",
+  "sourceType": "api-shelf-json",
+  "officialVendors": [
+    {
+      "name": "DREAMGAMING",
+      "id": 29
+    }
+  ],
+  "thumbnailMechanism": "frontend/api/game/list → data.games[].image (direct HTTPS URL, not lazy DOM)",
+  "games": [
+    {
+      "seedName": "DG Live",
+      "slug": "dg-live",
+      "officialId": 3278,
+      "imageUrl": "https://storage.googleapis.com/cdn-betmonsters-com-cdn-bucket-online/173218176456.png",
+      "localPath": "/images/games/dream-gaming/dg-live.webp"
+    }
+  ],
+  "accuracy": "100%"
+}

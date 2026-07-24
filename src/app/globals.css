@@ -1,26 +1,422 @@
 @import "tailwindcss";
 
+/* =========================================================
+   TPOWER Design System — dark premium luxury
+   Apple / Vercel / Linear / Stripe language
+   ========================================================= */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Layered dark surfaces — never pure black */
+  --background: #090909;
+  --surface: #111111;
+  --card: #161616;
+  --card-foreground: #ffffff;
+  --foreground: #ffffff;
+  --primary: #e50914;
+  --primary-foreground: #ffffff;
+  --secondary: #111111;
+  --secondary-foreground: #ffffff;
+  --muted: #111111;
+  --muted-foreground: #b3b3b3;
+  --accent: #1a1a1a;
+  --accent-foreground: #ffffff;
+  --destructive: #e50914;
+  --destructive-foreground: #ffffff;
+  --border: #252525;
+  --input: #252525;
+  --ring: #e50914;
+  --success: #22c55e;
+  --warning: #f59e0b;
+
+  /* Radius */
+  --radius: 24px;
+  --radius-button: 16px;
+  --radius-pill: 999px;
+
+  /* Elevation — soft depth on dark */
+  --shadow-soft: 0 8px 32px -16px rgba(0, 0, 0, 0.55);
+  --shadow-card: 0 12px 40px -18px rgba(0, 0, 0, 0.65);
+  --shadow-lift: 0 18px 48px -16px rgba(0, 0, 0, 0.75);
+  --shadow-button: 0 8px 28px -8px rgba(229, 9, 20, 0.55);
+  --shadow-glow: 0 0 40px -8px rgba(229, 9, 20, 0.45);
+
+  /* Layout */
+  --container: 1280px;
+  --navbar-height: 80px;
+  --section-y-mobile: 72px;
+  --section-y-tablet: 96px;
+  --section-y-desktop: 120px;
+  --pad-mobile: 20px;
+  --pad-tablet: 32px;
+  --pad-desktop: 40px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --duration-fast: 250ms;
+  --duration-motion: 400ms;
+
+  /* Type */
+  --text-body: 17px;
+  --leading-body: 1.6;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --font-sans: var(--font-inter), "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", sans-serif;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 24px;
+  --radius-2xl: 24px;
+  --animate-accordion-down: accordion-down 0.28s var(--ease-out);
+  --animate-accordion-up: accordion-up 0.22s var(--ease-out);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
   }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+/* Accordion chevron — reliable without Tailwind group-data variants */
+[data-radix-collection-item][data-state="open"] > svg {
+  transform: rotate(180deg);
+  color: var(--primary);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  color-scheme: dark;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", ui-sans-serif,
+    system-ui, sans-serif;
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--primary) 40%, transparent);
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+/* ---- Typography scale ---- */
+.text-display,
+.h1-display {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.h2-display {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.h3-display {
+  font-size: clamp(1.5rem, 2vw, 1.875rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.h4-display {
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+}
+
+.text-body {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.text-body-lg {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.text-small {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ---- Layout primitives ---- */
+.container-page {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--pad-mobile);
+}
+
+@media (min-width: 768px) {
+  .container-page {
+    padding-inline: var(--pad-tablet);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-page {
+    padding-inline: var(--pad-desktop);
+  }
+}
+
+.section-y {
+  padding-block: var(--section-y-mobile);
+}
+
+@media (min-width: 768px) {
+  .section-y {
+    padding-block: var(--section-y-tablet);
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-y {
+    padding-block: var(--section-y-desktop);
+  }
+}
+
+.bg-atmosphere {
+  background:
+    radial-gradient(900px 480px at 18% -10%, rgba(229, 9, 20, 0.18), transparent 55%),
+    radial-gradient(700px 420px at 88% 8%, rgba(229, 9, 20, 0.08), transparent 50%),
+    radial-gradient(600px 400px at 50% 100%, rgba(255, 255, 255, 0.03), transparent 55%),
+    linear-gradient(180deg, #111111 0%, #090909 42%, #090909 100%);
+}
+
+.navbar-offset {
+  padding-top: var(--navbar-height);
+}
+
+/* ---- Interactive surfaces ---- */
+.surface-card {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out);
+}
+
+.surface-card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--primary) 35%, var(--border));
+  box-shadow: var(--shadow-lift);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .surface-card,
+  .surface-card:hover {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* ---- Content prose ---- */
+.prose-tpower {
+  color: var(--muted-foreground);
+  font-size: clamp(15px, 14px + 0.25vw, 18px);
+  line-height: 1.75;
+}
+
+.prose-tpower h2 {
+  color: var(--foreground);
+  font-size: clamp(1.35rem, 1.2rem + 0.55vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.prose-tpower p {
+  margin-bottom: 16px;
+}
+
+.prose-tpower ul {
+  list-style: disc;
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.prose-tpower li {
+  margin-bottom: 8px;
+}
+
+/* ---- Marquee ---- */
+/* =========================================================
+   Brand Safe Area — 5% protected padding on every edge
+   Keep in sync with src/config/brand-safe-area.ts
+   ========================================================= */
+.brand-safe-media {
+  --brand-safe-ratio: 0.05;
+  --brand-safe-inset: 5%;
+  position: relative;
+}
+
+/* Optional debug outline for the protected edge (enable with .brand-safe-debug) */
+.brand-safe-media.brand-safe-debug::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border: 1px dashed rgba(229, 9, 20, 0.45);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%,
+    0% 0%,
+    var(--brand-safe-inset) var(--brand-safe-inset),
+    var(--brand-safe-inset) calc(100% - var(--brand-safe-inset)),
+    calc(100% - var(--brand-safe-inset)) calc(100% - var(--brand-safe-inset)),
+    calc(100% - var(--brand-safe-inset)) var(--brand-safe-inset),
+    var(--brand-safe-inset) var(--brand-safe-inset)
+  );
+  z-index: 5;
+}
+
+/* Overlay content must stay inside the 5% safe area */
+.brand-safe-overlay {
+  position: absolute;
+  left: var(--brand-safe-inset);
+  top: var(--brand-safe-inset);
+  right: var(--brand-safe-inset);
+  bottom: var(--brand-safe-inset);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.brand-safe-overlay > * {
+  pointer-events: auto;
+}
+
+/* Chips/badges: inside safe area, below the logo block */
+.brand-safe-chips {
+  position: absolute;
+  left: var(--brand-safe-inset);
+  top: calc(var(--brand-safe-inset) + 3.5rem);
+  right: var(--brand-safe-inset);
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+.brand-safe-chips > * {
+  pointer-events: auto;
+}
+
+/* Never zoom branded media — scale clips corner branding under overflow:hidden */
+.brand-safe-media img {
+  transform-origin: center center;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 38s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 42s linear infinite;
+}
+
+.animate-marquee-trust {
+  animation: marquee 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .animate-marquee-trust {
+    animation: none;
+  }
+
+  .animate-accordion-down,
+  .animate-accordion-up,
+  [data-state="open"].animate-accordion-down,
+  [data-state="closed"].animate-accordion-up {
+    animation: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
 }

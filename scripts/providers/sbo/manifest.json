@@ -1,0 +1,12 @@
+{
+  "provider": "sbo",
+  "resolvedAt": "2026-07-20T07:19:06.331Z",
+  "sourceType": "none",
+  "officialVendors": [],
+  "thumbnailMechanism": "N/A — no SBO vendor shelf with per-game thumbnails.",
+  "games": [],
+  "seedsBefore": 24,
+  "seedsAfter": 0,
+  "purgedLocalFiles": 0,
+  "accuracy": "100%"
+}

@@ -1,0 +1,13 @@
+{
+  "provider": "evolution",
+  "resolvedAt": "2026-07-20T07:18:14.034Z",
+  "sourceType": "none",
+  "officialVendors": [],
+  "officialDomain": "www.tpower3.com",
+  "thumbnailMechanism": "N/A — Evolution is not in api/newVendorsByDomain and has no frontend/api/game/list shelf.",
+  "games": [],
+  "seedCount": 0,
+  "purgedLocalFiles": 0,
+  "accuracy": "100%",
+  "note": "Marketing pages mention Evolution; playable lobby does not expose per-game Evolution cards."
+}

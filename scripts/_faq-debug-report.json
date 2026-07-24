@@ -1,0 +1,603 @@
+{
+  "url": "http://localhost:3000/en",
+  "pageErrors": [
+    "EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: script-src 'self' 'unsafe-inline'\".\n"
+  ],
+  "consoleErrors": [],
+  "consoleWarnings": [],
+  "probe": {
+    "title": "TPOWER Online Casino Malaysia",
+    "hasFaqText": true,
+    "h2s": [
+      "Trusted by players across Malaysia",
+      "Featured promotions",
+      "Game categories",
+      "Premium game providers",
+      "Why choose TPOWER",
+      "Play anywhere with the TPOWER app",
+      "VIP benefits",
+      "Latest news",
+      "Frequently asked questions",
+      "TPOWER Malaysia guide",
+      "Important pages",
+      "Frequently asked questions",
+      "Ready to join TPOWER?"
+    ],
+    "buttonCount": 12,
+    "buttonsWithAriaExpanded": [
+      {
+        "text": "",
+        "dataState": null,
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text"
+      },
+      {
+        "text": "How do I create a TPOWER account?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "What is the minimum age to play?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Which deposit methods are available in Malaysia?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "How long do withdrawals take?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Are games fair and from real providers?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Where can I find bonus terms before opting in?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Is TPOWER available for Malaysia players?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Where do I login or register for TPOWER?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "How do I download the TPOWER app or APK?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Which games and providers does TPOWER offer?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "How does TPOWER support responsible gaming?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      }
+    ],
+    "buttonsWithDataState": [
+      {
+        "text": "How do I create a TPOWER account?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "What is the minimum age to play?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Which deposit methods are available in Malaysia?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "How long do withdrawals take?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Are games fair and from real providers?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Where can I find bonus terms before opting in?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Is TPOWER available for Malaysia players?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Where do I login or register for TPOWER?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "How do I download the TPOWER app or APK?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Which games and providers does TPOWER offer?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "How does TPOWER support responsible gaming?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      }
+    ],
+    "sampleButtons": [
+      {
+        "text": "",
+        "dataState": null,
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text"
+      },
+      {
+        "text": "How do I create a TPOWER account?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "What is the minimum age to play?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Which deposit methods are available in Malaysia?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "How long do withdrawals take?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Are games fair and from real providers?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Where can I find bonus terms before opting in?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Is TPOWER available for Malaysia players?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Where do I login or register for TPOWER?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "How do I download the TPOWER app or APK?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "Which games and providers does TPOWER offer?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      },
+      {
+        "text": "How does TPOWER support responsible gaming?",
+        "dataState": "closed",
+        "ariaExpanded": "false",
+        "ariaControls": null,
+        "type": "button",
+        "className": "group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-le"
+      }
+    ],
+    "radixTriggers": 12,
+    "accordionRoots": [
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 6,
+        "html": "<div class=\"rounded-[24px] border border-border bg-card px-6 shadow-[var(--shadow-soft)] md:px-8\" data-orientation=\"vertical\"><div data-state=\"closed\" data-orientation=\"vertical\" class=\"border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-out data-[state=open]:bg-white/[0.03]\"><h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expa"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<div data-state=\"closed\" data-orientation=\"vertical\" class=\"border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-out data-[state=open]:bg-white/[0.03]\"><h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_qn5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer"
+      },
+      {
+        "tag": "H3",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_qn5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visib"
+      },
+      {
+        "tag": "BUTTON",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_qn5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visible:text-primary focus-visible:ring-2 focus-visible:ring-ring focu"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<div data-state=\"closed\" id=\"radix-_R_4qn5eqt5rlb_\" hidden=\"\" role=\"region\" aria-labelledby=\"radix-_R_qn5eqt5rlb_\" data-orientation=\"vertical\" class=\"overflow-hidden text-muted-foreground data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\" style=\"--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-colla"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<div data-state=\"closed\" data-orientation=\"vertical\" class=\"border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-out data-[state=open]:bg-white/[0.03]\"><h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_1an5eqt5rlb_\" class=\"group flex flex-1 cursor-pointe"
+      },
+      {
+        "tag": "H3",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_1an5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visi"
+      },
+      {
+        "tag": "BUTTON",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_1an5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visible:text-primary focus-visible:ring-2 focus-visible:ring-ring foc"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<div data-state=\"closed\" id=\"radix-_R_5an5eqt5rlb_\" hidden=\"\" role=\"region\" aria-labelledby=\"radix-_R_1an5eqt5rlb_\" data-orientation=\"vertical\" class=\"overflow-hidden text-muted-foreground data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\" style=\"--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-coll"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<div data-state=\"closed\" data-orientation=\"vertical\" class=\"border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-out data-[state=open]:bg-white/[0.03]\"><h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_1qn5eqt5rlb_\" class=\"group flex flex-1 cursor-pointe"
+      },
+      {
+        "tag": "H3",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_1qn5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visi"
+      },
+      {
+        "tag": "BUTTON",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_1qn5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visible:text-primary focus-visible:ring-2 focus-visible:ring-ring foc"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<div data-state=\"closed\" id=\"radix-_R_5qn5eqt5rlb_\" hidden=\"\" role=\"region\" aria-labelledby=\"radix-_R_1qn5eqt5rlb_\" data-orientation=\"vertical\" class=\"overflow-hidden text-muted-foreground data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\" style=\"--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-coll"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<div data-state=\"closed\" data-orientation=\"vertical\" class=\"border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-out data-[state=open]:bg-white/[0.03]\"><h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_2an5eqt5rlb_\" class=\"group flex flex-1 cursor-pointe"
+      },
+      {
+        "tag": "H3",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_2an5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visi"
+      },
+      {
+        "tag": "BUTTON",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_2an5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visible:text-primary focus-visible:ring-2 focus-visible:ring-ring foc"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<div data-state=\"closed\" id=\"radix-_R_6an5eqt5rlb_\" hidden=\"\" role=\"region\" aria-labelledby=\"radix-_R_2an5eqt5rlb_\" data-orientation=\"vertical\" class=\"overflow-hidden text-muted-foreground data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\" style=\"--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-coll"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<div data-state=\"closed\" data-orientation=\"vertical\" class=\"border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-out data-[state=open]:bg-white/[0.03]\"><h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_2qn5eqt5rlb_\" class=\"group flex flex-1 cursor-pointe"
+      },
+      {
+        "tag": "H3",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_2qn5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visi"
+      },
+      {
+        "tag": "BUTTON",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_2qn5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visible:text-primary focus-visible:ring-2 focus-visible:ring-ring foc"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<div data-state=\"closed\" id=\"radix-_R_6qn5eqt5rlb_\" hidden=\"\" role=\"region\" aria-labelledby=\"radix-_R_2qn5eqt5rlb_\" data-orientation=\"vertical\" class=\"overflow-hidden text-muted-foreground data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\" style=\"--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-coll"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<div data-state=\"closed\" data-orientation=\"vertical\" class=\"border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-out data-[state=open]:bg-white/[0.03]\"><h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_3an5eqt5rlb_\" class=\"group flex flex-1 cursor-pointe"
+      },
+      {
+        "tag": "H3",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_3an5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visi"
+      },
+      {
+        "tag": "BUTTON",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_3an5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visible:text-primary focus-visible:ring-2 focus-visible:ring-ring foc"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<div data-state=\"closed\" id=\"radix-_R_7an5eqt5rlb_\" hidden=\"\" role=\"region\" aria-labelledby=\"radix-_R_3an5eqt5rlb_\" data-orientation=\"vertical\" class=\"overflow-hidden text-muted-foreground data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\" style=\"--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-coll"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 5,
+        "html": "<div class=\"mt-8 rounded-[24px] border border-border bg-card px-6 shadow-[var(--shadow-soft)] md:px-8\" data-orientation=\"vertical\"><div data-state=\"closed\" data-orientation=\"vertical\" class=\"border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-out data-[state=open]:bg-white/[0.03]\"><h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<div data-state=\"closed\" data-orientation=\"vertical\" class=\"border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-out data-[state=open]:bg-white/[0.03]\"><h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_1up5eqt5rlb_\" class=\"group flex flex-1 cursor-pointe"
+      },
+      {
+        "tag": "H3",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_1up5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visi"
+      },
+      {
+        "tag": "BUTTON",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_1up5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visible:text-primary focus-visible:ring-2 focus-visible:ring-ring foc"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<div data-state=\"closed\" id=\"radix-_R_9up5eqt5rlb_\" hidden=\"\" role=\"region\" aria-labelledby=\"radix-_R_1up5eqt5rlb_\" data-orientation=\"vertical\" class=\"overflow-hidden text-muted-foreground data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\" style=\"--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-coll"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<div data-state=\"closed\" data-orientation=\"vertical\" class=\"border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-out data-[state=open]:bg-white/[0.03]\"><h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_2up5eqt5rlb_\" class=\"group flex flex-1 cursor-pointe"
+      },
+      {
+        "tag": "H3",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_2up5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visi"
+      },
+      {
+        "tag": "BUTTON",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_2up5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visible:text-primary focus-visible:ring-2 focus-visible:ring-ring foc"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<div data-state=\"closed\" id=\"radix-_R_aup5eqt5rlb_\" hidden=\"\" role=\"region\" aria-labelledby=\"radix-_R_2up5eqt5rlb_\" data-orientation=\"vertical\" class=\"overflow-hidden text-muted-foreground data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\" style=\"--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-coll"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<div data-state=\"closed\" data-orientation=\"vertical\" class=\"border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-out data-[state=open]:bg-white/[0.03]\"><h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_3up5eqt5rlb_\" class=\"group flex flex-1 cursor-pointe"
+      },
+      {
+        "tag": "H3",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_3up5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visi"
+      },
+      {
+        "tag": "BUTTON",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_3up5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visible:text-primary focus-visible:ring-2 focus-visible:ring-ring foc"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<div data-state=\"closed\" id=\"radix-_R_bup5eqt5rlb_\" hidden=\"\" role=\"region\" aria-labelledby=\"radix-_R_3up5eqt5rlb_\" data-orientation=\"vertical\" class=\"overflow-hidden text-muted-foreground data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\" style=\"--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-coll"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<div data-state=\"closed\" data-orientation=\"vertical\" class=\"border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-out data-[state=open]:bg-white/[0.03]\"><h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_4up5eqt5rlb_\" class=\"group flex flex-1 cursor-pointe"
+      },
+      {
+        "tag": "H3",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_4up5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visi"
+      },
+      {
+        "tag": "BUTTON",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_4up5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visible:text-primary focus-visible:ring-2 focus-visible:ring-ring foc"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<div data-state=\"closed\" id=\"radix-_R_cup5eqt5rlb_\" hidden=\"\" role=\"region\" aria-labelledby=\"radix-_R_4up5eqt5rlb_\" data-orientation=\"vertical\" class=\"overflow-hidden text-muted-foreground data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\" style=\"--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-coll"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<div data-state=\"closed\" data-orientation=\"vertical\" class=\"border-b border-border last:border-b-0 transition-colors duration-[250ms] ease-out data-[state=open]:bg-white/[0.03]\"><h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_5up5eqt5rlb_\" class=\"group flex flex-1 cursor-pointe"
+      },
+      {
+        "tag": "H3",
+        "orientation": "vertical",
+        "childButtons": 1,
+        "html": "<h3 data-orientation=\"vertical\" data-state=\"closed\" class=\"flex\"><button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_5up5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visi"
+      },
+      {
+        "tag": "BUTTON",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<button type=\"button\" aria-expanded=\"false\" data-state=\"closed\" data-orientation=\"vertical\" id=\"radix-_R_5up5eqt5rlb_\" class=\"group flex flex-1 cursor-pointer items-center justify-between gap-4 py-6 text-left text-base font-semibold text-foreground outline-none transition-colors duration-[250ms] ease-out hover:text-primary focus-visible:text-primary focus-visible:ring-2 focus-visible:ring-ring foc"
+      },
+      {
+        "tag": "DIV",
+        "orientation": "vertical",
+        "childButtons": 0,
+        "html": "<div data-state=\"closed\" id=\"radix-_R_dup5eqt5rlb_\" hidden=\"\" role=\"region\" aria-labelledby=\"radix-_R_5up5eqt5rlb_\" data-orientation=\"vertical\" class=\"overflow-hidden text-muted-foreground data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\" style=\"--radix-accordion-content-height:var(--radix-collapsible-content-height);--radix-accordion-content-width:var(--radix-coll"
+      }
+    ],
+    "questionNode": {
+      "tag": "DIV",
+      "className": "",
+      "dataState": null,
+      "ariaExpanded": null,
+      "parent": "BODY",
+      "outer": "<div lang=\"en\"><div class=\"flex min-h-screen flex-col\"><header class=\"fixed inset-x-0 top-0 z-50 border-b transition-all duration-[250ms] ease-out border-border/40 bg-[#090909]/45 backdrop-blur-md\"><div class=\"container-page relative flex h-20 items-center justify-between gap-6 md:gap-10\"><div class=\"flex min-w-0 items-center gap-8 md:gap-12 xl:gap-16\"><a class=\"group inline-flex shrink-0 items-center self-center\" aria-label=\"TPOWER Online Casino\" href=\"/en\"><img alt=\"TPOWER Online Casino\" width"
+    },
+    "reactRoot": true,
+    "nextData": false
+  }
+}

@@ -1,0 +1,102 @@
+---
+description: Desktop-first responsive layout — mobile scales composition, never redesigns it.
+alwaysApply: true
+---
+
+# TPOWER Global Responsive Layout (Desktop-First)
+
+Applies to **every page** on the website.
+
+## Core principle
+
+**Desktop is the master design.**
+
+Mobile, tablet, and other breakpoints must **not** redesign the layout. Mobile is the desktop composition viewed through a smaller window — scale proportionally; do not restack, reorder, or simplify.
+
+The experience must match premium brands where mobile is essentially a scaled desktop presentation, **not** a separate mobile website.
+
+## Forbidden on mobile (unless a hard technical limitation)
+
+Do **not**:
+
+- Move components or change section order
+- Stack content differently from desktop
+- Replace 2-column layouts with stacked single-column layouts
+- Replace grids with a different UI structure
+- Turn card rows into vertical stacks (`grid-cols-4` → `grid-cols-1`, etc.)
+- Remove cards, images, buttons, animations, or content
+- Hide sections with `hidden md:block` / `md:hidden` for “simplification”
+- Move CTAs or move images above/below text when desktop keeps them side-by-side
+- Swap landscape images for portrait crops
+- Change typography hierarchy (only scale sizes)
+
+### Anti-patterns (avoid)
+
+```tsx
+// ❌ NOT allowed as the default responsive strategy
+className="flex flex-col lg:flex-row"
+className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4"
+className="hidden md:block"
+// image stacked above text on mobile when desktop is Image | Text
+```
+
+## Required approach
+
+Keep the **same visual composition** as desktop. Only scale:
+
+- Font sizes
+- Padding / gap / max-width
+- Border radius (subtle)
+- Overall density
+
+Prefer:
+
+- `overflow-x-auto` + horizontal swipe for card rows
+- Fixed desktop column counts (`grid-cols-3`, `grid-cols-4`, `grid-cols-[0.9fr_1.1fr]`) at all breakpoints
+- `min-w-[…]` on scroll rows so cards keep desktop proportions
+- Proportional type: e.g. `text-sm md:text-base lg:text-lg` (same hierarchy)
+- Aspect ratios that match desktop (do not restyle to portrait)
+
+### Preferred patterns
+
+```tsx
+// ✅ Image | Text at every width — only scale gap/padding/type
+className="grid grid-cols-[0.9fr_1.1fr] items-center gap-3 p-3 sm:gap-6 sm:p-5 lg:gap-10 lg:p-6"
+
+// ✅ 3 (or 4) cards stay in one row; swipe if needed
+<div className="overflow-x-auto pb-2">
+  <div className="grid min-w-[720px] grid-cols-3 gap-3 md:min-w-0 md:gap-6">
+    {/* cards */}
+  </div>
+</div>
+```
+
+## Examples
+
+| Desktop | Mobile (correct) | Mobile (wrong) |
+|---------|------------------|----------------|
+| Image \| Text | Image \| Text (smaller) | Image above Text |
+| 4 cards in a row | Same 4-card row + horizontal scroll | 1-column stack |
+| Silver \| Gold \| Platinum | Same 3-card row + swipe | Stacked cards |
+| CTA copy \| artwork | Same two columns scaled | Artwork moved above copy |
+
+## Carousel / slider
+
+Horizontal scrolling is preferred over layout changes. Cards keep desktop proportions — do not resize cards independently per breakpoint.
+
+## Typography & images
+
+- Scale fonts proportionally; keep hierarchy
+- Keep spacing ratios
+- Keep desktop image aspect ratios
+- Never crop critical subjects; never replace landscape with portrait for “mobile fit”
+
+## Interaction with other rules
+
+- Overrides the old “mobile first / cards stack” guidance in the visual system
+- Works with Games/VIP visual quality and page-depth standards — quality stays high; **composition stays desktop**
+- Chinese/English SEO and brand rules are unchanged
+
+## Completion gate
+
+A page is not responsively complete if mobile looks like a different product. Desktop and mobile should look almost identical — **size changes, layout does not**.

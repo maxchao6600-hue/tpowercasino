@@ -1,0 +1,58 @@
+---
+description: Mandatory official TPOWER logo + global 5% Brand Safe Area
+alwaysApply: true
+---
+
+# TPOWER Brand Logo & Brand Safe Area
+
+## Brand Safe Area (global)
+
+Reserve approximately **5% of image width and 5% of image height** on **every edge** as protected padding.
+
+- Source of truth: `src/config/brand-safe-area.ts` (`BRAND_SAFE_RATIO = 0.05`)
+- Stamp pipeline: `scripts/lib/brand-logo.mjs`
+- CSS frames: `.brand-safe-media`, `.brand-safe-overlay`, `.brand-safe-chips`
+
+**Nothing may enter the protected edge zone:**
+
+- Official logo
+- Text / headlines baked into art
+- Badges, chips, stickers
+- Critical product UI or focal subjects
+
+This prevents clipping from responsive layouts, `overflow:hidden`, and rounded corners.
+
+## Official logo
+
+- Use **only** `public/logo/tpower-logo.png` (or `tpower-mark.png` when mark-only is required).
+- Never create, redraw, redesign, or approximate the logo.
+- Never replace it with AI-generated text or fake branding.
+- Do not stretch, crop, rotate, distort, or recolor the logo.
+
+## Logo placement
+
+- Default: top-left of the **content box** (just inside the 5% safe padding).
+- Never place the logo flush to the canvas edge or inside the protected 5% zone.
+- Keep proportions; logo should not dominate (~6% of content width; clamp ~40–96px).
+
+## Container / CSS rules
+
+- Wrap marketing images with `brand-safe-media`.
+- Place UI chips with `brand-safe-chips` (inside safe area, below the logo).
+- **Do not** use `group-hover:scale-*` on branded media.
+- If overflow/radius would clip branding, fix inset or layout — never ship clipped logos.
+
+## Generating artwork
+
+1. Compose art with a mental 5% margin on all sides — keep important elements inside.
+2. Do not invent a logo in AI prompts as readable brand text.
+3. Stamp with `npm run brand:stamp` or `npm run brand:restamp`.
+4. Do not ship marketing visuals without the official logo inside the safe area.
+
+## Exclusions
+
+- Third-party provider logos (`public/providers/**`, `public/images/providers/**`)
+- Payment marks (`public/images/payments/**`)
+- Favicons (`public/icons/**`)
+- Logo files themselves (`public/logo/**`)
+- **Game thumbnails** (`public/images/games/**`, `public/games/**`) — never stamp or overlay the TPOWER logo on game artwork. Identify providers in card metadata below the image only.

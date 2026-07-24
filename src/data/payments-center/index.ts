@@ -1,0 +1,12 @@
+export { paymentDepositGuide } from "./deposit-guide";
+export { paymentWithdrawalGuide } from "./withdrawal-guide";
+export { paymentMethodsHub } from "./payment-methods";
+export { paymentFpxDeposit } from "./fpx-deposit";
+export { paymentDuitnowDeposit } from "./duitnow-deposit";
+export { paymentTouchNGo } from "./touch-n-go";
+export { paymentGrabPay } from "./grabpay";
+export { paymentOnlineBanking } from "./online-banking";
+export { paymentInstantDeposit } from "./instant-deposit";
+export { paymentFastWithdrawal } from "./fast-withdrawal";
+export { paymentSecurityPage } from "./payment-security";
+export { paymentDepositWithdrawalFaq } from "./deposit-withdrawal-faq";
