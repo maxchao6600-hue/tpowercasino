@@ -79,28 +79,28 @@ export function Footer({ locale, dictionary }: FooterProps) {
           <p>
             © {year} {siteConfig.name}. {dictionary.footer.rights}
           </p>
-          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+          <div className="flex flex-wrap items-center gap-1 sm:gap-2">
             <Link
               href={localePath(locale, "/responsible-gaming")}
-              className="hover:text-foreground"
+              className="inline-flex min-h-11 items-center px-2 hover:text-foreground"
             >
               {dictionary.footer.responsible}
             </Link>
             <Link
               href={localePath(locale, "/privacy-policy")}
-              className="hover:text-foreground"
+              className="inline-flex min-h-11 items-center px-2 hover:text-foreground"
             >
               {dictionary.footer.privacy}
             </Link>
             <Link
               href={localePath(locale, "/terms-and-conditions")}
-              className="hover:text-foreground"
+              className="inline-flex min-h-11 items-center px-2 hover:text-foreground"
             >
               {dictionary.footer.terms}
             </Link>
             <Link
               href={localePath(locale, "/contact")}
-              className="hover:text-foreground"
+              className="inline-flex min-h-11 items-center px-2 hover:text-foreground"
             >
               {dictionary.footer.contact}
             </Link>
@@ -131,7 +131,7 @@ function FooterColumn({
           <li key={item.key} className="min-w-0">
             <Link
               href={localePath(locale, item.href)}
-              className="block break-words text-[10px] leading-snug text-muted-foreground transition-colors hover:text-foreground sm:text-sm"
+              className="flex min-h-11 items-center break-words py-1 text-[10px] leading-snug text-muted-foreground transition-colors hover:text-foreground sm:min-h-0 sm:py-0 sm:text-sm"
             >
               {item.label[locale]}
             </Link>

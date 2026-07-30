@@ -33,7 +33,7 @@ export function PromotionCard({
           title={promo.title[locale]}
           fill
           className="object-cover transition-[filter] duration-500 group-hover:brightness-110"
-          sizes="(max-width: 1024px) 100vw, 50vw"
+          sizes="(max-width: 640px) 45vw, (max-width: 1024px) 50vw, 560px"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
         {/* Badges stay inside the 5% Brand Safe Area, below the logo */}

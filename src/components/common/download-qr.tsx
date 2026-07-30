@@ -18,11 +18,12 @@ export async function DownloadQr({ label, href }: DownloadQrProps) {
     color: { dark: "#111111", light: "#FFFFFF" },
   });
 
+  const officialMark = "TPOWER · Official";
+
   return (
     <Link
       href={href}
       className="inline-flex items-center gap-4 rounded-[24px] border border-border bg-card p-4 shadow-[var(--shadow-soft)] transition-all duration-[250ms] hover:-translate-y-1 hover:shadow-[var(--shadow-lift)] md:p-5"
-      aria-label={label}
     >
       <Image
         src={dataUrl}
@@ -30,11 +31,12 @@ export async function DownloadQr({ label, href }: DownloadQrProps) {
         width={96}
         height={96}
         unoptimized
+        decoding="async"
         className="h-24 w-24 rounded-xl border border-border bg-white"
       />
       <div>
         <p className="text-sm font-semibold text-foreground">{label}</p>
-        <p className="mt-1 text-xs text-muted-foreground">TPOWER · Official</p>
+        <p className="mt-1 text-xs text-muted-foreground">{officialMark}</p>
       </div>
     </Link>
   );

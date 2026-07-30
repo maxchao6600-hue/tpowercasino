@@ -46,6 +46,8 @@ export function AtmosphereMedia({
           title={title ?? alt}
           fill
           priority={priority}
+          loading={priority ? undefined : "lazy"}
+          decoding="async"
           className="object-cover"
           sizes={sizes}
         />

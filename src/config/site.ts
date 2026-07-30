@@ -6,7 +6,7 @@ export const siteConfig = {
     zh: "高端在线娱乐平台",
   },
   description: {
-    en: "TPOWER Casino is Malaysia's premium online gaming platform — secure banking, licensed providers, and a refined player experience built for trust and performance.",
+    en: "TPOWER Casino is Malaysia premium online gaming platform with secure banking, licensed providers, and a refined player experience built for trust and performance.",
     zh: "TPOWER Casino 是马来西亚高端在线娱乐平台——安全支付、持牌供应商，以及为信任与性能打造的精致玩家体验。",
   },
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tpower.my",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import type { Locale } from "@/config/site";
 import { isValidLocale } from "@/config/i18n";
@@ -20,8 +21,11 @@ import { FeatureGrid } from "@/components/home/feature-grid";
 import { DownloadApp } from "@/components/home/download-app";
 import { VipBenefits } from "@/components/home/vip-benefits";
 import { LatestNews } from "@/components/home/latest-news";
-import { FaqSection } from "@/components/home/faq-section";
 import { HomepageSeo } from "@/components/home/homepage-seo";
+
+const FaqSection = dynamic(() =>
+  import("@/components/home/faq-section").then((m) => m.FaqSection),
+);
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -37,6 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: dictionary.home.metaTitle,
     description: dictionary.home.metaDescription,
     path: "/",
+    image: "/images/hero-lcp-xs.webp",
   });
 }
 
@@ -69,7 +74,7 @@ export default async function HomePage({ params }: PageProps) {
       <VipBenefits locale={locale} dictionary={dictionary} />
       <LatestNews locale={locale} dictionary={dictionary} />
       <FaqSection locale={locale} dictionary={dictionary} withSchema={false} />
-      <HomepageSeo locale={locale} dictionary={dictionary} />
+      <HomepageSeo locale={locale} dictionary={dictionary} compact />
     </>
   );
 }

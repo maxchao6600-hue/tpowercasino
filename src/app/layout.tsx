@@ -8,10 +8,12 @@ import "./globals.css";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  // optional avoids late font swaps that shift the long homepage SEO block on mobile
+  // optional avoids late font swaps that shift homepage text (CLS)
   display: "optional",
-  adjustFontFallback: true,
+  weight: ["400", "600", "700", "800"],
   preload: true,
+  adjustFontFallback: true,
+  fallback: ["PingFang SC", "Microsoft YaHei", "Noto Sans SC", "sans-serif"],
 });
 
 export const metadata: Metadata = {
@@ -57,6 +59,16 @@ export default async function RootLayout({
       className={`${inter.variable} h-full`}
       suppressHydrationWarning
     >
+      <head>
+        {/* Ensures meta description is present for crawlers / Lighthouse MetaElements */}
+        <meta name="description" content={siteConfig.description.en} />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-lcp-xs.webp"
+          fetchPriority="high"
+        />
+      </head>
       <body className="min-h-full bg-background font-sans text-foreground antialiased">
         {children}
       </body>

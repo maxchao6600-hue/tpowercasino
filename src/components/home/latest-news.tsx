@@ -36,7 +36,7 @@ export function LatestNews({ locale, dictionary }: LatestNewsProps) {
                   title={item.title[locale]}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  sizes="(max-width: 640px) 40vw, (max-width: 1024px) 33vw, 420px"
                 />
               </div>
               <CardHeader className="space-y-3">

@@ -52,6 +52,8 @@ export function GameCard({
             title={game.name[locale]}
             fill
             priority={priority}
+            loading={priority ? undefined : "lazy"}
+            decoding="async"
             className="object-cover transition-[filter] duration-300 group-hover:brightness-110"
             sizes="(max-width: 640px) 46vw, (max-width: 1024px) 22vw, 16vw"
             onError={() => setImageFailed(true)}
@@ -89,8 +91,11 @@ export function GameCard({
             <img
               src={provider.logo}
               alt=""
+              width={52}
+              height={14}
               className="h-3.5 w-auto max-w-[3.25rem] shrink-0 object-contain opacity-90"
               loading="lazy"
+              decoding="async"
             />
           ) : null}
           <p className="truncate text-[11px] text-muted-foreground">

@@ -19,11 +19,19 @@ import { SeoRichText } from "@/components/home/seo-rich-text";
 type HomepageSeoProps = {
   locale: Locale;
   dictionary: Dictionary;
+  /** Home LCP path: fewer blocks to shrink HTML (~550KB → much smaller). */
+  compact?: boolean;
 };
 
-export function HomepageSeo({ locale, dictionary }: HomepageSeoProps) {
-  const guides = getRecentPosts(6);
-  const news = getLatestNews(4);
+export function HomepageSeo({
+  locale,
+  dictionary,
+  compact = false,
+}: HomepageSeoProps) {
+  const guides = getRecentPosts(compact ? 0 : 6);
+  const news = getLatestNews(compact ? 0 : 4);
+  const blocks = compact ? homepageSeoBlocks.slice(0, 3) : homepageSeoBlocks;
+  const faqs = compact ? homepageSeoFaqs.slice(0, 3) : homepageSeoFaqs;
 
   return (
     <section className="section-y border-t border-border bg-card" aria-labelledby="homepage-seo-heading">
@@ -41,7 +49,7 @@ export function HomepageSeo({ locale, dictionary }: HomepageSeoProps) {
         </header>
 
         <div className="space-y-14 [font-synthesis:none]">
-          {homepageSeoBlocks.map((block) => (
+          {blocks.map((block) => (
             <article key={block.id} id={block.id}>
               <h2 className="h2-display text-foreground">{block.title[locale]}</h2>
               <div className="mt-5 space-y-4">
@@ -81,6 +89,7 @@ export function HomepageSeo({ locale, dictionary }: HomepageSeoProps) {
           }))}
         />
 
+        {guides.length > 0 ? (
         <section className="mt-16">
           <h2 className="h2-display text-foreground">
             {dictionary.home.guidesTitle}
@@ -122,7 +131,9 @@ export function HomepageSeo({ locale, dictionary }: HomepageSeoProps) {
             ))}
           </ul>
         </section>
+        ) : null}
 
+        {news.length > 0 ? (
         <section className="mt-16">
           <h2 className="h2-display text-foreground">
             {dictionary.home.newsSeoTitle}
@@ -145,11 +156,12 @@ export function HomepageSeo({ locale, dictionary }: HomepageSeoProps) {
             ))}
           </ul>
         </section>
+        ) : null}
 
         <PageFaq
           locale={locale}
           title={dictionary.home.seoFaqTitle}
-          items={homepageSeoFaqs}
+          items={faqs}
         />
       </Container>
     </section>

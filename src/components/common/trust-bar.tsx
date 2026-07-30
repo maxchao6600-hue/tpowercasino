@@ -1,6 +1,4 @@
-"use client";
-
-import { usePathname } from "next/navigation";
+import { headers } from "next/headers";
 import {
   Gamepad2,
   Gift,
@@ -13,6 +11,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import type { Locale } from "@/config/site";
+import { isValidLocale } from "@/config/i18n";
 import { cn } from "@/lib/utils";
 
 type TrustItem = {
@@ -55,18 +54,11 @@ const TRUST_ITEMS: TrustItem[] = [
   },
 ];
 
-function localeFromPath(pathname: string | null): Locale {
-  if (!pathname) return "en";
-  return pathname === "/zh" || pathname.startsWith("/zh/") ? "zh" : "en";
-}
-
 type TrustBarProps = {
+  locale?: Locale;
   className?: string;
 };
 
-/**
- * Premium site-wide trust marquee — sits directly under every page hero.
- */
 function TrustTrack({
   locale,
   ariaHidden,
@@ -84,20 +76,14 @@ function TrustTrack({
         return (
           <div
             key={item.label.en}
-            className="flex shrink-0 items-center gap-2.5 whitespace-nowrap px-1"
+            className="flex shrink-0 items-center gap-2.5 whitespace-nowrap"
           >
-            <Icon
-              className="h-4 w-4 shrink-0 text-primary"
-              aria-hidden="true"
-              strokeWidth={2}
-            />
-            <span className="text-[13px] font-semibold tracking-wide text-white/85 md:text-sm">
+            <div className="flex h-7 w-7 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-primary">
+              <Icon className="h-3.5 w-3.5" aria-hidden="true" strokeWidth={2.25} />
+            </div>
+            <span className="text-[12px] font-semibold tracking-wide text-white/85 md:text-[13px]">
               {item.label[locale]}
             </span>
-            <span
-              className="ml-2 h-1 w-1 rounded-full bg-white/20"
-              aria-hidden="true"
-            />
           </div>
         );
       })}
@@ -105,8 +91,17 @@ function TrustTrack({
   );
 }
 
-export function TrustBar({ className }: TrustBarProps) {
-  const locale = localeFromPath(usePathname());
+/**
+ * Premium site-wide trust marquee — sits directly under every page hero.
+ * Server component (no client hydration cost).
+ */
+export async function TrustBar({ locale: localeProp, className }: TrustBarProps) {
+  let locale: Locale = localeProp ?? "en";
+  if (!localeProp) {
+    const headerList = await headers();
+    const raw = headerList.get("x-locale") ?? "en";
+    locale = isValidLocale(raw) ? raw : "en";
+  }
 
   return (
     <div

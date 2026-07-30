@@ -41,8 +41,11 @@ export function ProviderLogoMark({
           src={logo!}
           alt={name}
           title={name}
-          loading={variant === "marquee" ? "eager" : "lazy"}
+          width={160}
+          height={48}
+          loading="lazy"
           decoding="async"
+          fetchPriority="low"
           onError={() => setFailed(true)}
           className={cn(
             "w-auto object-contain transition-transform duration-300 ease-out",

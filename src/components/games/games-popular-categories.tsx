@@ -71,7 +71,7 @@ export function GamesPopularCategories({
                 title={title}
                 fill
                 className="object-cover transition-[filter] duration-300 group-hover:brightness-110"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 640px) 40vw, (max-width: 1024px) 33vw, 420px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/15" />
               <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">

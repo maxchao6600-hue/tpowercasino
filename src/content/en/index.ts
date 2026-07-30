@@ -149,7 +149,7 @@ export const en = {
   home: {
     metaTitle: "TPOWER Online Casino Malaysia",
     metaDescription:
-      "Play TPOWER Online Casino in Malaysia — premium slots, live casino, and sports betting with fast deposits, secure withdrawals, and mobile gaming.",
+      "Play TPOWER Online Casino in Malaysia: premium slots, live casino, and sports betting with fast deposits, secure withdrawals, and mobile gaming.",
     heroEyebrow: "Malaysia's Trusted Online Casino",
     heroH1: "TPOWER Online Casino",
     heroTitle: "Malaysia's Premium Online Casino Platform",

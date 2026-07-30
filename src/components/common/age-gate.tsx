@@ -18,6 +18,8 @@ type AgeGateProps = {
     confirm: string;
     deny: string;
   };
+  /** Server-known cookie state — avoids post-hydration flash / layout work. */
+  initiallyConfirmed?: boolean;
 };
 
 function hasAgeCookie(): boolean {
@@ -27,12 +29,24 @@ function hasAgeCookie(): boolean {
     .some((part) => part.trim().startsWith(`${COOKIE_NAME}=1`));
 }
 
-export function AgeGate({ locale, labels }: AgeGateProps) {
+/**
+ * Starts closed to avoid SSR/client mismatch and CLS.
+ * Opens after mount only when the age cookie is missing.
+ */
+export function AgeGate({
+  locale,
+  labels,
+  initiallyConfirmed = false,
+}: AgeGateProps) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    setOpen(!hasAgeCookie());
-  }, []);
+    if (initiallyConfirmed || hasAgeCookie()) {
+      setOpen(false);
+      return;
+    }
+    setOpen(true);
+  }, [initiallyConfirmed]);
 
   function confirm() {
     document.cookie = `${COOKIE_NAME}=1; Max-Age=${COOKIE_MAX_AGE}; Path=/; SameSite=Lax`;
