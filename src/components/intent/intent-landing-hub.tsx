@@ -31,7 +31,7 @@ import {
   softwareApplicationSchema,
   webPageSchema,
 } from "@/lib/schema";
-import { JsonLd } from "@/components/common/json-ld";
+import { JsonLd, type JsonLdObject } from "@/components/common/json-ld";
 import { PageHeader } from "@/components/common/page-header";
 import { Container } from "@/components/common/container";
 import { FadeIn } from "@/components/common/fade-in";
@@ -83,7 +83,7 @@ export function IntentLandingHub({
     },
   ];
 
-  const schemas: object[] = [
+  const schemas: JsonLdObject[] = [
     organizationSchema(locale),
     breadcrumbSchema(breadcrumbs),
     webPageSchema({

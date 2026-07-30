@@ -1,8 +1,9 @@
 import { siteConfig, type Locale } from "@/config/site";
+import type { JsonLdObject } from "@/components/common/json-ld";
 import { absoluteUrl } from "@/lib/utils";
 import type { BreadcrumbItem } from "@/types";
 
-export function organizationSchema(locale: Locale) {
+export function organizationSchema(locale: Locale): JsonLdObject {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -38,7 +39,7 @@ export function organizationSchema(locale: Locale) {
   };
 }
 
-export function websiteSchema(locale: Locale) {
+export function websiteSchema(locale: Locale): JsonLdObject {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -58,7 +59,7 @@ export function webPageSchema(input: {
   name: string;
   description: string;
   path: string;
-}) {
+}): JsonLdObject {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -83,7 +84,7 @@ export function aboutPageSchema(input: {
   name: string;
   description: string;
   path: string;
-}) {
+}): JsonLdObject {
   return {
     ...webPageSchema(input),
     "@type": "AboutPage",
@@ -95,7 +96,7 @@ export function contactPageSchema(input: {
   name: string;
   description: string;
   path: string;
-}) {
+}): JsonLdObject {
   return {
     ...webPageSchema(input),
     "@type": "ContactPage",
@@ -117,7 +118,7 @@ export function contactPageSchema(input: {
   };
 }
 
-export function breadcrumbSchema(items: BreadcrumbItem[]) {
+export function breadcrumbSchema(items: BreadcrumbItem[]): JsonLdObject {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -132,7 +133,7 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
 
 export function faqSchema(
   items: Array<{ question: string; answer: string }>,
-) {
+): JsonLdObject {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -156,7 +157,7 @@ export function articleSchema(input: {
   author: string;
   url: string;
   type?: "Article" | "NewsArticle";
-}) {
+}): JsonLdObject {
   return {
     "@context": "https://schema.org",
     "@type": input.type ?? "Article",
@@ -185,7 +186,7 @@ export function collectionPageSchema(input: {
   name: string;
   description: string;
   url: string;
-}) {
+}): JsonLdObject {
   return {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -200,7 +201,7 @@ export function collectionPageSchema(input: {
   };
 }
 
-export function softwareApplicationSchema(locale: Locale) {
+export function softwareApplicationSchema(locale: Locale): JsonLdObject {
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -240,7 +241,7 @@ export function howToSchema(input: {
   name: string;
   description: string;
   steps: Array<{ name: string; text: string; image?: string }>;
-}) {
+}): JsonLdObject {
   return {
     "@context": "https://schema.org",
     "@type": "HowTo",
@@ -262,7 +263,7 @@ export function reviewSchemaList(
     reviewBody: string;
     ratingValue: number;
   }>,
-) {
+): JsonLdObject[] {
   return reviews.map((review) => ({
     "@context": "https://schema.org",
     "@type": "Review",
@@ -291,7 +292,7 @@ export function offerSchema(input: {
   image: string;
   validThrough: string;
   category: string;
-}) {
+}): JsonLdObject {
   return {
     "@context": "https://schema.org",
     "@type": "Offer",
@@ -320,7 +321,7 @@ export function offerItemListSchema(
     validThrough: string;
     category: string;
   }>,
-) {
+): JsonLdObject {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -356,7 +357,7 @@ export function gameSchema(input: {
   providerName: string;
   category: string;
   rtp?: string;
-}) {
+}): JsonLdObject {
   return {
     "@context": "https://schema.org",
     "@type": "Game",
