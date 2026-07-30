@@ -74,15 +74,15 @@ export function GamesHero({
             {dictionary.common.brand}
           </p>
 
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-[3.35rem] lg:leading-[1.08]">
+          <h1 className="h1-display mt-3 text-white">
             {t.heroH1}
           </h1>
 
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-white/72 md:text-lg">
+          <p className="text-lead mt-4 max-w-xl text-white/72">
             {t.heroDescription}
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="df-actions mt-8">
             <Button asChild size="lg">
               <Link href={localePath(locale, "/register")}>
                 <UserPlus className="h-4 w-4" aria-hidden="true" />

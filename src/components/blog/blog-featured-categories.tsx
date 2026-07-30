@@ -29,13 +29,12 @@ export function BlogFeaturedCategories({
           {subtitle}
         </p>
       </div>
-      <div className="overflow-x-auto pb-1">
-        <div className="grid min-w-[960px] grid-cols-3 gap-3 sm:gap-4 md:min-w-0 lg:grid-cols-3">
+      <div className="df-grid-3">
           {blogFeaturedCategories.map((item, index) => (
-            <FadeIn key={item.id} delay={index * 0.03}>
+            <FadeIn key={item.id} delay={index * 0.03} className="h-full">
               <Link
                 href={`${localePath(locale, "/blog")}?q=${encodeURIComponent(item.query)}#guides`}
-                className="group grid grid-cols-[0.9fr_1.1fr] overflow-hidden rounded-[18px] border border-border/80 bg-gradient-to-br from-[#141414] to-[#0c0c0c] shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[4px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[22px]"
+                className="group grid h-full grid-cols-[0.9fr_1.1fr] overflow-hidden rounded-[18px] border border-border/80 bg-gradient-to-br from-[#141414] to-[#0c0c0c] shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[4px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[22px]"
               >
                 <div className="brand-safe-media relative min-h-[100px] overflow-hidden">
                   <Image
@@ -65,7 +64,6 @@ export function BlogFeaturedCategories({
               </Link>
             </FadeIn>
           ))}
-        </div>
       </div>
     </section>
   );

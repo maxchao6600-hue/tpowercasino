@@ -20,24 +20,24 @@ export function GamesShelf({
 
   return (
     <section className="mb-8">
-      <div className="mb-3 flex items-end justify-between gap-3">
-        <h2 className="text-lg font-bold tracking-tight text-foreground md:text-xl">
-          {title}
-        </h2>
+      <div className="mb-3 flex flex-row flex-wrap items-end justify-between gap-2 sm:gap-3">
+        <h2 className="h4-display text-foreground">{title}</h2>
         <span className="text-xs font-semibold text-muted-foreground">
           {games.length} {dictionary.games.titlesLabel}
         </span>
       </div>
-      <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 md:gap-3">
-        {games.map((game, index) => (
-          <GameCard
-            key={game.id}
-            locale={locale}
-            dictionary={dictionary}
-            game={game}
-            priority={index < 6}
-          />
-        ))}
+      <div className="df-scroll">
+        <div className="grid min-w-[860px] grid-cols-6 gap-2.5 md:min-w-0 md:gap-3">
+          {games.map((game, index) => (
+            <GameCard
+              key={game.id}
+              locale={locale}
+              dictionary={dictionary}
+              game={game}
+              priority={index < 6}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -152,7 +152,7 @@ export function IntentLandingHub({
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+          <div className="df-grid-4">
             {content.stats.map((stat, index) => (
               <FadeIn key={stat.label.en} delay={index * 0.04}>
                 <div className="rounded-[18px] border border-border/80 bg-gradient-to-br from-[#161010] to-[#0c0c0c] p-4 text-center shadow-[var(--shadow-soft)] sm:rounded-[22px] sm:p-6">
@@ -171,7 +171,7 @@ export function IntentLandingHub({
             <h2 className="text-center text-lg font-bold text-foreground sm:text-2xl md:text-3xl">
               {content.benefitsTitle[locale]}
             </h2>
-            <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:gap-4 lg:grid-cols-3">
+            <div className="df-grid-3 mt-6 sm:mt-8">
               {content.benefits.map((feature, index) => {
                 const Icon = iconMap[feature.icon];
                 return (
@@ -320,7 +320,7 @@ export function IntentLandingHub({
             <h2 className="text-lg font-bold text-foreground sm:text-2xl md:text-3xl">
               {content.timelineTitle[locale]}
             </h2>
-            <ol className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+            <ol className="df-grid-4 mt-6">
               {content.timeline.map((step, index) => (
                 <li key={step.title.en}>
                   <div className="h-full rounded-[18px] border border-border/80 bg-gradient-to-br from-[#141414] to-[#0c0c0c] p-4 shadow-[var(--shadow-soft)] sm:rounded-[22px] sm:p-5">
@@ -343,7 +343,7 @@ export function IntentLandingHub({
             <h2 className="text-lg font-bold text-foreground sm:text-2xl">
               {content.trustTitle[locale]}
             </h2>
-            <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+            <div className="df-grid-3 mt-6">
               {content.trustItems.map((item) => (
                 <article
                   key={item.title.en}

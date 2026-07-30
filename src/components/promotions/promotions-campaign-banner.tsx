@@ -35,19 +35,19 @@ export function PromotionsCampaignBanner({
                 "radial-gradient(ellipse 55% 70% at 85% 45%, rgba(229,9,20,0.18), transparent 58%), radial-gradient(ellipse 40% 50% at 10% 80%, rgba(212,175,55,0.08), transparent 55%)",
             }}
           />
-          <div className="relative grid items-center gap-8 p-7 md:gap-10 md:p-10 lg:grid-cols-2 lg:gap-12 lg:p-12">
+          <div className="relative grid grid-cols-2 items-center gap-3 p-4 sm:gap-6 sm:p-7 md:gap-10 md:p-10 lg:gap-12 lg:p-12">
             <Reveal>
-              <div className="inline-flex items-center rounded-full border border-primary/35 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+              <div className="inline-flex items-center rounded-full border border-primary/35 bg-primary/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-primary sm:px-3 sm:py-1 sm:text-xs">
                 {t.campaignLabel}
               </div>
-              <h2 className="mt-4 text-2xl font-bold tracking-tight text-white md:text-3xl lg:text-[2.15rem] lg:leading-[1.15]">
+              <h2 className="h2-display mt-2 text-white sm:mt-4">
                 {t.campaignTitle}
               </h2>
-              <p className="mt-3 max-w-xl text-body leading-relaxed text-white/70">
+              <p className="text-lead mt-2 max-w-xl text-white/70 sm:mt-3">
                 {t.campaignDescription}
               </p>
 
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <div className="df-actions mt-4 sm:mt-7">
                 <Button asChild size="lg">
                   <Link href={localePath(locale, "/register")}>
                     <UserPlus className="h-4 w-4" aria-hidden="true" />

@@ -129,7 +129,7 @@ export default async function ProviderDetailPage({ params }: PageProps) {
       />
       <section className="section-y">
         <Container className="max-w-4xl space-y-14">
-          <div className="flex flex-col gap-6 rounded-[24px] border border-border bg-card p-6 shadow-[var(--shadow-soft)] md:flex-row md:items-center md:p-8">
+          <div className="grid grid-cols-[auto_1fr] items-center gap-6 rounded-[24px] border border-border bg-card p-6 shadow-[var(--shadow-soft)] md:p-8">
             <div className="flex h-[60px] w-[120px] items-center justify-center rounded-2xl border border-border bg-muted/40 px-3">
               <ProviderLogoMark
                 name={provider.name}
@@ -161,7 +161,7 @@ export default async function ProviderDetailPage({ params }: PageProps) {
             <h2 className="h2-display text-foreground">
               {dictionary.seo.features}
             </h2>
-            <ul className="mt-6 grid gap-3 md:grid-cols-2">
+            <ul className="df-grid-2 mt-6">
               {provider.features.map((feature) => (
                 <li
                   key={feature.en}
@@ -201,15 +201,17 @@ export default async function ProviderDetailPage({ params }: PageProps) {
                 {dictionary.providers.gamesLibrary.gamesAvailableAfterLogin}
               </p>
             ) : (
-              <div className="mt-8 grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:gap-3">
-                {popular.map((game) => (
-                  <GameCard
-                    key={game.id}
-                    locale={locale}
-                    dictionary={dictionary}
-                    game={game}
-                  />
-                ))}
+              <div className="df-scroll mt-8">
+                <div className="grid min-w-[480px] grid-cols-3 gap-2.5 md:min-w-0 md:gap-3">
+                  {popular.map((game) => (
+                    <GameCard
+                      key={game.id}
+                      locale={locale}
+                      dictionary={dictionary}
+                      game={game}
+                    />
+                  ))}
+                </div>
               </div>
             )}
             {showFullLibraryLink ? (

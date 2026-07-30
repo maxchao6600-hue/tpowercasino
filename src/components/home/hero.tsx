@@ -27,8 +27,8 @@ export function Hero({ locale, dictionary }: HeroProps) {
           : "TPOWER Online Casino premium sports and casino atmosphere"
       }
       actions={
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-          <Button asChild size="lg">
+        <div className="df-actions">
+          <Button asChild size="lg" className="h-9 px-3 text-xs sm:h-11 sm:px-6 sm:text-sm">
             <Link href={localePath(locale, "/register")}>
               {common.ctaPrimary}
             </Link>
@@ -37,7 +37,7 @@ export function Hero({ locale, dictionary }: HeroProps) {
             asChild
             size="lg"
             variant="outline"
-            className="border-white/20 bg-transparent text-white hover:border-white/35 hover:bg-white/10 hover:text-white"
+            className="h-9 border-white/20 bg-transparent px-3 text-xs text-white hover:border-white/35 hover:bg-white/10 hover:text-white sm:h-11 sm:px-6 sm:text-sm"
           >
             <Link href={localePath(locale, "/download")}>
               {common.ctaSecondary}

@@ -20,27 +20,27 @@ export function GamesFeaturedProviders({
 
   return (
     <section className="mt-16 border-t border-border/80 pt-14" aria-labelledby="games-providers-heading">
-      <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-        <div className="max-w-2xl">
+      <div className="mb-8 grid grid-cols-[1fr_auto] items-end gap-3">
+        <div className="max-w-2xl min-w-0">
           <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
             {t.providersEyebrow}
           </p>
           <h2
             id="games-providers-heading"
-            className="mt-3 text-2xl font-bold tracking-tight text-foreground md:text-3xl"
+            className="h2-display mt-3 text-foreground"
           >
             {t.providersTitle}
           </h2>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
+          <p className="text-lead mt-3 text-muted-foreground">
             {t.providersSubtitle}
           </p>
         </div>
-        <Button asChild variant="secondary">
+        <Button asChild variant="secondary" className="shrink-0">
           <Link href={localePath(locale, "/providers")}>{t.providersCta}</Link>
         </Button>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="df-grid-4">
         {items.map((provider) => (
           <Link
             key={provider.id}

@@ -111,12 +111,13 @@ export function TrustBar({ className }: TrustBarProps) {
   return (
     <div
       className={cn(
-        "group/trust relative w-full overflow-hidden border-y border-border/70 bg-[#0b0b0b]",
+        "group/trust relative w-full max-w-full overflow-x-clip border-y border-border/70 bg-[#0b0b0b]",
         className,
       )}
       style={{ height: 52 }}
       role="region"
       aria-label={locale === "zh" ? "平台信任指标" : "Platform trust highlights"}
+      data-qa-scroll="true"
     >
       <div
         className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-[#0b0b0b] to-transparent md:w-12"

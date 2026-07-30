@@ -32,10 +32,9 @@ export function BlogKnowledgeHub({
           {subtitle}
         </p>
       </div>
-      <div className="overflow-x-auto pb-1">
-        <div className="grid min-w-[920px] grid-cols-4 gap-3 sm:gap-4 md:min-w-0">
+      <div className="df-grid-4">
           {blogKnowledgeHub.map((item, index) => (
-            <FadeIn key={item.href} delay={index * 0.03}>
+            <FadeIn key={item.href} delay={index * 0.03} className="h-full">
               <Link
                 href={localePath(locale, item.href)}
                 className="group flex h-full flex-col overflow-hidden rounded-[18px] border border-border/80 bg-card shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[22px]"
@@ -68,7 +67,6 @@ export function BlogKnowledgeHub({
               </Link>
             </FadeIn>
           ))}
-        </div>
       </div>
     </section>
   );
@@ -119,8 +117,7 @@ export function BlogFinalCta({ locale, dictionary }: BlogFinalCtaProps) {
         ]}
       />
       <Container className="mt-4">
-        <div className="overflow-x-auto">
-          <div className="grid min-w-[720px] grid-cols-4 gap-2 sm:gap-3 md:min-w-0">
+        <div className="df-grid-4 mt-4">
             {[
               {
                 en: "Official Download only",
@@ -141,12 +138,11 @@ export function BlogFinalCta({ locale, dictionary }: BlogFinalCtaProps) {
             ].map((item) => (
               <div
                 key={item.en}
-                className="rounded-[14px] border border-primary/20 bg-[#120808] px-3 py-3 text-center text-[10px] font-semibold text-muted-foreground sm:rounded-[16px] sm:text-xs"
+                className="flex h-full items-center justify-center rounded-[14px] border border-primary/20 bg-[#120808] px-3 py-3 text-center text-[10px] font-semibold text-muted-foreground sm:rounded-[16px] sm:text-xs"
               >
                 {item[locale]}
               </div>
             ))}
-          </div>
         </div>
       </Container>
     </section>

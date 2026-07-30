@@ -25,10 +25,10 @@ export function LatestNews({ locale, dictionary }: LatestNewsProps) {
       title={dictionary.home.newsTitle}
       description={dictionary.home.newsSubtitle}
     >
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="df-grid-3">
         {items.map((item, index) => (
           <FadeIn key={item.id} delay={index * 0.05}>
-            <Card className="h-full overflow-hidden">
+            <Card className="flex h-full min-w-0 flex-col overflow-hidden">
               <div className="relative aspect-[16/10] bg-muted">
                 <Image
                   src={item.image}
@@ -46,17 +46,15 @@ export function LatestNews({ locale, dictionary }: LatestNewsProps) {
                     {formatDate(item.publishedAt, locale)}
                   </span>
                 </div>
-                <CardTitle>{item.title[locale]}</CardTitle>
+                <CardTitle className="text-balance">{item.title[locale]}</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-sm text-muted-foreground leading-relaxed">
+              <CardContent className="mt-auto space-y-4">
+                <p className="text-sm leading-relaxed text-muted-foreground">
                   {item.excerpt[locale]}
                 </p>
                 <Button asChild variant="link" className="px-0">
                   <Link href={localePath(locale, `/news/${item.slug}`)}>
-                    {locale === "zh"
-                      ? `阅读：${item.title[locale]}`
-                      : `Read: ${item.title.en}`}
+                    {locale === "zh" ? "阅读全文" : "Read article"}
                   </Link>
                 </Button>
               </CardContent>

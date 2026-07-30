@@ -51,7 +51,7 @@ export default async function AffiliatePage({ params }: PageProps) {
         brand={dictionary.common.brand}
       />
       <Section title={dictionary.affiliate.benefitsTitle}>
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="df-grid-2">
           {dictionary.affiliate.benefits.map((benefit) => (
             <Card key={benefit.title}>
               <CardHeader>

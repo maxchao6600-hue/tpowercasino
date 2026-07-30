@@ -24,10 +24,9 @@ export function NewsTrendingShelf({
         {t.trendingArticles ??
           (locale === "zh" ? "热门文章" : "Trending articles")}
       </h2>
-      <div className="overflow-x-auto pb-1">
-        <div className="grid min-w-[880px] grid-cols-4 gap-3 sm:gap-4 md:min-w-0">
+      <div className="df-grid-4">
           {items.slice(0, 4).map((item, index) => (
-            <FadeIn key={item.id} delay={index * 0.04}>
+            <FadeIn key={item.id} delay={index * 0.04} className="h-full">
               <NewsCard
                 item={item}
                 locale={locale}
@@ -36,7 +35,6 @@ export function NewsTrendingShelf({
               />
             </FadeIn>
           ))}
-        </div>
       </div>
     </section>
   );
@@ -56,10 +54,9 @@ export function NewsEditorsPicks({
         {t.editorsPicks ??
           (locale === "zh" ? "编辑精选" : "Editor's picks")}
       </h2>
-      <div className="overflow-x-auto pb-1">
-        <div className="grid min-w-[920px] grid-cols-2 gap-3 sm:gap-4 md:min-w-0">
+      <div className="df-grid-2">
           {items.slice(0, 4).map((item, index) => (
-            <FadeIn key={item.id} delay={index * 0.04}>
+            <FadeIn key={item.id} delay={index * 0.04} className="h-full">
               <NewsCard
                 item={item}
                 locale={locale}
@@ -68,7 +65,6 @@ export function NewsEditorsPicks({
               />
             </FadeIn>
           ))}
-        </div>
       </div>
     </section>
   );
@@ -88,10 +84,9 @@ export function NewsRecommended({
         {t.recommended ??
           (locale === "zh" ? "为你推荐" : "Recommended for you")}
       </h2>
-      <div className="overflow-x-auto pb-1">
-        <div className="grid min-w-[840px] grid-cols-3 gap-3 sm:gap-5 md:min-w-0">
+      <div className="df-grid-3">
           {items.slice(0, 3).map((item, index) => (
-            <FadeIn key={item.id} delay={index * 0.04}>
+            <FadeIn key={item.id} delay={index * 0.04} className="h-full">
               <NewsCard
                 item={item}
                 locale={locale}
@@ -100,7 +95,6 @@ export function NewsRecommended({
               />
             </FadeIn>
           ))}
-        </div>
       </div>
     </section>
   );

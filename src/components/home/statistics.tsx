@@ -32,7 +32,7 @@ export function Statistics({ dictionary }: StatisticsProps) {
       title={dictionary.home.statsTitle}
       description={dictionary.home.statsSubtitle}
     >
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
+      <div className="df-grid-3">
         {stats.map((stat) => (
           <div
             key={stat.key}

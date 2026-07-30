@@ -102,7 +102,7 @@ export function CategoryGamesPage({
                 <h2 className="h2-display text-foreground">
                   {dictionary.seo.benefits}
                 </h2>
-                <ul className="mt-6 grid gap-3 md:grid-cols-2">
+                <ul className="df-grid-2 mt-6">
                   {seo.benefits.map((benefit) => (
                     <li
                       key={benefit.en}
@@ -146,16 +146,18 @@ export function CategoryGamesPage({
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 md:gap-3">
-              {items.map((game, index) => (
-                <GameCard
-                  key={game.id}
-                  locale={locale}
-                  dictionary={dictionary}
-                  game={game}
-                  priority={index < 12}
-                />
-              ))}
+            <div className="df-scroll">
+              <div className="grid min-w-[960px] grid-cols-6 gap-2.5 md:min-w-0 md:gap-3">
+                {items.map((game, index) => (
+                  <GameCard
+                    key={game.id}
+                    locale={locale}
+                    dictionary={dictionary}
+                    game={game}
+                    priority={index < 12}
+                  />
+                ))}
+              </div>
             </div>
           )}
 

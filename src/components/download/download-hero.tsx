@@ -94,10 +94,10 @@ export function DownloadHero({
 
 function PhoneMockup({ alt, title }: { alt: string; title: string }) {
   return (
-    <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[340px] md:max-w-[390px]">
+    <div className="relative mx-auto w-full max-w-[280px] overflow-hidden sm:max-w-[340px] md:max-w-[390px]">
       {/* Soft red glow behind the device */}
       <div
-        className="pointer-events-none absolute -inset-10 rounded-full bg-[radial-gradient(circle_at_50%_42%,rgba(229,9,20,0.5),transparent_68%)] blur-3xl"
+        className="pointer-events-none absolute inset-0 rounded-full bg-[radial-gradient(circle_at_50%_42%,rgba(229,9,20,0.5),transparent_68%)] blur-3xl"
         aria-hidden="true"
       />
       <div

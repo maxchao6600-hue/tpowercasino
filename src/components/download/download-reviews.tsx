@@ -31,10 +31,9 @@ export function DownloadReviews({ locale, dictionary }: DownloadReviewsProps) {
           : "Install experiences from common Android and iPhone devices.")
       }
     >
-      <div className="overflow-x-auto pb-2">
-        <div className="grid min-w-[1080px] grid-cols-3 gap-3 sm:gap-4 md:min-w-0 md:gap-5">
+      <div className="df-grid-3">
           {downloadReviews.map((review, index) => (
-            <FadeIn key={review.id} delay={index * 0.03}>
+            <FadeIn key={review.id} delay={index * 0.03} className="h-full">
               <article className="group flex h-full flex-col rounded-[20px] border border-border/80 bg-gradient-to-br from-[#161616] via-[#0f0f0f] to-[#1a0a0c] p-4 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[24px] sm:p-5 md:p-6">
                 <div className="flex gap-0.5" aria-label={`${review.rating} / 5`}>
                   {Array.from({ length: 5 }).map((_, starIndex) => (
@@ -65,7 +64,6 @@ export function DownloadReviews({ locale, dictionary }: DownloadReviewsProps) {
               </article>
             </FadeIn>
           ))}
-        </div>
       </div>
     </Section>
   );

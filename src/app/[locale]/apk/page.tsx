@@ -130,13 +130,13 @@ export default async function ApkPage({ params }: PageProps) {
             <p className="mt-6 text-body leading-relaxed text-muted-foreground">
               {dictionary.apk.intro}
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button asChild size="lg">
+            <div className="df-actions mt-8">
+              <Button asChild size="lg" className="h-auto max-w-full px-4 py-3 text-sm">
                 <Link href={localePath(locale, "/contact")}>
                   {dictionary.apk.ctaDownload}
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" variant="outline" className="h-auto max-w-full px-4 py-3 text-sm">
                 <Link href={localePath(locale, "/blog/how-to-download-tpower")}>
                   {dictionary.apk.ctaGuide}
                 </Link>
@@ -144,18 +144,18 @@ export default async function ApkPage({ params }: PageProps) {
             </div>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-3">
-            {steps.map((step, index) => (
-              <Card key={step.title}>
-                <CardHeader>
-                  <p className="text-small font-bold uppercase tracking-[0.14em] text-muted-foreground">
-                    {dictionary.seo.step} {index + 1}
-                  </p>
-                  <CardTitle>{step.title}</CardTitle>
-                  <CardDescription>{step.description}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
+          <div className="df-grid-3">
+              {steps.map((step, index) => (
+                <Card key={step.title} className="h-full">
+                  <CardHeader>
+                    <p className="text-small font-bold uppercase tracking-[0.14em] text-muted-foreground">
+                      {dictionary.seo.step} {index + 1}
+                    </p>
+                    <CardTitle>{step.title}</CardTitle>
+                    <CardDescription>{step.description}</CardDescription>
+                  </CardHeader>
+                </Card>
+              ))}
           </div>
 
           <PageFaq

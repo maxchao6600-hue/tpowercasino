@@ -108,7 +108,7 @@ export default async function PromotionDetailPage({ params }: PageProps) {
         />
         <Container className="relative py-10 md:py-14">
           <Breadcrumbs items={breadcrumbs} />
-          <div className="mt-8 grid items-end gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="mt-8 grid grid-cols-[1.15fr_0.85fr] items-end gap-3 sm:gap-6 lg:gap-8">
             <div>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="accent">
@@ -116,13 +116,13 @@ export default async function PromotionDetailPage({ params }: PageProps) {
                 </Badge>
                 <Badge variant="outline">{promo.badge[locale]}</Badge>
               </div>
-              <h1 className="mt-5 text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+              <h1 className="h1-display mt-3 text-foreground sm:mt-5">
                 {promo.title[locale]}
               </h1>
-              <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
+              <p className="text-lead mt-2 max-w-2xl text-muted-foreground sm:mt-4">
                 {promo.summary[locale]}
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="df-actions mt-4 sm:mt-8">
                 <Button asChild size="lg">
                   <Link href={localePath(locale, "/register")}>
                     <UserPlus className="h-4 w-4" aria-hidden="true" />
@@ -137,30 +137,30 @@ export default async function PromotionDetailPage({ params }: PageProps) {
                 </Button>
               </div>
             </div>
-            <dl className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
-              <div className="rounded-2xl border border-border bg-card/80 p-4">
-                <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+            <dl className="grid grid-cols-3 gap-2 sm:gap-3">
+              <div className="min-w-0 rounded-xl border border-border bg-card/80 p-2 sm:rounded-2xl sm:p-4">
+                <dt className="text-[10px] font-semibold uppercase tracking-wide text-muted-foreground sm:text-xs">
                   {t.bonusAmountLabel}
                 </dt>
-                <dd className="mt-1 font-bold text-foreground">
+                <dd className="mt-0.5 text-sm font-bold text-foreground sm:mt-1 sm:text-base">
                   {promo.bonusAmount[locale]}
                 </dd>
               </div>
-              <div className="rounded-2xl border border-border bg-card/80 p-4">
-                <dt className="flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                  <Wallet className="h-3.5 w-3.5" aria-hidden="true" />
+              <div className="min-w-0 rounded-xl border border-border bg-card/80 p-2 sm:rounded-2xl sm:p-4">
+                <dt className="flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground sm:text-xs">
+                  <Wallet className="h-3 w-3 sm:h-3.5 sm:w-3.5" aria-hidden="true" />
                   {t.minDepositLabel}
                 </dt>
-                <dd className="mt-1 font-bold text-foreground">
+                <dd className="mt-0.5 text-sm font-bold text-foreground sm:mt-1 sm:text-base">
                   {promo.minDeposit[locale]}
                 </dd>
               </div>
-              <div className="rounded-2xl border border-border bg-card/80 p-4">
-                <dt className="flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                  <Clock3 className="h-3.5 w-3.5" aria-hidden="true" />
+              <div className="min-w-0 rounded-xl border border-border bg-card/80 p-2 sm:rounded-2xl sm:p-4">
+                <dt className="flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground sm:text-xs">
+                  <Clock3 className="h-3 w-3 sm:h-3.5 sm:w-3.5" aria-hidden="true" />
                   {dictionary.common.expires}
                 </dt>
-                <dd className="mt-1 font-bold text-foreground">
+                <dd className="mt-0.5 text-sm font-bold text-foreground sm:mt-1 sm:text-base">
                   {formatDate(promo.expiresAt, locale)}
                 </dd>
               </div>
@@ -172,7 +172,7 @@ export default async function PromotionDetailPage({ params }: PageProps) {
       <TrustBar />
 
       <section className="section-y">
-        <Container className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+        <Container className="grid grid-cols-[1.2fr_0.8fr] gap-3 sm:gap-6 lg:gap-10">
           <div className="space-y-10">
             <div className="relative aspect-[16/9] overflow-hidden rounded-[28px] border border-border bg-muted shadow-[0_0_40px_rgba(229,9,20,0.12)]">
               <Image
@@ -267,8 +267,8 @@ export default async function PromotionDetailPage({ params }: PageProps) {
             ) : null}
           </div>
 
-          <aside className="space-y-6 lg:sticky lg:top-28 lg:self-start">
-            <div className="rounded-[28px] border border-border bg-card p-6 shadow-[var(--shadow-soft)]">
+          <aside className="min-w-0 space-y-3 sm:space-y-6 lg:sticky lg:top-28 lg:self-start">
+            <div className="rounded-2xl border border-border bg-card p-3 shadow-[var(--shadow-soft)] sm:rounded-[28px] sm:p-6">
               <h2 className="text-xl font-bold text-foreground">
                 {t.detailRegisterCtaTitle}
               </h2>
@@ -344,7 +344,7 @@ export default async function PromotionDetailPage({ params }: PageProps) {
         <section className="section-y border-t border-border bg-card">
           <Container>
             <h2 className="h2-display text-foreground">{t.detailRelated}</h2>
-            <div className="mt-8 grid gap-6 lg:grid-cols-2">
+            <div className="df-grid-2 mt-8">
               {related.map((item) => (
                 <PromotionCard
                   key={item.id}

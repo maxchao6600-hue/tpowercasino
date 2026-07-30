@@ -78,11 +78,11 @@ export function ProvidersLobby({
   return (
     <div>
       <div className="sticky top-[var(--site-header-offset,4.5rem)] z-20 -mx-1 mb-8 space-y-4 rounded-[22px] border border-border/80 bg-[#0b0b0b]/95 px-4 py-4 backdrop-blur-md md:px-5">
-        <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+        <div className="grid grid-cols-[1fr_minmax(0,28rem)] items-center gap-3">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
             {t.filterLabel}
           </p>
-          <div className="relative w-full max-w-md">
+          <div className="relative w-full">
             <Search
               className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
               aria-hidden="true"
@@ -108,7 +108,7 @@ export function ProvidersLobby({
         </div>
 
         <div
-          className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="df-scroll flex gap-2"
           role="tablist"
           aria-label={t.filterLabel}
         >
@@ -141,7 +141,7 @@ export function ProvidersLobby({
       </div>
 
       {filtered.length > 0 ? (
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="df-grid-3">
           {filtered.map((provider) => (
             <ProviderCard
               key={provider.id}

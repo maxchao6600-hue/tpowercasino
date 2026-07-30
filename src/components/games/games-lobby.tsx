@@ -71,10 +71,11 @@ export function GamesLobby({
 
   return (
     <div>
-      <div className="sticky top-16 z-30 -mx-4 border-y border-border/80 bg-[#0a0a0a]/95 px-4 py-3 backdrop-blur-md md:-mx-6 md:px-6 lg:top-[4.5rem]">
-        <div className="flex flex-col gap-3">
+      <div className="sticky top-16 z-30 max-w-full overflow-x-clip border-y border-border/80 bg-[#0a0a0a]/95 py-3 backdrop-blur-md lg:top-[4.5rem]">
+        <div className="flex min-w-0 flex-col gap-3">
           <div
-            className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="df-scroll flex max-w-full gap-2"
+            data-qa-scroll="true"
             role="navigation"
             aria-label={t.filterLabel}
           >
@@ -113,7 +114,7 @@ export function GamesLobby({
             })}
           </div>
 
-          <div className="flex flex-col gap-2 sm:flex-row">
+          <div className="flex flex-row flex-wrap items-center gap-2">
             <label className="relative min-w-0 flex-1">
               <span className="sr-only">{t.searchPlaceholder}</span>
               <Search
@@ -138,7 +139,7 @@ export function GamesLobby({
               ) : null}
             </label>
 
-            <label className="sm:w-56">
+            <label className="w-56">
               <span className="sr-only">{t.providerFilterLabel}</span>
               <select
                 value={providerId}
@@ -184,16 +185,18 @@ export function GamesLobby({
         </div>
       ) : (
         <>
-          <div className="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 md:gap-3">
-            {visible.map((game, index) => (
-              <GameCard
-                key={game.id}
-                locale={locale}
-                dictionary={dictionary}
-                game={game}
-                priority={index < 12}
-              />
-            ))}
+          <div className="df-scroll mt-4">
+            <div className="grid min-w-[960px] grid-cols-6 gap-2.5 md:min-w-0 md:gap-3">
+              {visible.map((game, index) => (
+                <GameCard
+                  key={game.id}
+                  locale={locale}
+                  dictionary={dictionary}
+                  game={game}
+                  priority={index < 12}
+                />
+              ))}
+            </div>
           </div>
           {visibleCount < filtered.length ? (
             <div className="mt-8 flex justify-center">

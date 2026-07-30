@@ -98,7 +98,7 @@ export function AtmosphereHero({
         <div
           className={cn(
             "grid items-center gap-4 sm:gap-8 md:gap-10",
-            aside ? "grid-cols-[1.15fr_0.85fr] sm:gap-10 lg:gap-12" : "",
+            aside ? "grid-cols-[1.4fr_0.6fr] sm:grid-cols-[1.2fr_0.8fr] lg:grid-cols-[1.15fr_0.85fr] sm:gap-10 lg:gap-12" : "",
             breadcrumbs?.length ? "mt-8" : "",
           )}
         >
@@ -122,18 +122,21 @@ export function AtmosphereHero({
 
             <h1
               className={cn(
-                "text-2xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-[3.35rem] lg:leading-[1.08]",
+                "h1-display text-white",
+                aside && "[font-size:clamp(1.5rem,1.25rem+1.1vw,4rem)] leading-[1.12]",
                 brand || eyebrow ? "mt-2 sm:mt-3" : "",
               )}
             >
               {title}
             </h1>
 
-            <p className="mt-2 max-w-xl text-xs leading-relaxed text-white/72 sm:mt-4 sm:text-base md:text-lg">
+            <p className="text-lead mt-2 max-w-xl text-white/72 sm:mt-4">
               {description}
             </p>
 
-            {actions ? <div className="mt-4 sm:mt-8">{actions}</div> : null}
+            {actions ? (
+              <div className="df-actions mt-4 sm:mt-8">{actions}</div>
+            ) : null}
           </div>
 
           {aside ? <div className="relative min-w-0">{aside}</div> : null}

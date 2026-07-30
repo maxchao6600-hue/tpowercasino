@@ -23,12 +23,11 @@ export function VipHowTo({ locale, dictionary }: VipHowToProps) {
         {vipHowToIntro[locale]}
       </p>
 
-      <div className="mt-10 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:thin]">
-        <ol className="grid min-w-[900px] grid-cols-3 gap-3 sm:gap-4 md:min-w-0">
+      <ol className="df-grid-3 mt-10">
           {vipHowToSteps.map((step, index) => (
             <li
               key={step.id}
-              className="relative rounded-[20px] border border-border/80 bg-card/80 p-4 shadow-[var(--shadow-soft)] backdrop-blur-sm sm:rounded-[24px] sm:p-6"
+              className="relative flex h-full flex-col rounded-[20px] border border-border/80 bg-card/80 p-4 shadow-[var(--shadow-soft)] backdrop-blur-sm sm:rounded-[24px] sm:p-6"
             >
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/15 text-xs font-bold text-primary sm:h-10 sm:w-10 sm:text-sm">
                 {index + 1}
@@ -47,8 +46,7 @@ export function VipHowTo({ locale, dictionary }: VipHowToProps) {
               ) : null}
             </li>
           ))}
-        </ol>
-      </div>
+      </ol>
     </Section>
   );
 }

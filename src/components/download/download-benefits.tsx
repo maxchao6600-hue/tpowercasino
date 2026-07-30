@@ -36,12 +36,11 @@ export function DownloadBenefits({
           : "One-tap lobby, optional alerts, dedicated chrome — same rules, smoother habit.")
       }
     >
-      <div className="overflow-x-auto pb-2">
-        <div className="grid min-w-[960px] grid-cols-4 gap-3 sm:gap-4 md:min-w-0 md:gap-5">
+      <div className="df-grid-4">
           {downloadAppBenefits.map((item, index) => {
             const Icon = downloadIconMap[item.icon];
             return (
-              <FadeIn key={item.id} delay={index * 0.03}>
+              <FadeIn key={item.id} delay={index * 0.03} className="h-full">
                 <article className="group flex h-full flex-col rounded-[20px] border border-border/80 bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a0a0c] p-4 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[24px] sm:p-5">
                   <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/15 text-primary">
                     <Icon className="h-4 w-4" aria-hidden="true" />
@@ -56,7 +55,6 @@ export function DownloadBenefits({
               </FadeIn>
             );
           })}
-        </div>
       </div>
     </Section>
   );

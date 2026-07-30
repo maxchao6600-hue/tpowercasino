@@ -32,12 +32,11 @@ export function DownloadSecurity({
           : "Official sources, lock screens, refuse patched packages — protect every session.")
       }
     >
-      <div className="overflow-x-auto pb-2">
-        <div className="grid min-w-[960px] grid-cols-4 gap-3 sm:gap-4 md:min-w-0 md:gap-5">
+      <div className="df-grid-4">
           {downloadSecurityPoints.map((point, index) => {
             const Icon = downloadIconMap[point.icon];
             return (
-              <FadeIn key={point.id} delay={index * 0.03}>
+              <FadeIn key={point.id} delay={index * 0.03} className="h-full">
                 <article className="group flex h-full flex-col rounded-[20px] border border-border/80 bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a0a0c] p-4 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[24px] sm:p-5">
                   <div className="flex items-start justify-between gap-3">
                     <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/15 text-primary sm:h-11 sm:w-11">
@@ -57,7 +56,6 @@ export function DownloadSecurity({
               </FadeIn>
             );
           })}
-        </div>
       </div>
     </Section>
   );

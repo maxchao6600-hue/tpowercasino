@@ -23,8 +23,7 @@ export function VipExclusivePromos({
       title={t.promosTitle}
       description={t.promosSubtitle}
     >
-      <div className="overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:thin]">
-        <div className="grid min-w-[960px] grid-cols-4 gap-3 sm:gap-4 md:min-w-0 md:gap-4">
+      <div className="df-grid-4">
           {vipExclusivePromotions.map((item, index) => {
             const Icon = vipIconMap[item.icon];
             return (
@@ -43,7 +42,6 @@ export function VipExclusivePromos({
               </FadeIn>
             );
           })}
-        </div>
       </div>
     </Section>
   );

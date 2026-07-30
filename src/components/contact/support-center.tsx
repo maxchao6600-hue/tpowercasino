@@ -291,10 +291,9 @@ export function SupportCenter({
             ? "选择你的 TPOWER 问题类型"
             : "Choose your TPOWER issue type"}
         </h2>
-        <div className="mt-5 overflow-x-auto pb-1">
-          <div className="grid min-w-[920px] grid-cols-4 gap-3 sm:gap-4 md:min-w-0">
+        <div className="mt-5 df-grid-4">
             {supportHubCards.map((card, index) => (
-              <FadeIn key={card.id} delay={index * 0.03}>
+              <FadeIn key={card.id} delay={index * 0.03} className="h-full">
                 <button
                   type="button"
                   onClick={() => focusSupport(card.id, card.faqId)}
@@ -316,7 +315,6 @@ export function SupportCenter({
                 </button>
               </FadeIn>
             ))}
-          </div>
         </div>
       </section>
 
@@ -337,12 +335,11 @@ export function SupportCenter({
             {locale === "zh" ? "最近更新：今天" : "Last Updated: Today"}
           </p>
         </div>
-        <div className="mt-5 overflow-x-auto">
-          <div className="grid min-w-[720px] grid-cols-5 gap-3 md:min-w-0">
+        <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             {supportStatusItems.map((item) => (
               <div
                 key={item.id}
-                className="rounded-[16px] border border-emerald-500/20 bg-black/25 p-3 sm:p-4"
+                className="flex h-full flex-col rounded-[16px] border border-emerald-500/20 bg-black/25 p-3 sm:p-4"
               >
                 <p className="flex items-center gap-2 text-sm font-bold text-foreground">
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.8)]" />
@@ -353,7 +350,6 @@ export function SupportCenter({
                 </p>
               </div>
             ))}
-          </div>
         </div>
       </section>
 
@@ -367,8 +363,7 @@ export function SupportCenter({
             ? "官方 TPOWER 客服通道"
             : "Official TPOWER support channels"}
         </h2>
-        <div className="mt-5 overflow-x-auto pb-1">
-          <div className="grid min-w-[880px] grid-cols-4 gap-3 sm:gap-4 md:min-w-0">
+        <div className="mt-5 df-grid-4">
             {supportMethodCards.map((card, index) => {
               const href =
                 card.href === "whatsapp"
@@ -379,7 +374,7 @@ export function SupportCenter({
               const external =
                 card.href === "whatsapp" || card.href === "email";
               return (
-                <FadeIn key={card.id} delay={index * 0.03}>
+                <FadeIn key={card.id} delay={index * 0.03} className="h-full">
                   <article className="flex h-full flex-col rounded-[18px] border border-border/80 bg-gradient-to-br from-[#141414] to-[#0c0c0c] p-4 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[24px] sm:p-6">
                     <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/12 text-primary">
                       <SupportIcon name={card.icon} className="h-5 w-5" />
@@ -429,25 +424,24 @@ export function SupportCenter({
                 </FadeIn>
               );
             })}
-          </div>
         </div>
       </section>
 
       {/* Form + Company */}
       <section
         id="support-form"
-        className="grid grid-cols-[0.95fr_1.05fr] items-start gap-4 sm:gap-6 lg:gap-8"
+        className="grid min-w-0 grid-cols-[0.95fr_1.05fr] items-start gap-2 sm:gap-6 lg:gap-8"
       >
-        <aside className="rounded-[22px] border border-border/80 bg-gradient-to-b from-[#141414] to-[#0d0d0d] p-4 shadow-[var(--shadow-soft)] sm:rounded-[28px] sm:p-6">
+        <aside className="min-w-0 overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-b from-[#141414] to-[#0d0d0d] p-3 shadow-[var(--shadow-soft)] sm:rounded-[28px] sm:p-6">
           <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary sm:text-xs">
             {locale === "zh" ? "公司信息" : "Company information"}
           </p>
-          <h2 className="mt-2 text-base font-bold text-foreground sm:text-xl">
+          <h2 className="mt-2 text-sm font-bold text-foreground sm:text-xl">
             {locale === "zh"
               ? "TPOWER 马来西亚支持办公室"
               : "TPOWER Malaysia support office"}
           </h2>
-          <ul className="mt-5 space-y-4 text-[11px] sm:text-sm">
+          <ul className="mt-4 space-y-3 text-[10px] sm:mt-5 sm:space-y-4 sm:text-sm">
             {[
               {
                 icon: MapPin,
@@ -507,7 +501,7 @@ export function SupportCenter({
           </ul>
         </aside>
 
-        <div className="rounded-[22px] border border-border/80 bg-gradient-to-br from-[#161010] to-[#0c0c0c] p-4 shadow-[var(--shadow-soft)] sm:rounded-[28px] sm:p-7">
+        <div className="min-w-0 overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-br from-[#161010] to-[#0c0c0c] p-3 shadow-[var(--shadow-soft)] sm:rounded-[28px] sm:p-7">
           <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary sm:text-xs">
             {locale === "zh" ? "官方支持表单" : "Official support form"}
           </p>
@@ -732,10 +726,9 @@ export function SupportCenter({
             ? "热门 TPOWER 攻略"
             : "Popular TPOWER Guides"}
         </h2>
-        <div className="mt-5 overflow-x-auto pb-1">
-          <div className="grid min-w-[920px] grid-cols-3 gap-3 sm:gap-4 md:min-w-0 lg:grid-cols-3">
+        <div className="mt-5 df-grid-3">
             {supportGuideCards.map((guide, index) => (
-              <FadeIn key={guide.slug} delay={index * 0.03}>
+              <FadeIn key={guide.slug} delay={index * 0.03} className="h-full">
                 <Link
                   href={localePath(locale, `/blog/${guide.slug}`)}
                   className="group flex h-full flex-col overflow-hidden rounded-[18px] border border-border/80 bg-card shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[22px]"
@@ -768,7 +761,6 @@ export function SupportCenter({
                 </Link>
               </FadeIn>
             ))}
-          </div>
         </div>
       </section>
 
@@ -782,10 +774,10 @@ export function SupportCenter({
             ? "从提交到解决的四步"
             : "Four steps from request to resolution"}
         </h2>
-        <ol className="mt-6 grid grid-cols-4 gap-3 sm:gap-4">
+        <ol className="df-grid-4 mt-6">
           {supportTimeline.map((step, index) => (
-            <li key={step.id} className="relative">
-              <div className="rounded-[18px] border border-border/80 bg-gradient-to-br from-[#141414] to-[#0c0c0c] p-3 shadow-[var(--shadow-soft)] sm:rounded-[22px] sm:p-5">
+            <li key={step.id} className="relative min-w-0">
+              <div className="h-full rounded-[18px] border border-border/80 bg-gradient-to-br from-[#141414] to-[#0c0c0c] p-3 shadow-[var(--shadow-soft)] sm:rounded-[22px] sm:p-5">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full border border-primary/40 bg-primary/15 text-xs font-bold text-primary">
                   {index + 1}
                 </span>
@@ -798,7 +790,7 @@ export function SupportCenter({
               </div>
               {index < supportTimeline.length - 1 ? (
                 <div
-                  className="pointer-events-none absolute -right-2 top-1/2 hidden h-px w-4 -translate-y-1/2 bg-primary/40 sm:block lg:w-6"
+                  className="pointer-events-none absolute -right-2 top-1/2 hidden h-px w-4 -translate-y-1/2 bg-primary/40 lg:block lg:w-6"
                   aria-hidden="true"
                 />
               ) : null}
@@ -817,11 +809,10 @@ export function SupportCenter({
             ? "为什么选择官方 TPOWER 支持"
             : "Why use official TPOWER support"}
         </h2>
-        <div className="mt-5 overflow-x-auto pb-1">
-          <div className="grid min-w-[900px] grid-cols-3 gap-3 sm:gap-4 md:min-w-0">
+        <div className="mt-5 df-grid-3">
             {supportTrustCards.map((card, index) => (
-              <FadeIn key={card.id} delay={index * 0.03}>
-                <article className="rounded-[18px] border border-border/80 bg-[#101010] p-4 shadow-[var(--shadow-soft)] sm:rounded-[22px] sm:p-5">
+              <FadeIn key={card.id} delay={index * 0.03} className="h-full">
+                <article className="flex h-full flex-col rounded-[18px] border border-border/80 bg-[#101010] p-4 shadow-[var(--shadow-soft)] sm:rounded-[22px] sm:p-5">
                   <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/12 text-primary">
                     <SupportIcon name={card.icon} className="h-5 w-5" />
                   </span>
@@ -834,7 +825,6 @@ export function SupportCenter({
                 </article>
               </FadeIn>
             ))}
-          </div>
         </div>
       </section>
 

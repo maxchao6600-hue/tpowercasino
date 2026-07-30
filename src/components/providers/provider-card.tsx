@@ -100,11 +100,11 @@ export function ProviderCard({
           </ul>
         </div>
 
-        <div className="mt-6 flex w-full min-w-0 flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <div className="df-actions mt-6 w-full min-w-0">
           <Button
             asChild
             size="lg"
-            className="h-12 min-h-12 w-full min-w-0 flex-1 basis-full whitespace-normal px-4 text-sm leading-snug sm:basis-[calc(50%-0.375rem)] sm:min-w-[9.5rem]"
+            className="h-12 min-h-12 min-w-0 flex-1 whitespace-normal px-4 text-sm leading-snug sm:min-w-[9.5rem]"
           >
             <Link
               href={primaryHref}
@@ -118,7 +118,7 @@ export function ProviderCard({
             asChild
             variant="outline"
             size="lg"
-            className="h-12 min-h-12 w-full min-w-0 flex-1 basis-full whitespace-normal px-4 text-sm leading-snug sm:basis-[calc(50%-0.375rem)] sm:min-w-[9.5rem]"
+            className="h-12 min-h-12 min-w-0 flex-1 whitespace-normal px-4 text-sm leading-snug sm:min-w-[9.5rem]"
           >
             <Link
               href={detailHref}

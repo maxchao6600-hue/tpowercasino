@@ -74,10 +74,10 @@ export default async function LoginPage({ params }: PageProps) {
         brand={dictionary.common.brand}
       />
       <section className="section-y">
-        <Container className="grid gap-10 lg:grid-cols-2">
-          <div className="rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-soft)]">
+        <Container className="grid grid-cols-2 gap-3 sm:gap-6 lg:gap-10">
+          <div className="min-w-0 rounded-2xl border border-border bg-card p-4 shadow-[var(--shadow-soft)] sm:rounded-3xl sm:p-8">
             <Logo href={localePath(locale)} />
-            <h2 className="mt-8 text-2xl font-bold tracking-tight text-foreground">
+            <h2 className="h2-display mt-4 text-foreground sm:mt-8">
               {dictionary.login.headline}
             </h2>
             <ul className="mt-6 space-y-3">
@@ -106,11 +106,11 @@ export default async function LoginPage({ params }: PageProps) {
               </Link>
             </p>
           </div>
-          <div className="space-y-6">
+          <div className="min-w-0 space-y-3 sm:space-y-6">
             <Accordion
               type="single"
               collapsible
-              className="rounded-2xl border border-border bg-card px-5 shadow-[var(--shadow-soft)]"
+              className="rounded-xl border border-border bg-card px-3 shadow-[var(--shadow-soft)] sm:rounded-2xl sm:px-5"
             >
               {faqs.map((item) => (
                 <AccordionItem key={item.id} value={item.id}>
@@ -131,7 +131,7 @@ export default async function LoginPage({ params }: PageProps) {
               </Link>
             </div>
           </div>
-          <div className="lg:col-span-2">
+          <div className="col-span-2">
             <RelatedLinks
               locale={locale}
               title={dictionary.seo.relatedPages}

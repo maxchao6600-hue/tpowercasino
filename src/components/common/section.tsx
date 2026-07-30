@@ -28,18 +28,18 @@ export function Section({
         {(eyebrow || title || description) && (
           <div
             className={cn(
-              "mb-10 max-w-3xl md:mb-12 xl:mb-16",
+              "mb-6 max-w-3xl sm:mb-8 md:mb-12 xl:mb-16",
               align === "center" && "mx-auto text-center",
             )}
           >
             {eyebrow ? (
-              <p className="mb-4 text-small font-semibold uppercase tracking-[0.18em] text-primary">
+              <p className="mb-3 text-small font-semibold uppercase tracking-[0.18em] text-primary sm:mb-4">
                 {eyebrow}
               </p>
             ) : null}
             {title ? <h2 className="h2-display text-foreground">{title}</h2> : null}
             {description ? (
-              <p className="mt-4 text-body-lg text-muted-foreground md:mt-5">
+              <p className="mt-3 text-body-lg text-muted-foreground sm:mt-4 md:mt-5">
                 {description}
               </p>
             ) : null}

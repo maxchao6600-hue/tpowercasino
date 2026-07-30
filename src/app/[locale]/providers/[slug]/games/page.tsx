@@ -140,7 +140,7 @@ export default async function ProviderGamesPage({ params }: PageProps) {
 
       <section className="section-y pt-8 md:pt-10">
         <Container>
-          <div className="mb-8 flex flex-col gap-5 rounded-[24px] border border-border bg-card p-5 shadow-[var(--shadow-soft)] md:flex-row md:items-center md:justify-between md:p-7">
+          <div className="mb-8 grid grid-cols-[1fr_auto] items-center gap-5 rounded-[24px] border border-border bg-card p-5 shadow-[var(--shadow-soft)] md:p-7">
             <div className="flex items-center gap-4">
               <div className="flex h-[60px] w-[120px] items-center justify-center rounded-2xl border border-border bg-muted/40 px-3">
                 <ProviderLogoMark

@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-[15px] font-semibold transition-all duration-[250ms] ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-normal rounded-2xl text-[15px] font-semibold transition-all duration-[250ms] ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 sm:whitespace-nowrap",
   {
     variants: {
       variant: {
@@ -16,7 +16,7 @@ const buttonVariants = cva(
           "border border-border bg-surface text-foreground hover:-translate-y-1 hover:border-primary hover:shadow-[var(--shadow-soft)] active:translate-y-0",
         ghost:
           "bg-transparent text-foreground underline-offset-4 hover:underline",
-        link: "rounded-none bg-transparent px-0 text-primary underline-offset-4 hover:underline",
+        link: "h-auto max-w-full whitespace-normal rounded-none bg-transparent px-0 text-left text-primary underline-offset-4 hover:underline",
       },
       size: {
         default: "h-[52px] px-8",

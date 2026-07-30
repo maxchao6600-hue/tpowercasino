@@ -45,19 +45,19 @@ export function PromotionsPlaySmarterBanner({
                 "radial-gradient(ellipse 50% 60% at 80% 35%, rgba(229,9,20,0.2), transparent 58%), radial-gradient(ellipse 45% 50% at 15% 70%, rgba(212,175,55,0.1), transparent 55%)",
             }}
           />
-          <div className="relative grid items-center gap-8 p-7 md:gap-10 md:p-10 lg:grid-cols-2 lg:gap-12 lg:p-12">
+          <div className="relative grid grid-cols-2 items-center gap-3 p-4 sm:gap-6 sm:p-7 md:gap-10 md:p-10 lg:gap-12 lg:p-12">
             <Reveal>
               <h2
                 id="play-smarter-heading"
-                className="text-2xl font-bold tracking-tight text-white md:text-3xl lg:text-[2.15rem] lg:leading-[1.15]"
+                className="h2-display text-white"
               >
                 {t.playSmarterTitle}
               </h2>
-              <p className="mt-3 max-w-xl text-body leading-relaxed text-white/70">
+              <p className="text-lead mt-2 max-w-xl text-white/70 sm:mt-3">
                 {t.playSmarterDescription}
               </p>
 
-              <div className="mt-7 grid gap-3 sm:grid-cols-2">
+              <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-7 sm:gap-3">
                 {t.playSmarterHighlights.map((item, index) => {
                   const Icon = highlightIcons[index] ?? Check;
                   return (
@@ -76,7 +76,7 @@ export function PromotionsPlaySmarterBanner({
                 })}
               </div>
 
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <div className="df-actions mt-4 sm:mt-7">
                 <Button asChild size="lg">
                   <Link href={localePath(locale, "/register")}>
                     <UserPlus className="h-4 w-4" aria-hidden="true" />

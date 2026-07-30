@@ -88,7 +88,7 @@ export function HomepageSeo({ locale, dictionary }: HomepageSeoProps) {
           <p className="mt-3 text-body text-muted-foreground">
             {dictionary.home.guidesSubtitle}
           </p>
-          <ul className="mt-8 grid gap-4 md:grid-cols-2">
+          <ul className="mt-8 df-grid-2">
             {guides.map((post) => (
               <li key={post.id}>
                 <Link
@@ -132,7 +132,7 @@ export function HomepageSeo({ locale, dictionary }: HomepageSeoProps) {
               <li key={item.id}>
                 <Link
                   href={localePath(locale, `/news/${item.slug}`)}
-                  className="flex flex-col gap-1 rounded-[24px] border border-border bg-card p-5 shadow-[var(--shadow-soft)] transition-colors hover:border-foreground/15 md:flex-row md:items-center md:justify-between"
+                  className="flex flex-row flex-wrap items-center justify-between gap-1 rounded-[24px] border border-border bg-card p-5 shadow-[var(--shadow-soft)] transition-colors hover:border-foreground/15"
                 >
                   <span className="font-bold text-foreground">
                     {item.title[locale]}

@@ -81,15 +81,15 @@ export default async function RegisterPage({ params }: PageProps) {
           <h2 className="text-2xl font-bold tracking-tight text-foreground">
             {dictionary.register.headline}
           </h2>
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
-            {dictionary.register.benefits.map((benefit) => (
-              <Card key={benefit.title}>
-                <CardHeader>
-                  <CardTitle>{benefit.title}</CardTitle>
-                  <CardDescription>{benefit.description}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
+          <div className="df-grid-3 mt-8">
+              {dictionary.register.benefits.map((benefit) => (
+                <Card key={benefit.title} className="h-full">
+                  <CardHeader>
+                    <CardTitle>{benefit.title}</CardTitle>
+                    <CardDescription>{benefit.description}</CardDescription>
+                  </CardHeader>
+                </Card>
+              ))}
           </div>
           <Button asChild size="lg" className="mt-10">
             <Link href={localePath(locale, "/contact")}>

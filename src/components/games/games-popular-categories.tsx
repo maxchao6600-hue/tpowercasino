@@ -44,16 +44,16 @@ export function GamesPopularCategories({
         </p>
         <h2
           id="games-categories-heading"
-          className="mt-3 text-2xl font-bold tracking-tight text-foreground md:text-3xl"
+          className="h2-display mt-3 text-foreground"
         >
           {t.popularCategoriesTitle}
         </h2>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
+        <p className="text-lead mt-3 text-muted-foreground">
           {t.popularCategoriesSubtitle}
         </p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="df-grid-3">
         {CATEGORY_LINKS.map((item) => {
           const image = bannerFor(item.category);
           const title = t.categories[item.category];

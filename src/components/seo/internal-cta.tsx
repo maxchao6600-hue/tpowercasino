@@ -26,7 +26,7 @@ export function InternalCta({
     <aside className="mt-16 rounded-[24px] border border-border bg-[#111111] px-8 py-10 text-white shadow-[var(--shadow-soft)] md:px-10">
       <h2 className="h3-display text-white">{title}</h2>
       <p className="mt-4 max-w-2xl text-body text-white/75">{description}</p>
-      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+      <div className="df-actions mt-8">
         <Button asChild size="lg">
           <Link href={localePath(locale, primaryHref)}>{primaryLabel}</Link>
         </Button>

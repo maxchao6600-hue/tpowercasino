@@ -38,10 +38,9 @@ export function DownloadNews({ locale, dictionary }: DownloadNewsProps) {
           : "Performance, VIP, payments, and live tables — worth following after install.")
       }
     >
-      <div className="overflow-x-auto pb-2">
-        <div className="grid min-w-[920px] grid-cols-4 gap-3 sm:gap-4 md:min-w-0 md:gap-5">
+      <div className="df-grid-4">
           {items.map((item, index) => (
-            <FadeIn key={item.slug} delay={index * 0.03}>
+            <FadeIn key={item.slug} delay={index * 0.03} className="h-full">
               <Link
                 href={localePath(locale, `/news/${item.slug}`)}
                 className="group flex h-full flex-col overflow-hidden rounded-[20px] border border-border/80 bg-card shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[24px]"
@@ -83,7 +82,6 @@ export function DownloadNews({ locale, dictionary }: DownloadNewsProps) {
               </Link>
             </FadeIn>
           ))}
-        </div>
       </div>
     </Section>
   );

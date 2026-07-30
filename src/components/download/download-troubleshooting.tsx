@@ -34,10 +34,9 @@ export function DownloadTroubleshooting({
           : "Common errors, why they happen, and concrete fixes.")
       }
     >
-      <div className="overflow-x-auto pb-2">
-        <div className="grid min-w-[960px] grid-cols-3 gap-3 sm:gap-4 md:min-w-0 md:gap-5">
+      <div className="df-grid-3">
           {downloadTroubleshooting.map((item, index) => (
-            <FadeIn key={item.id} delay={index * 0.03}>
+            <FadeIn key={item.id} delay={index * 0.03} className="h-full">
               <article className="group flex h-full flex-col rounded-[20px] border border-border/80 bg-gradient-to-br from-[#141414] to-[#0c0c0c] p-4 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[24px] sm:p-5">
                 <div className="flex items-center gap-3">
                   <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/15 text-primary">
@@ -61,7 +60,6 @@ export function DownloadTroubleshooting({
               </article>
             </FadeIn>
           ))}
-        </div>
       </div>
     </Section>
   );

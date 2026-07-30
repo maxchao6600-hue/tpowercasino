@@ -34,12 +34,11 @@ export function DownloadPerformance({
           : "Lobby speed, adaptive streams, battery, and cashier stability — built for mid-range devices.")
       }
     >
-      <div className="overflow-x-auto pb-2">
-        <div className="grid min-w-[900px] grid-cols-3 gap-3 sm:gap-4 md:min-w-0 md:grid-cols-3 lg:grid-cols-3">
+      <div className="df-grid-3">
           {downloadPerformancePoints.map((point, index) => {
             const Icon = downloadIconMap[point.icon];
             return (
-              <FadeIn key={point.id} delay={index * 0.03}>
+              <FadeIn key={point.id} delay={index * 0.03} className="h-full">
                 <article className="group flex h-full flex-col rounded-[20px] border border-border/80 bg-gradient-to-br from-[#121212] via-[#0e0e0e] to-[#1a0a0c] p-4 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[24px] sm:p-5 md:p-6">
                   <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/15 text-primary sm:h-12 sm:w-12">
                     <Icon className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
@@ -54,7 +53,6 @@ export function DownloadPerformance({
               </FadeIn>
             );
           })}
-        </div>
       </div>
     </Section>
   );

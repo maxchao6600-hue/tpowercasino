@@ -32,7 +32,7 @@ export function PromotionGrid({
       title={showHeader ? dictionary.home.promotionsTitle : undefined}
       description={showHeader ? dictionary.home.promotionsSubtitle : undefined}
     >
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div className="df-grid-3">
         {items.map((promo, index) => (
           <FadeIn key={promo.id} delay={index * 0.05}>
             <Card className="group h-full overflow-hidden">

@@ -20,7 +20,7 @@ export function ProviderThinGamesCta({
       <p className="mx-auto max-w-xl text-lg font-semibold leading-relaxed text-foreground md:text-xl">
         {t.exploreMoreGamesCta}
       </p>
-      <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <div className="df-actions mt-8 justify-center">
         <Button asChild size="lg">
           <Link href={localePath(locale, "/register")}>
             {dictionary.common.ctaRegister}

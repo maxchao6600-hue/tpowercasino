@@ -52,16 +52,16 @@ export function GamesWhyPlay({ locale, dictionary }: GamesWhyPlayProps) {
         </p>
         <h2
           id="games-why-heading"
-          className="mt-3 text-2xl font-bold tracking-tight text-foreground md:text-3xl"
+          className="h2-display mt-3 text-foreground"
         >
           {t.whyTitle}
         </h2>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
+        <p className="text-lead mt-3 text-muted-foreground">
           {t.whySubtitle}
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="df-grid-4">
         {stats.map((stat) => {
           const Icon = stat.icon;
           return (

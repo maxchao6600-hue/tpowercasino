@@ -17,12 +17,11 @@ export function NewsCategoryFilters({
   query = "",
 }: NewsCategoryFiltersProps) {
   return (
-    <div className="overflow-x-auto pb-1">
-      <div
-        className="flex min-w-[720px] flex-wrap gap-2 sm:min-w-0 md:gap-2.5"
-        role="navigation"
-        aria-label={locale === "zh" ? "新闻分类" : "News categories"}
-      >
+    <div
+      className="flex flex-wrap gap-2 md:gap-2.5"
+      role="navigation"
+      aria-label={locale === "zh" ? "新闻分类" : "News categories"}
+    >
         {NEWS_CATEGORY_FILTERS.map((filter) => {
           const params = new URLSearchParams();
           if (filter.key !== "all") params.set("category", filter.key);
@@ -46,7 +45,6 @@ export function NewsCategoryFilters({
             </Link>
           );
         })}
-      </div>
     </div>
   );
 }

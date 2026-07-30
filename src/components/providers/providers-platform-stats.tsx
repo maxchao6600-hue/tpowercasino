@@ -148,16 +148,16 @@ export function ProvidersPlatformStats({
           </p>
           <h2
             id="providers-platform-stats-heading"
-            className="mt-3 text-2xl font-bold tracking-tight text-foreground md:text-3xl"
+            className="h2-display mt-3 text-foreground"
           >
             {t.platformStatsTitle}
           </h2>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
+          <p className="text-lead mt-3 text-muted-foreground">
             {t.platformStatsSubtitle}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="df-grid-4">
           {stats.map((stat, index) => (
             <article
               key={stat.key}

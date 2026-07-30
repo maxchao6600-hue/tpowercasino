@@ -61,17 +61,17 @@ export function PremiumCta({
           ) : null}
           <h2
             className={cn(
-              "text-lg font-bold tracking-tight text-white sm:text-2xl md:text-3xl lg:text-[2rem] lg:leading-tight",
+              "h2-display text-white",
               eyebrow ? "mt-2 sm:mt-3" : "",
             )}
           >
             {title}
           </h2>
-          <p className="mt-2 max-w-xl text-xs leading-relaxed text-white/72 sm:mt-3 sm:text-sm md:text-base">
+          <p className="text-lead mt-2 max-w-xl text-white/72 sm:mt-3">
             {description}
           </p>
           {beforeActions}
-          <div className="mt-4 flex flex-row flex-wrap gap-2 sm:mt-7 sm:gap-3">
+          <div className="df-actions mt-4 sm:mt-7">
             {actions.map((action) => (
               <Button
                 key={`${action.href}-${action.label}`}

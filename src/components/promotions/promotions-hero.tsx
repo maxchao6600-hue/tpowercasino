@@ -35,7 +35,7 @@ export function PromotionsHero({
       imageAlt={t.heroImageAlt}
       actions={
         <div className="space-y-6">
-          <div className="flex flex-col gap-3 sm:flex-row">
+          <div className="df-actions">
             <Button asChild size="lg">
               <Link href={localePath(locale, "/register")}>
                 <UserPlus className="h-4 w-4" aria-hidden="true" />

@@ -19,13 +19,13 @@ export function Footer({ locale, dictionary }: FooterProps) {
   return (
     <footer className="border-t border-border bg-surface">
       <Container className="section-y">
-        <div className="grid gap-14 md:grid-cols-2 xl:grid-cols-12 xl:gap-16">
-          <div className="xl:col-span-4">
+        <div className="grid min-w-0 grid-cols-12 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
+          <div className="col-span-4 min-w-0">
             <Logo href={localePath(locale)} />
-            <p className="mt-6 max-w-sm text-body text-muted-foreground">
+            <p className="mt-4 max-w-sm text-body text-muted-foreground sm:mt-6">
               {dictionary.footer.tagline}
             </p>
-            <div className="mt-6 space-y-2 text-small">
+            <div className="mt-4 space-y-2 text-small sm:mt-6">
               <p className="font-medium text-foreground">
                 {siteConfig.address[locale]}
               </p>
@@ -37,7 +37,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
               </a>
               <p className="text-muted-foreground">{siteConfig.phone}</p>
             </div>
-            <div className="mt-8 flex items-center gap-3">
+            <div className="mt-5 flex items-center gap-2 sm:mt-8 sm:gap-3">
               <SocialLink href={siteConfig.social.facebook} label="Facebook">
                 <FacebookIcon />
               </SocialLink>
@@ -75,11 +75,11 @@ export function Footer({ locale, dictionary }: FooterProps) {
           />
         </div>
 
-        <div className="mt-16 flex flex-col gap-4 border-t border-border pt-8 text-small text-muted-foreground md:flex-row md:items-center md:justify-between">
+        <div className="mt-8 flex flex-row flex-wrap items-center justify-between gap-3 border-t border-border pt-6 text-small text-muted-foreground sm:mt-12 sm:gap-4 sm:pt-8 lg:mt-16">
           <p>
             © {year} {siteConfig.name}. {dictionary.footer.rights}
           </p>
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
             <Link
               href={localePath(locale, "/responsible-gaming")}
               className="hover:text-foreground"
@@ -124,14 +124,14 @@ function FooterColumn({
   items: readonly { key: string; href: string; label: Record<Locale, string> }[];
 }) {
   return (
-    <div className="xl:col-span-2">
-      <p className="text-sm font-bold text-foreground">{title}</p>
-      <ul className="mt-4 space-y-2.5">
+    <div className="col-span-2 min-w-0 overflow-hidden">
+      <p className="text-[10px] font-bold text-foreground sm:text-sm">{title}</p>
+      <ul className="mt-2 space-y-1.5 sm:mt-4 sm:space-y-2.5">
         {items.map((item) => (
-          <li key={item.key}>
+          <li key={item.key} className="min-w-0">
             <Link
               href={localePath(locale, item.href)}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="block break-words text-[10px] leading-snug text-muted-foreground transition-colors hover:text-foreground sm:text-sm"
             >
               {item.label[locale]}
             </Link>

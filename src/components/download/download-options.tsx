@@ -38,9 +38,8 @@ export async function DownloadOptions({
           : "Android APK, iOS guidance, and desktop QR — three official paths in one row.")
       }
     >
-      <div className="overflow-x-auto pb-2">
-        <div className="grid min-w-[860px] grid-cols-3 gap-3 sm:gap-5 md:min-w-0 md:gap-6">
-          <FadeIn>
+      <div className="df-grid-3">
+          <FadeIn className="h-full">
             <article className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-br from-[#1a0a0c] via-[#121212] to-[#0c0c0c] p-4 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[26px] sm:p-5 md:p-6">
               <div className="flex items-center justify-between gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/15 text-primary sm:h-12 sm:w-12">
@@ -93,7 +92,7 @@ export async function DownloadOptions({
             </article>
           </FadeIn>
 
-          <FadeIn delay={0.04}>
+          <FadeIn delay={0.04} className="h-full">
             <article className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-br from-[#141418] via-[#101014] to-[#0c0c0c] p-4 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[26px] sm:p-5 md:p-6">
               <div className="flex items-center justify-between gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 text-white sm:h-12 sm:w-12">
@@ -119,7 +118,7 @@ export async function DownloadOptions({
             </article>
           </FadeIn>
 
-          <FadeIn delay={0.08}>
+          <FadeIn delay={0.08} className="h-full">
             <article className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-br from-[#121212] via-[#0f0f0f] to-[#1a0a0c] p-4 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[26px] sm:p-5 md:p-6">
               <div className="flex items-center justify-between gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/15 text-primary sm:h-12 sm:w-12">
@@ -145,7 +144,6 @@ export async function DownloadOptions({
               </div>
             </article>
           </FadeIn>
-        </div>
       </div>
     </Section>
   );

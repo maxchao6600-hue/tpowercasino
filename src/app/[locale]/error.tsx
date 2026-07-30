@@ -26,7 +26,7 @@ export default function LocaleError({ reset }: ErrorProps) {
       <p className="mt-4 max-w-md text-body text-muted-foreground">
         {dictionary.common.errorBody}
       </p>
-      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+      <div className="df-actions mt-8">
         <Button type="button" size="lg" onClick={reset}>
           {dictionary.common.errorRetry}
         </Button>

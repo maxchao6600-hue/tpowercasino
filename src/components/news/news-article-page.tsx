@@ -270,8 +270,7 @@ export function NewsArticlePageContent({
                 {t.relatedArticles ??
                   (locale === "zh" ? "相关文章" : "Related articles")}
               </h2>
-              <div className="overflow-x-auto pb-1">
-                <div className="grid min-w-[840px] grid-cols-3 gap-3 sm:gap-5 md:min-w-0">
+              <div className="df-grid-3">
                   {related.map((entry) => (
                     <NewsCard
                       key={entry.id}
@@ -280,7 +279,6 @@ export function NewsArticlePageContent({
                       dictionary={dictionary}
                     />
                   ))}
-                </div>
               </div>
             </section>
           ) : null}
@@ -291,8 +289,7 @@ export function NewsArticlePageContent({
                 {t.recommended ??
                   (locale === "zh" ? "为你推荐" : "Recommended for you")}
               </h2>
-              <div className="overflow-x-auto pb-1">
-                <div className="grid min-w-[840px] grid-cols-3 gap-3 sm:gap-5 md:min-w-0">
+              <div className="df-grid-3">
                   {recommended.map((entry) => (
                     <NewsCard
                       key={entry.id}
@@ -302,7 +299,6 @@ export function NewsArticlePageContent({
                       variant="large"
                     />
                   ))}
-                </div>
               </div>
             </section>
           ) : null}

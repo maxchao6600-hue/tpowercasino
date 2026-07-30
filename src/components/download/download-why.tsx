@@ -38,10 +38,9 @@ export function DownloadWhy({ locale, dictionary }: DownloadWhyProps) {
           : "Eight reasons: official install, local payments, full lobby, and safer habits.")
       }
     >
-      <div className="overflow-x-auto pb-2">
-        <div className="grid min-w-[1080px] grid-cols-4 gap-3 sm:gap-4 md:min-w-0 md:gap-5">
+      <div className="df-grid-4">
           {downloadWhyFeatures.map((item, index) => (
-            <FadeIn key={item.id} delay={index * 0.03}>
+            <FadeIn key={item.id} delay={index * 0.03} className="h-full">
               <WhyCard
                 locale={locale}
                 item={item}
@@ -50,7 +49,6 @@ export function DownloadWhy({ locale, dictionary }: DownloadWhyProps) {
               />
             </FadeIn>
           ))}
-        </div>
       </div>
     </Section>
   );

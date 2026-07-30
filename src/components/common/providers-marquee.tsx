@@ -23,8 +23,9 @@ export function ProvidersMarquee({
 
   return (
     <section
-      className="relative w-full overflow-hidden border-y border-border/70 bg-[#070707]"
+      className="relative w-full max-w-full overflow-x-clip border-y border-border/70 bg-[#070707]"
       aria-labelledby="site-providers-marquee-heading"
+      data-qa-scroll="true"
     >
       <div
         className="pointer-events-none absolute inset-0"
@@ -48,7 +49,7 @@ export function ProvidersMarquee({
           </p>
         </div>
 
-        <div className="group/row relative h-[96px] overflow-hidden md:h-[104px]">
+        <div className="group/row relative h-[96px] max-w-full overflow-x-clip md:h-[104px]">
           <div
             className="pointer-events-none absolute inset-y-0 left-0 z-10 w-6 bg-gradient-to-r from-[#070707] to-transparent md:w-10"
             aria-hidden="true"
@@ -58,7 +59,7 @@ export function ProvidersMarquee({
             aria-hidden="true"
           />
 
-          <div className="flex h-full w-max items-center gap-8 animate-marquee group-hover/row:[animation-play-state:paused] md:gap-12">
+          <div className="flex h-full w-max max-w-none items-center gap-8 animate-marquee will-change-transform group-hover/row:[animation-play-state:paused] md:gap-12">
             {loop.map((provider, index) => {
               const content = (
                 <ProviderLogoMark

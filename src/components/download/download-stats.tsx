@@ -98,8 +98,10 @@ export function DownloadStats({ locale, dictionary }: DownloadStatsProps) {
           : "Downloads, ratings, install time, and platform coverage.")
       }
     >
-      <div ref={ref} className="overflow-x-auto pb-2">
-        <div className="grid min-w-[980px] grid-cols-7 gap-2 sm:gap-3 md:min-w-0 md:gap-4">
+      <div
+        ref={ref}
+        className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 xl:grid-cols-4 xl:gap-4"
+      >
           {downloadStats.map((stat, index) => {
             const parsed = parseStatValue(stat.value);
             const display =
@@ -107,7 +109,7 @@ export function DownloadStats({ locale, dictionary }: DownloadStatsProps) {
                 ? stat.value
                 : formatAnimated(parsed, progress);
             return (
-              <FadeIn key={stat.id} delay={index * 0.03}>
+              <FadeIn key={stat.id} delay={index * 0.03} className="h-full">
                 <article className="flex h-full flex-col items-center justify-center rounded-[18px] border border-border/80 bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a0a0c] px-2 py-4 text-center shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 sm:rounded-[22px] sm:px-3 sm:py-5 md:py-6">
                   <p className="text-base font-bold tracking-tight text-primary sm:text-lg md:text-xl lg:text-2xl">
                     {display}
@@ -119,7 +121,6 @@ export function DownloadStats({ locale, dictionary }: DownloadStatsProps) {
               </FadeIn>
             );
           })}
-        </div>
       </div>
     </Section>
   );

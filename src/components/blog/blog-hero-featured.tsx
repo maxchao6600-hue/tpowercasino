@@ -64,8 +64,8 @@ export function BlogFeaturedEditorial({
       <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-primary">
         {dictionary.blog.featured}
       </p>
-      <article className="grid overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-br from-[#161010] via-[#0f0c0c] to-[#0a0a0a] shadow-[0_20px_60px_rgba(229,9,20,0.1)] lg:grid-cols-[1.15fr_0.85fr] sm:rounded-[28px]">
-        <div className="brand-safe-media relative min-h-[260px] overflow-hidden sm:min-h-[340px]">
+      <article className="grid grid-cols-[1.15fr_0.85fr] overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-br from-[#161010] via-[#0f0c0c] to-[#0a0a0a] shadow-[0_20px_60px_rgba(229,9,20,0.1)] sm:rounded-[28px]">
+        <div className="brand-safe-media relative min-h-[180px] overflow-hidden sm:min-h-[260px] md:min-h-[340px]">
           <Image
             src={post.image}
             alt={post.imageAlt[locale]}
@@ -84,7 +84,7 @@ export function BlogFeaturedEditorial({
             }}
           />
         </div>
-        <div className="flex flex-col justify-center gap-3 p-5 sm:gap-4 sm:p-8 lg:p-10">
+        <div className="flex min-w-0 flex-col justify-center gap-2 p-3 sm:gap-4 sm:p-8 lg:p-10">
           <div className="flex flex-wrap gap-1.5 sm:gap-2">
             <Badge variant="accent">
               {t.officialGuide ??
@@ -115,7 +115,7 @@ export function BlogFeaturedEditorial({
               {difficultyLabel(post.difficulty, locale)}
             </Badge>
           </div>
-          <h2 className="text-xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
+          <h2 className="h2-display text-foreground">
             {post.title[locale]}
           </h2>
           <p className="text-[11px] text-muted-foreground sm:text-sm">
@@ -123,10 +123,10 @@ export function BlogFeaturedEditorial({
             {(locale === "zh" ? "更新于" : "Updated")}{" "}
             {formatDate(post.updatedAt, locale)}
           </p>
-          <p className="text-xs leading-relaxed text-muted-foreground sm:text-base">
+          <p className="text-lead text-muted-foreground">
             {post.excerpt[locale]}
           </p>
-          <div className="mt-1 flex flex-wrap gap-2">
+          <div className="df-actions mt-1">
             <Button asChild>
               <Link href={localePath(locale, `/blog/${post.slug}`)}>
                 {guideCta(post.slug, locale)}

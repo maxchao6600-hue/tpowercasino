@@ -23,18 +23,18 @@ export function VipComparisonTable({
       title={t.tableTitle}
       description={t.tableSubtitle}
     >
-      <div className="overflow-x-auto rounded-[28px] border border-border/80 bg-card/60 shadow-[var(--shadow-soft)] backdrop-blur-sm">
-        <table className="min-w-[720px] w-full border-collapse text-left text-sm md:text-[15px]">
+      <div className="max-w-full w-full overflow-x-auto rounded-[28px] border border-border/80 bg-card/60 shadow-[var(--shadow-soft)] backdrop-blur-sm" data-qa-scroll="true">
+        <table className="w-full table-fixed border-collapse text-left text-[10px] sm:text-sm md:text-[15px]">
           <thead>
             <tr className="border-b border-border/80 bg-white/[0.03]">
-              <th className="px-5 py-4 font-semibold text-muted-foreground md:px-6">
+              <th className="px-2 py-3 font-semibold text-muted-foreground sm:px-5 sm:py-4 md:px-6">
                 {t.tableFeatureLabel}
               </th>
               {columns.map((tier) => (
                 <th
                   key={tier.id}
                   className={cn(
-                    "px-5 py-4 font-bold text-foreground md:px-6",
+                    "px-2 py-3 font-bold text-foreground sm:px-5 sm:py-4 md:px-6",
                     tier.highlight && "bg-primary/10 text-primary",
                   )}
                 >

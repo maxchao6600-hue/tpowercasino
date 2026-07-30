@@ -23,15 +23,15 @@ export function FeatureGrid({ dictionary }: FeatureGridProps) {
       title={dictionary.home.whyTitle}
       description={dictionary.home.whySubtitle}
     >
-      <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="df-grid-3">
         {dictionary.why.items.map((item, index) => {
           const Icon = icons[index] ?? BadgeCheck;
           return (
             <FadeIn key={item.title} delay={index * 0.05}>
               <Card className="h-full">
                 <CardHeader>
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-muted text-foreground">
-                    <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
+                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-2xl bg-muted text-foreground sm:mb-4 sm:h-12 sm:w-12">
+                    <Icon className="h-4 w-4 sm:h-5 sm:w-5" strokeWidth={1.75} aria-hidden="true" />
                   </div>
                   <CardTitle>{item.title}</CardTitle>
                   <CardDescription>{item.description}</CardDescription>

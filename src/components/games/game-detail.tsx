@@ -92,7 +92,7 @@ export function GameDetail({
         imageAlt={game.name[locale]}
         overlay="cinematic"
         actions={
-          <div className="flex flex-wrap gap-3">
+          <div className="df-actions">
             <Button asChild size="lg">
               <Link href={localePath(locale, "/register")}>{t.playNow}</Link>
             </Button>
@@ -119,7 +119,7 @@ export function GameDetail({
 
       <section className="section-y">
         <Container className="max-w-5xl space-y-14">
-          <div className="flex flex-col gap-6 rounded-[24px] border border-border bg-card p-6 shadow-[var(--shadow-soft)] md:flex-row md:items-center md:p-8">
+          <div className="grid grid-cols-[auto_1fr] items-center gap-6 rounded-[24px] border border-border bg-card p-6 shadow-[var(--shadow-soft)] md:p-8">
             <div className="flex h-[60px] w-[120px] items-center justify-center rounded-2xl border border-border bg-muted/40 px-3">
               <ProviderLogoMark
                 name={providerName}
@@ -140,7 +140,7 @@ export function GameDetail({
 
           <article>
             <h2 className="h2-display text-foreground">{t.specsTitle}</h2>
-            <dl className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <dl className="df-grid-3 mt-6">
               {specs.map((spec) => (
                 <div
                   key={spec.label}
@@ -166,7 +166,7 @@ export function GameDetail({
 
           <article>
             <h2 className="h2-display text-foreground">{t.featuresTitle}</h2>
-            <ul className="mt-6 grid gap-3 md:grid-cols-2">
+            <ul className="df-grid-2 mt-6">
               {features.map((feature) => (
                 <li
                   key={feature.en}
@@ -203,16 +203,18 @@ export function GameDetail({
               <p className="mt-3 text-sm text-muted-foreground">
                 {t.similarSubtitle}
               </p>
-              <div className="mt-8 grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:gap-3">
-                {similarGames.map((item, index) => (
-                  <GameCard
-                    key={item.id}
-                    locale={locale}
-                    dictionary={dictionary}
-                    game={item}
-                    priority={index < 4}
-                  />
-                ))}
+              <div className="df-scroll mt-8">
+                <div className="grid min-w-[960px] grid-cols-6 gap-2.5 md:min-w-0 md:gap-3">
+                  {similarGames.map((item, index) => (
+                    <GameCard
+                      key={item.id}
+                      locale={locale}
+                      dictionary={dictionary}
+                      game={item}
+                      priority={index < 4}
+                    />
+                  ))}
+                </div>
               </div>
             </article>
           ) : null}

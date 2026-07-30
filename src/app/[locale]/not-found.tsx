@@ -30,7 +30,7 @@ export default async function LocaleNotFound() {
       <p className="mt-4 max-w-md text-muted-foreground">
         {dictionary.common.notFoundBody}
       </p>
-      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+      <div className="df-actions mt-8">
         <Button asChild size="lg">
           <Link href={localePath(locale)}>{dictionary.common.notFoundHome}</Link>
         </Button>

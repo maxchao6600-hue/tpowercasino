@@ -32,16 +32,16 @@ export function ProvidersRelated({
         <header className="mx-auto max-w-3xl text-center">
           <h2
             id="providers-related-heading"
-            className="text-2xl font-bold tracking-tight text-foreground md:text-3xl"
+            className="h2-display text-foreground"
           >
             {t.relatedTitle}
           </h2>
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
+          <p className="text-lead mt-4 text-muted-foreground">
             {t.relatedSubtitle}
           </p>
         </header>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-3">
+        <div className="df-grid-3 mt-12">
           <FadeIn>
             <div className="h-full rounded-[24px] border border-border/80 bg-card/60 p-6">
               <h3 className="text-lg font-semibold text-foreground">

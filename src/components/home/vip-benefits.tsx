@@ -20,7 +20,7 @@ export function VipBenefits({ locale, dictionary }: VipBenefitsProps) {
       title={dictionary.home.vipTitle}
       description={dictionary.home.vipSubtitle}
     >
-      <div className="grid gap-5 lg:grid-cols-3">
+      <div className="df-grid-3">
         {vipTiers.map((tier, index) => (
           <FadeIn key={tier.id} delay={index * 0.06}>
             <Card

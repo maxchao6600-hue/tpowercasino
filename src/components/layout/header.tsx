@@ -44,7 +44,7 @@ export function Header({ locale, dictionary }: HeaderProps) {
           <Logo href={localePath(locale)} />
 
           <nav
-            className="hidden items-center gap-0.5 xl:flex"
+            className="hidden items-center gap-0.5 lg:flex"
             aria-label={dictionary.common.primaryNav}
           >
             {mainNavigation.map((item) => {

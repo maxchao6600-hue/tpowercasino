@@ -66,8 +66,7 @@ export default async function PaymentMethodsPage({ params }: PageProps) {
                 </div>
               </div>
             </FadeIn>
-            <div className="overflow-x-auto pb-2">
-              <div className="grid min-w-[720px] grid-cols-3 gap-3 md:min-w-0 md:gap-5 lg:grid-cols-3">
+            <div className="df-grid-3">
                 {paymentMethods.map((method, index) => {
                   const href = methodDeepLinks[method.id];
                   const card = (
@@ -113,7 +112,7 @@ export default async function PaymentMethodsPage({ params }: PageProps) {
                   );
 
                   return (
-                    <FadeIn key={method.id} delay={index * 0.04}>
+                    <FadeIn key={method.id} delay={index * 0.04} className="h-full">
                       {href ? (
                         <Link
                           href={localePath(locale, href)}
@@ -127,7 +126,6 @@ export default async function PaymentMethodsPage({ params }: PageProps) {
                     </FadeIn>
                   );
                 })}
-              </div>
             </div>
           </Container>
         </section>

@@ -288,7 +288,7 @@ export const en = {
       "TPower Official App",
       "TPower Mobile App",
     ],
-    title: "Download the Official TPOWER App",
+    title: "Download TPOWER App",
     subtitle:
       "The premium Malaysia Casino App pathway for Android and iOS — documented TPower APK installs, secure sessions, local payments, and the full lobby in your pocket.",
     heroImageAlt:

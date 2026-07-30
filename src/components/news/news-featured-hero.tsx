@@ -64,13 +64,13 @@ export function NewsFeaturedHero({
             <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-primary sm:mt-4 sm:text-xs">
               {dictionary.common.brand}
             </p>
-            <h1 className="mt-2 text-2xl font-bold leading-[1.1] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+            <h1 className="mt-2 text-balance text-[clamp(1.5rem,1.25rem+1.1vw,4rem)] font-bold leading-[1.12] tracking-tight text-white">
               {item.title[locale]}
             </h1>
-            <p className="mt-3 max-w-2xl text-xs leading-relaxed text-white/75 sm:mt-4 sm:text-base md:text-lg">
+            <p className="text-lead mt-3 max-w-2xl text-white/75 sm:mt-4">
               {item.excerpt[locale]}
             </p>
-            <div className="mt-5 flex flex-wrap items-center gap-3 sm:mt-7">
+            <div className="df-actions mt-5 sm:mt-7">
               <Button asChild size="lg" className="h-10 px-5 text-sm sm:h-12 sm:px-7 sm:text-base">
                 <Link href={href}>
                   {t.readStory ?? (locale === "zh" ? "阅读全文" : "Read story")}
@@ -82,14 +82,14 @@ export function NewsFeaturedHero({
               </p>
             </div>
           </div>
-          <div className="hidden min-w-0 rounded-[20px] border border-white/10 bg-black/35 p-4 backdrop-blur-md sm:block sm:p-6">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary sm:text-xs">
+          <div className="min-w-0 rounded-[12px] border border-white/10 bg-black/35 p-2.5 backdrop-blur-md sm:rounded-[20px] sm:p-6">
+            <p className="text-[9px] font-semibold uppercase tracking-[0.16em] text-primary sm:text-xs">
               {badgeLabel(item.badge, locale)}
             </p>
-            <p className="mt-2 text-sm font-semibold text-white sm:text-base">
+            <p className="mt-1 text-[11px] font-semibold text-white sm:mt-2 sm:text-base">
               {item.category[locale]}
             </p>
-            <dl className="mt-4 space-y-2 text-[11px] text-white/70 sm:text-sm">
+            <dl className="mt-2 space-y-1 text-[9px] text-white/70 sm:mt-4 sm:space-y-2 sm:text-sm">
               <div className="flex justify-between gap-3">
                 <dt>{locale === "zh" ? "发布" : "Published"}</dt>
                 <dd className="text-white">{formatDate(item.publishedAt, locale)}</dd>

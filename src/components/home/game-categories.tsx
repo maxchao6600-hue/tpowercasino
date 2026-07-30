@@ -38,7 +38,7 @@ export function GameCategories({ locale, dictionary }: GameCategoriesProps) {
       title={dictionary.home.categoriesTitle}
       description={dictionary.home.categoriesSubtitle}
     >
-      <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+      <div className="df-grid-4">
         {gameCategories.map((category, index) => {
           const Icon = iconMap[category.icon as keyof typeof iconMap] ?? Joystick;
           const href = category.href.startsWith("/games")

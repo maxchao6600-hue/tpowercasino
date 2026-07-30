@@ -58,7 +58,7 @@ export function AgeGate({ locale, labels }: AgeGateProps) {
         <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
           {labels.body}
         </p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <div className="df-actions mt-8">
           <Button type="button" size="lg" className="flex-1" onClick={confirm}>
             {labels.confirm}
           </Button>

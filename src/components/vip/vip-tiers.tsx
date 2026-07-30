@@ -20,8 +20,7 @@ export function VipTiers({ locale, dictionary }: VipTiersProps) {
       title={t.tiersTitle}
       description={t.tiersSubtitle}
     >
-      <div className="overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:thin]">
-        <div className="grid min-w-[860px] grid-cols-3 gap-3 sm:gap-4 md:min-w-0 md:gap-5 lg:gap-6">
+      <div className="df-grid-3">
           {vipTiers.map((tier, index) => (
             <FadeIn key={tier.id} delay={index * 0.06} className="h-full min-w-0">
               <div
@@ -111,7 +110,6 @@ export function VipTiers({ locale, dictionary }: VipTiersProps) {
             </div>
             </FadeIn>
           ))}
-        </div>
       </div>
     </Section>
   );

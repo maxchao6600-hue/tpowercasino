@@ -112,7 +112,7 @@ export default async function PromotionsPage({ params, searchParams }: PageProps
           />
 
           {filtered.length > 0 ? (
-            <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <div className="df-grid-2 mt-10">
               {filtered.map((promo, index) => (
                 <FadeIn key={promo.id} delay={index * 0.04}>
                   <PromotionCard

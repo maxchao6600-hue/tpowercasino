@@ -22,16 +22,16 @@ export function ProvidersTrust({ dictionary }: ProvidersTrustProps) {
           </p>
           <h2
             id="providers-trust-heading"
-            className="mt-3 text-2xl font-bold tracking-tight text-foreground md:text-3xl"
+            className="h2-display mt-3 text-foreground"
           >
             {t.trustTitle}
           </h2>
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
+          <p className="text-lead mt-4 text-muted-foreground">
             {t.trustSubtitle}
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="df-grid-3 mt-12">
           {t.trustPoints.map((point, index) => (
             <FadeIn key={point.title} delay={index * 0.05}>
               <article className="h-full rounded-[22px] border border-border/80 bg-card/70 p-6 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/35 hover:shadow-[var(--shadow-lift)]">
