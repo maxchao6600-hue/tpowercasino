@@ -44,7 +44,7 @@
   /* Layout — desktop master; smaller viewports scale, not redesign */
   --container: 1400px;
   --container-tablet: 1100px;
-  --navbar-height: 80px;
+  --navbar-height: 56px;
   --section-y-mobile: 56px;
   --section-y-tablet: 80px;
   --section-y-desktop: 120px;
@@ -68,6 +68,18 @@
   --text-h3: clamp(1.2rem, 1.05rem + 0.7vw, 1.875rem);
   --text-h4: clamp(1.0625rem, 1rem + 0.4vw, 1.5rem);
   --text-lead: clamp(0.8125rem, 0.74rem + 0.3vw, 1.125rem);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --navbar-height: 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --navbar-height: 80px;
+  }
 }
 
 @theme inline {
@@ -250,40 +262,58 @@ html {
   }
 }
 
-/* Desktop-first card densify: never collapse to 1 column */
-.df-grid-2 {
+/* Desktop-first card densify: never collapse column count — scale / scroll instead */
+.df-grid-2,
+.df-grid-3,
+.df-grid-4 {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--gap-card);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  overscroll-behavior-x: contain;
+}
+
+.df-grid-2::-webkit-scrollbar,
+.df-grid-3::-webkit-scrollbar,
+.df-grid-4::-webkit-scrollbar {
+  height: 4px;
+}
+
+.df-grid-2::-webkit-scrollbar-thumb,
+.df-grid-3::-webkit-scrollbar-thumb,
+.df-grid-4::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--primary) 45%, transparent);
+  border-radius: 999px;
+}
+
+.df-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .df-grid-3 {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--gap-card);
-}
-
-@media (min-width: 1024px) {
-  .df-grid-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .df-grid-4 {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--gap-card);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-@media (min-width: 768px) {
-  .df-grid-4 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+/* Narrow viewports: keep desktop column counts; scroll if cards need room */
+@media (max-width: 767px) {
+  .df-grid-2 {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
   }
-}
 
-@media (min-width: 1280px) {
+  .df-grid-3 {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+
   .df-grid-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(170px, 1fr));
   }
 }
 
@@ -291,6 +321,43 @@ html {
 .df-grid-3 > *,
 .df-grid-4 > * {
   min-width: 0;
+}
+
+/* Keep desktop card proportions on narrow viewports via horizontal scroll */
+.df-row-3,
+.df-row-4 {
+  overflow-x: auto;
+  max-width: 100%;
+  padding-bottom: 0.5rem;
+  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  overscroll-behavior-x: contain;
+}
+
+.df-row-3::-webkit-scrollbar,
+.df-row-4::-webkit-scrollbar {
+  height: 4px;
+}
+
+.df-row-3::-webkit-scrollbar-thumb,
+.df-row-4::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--primary) 45%, transparent);
+  border-radius: 999px;
+}
+
+.df-row-3 > .df-grid-3 {
+  min-width: min(100%, 720px);
+}
+
+.df-row-4 > .df-grid-4 {
+  min-width: min(100%, 860px);
+}
+
+@media (min-width: 768px) {
+  .df-row-3 > .df-grid-3,
+  .df-row-4 > .df-grid-4 {
+    min-width: 0;
+  }
 }
 .df-scroll {
   overflow-x: auto;

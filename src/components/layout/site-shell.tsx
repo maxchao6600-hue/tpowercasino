@@ -36,7 +36,11 @@ export function SiteShell({
       />
       <Header locale={locale} dictionary={dictionary} />
       {/* Inline height reserves nav space before CSS (fixed header) — prevents CLS */}
-      <div style={{ height: 80 }} aria-hidden="true" className="shrink-0" />
+      <div
+        aria-hidden="true"
+        className="shrink-0"
+        style={{ height: "var(--navbar-height)" }}
+      />
       <main className="flex-1">
         {children}
         <FinalCtaSlot locale={locale} dictionary={dictionary} />

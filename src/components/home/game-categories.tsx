@@ -48,15 +48,28 @@ export function GameCategories({ locale, dictionary }: GameCategoriesProps) {
           return (
             <FadeIn key={category.id} delay={index * 0.04}>
               <Card className="h-full">
-                <CardHeader>
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-muted text-foreground">
-                    <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
+                <CardHeader className="gap-1 p-3 sm:gap-2 sm:p-5 md:p-8">
+                  <div className="mb-1.5 flex h-8 w-8 items-center justify-center rounded-xl bg-muted text-foreground sm:mb-3 sm:h-10 sm:w-10 sm:rounded-2xl md:mb-4 md:h-12 md:w-12">
+                    <Icon
+                      className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5"
+                      strokeWidth={1.75}
+                      aria-hidden="true"
+                    />
                   </div>
-                  <CardTitle>{category.title[locale]}</CardTitle>
-                  <CardDescription>{category.description[locale]}</CardDescription>
+                  <CardTitle className="text-sm sm:text-base md:text-[inherit]">
+                    {category.title[locale]}
+                  </CardTitle>
+                  <CardDescription className="text-[11px] leading-relaxed sm:text-sm md:text-[inherit]">
+                    {category.description[locale]}
+                  </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <Button asChild variant="secondary" size="sm">
+                <CardContent className="p-3 pt-0 sm:p-5 sm:pt-0 md:px-8 md:pb-8">
+                  <Button
+                    asChild
+                    variant="secondary"
+                    size="sm"
+                    className="h-7 px-2 text-[10px] sm:h-9 sm:px-3 sm:text-xs md:text-sm"
+                  >
                     <Link
                       href={
                         category.href.includes("?")

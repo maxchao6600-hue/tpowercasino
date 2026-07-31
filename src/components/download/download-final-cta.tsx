@@ -5,6 +5,7 @@ import { Container } from "@/components/common/container";
 import { DownloadQr } from "@/components/common/download-qr";
 import { PremiumCta } from "@/components/common/premium-cta";
 import { asDownloadCopy } from "@/components/download/download-copy";
+import { PhoneMockup } from "@/components/download/phone-mockup";
 
 type DownloadFinalCtaProps = {
   locale: Locale;
@@ -42,12 +43,28 @@ export async function DownloadFinalCta({
               : "TPOWER App download and join artwork")
           }
           beforeActions={
-            <div className="mt-5">
+            <div className="mt-3 sm:mt-5">
               <DownloadQr
                 label={t.qrLabel}
                 href={localePath(locale, "/apk")}
               />
             </div>
+          }
+          media={
+            <PhoneMockup
+              alt={
+                t.finalCtaImageAlt ??
+                (locale === "zh"
+                  ? "TPOWER官方APP 手机预览"
+                  : "TPOWER App phone preview")
+              }
+              title={
+                t.finalCtaTitle ??
+                (locale === "zh"
+                  ? "立即下载 TPOWER官方APP"
+                  : "Download the TPOWER App now")
+              }
+            />
           }
           actions={[
             {

@@ -23,20 +23,22 @@ export function NewsStats({ locale, dictionary }: NewsStatsProps) {
             (locale === "zh" ? "可信赖的运营规模" : "Trusted platform scale")}
         </h2>
       </div>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5 sm:gap-4">
+      <div className="df-scroll">
+        <div className="grid min-w-[720px] grid-cols-5 gap-2 sm:min-w-0 sm:gap-4 md:gap-4">
           {newsPlatformStats.map((stat, index) => (
             <FadeIn key={stat.id} delay={index * 0.04} className="h-full">
-              <div className="flex h-full flex-col rounded-[16px] border border-white/8 bg-black/30 px-3 py-4 text-center sm:rounded-[20px] sm:px-4 sm:py-6">
+              <div className="flex h-full flex-col rounded-[12px] border border-white/8 bg-black/30 px-1.5 py-3 text-center sm:rounded-[20px] sm:px-4 sm:py-6">
                 <AnimatedCounter
                   value={stat.value}
-                  className="block text-xl font-bold tracking-tight text-primary sm:text-3xl md:text-4xl"
+                  className="block text-sm font-bold tracking-tight text-primary sm:text-3xl md:text-4xl"
                 />
-                <p className="mt-2 text-[10px] font-medium text-muted-foreground sm:text-sm">
+                <p className="mt-1.5 text-[8px] font-medium leading-snug text-muted-foreground sm:mt-2 sm:text-sm">
                   {stat.label[locale]}
                 </p>
               </div>
             </FadeIn>
           ))}
+        </div>
       </div>
     </section>
   );

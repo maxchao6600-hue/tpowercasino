@@ -35,15 +35,15 @@ export function ProviderCard({
       : "Play Now";
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-[24px] border border-border bg-card shadow-[var(--shadow-soft)] transition-all duration-300 ease-out hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[var(--shadow-lift)]">
-      <div className="flex flex-1 flex-col p-6 md:p-7">
-        <div className="flex items-start justify-between gap-4">
-          <div className="flex h-[60px] w-[120px] shrink-0 items-center justify-center rounded-2xl border border-border/80 bg-muted/30 px-3 transition-colors duration-300 group-hover:border-primary/30 group-hover:bg-primary/5">
+    <article className="group flex h-full flex-col overflow-hidden rounded-[16px] border border-border bg-card shadow-[var(--shadow-soft)] transition-all duration-300 ease-out hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[var(--shadow-lift)] sm:rounded-[20px] md:rounded-[24px]">
+      <div className="flex flex-1 flex-col p-3 sm:p-5 md:p-7">
+        <div className="flex items-start justify-between gap-2 sm:gap-4">
+          <div className="flex h-10 w-16 shrink-0 items-center justify-center rounded-xl border border-border/80 bg-muted/30 px-2 transition-colors duration-300 group-hover:border-primary/30 group-hover:bg-primary/5 sm:h-[60px] sm:w-[120px] sm:rounded-2xl sm:px-3">
             <ProviderLogoMark
               name={provider.name}
               logo={provider.logo}
               variant="card"
-              className="h-full w-full [&_img]:h-10 [&_img]:max-h-10 [&_img]:max-w-[100px]"
+              className="h-full w-full [&_img]:h-6 [&_img]:max-h-6 [&_img]:max-w-[72px] sm:[&_img]:h-10 sm:[&_img]:max-h-10 sm:[&_img]:max-w-[100px]"
             />
           </div>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/25 bg-primary/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-primary">

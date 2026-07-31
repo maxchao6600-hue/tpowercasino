@@ -57,7 +57,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { cn } from "@/lib/utils";
 
 type SupportCenterProps = {
   locale: Locale;
@@ -335,21 +334,23 @@ export function SupportCenter({
             {locale === "zh" ? "最近更新：今天" : "Last Updated: Today"}
           </p>
         </div>
-        <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="df-scroll mt-5">
+          <div className="grid min-w-[720px] grid-cols-5 gap-2 sm:min-w-0 sm:gap-3">
             {supportStatusItems.map((item) => (
               <div
                 key={item.id}
-                className="flex h-full flex-col rounded-[16px] border border-emerald-500/20 bg-black/25 p-3 sm:p-4"
+                className="flex h-full flex-col rounded-[12px] border border-emerald-500/20 bg-black/25 p-2 sm:rounded-[16px] sm:p-4"
               >
-                <p className="flex items-center gap-2 text-sm font-bold text-foreground">
-                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.8)]" />
+                <p className="flex items-center gap-1.5 text-[10px] font-bold text-foreground sm:gap-2 sm:text-sm">
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.8)] sm:h-2.5 sm:w-2.5" />
                   {item.label[locale]}
                 </p>
-                <p className="mt-2 text-[11px] font-semibold text-emerald-300/90 sm:text-xs">
+                <p className="mt-1.5 text-[9px] font-semibold text-emerald-300/90 sm:mt-2 sm:text-xs">
                   {item.status[locale]}
                 </p>
               </div>
             ))}
+          </div>
         </div>
       </section>
 

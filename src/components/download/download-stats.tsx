@@ -98,10 +98,7 @@ export function DownloadStats({ locale, dictionary }: DownloadStatsProps) {
           : "Downloads, ratings, install time, and platform coverage.")
       }
     >
-      <div
-        ref={ref}
-        className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 xl:grid-cols-4 xl:gap-4"
-      >
+      <div ref={ref} className="df-grid-4">
           {downloadStats.map((stat, index) => {
             const parsed = parseStatValue(stat.value);
             const display =

@@ -63,7 +63,7 @@ export function GamesPopularCategories({
             <Link
               key={item.category}
               href={localePath(locale, item.href)}
-              className="group relative min-h-[220px] overflow-hidden rounded-3xl border border-border/80"
+              className="group relative min-h-[140px] overflow-hidden rounded-2xl border border-border/80 sm:min-h-[180px] md:min-h-[220px] md:rounded-3xl"
             >
               <Image
                 src={image}
@@ -74,8 +74,8 @@ export function GamesPopularCategories({
                 sizes="(max-width: 640px) 40vw, (max-width: 1024px) 33vw, 420px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/15" />
-              <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
-                <h3 className="text-xl font-bold tracking-tight text-white md:text-2xl">
+              <div className="absolute inset-x-0 bottom-0 p-3 sm:p-5 md:p-6">
+                <h3 className="text-sm font-bold tracking-tight text-white sm:text-xl md:text-2xl">
                   {title}
                 </h3>
                 <p className="mt-2 max-w-md text-sm leading-relaxed text-white/75">

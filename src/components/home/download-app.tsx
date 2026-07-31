@@ -1,10 +1,10 @@
-import Link from "next/link";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
 import type { Dictionary } from "@/lib/dictionary";
 import { Container } from "@/components/common/container";
 import { PremiumCta } from "@/components/common/premium-cta";
 import { DownloadQr } from "@/components/common/download-qr";
+import { PhoneMockup } from "@/components/download/phone-mockup";
 
 type DownloadAppProps = {
   locale: Locale;
@@ -12,6 +12,11 @@ type DownloadAppProps = {
 };
 
 export async function DownloadApp({ locale, dictionary }: DownloadAppProps) {
+  const phoneAlt =
+    locale === "zh"
+      ? "TPOWER官方APP 手机预览"
+      : "TPOWER official app phone preview";
+
   return (
     <section className="section-y">
       <Container>
@@ -20,13 +25,10 @@ export async function DownloadApp({ locale, dictionary }: DownloadAppProps) {
           title={dictionary.home.downloadTitle}
           description={dictionary.home.downloadSubtitle}
           imageSrc="/images/cta/tpower-join-cta.webp"
-          imageAlt={
-            locale === "zh"
-              ? "TPOWER App 下载与欢迎红利视觉"
-              : "TPOWER app download and welcome bonus artwork"
-          }
+          imageAlt={phoneAlt}
+          media={<PhoneMockup alt={phoneAlt} title={dictionary.home.downloadTitle} />}
           beforeActions={
-            <div className="mt-5">
+            <div className="mt-3 sm:mt-5">
               <DownloadQr
                 label={dictionary.download.qrLabel}
                 href={localePath(locale, "/download")}

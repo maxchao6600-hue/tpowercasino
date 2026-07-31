@@ -36,14 +36,14 @@ export function Statistics({ dictionary }: StatisticsProps) {
         {stats.map((stat) => (
           <div
             key={stat.key}
-            className="rounded-[24px] border border-border bg-card p-6 text-center shadow-[var(--shadow-soft)] transition-all duration-[250ms] ease-out hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[var(--shadow-lift)] md:p-8"
+            className="rounded-[16px] border border-border bg-card p-3 text-center shadow-[var(--shadow-soft)] transition-all duration-[250ms] ease-out hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[var(--shadow-lift)] sm:rounded-[20px] sm:p-5 md:rounded-[24px] md:p-8"
           >
-            <p className="h3-display tabular-nums text-foreground">
+            <p className="h3-display tabular-nums text-foreground [font-size:clamp(1.1rem,0.95rem+0.9vw,1.875rem)]">
               <span className="inline-block" style={{ minWidth: stat.width }}>
                 {stat.value}
               </span>
             </p>
-            <p className="mt-3 text-small font-medium text-muted-foreground">
+            <p className="mt-1.5 text-[10px] font-medium text-muted-foreground sm:mt-2 sm:text-xs md:mt-3 md:text-sm">
               {dictionary.stats[stat.key]}
             </p>
           </div>

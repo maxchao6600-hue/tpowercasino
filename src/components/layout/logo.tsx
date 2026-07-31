@@ -23,7 +23,7 @@ export function Logo({ href, className }: LogoProps) {
         alt="TPOWER Online Casino"
         width={48}
         height={48}
-        className="h-10 w-10 object-contain md:h-12 md:w-12"
+        className="h-8 w-8 object-contain sm:h-10 sm:w-10 md:h-12 md:w-12"
         priority
       />
     </Link>

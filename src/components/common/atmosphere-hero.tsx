@@ -54,9 +54,11 @@ export function AtmosphereHero({
         className={cn(
           "relative overflow-hidden bg-[#070707]",
           showTrustBar ? "" : "border-b border-border/70",
+          compact
+            ? "min-h-[280px] sm:min-h-[360px] lg:min-h-[420px]"
+            : "min-h-[320px] sm:min-h-[420px] lg:min-h-[520px]",
           className,
         )}
-        style={{ minHeight: 420 }}
         aria-label={imageAlt}
       >
         <div className="pointer-events-none absolute inset-0" aria-hidden="true">
@@ -86,18 +88,18 @@ export function AtmosphereHero({
         <Container
           className={cn(
             "relative flex h-full min-h-[inherit] flex-col justify-center",
-            compact ? "py-10 md:py-12" : "py-12 md:py-16 lg:py-20",
+            compact ? "py-6 sm:py-10 md:py-12" : "py-8 sm:py-12 md:py-16 lg:py-20",
           )}
         >
           {breadcrumbs?.length ? <Breadcrumbs items={breadcrumbs} /> : null}
 
           <div
             className={cn(
-              "grid items-center gap-4 sm:gap-8 md:gap-10",
+              "grid items-center gap-3 sm:gap-6 md:gap-8 lg:gap-12",
               aside
-                ? "grid-cols-[1.4fr_0.6fr] sm:grid-cols-[1.2fr_0.8fr] lg:grid-cols-[1.15fr_0.85fr] sm:gap-10 lg:gap-12"
+                ? "grid-cols-[1.15fr_0.85fr] sm:grid-cols-[1.2fr_0.8fr] lg:grid-cols-[1.15fr_0.85fr]"
                 : "",
-              breadcrumbs?.length ? "mt-8" : "",
+              breadcrumbs?.length ? "mt-4 sm:mt-8" : "",
             )}
           >
             <div className={cn("min-w-0 max-w-2xl", !aside && "lg:max-w-3xl")}>
