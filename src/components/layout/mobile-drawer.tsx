@@ -8,13 +8,13 @@ import { mainNavigation } from "@/config/navigation";
 import { localePath } from "@/config/i18n";
 import type { Dictionary } from "@/lib/dictionary";
 import { Button } from "@/components/ui/button";
-import { LanguageSwitcher } from "@/components/layout/language-switcher";
 
 type MobileDrawerProps = {
   locale: Locale;
   dictionary: Dictionary;
 };
 
+/** Hamburger + full-page navigation drawer (mobile / tablet). */
 export function MobileDrawer({ locale, dictionary }: MobileDrawerProps) {
   const [open, setOpen] = useState(false);
 
@@ -25,17 +25,28 @@ export function MobileDrawer({ locale, dictionary }: MobileDrawerProps) {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
   return (
-    <div className="lg:hidden">
+    <>
       <Button
         type="button"
         variant="outline"
         size="icon"
+        className="h-10 w-10 shrink-0 rounded-2xl"
         aria-label={open ? dictionary.common.close : dictionary.common.menu}
         aria-expanded={open}
+        aria-controls="mobile-nav-drawer"
         onClick={() => setOpen((value) => !value)}
       >
-        {open ? <X /> : <Menu />}
+        {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
       </Button>
 
       {open ? (
@@ -43,25 +54,27 @@ export function MobileDrawer({ locale, dictionary }: MobileDrawerProps) {
           <button
             type="button"
             aria-label={dictionary.common.close}
-            className="fixed inset-0 z-40 bg-foreground/30 backdrop-blur-sm transition-opacity duration-[250ms]"
+            className="fixed inset-0 z-40 bg-black/55 backdrop-blur-sm transition-opacity duration-[250ms]"
             onClick={() => setOpen(false)}
           />
           <aside
-            className="fixed inset-y-0 right-0 z-50 flex w-[min(100%,22rem)] flex-col border-l border-border bg-card shadow-[var(--shadow-soft)]"
+            id="mobile-nav-drawer"
+            className="fixed inset-y-0 left-0 z-50 flex w-[min(100%,22rem)] flex-col border-r border-border bg-card shadow-[var(--shadow-lift)]"
             aria-label={dictionary.common.menu}
           >
-            <div className="flex items-center justify-between border-b border-border px-5 py-4">
-              <p className="text-sm font-bold text-foreground">
+            <div className="flex h-20 items-center justify-between border-b border-border px-5">
+              <p className="text-sm font-bold tracking-wide text-foreground">
                 {dictionary.common.brand}
               </p>
               <Button
                 type="button"
                 variant="ghost"
                 size="icon"
+                className="h-10 w-10 rounded-2xl"
                 aria-label={dictionary.common.close}
                 onClick={() => setOpen(false)}
               >
-                <X />
+                <X className="h-5 w-5" />
               </Button>
             </div>
 
@@ -70,7 +83,7 @@ export function MobileDrawer({ locale, dictionary }: MobileDrawerProps) {
                 <Link
                   key={item.key}
                   href={localePath(locale, item.href === "/" ? "" : item.href)}
-                  className="rounded-xl px-4 py-3 text-base font-semibold text-foreground transition-colors hover:bg-muted"
+                  className="rounded-2xl px-4 py-3.5 text-base font-semibold text-foreground transition-colors hover:bg-white/[0.04] hover:text-primary"
                   onClick={() => setOpen(false)}
                 >
                   {item.label[locale]}
@@ -78,13 +91,9 @@ export function MobileDrawer({ locale, dictionary }: MobileDrawerProps) {
               ))}
             </nav>
 
-            <div className="space-y-3 border-t border-border p-4">
-              <LanguageSwitcher
-                locale={locale}
-                label={dictionary.common.language}
-              />
-              <div className="grid grid-cols-2 gap-2">
-                <Button asChild variant="outline">
+            <div className="border-t border-border p-4">
+              <div className="grid grid-cols-2 gap-3">
+                <Button asChild variant="outline" className="h-11">
                   <Link
                     href={localePath(locale, "/login")}
                     onClick={() => setOpen(false)}
@@ -92,7 +101,7 @@ export function MobileDrawer({ locale, dictionary }: MobileDrawerProps) {
                     {dictionary.nav.login}
                   </Link>
                 </Button>
-                <Button asChild>
+                <Button asChild className="h-11">
                   <Link
                     href={localePath(locale, "/register")}
                     onClick={() => setOpen(false)}
@@ -105,6 +114,6 @@ export function MobileDrawer({ locale, dictionary }: MobileDrawerProps) {
           </aside>
         </>
       ) : null}
-    </div>
+    </>
   );
 }

@@ -22,15 +22,13 @@ export function LanguageSwitcher({ locale, label }: LanguageSwitcherProps) {
     <Link
       href={href}
       className={cn(
-        "inline-flex h-7 w-7 items-center justify-center rounded-lg border border-border/80 bg-surface/80 text-muted-foreground shadow-[var(--shadow-soft)] backdrop-blur-md transition-all duration-[250ms] ease-out hover:-translate-y-0.5 hover:border-primary/40 hover:text-foreground sm:h-9 sm:w-auto sm:gap-1.5 sm:rounded-2xl sm:px-3 sm:text-xs md:h-10 md:gap-2 md:px-4 md:text-sm",
+        "inline-flex h-9 items-center gap-1.5 rounded-2xl border border-border/80 bg-surface/80 px-2.5 text-xs font-semibold text-muted-foreground shadow-[var(--shadow-soft)] backdrop-blur-md transition-all duration-[250ms] ease-out hover:-translate-y-0.5 hover:border-primary/40 hover:text-foreground sm:h-10 sm:gap-2 sm:px-4 sm:text-sm",
       )}
       aria-label={`${label}: ${nextLocale === "zh" ? "中文" : "English"}`}
       hrefLang={nextLocale === "zh" ? "zh-CN" : "en"}
     >
-      <Languages className="h-3.5 w-3.5 sm:h-3.5 sm:w-3.5 md:h-4 md:w-4" aria-hidden="true" />
-      <span className="hidden sm:inline">
-        {nextLocale === "zh" ? "中文" : "EN"}
-      </span>
+      <Languages className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden="true" />
+      <span>{nextLocale === "zh" ? "中文" : "EN"}</span>
     </Link>
   );
 }

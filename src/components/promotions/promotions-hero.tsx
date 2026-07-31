@@ -5,7 +5,6 @@ import { localePath } from "@/config/i18n";
 import type { Dictionary } from "@/lib/dictionary";
 import type { BreadcrumbItem } from "@/types";
 import { AtmosphereHero } from "@/components/common/atmosphere-hero";
-import { AtmosphereMedia } from "@/components/common/atmosphere-media";
 import { atmosphereImageFor } from "@/config/page-atmosphere";
 import { Button } from "@/components/ui/button";
 
@@ -67,16 +66,6 @@ export function PromotionsHero({
             </div>
           </div>
         </div>
-      }
-      aside={
-        <AtmosphereMedia
-          src={atmosphereImageFor("promotions")}
-          alt={t.heroImageAlt}
-          title={t.heroH1}
-          priority
-          aspectClassName="aspect-[16/10]"
-          sizes="(max-width: 1024px) 100vw, 40vw"
-        />
       }
     />
   );

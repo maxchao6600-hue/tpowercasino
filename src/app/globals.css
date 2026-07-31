@@ -44,7 +44,7 @@
   /* Layout — desktop master; smaller viewports scale, not redesign */
   --container: 1400px;
   --container-tablet: 1100px;
-  --navbar-height: 56px;
+  --navbar-height: 80px;
   --section-y-mobile: 56px;
   --section-y-tablet: 80px;
   --section-y-desktop: 120px;
@@ -68,18 +68,6 @@
   --text-h3: clamp(1.2rem, 1.05rem + 0.7vw, 1.875rem);
   --text-h4: clamp(1.0625rem, 1rem + 0.4vw, 1.5rem);
   --text-lead: clamp(0.8125rem, 0.74rem + 0.3vw, 1.125rem);
-}
-
-@media (min-width: 640px) {
-  :root {
-    --navbar-height: 64px;
-  }
-}
-
-@media (min-width: 1024px) {
-  :root {
-    --navbar-height: 80px;
-  }
 }
 
 @theme inline {

@@ -32,6 +32,7 @@ const OVERLAY_STYLES = {
 /**
  * Global Games-benchmark hero: full-bleed atmosphere image,
  * dark overlay, red radial, smooth fade into the page.
+ * Artwork is the background plane — never a floating thumbnail.
  */
 export function AtmosphereHero({
   title,
@@ -55,8 +56,8 @@ export function AtmosphereHero({
           "relative overflow-hidden bg-[#070707]",
           showTrustBar ? "" : "border-b border-border/70",
           compact
-            ? "min-h-[280px] sm:min-h-[360px] lg:min-h-[420px]"
-            : "min-h-[320px] sm:min-h-[420px] lg:min-h-[520px]",
+            ? "min-h-[360px] sm:min-h-[400px] lg:min-h-[420px]"
+            : "min-h-[420px] sm:min-h-[480px] lg:min-h-[560px]",
           className,
         )}
         aria-label={imageAlt}
@@ -68,7 +69,7 @@ export function AtmosphereHero({
             fill
             priority
             fetchPriority="high"
-            quality={50}
+            quality={60}
             decoding="async"
             className="object-cover object-center"
             sizes="100vw"
@@ -88,18 +89,16 @@ export function AtmosphereHero({
         <Container
           className={cn(
             "relative flex h-full min-h-[inherit] flex-col justify-center",
-            compact ? "py-6 sm:py-10 md:py-12" : "py-8 sm:py-12 md:py-16 lg:py-20",
+            compact ? "py-10 md:py-12" : "py-12 md:py-16 lg:py-20",
           )}
         >
           {breadcrumbs?.length ? <Breadcrumbs items={breadcrumbs} /> : null}
 
           <div
             className={cn(
-              "grid items-center gap-3 sm:gap-6 md:gap-8 lg:gap-12",
-              aside
-                ? "grid-cols-[1.15fr_0.85fr] sm:grid-cols-[1.2fr_0.8fr] lg:grid-cols-[1.15fr_0.85fr]"
-                : "",
-              breadcrumbs?.length ? "mt-4 sm:mt-8" : "",
+              "grid items-center gap-6 md:gap-8 lg:gap-12",
+              aside ? "grid-cols-[1.15fr_0.85fr]" : "",
+              breadcrumbs?.length ? "mt-6 md:mt-8" : "",
             )}
           >
             <div className={cn("min-w-0 max-w-2xl", !aside && "lg:max-w-3xl")}>
@@ -112,8 +111,8 @@ export function AtmosphereHero({
               {brand ? (
                 <p
                   className={cn(
-                    "text-[11px] font-bold uppercase tracking-[0.18em] text-white/70 sm:text-sm",
-                    eyebrow ? "mt-3 sm:mt-5" : "",
+                    "text-xs font-bold uppercase tracking-[0.18em] text-white/70 sm:text-sm",
+                    eyebrow ? "mt-4 sm:mt-5" : "",
                   )}
                 >
                   {brand}
@@ -123,20 +122,18 @@ export function AtmosphereHero({
               <h1
                 className={cn(
                   "h1-display text-white",
-                  aside &&
-                    "[font-size:clamp(1.5rem,1.25rem+1.1vw,4rem)] leading-[1.12]",
-                  brand || eyebrow ? "mt-2 sm:mt-3" : "",
+                  brand || eyebrow ? "mt-3" : "",
                 )}
               >
                 {title}
               </h1>
 
-              <p className="text-lead mt-2 max-w-xl text-white/72 sm:mt-4">
+              <p className="text-lead mt-3 max-w-xl text-white/72 sm:mt-4">
                 {description}
               </p>
 
               {actions ? (
-                <div className="df-actions mt-4 sm:mt-8">{actions}</div>
+                <div className="df-actions mt-6 sm:mt-8">{actions}</div>
               ) : null}
             </div>
 
