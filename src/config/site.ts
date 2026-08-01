@@ -6,12 +6,12 @@ export const siteConfig = {
     zh: "官方线上博彩平台",
   },
   description: {
-    en: "TPOWER Malaysia is the official online casino platform for slots, live casino, and sports betting — secure banking, fast withdrawals, and premium mobile gaming built for Malaysian players.",
-    zh: "TPOWER Malaysia 官方线上博彩平台，提供老虎机、真人视讯与体育博彩——安全支付、快速提现，以及为马来西亚玩家打造的高端手机博彩体验。",
+    en: "Experience TPOWER Online Casino Malaysia with official APK download, premium slots, live casino, sports betting, secure payments, fast withdrawals, exclusive promotions and mobile gaming for Malaysia players.",
+    zh: "体验TPOWER线上博彩马来西亚官方平台：官方APK下载、热门老虎机、真人视讯、体育博彩、安全支付、快速提现、独家优惠与手机博彩，专为马来西亚玩家打造。",
   },
   title: {
-    en: "TPOWER Malaysia | Official Online Casino Platform",
-    zh: "TPOWER Malaysia｜官方线上博彩平台",
+    en: "TPOWER Online Casino Malaysia | Official TPOWER Casino, Slots, Live Casino & APK Download",
+    zh: "TPOWER线上博彩马来西亚｜官方平台・老虎机・真人视讯・APK下载",
   },
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tpower.my",
   locale: "en_MY",

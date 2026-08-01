@@ -16,6 +16,9 @@ const inter = Inter({
   fallback: ["PingFang SC", "Microsoft YaHei", "Noto Sans SC", "sans-serif"],
 });
 
+/** Cache-bust static icon URLs when regenerating favicons. */
+const ICON_V = "20260801";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -27,36 +30,41 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [
-      { url: "/icons/favicon.ico" },
+      { url: `/favicon.ico?v=${ICON_V}`, sizes: "any" },
+      { url: `/icons/favicon.ico?v=${ICON_V}`, sizes: "48x48" },
       {
-        url: "/icons/favicon-16x16.png",
+        url: `/icons/favicon-16x16.png?v=${ICON_V}`,
         sizes: "16x16",
         type: "image/png",
       },
       {
-        url: "/icons/favicon-32x32.png",
+        url: `/icons/favicon-32x32.png?v=${ICON_V}`,
         sizes: "32x32",
         type: "image/png",
       },
       {
-        url: "/icons/android-chrome-192x192.png",
+        url: `/icons/favicon.svg?v=${ICON_V}`,
+        type: "image/svg+xml",
+      },
+      {
+        url: `/icons/android-chrome-192x192.png?v=${ICON_V}`,
         sizes: "192x192",
         type: "image/png",
       },
       {
-        url: "/icons/android-chrome-512x512.png",
+        url: `/icons/android-chrome-512x512.png?v=${ICON_V}`,
         sizes: "512x512",
         type: "image/png",
       },
     ],
     apple: [
       {
-        url: "/icons/apple-touch-icon.png",
+        url: `/icons/apple-touch-icon.png?v=${ICON_V}`,
         sizes: "180x180",
         type: "image/png",
       },
     ],
-    shortcut: ["/icons/favicon.ico"],
+    shortcut: [`/favicon.ico?v=${ICON_V}`],
   },
   other: {
     "mobile-web-app-capable": "yes",

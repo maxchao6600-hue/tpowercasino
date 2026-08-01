@@ -5,9 +5,9 @@ import { absoluteUrl } from "@/lib/utils";
 
 type BuildMetadataInput = {
   locale: Locale;
-  /** Unique page title — keep under ~50 chars so brand suffix fits under 60. */
+  /** Unique page title — homepage may be longer for SEO; clamp soft-limits at ~110. */
   title: string;
-  /** Unique description — aim for 140–160 characters. */
+  /** Unique description — aim for ~140–220 characters. */
   description: string;
   path?: string;
   image?: string;
@@ -22,8 +22,9 @@ type BuildMetadataInput = {
 };
 
 function clampTitle(title: string): string {
-  if (title.length <= 60) return title;
-  return `${title.slice(0, 57).trimEnd()}...`;
+  // Allow intentional long SEO titles (SERP may truncate; browser tab keeps full string).
+  if (title.length <= 110) return title;
+  return `${title.slice(0, 107).trimEnd()}...`;
 }
 
 function ensureBrandTitle(title: string): string {
@@ -80,8 +81,8 @@ export function buildMetadata({
   const ogImage = absoluteUrl(safeImage);
   const fullTitle = ensureBrandTitle(title);
   const metaDescription =
-    description.length > 160
-      ? `${description.slice(0, 157).trimEnd()}...`
+    description.length > 220
+      ? `${description.slice(0, 217).trimEnd()}...`
       : description;
 
   const languages = Object.fromEntries(

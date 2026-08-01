@@ -1,7 +1,7 @@
 {
   "name": "TPOWER Malaysia",
   "short_name": "TPOWER",
-  "description": "TPOWER Malaysia is the official online casino platform for slots, live casino, and sports betting — secure banking, fast withdrawals, and premium mobile gaming built for Malaysian players.",
+  "description": "Experience TPOWER Online Casino Malaysia with official APK download, premium slots, live casino, sports betting, secure payments, fast withdrawals, exclusive promotions and mobile gaming for Malaysia players.",
   "start_url": "/en",
   "display": "standalone",
   "background_color": "#090909",
@@ -9,46 +9,46 @@
   "lang": "en",
   "icons": [
     {
-      "src": "/icons/favicon.ico",
+      "src": "/icons/favicon.ico?v=20260801",
       "sizes": "48x48",
       "type": "image/x-icon",
       "purpose": "any"
     },
     {
-      "src": "/icons/favicon-16x16.png",
+      "src": "/icons/favicon-16x16.png?v=20260801",
       "sizes": "16x16",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icons/favicon-32x32.png",
+      "src": "/icons/favicon-32x32.png?v=20260801",
       "sizes": "32x32",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icons/apple-touch-icon.png",
+      "src": "/icons/apple-touch-icon.png?v=20260801",
       "sizes": "180x180",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icons/android-chrome-192x192.png",
+      "src": "/icons/android-chrome-192x192.png?v=20260801",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icons/android-chrome-512x512.png",
+      "src": "/icons/android-chrome-512x512.png?v=20260801",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/logo/tpower-mark.png",
+      "src": "/icons/android-chrome-512x512.png?v=20260801",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "maskable"
     }
   ]
 }
