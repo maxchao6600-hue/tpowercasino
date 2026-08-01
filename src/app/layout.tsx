@@ -65,7 +65,7 @@ export default async function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/images/hero-lcp-xs.webp"
+          href="/images/hero.webp"
           fetchPriority="high"
         />
       </head>

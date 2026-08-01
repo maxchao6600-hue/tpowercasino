@@ -69,9 +69,9 @@ export function AtmosphereHero({
             fill
             priority
             fetchPriority="high"
-            quality={60}
+            quality={75}
             decoding="async"
-            className="object-cover object-center"
+            className="object-cover object-[72%_center] sm:object-center"
             sizes="100vw"
           />
           <div

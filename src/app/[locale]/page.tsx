@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: dictionary.home.metaTitle,
     description: dictionary.home.metaDescription,
     path: "/",
-    image: "/images/hero-lcp-xs.webp",
+    image: "/images/hero.webp",
   });
 }
 
