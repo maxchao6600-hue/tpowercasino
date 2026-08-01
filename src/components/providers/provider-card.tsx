@@ -35,18 +35,18 @@ export function ProviderCard({
       : "Play Now";
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-[16px] border border-border bg-card shadow-[var(--shadow-soft)] transition-all duration-300 ease-out hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[var(--shadow-lift)] sm:rounded-[20px] md:rounded-[24px]">
-      <div className="flex flex-1 flex-col p-3 sm:p-5 md:p-7">
-        <div className="flex items-start justify-between gap-2 sm:gap-4">
-          <div className="flex h-10 w-16 shrink-0 items-center justify-center rounded-xl border border-border/80 bg-muted/30 px-2 transition-colors duration-300 group-hover:border-primary/30 group-hover:bg-primary/5 sm:h-[60px] sm:w-[120px] sm:rounded-2xl sm:px-3">
+    <article className="group flex h-full min-w-[280px] flex-col overflow-visible rounded-[24px] border border-border bg-card shadow-[var(--shadow-soft)] transition-all duration-300 ease-out hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[var(--shadow-lift)]">
+      <div className="flex flex-1 flex-col p-5 md:p-7">
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex h-[60px] w-[120px] shrink-0 items-center justify-center rounded-2xl border border-border/80 bg-muted/30 px-3 transition-colors duration-300 group-hover:border-primary/30 group-hover:bg-primary/5">
             <ProviderLogoMark
               name={provider.name}
               logo={provider.logo}
               variant="card"
-              className="h-full w-full [&_img]:h-6 [&_img]:max-h-6 [&_img]:max-w-[72px] sm:[&_img]:h-10 sm:[&_img]:max-h-10 sm:[&_img]:max-w-[100px]"
+              className="h-full w-full [&_img]:h-10 [&_img]:max-h-10 [&_img]:max-w-[100px]"
             />
           </div>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/25 bg-primary/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-primary">
+          <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-primary/25 bg-primary/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-primary">
             <BadgeCheck className="h-3.5 w-3.5" aria-hidden="true" />
             {t.officialBadge}
           </span>
@@ -100,17 +100,17 @@ export function ProviderCard({
           </ul>
         </div>
 
-        <div className="df-actions mt-6 w-full min-w-0">
+        <div className="mt-6 flex w-full flex-nowrap items-center gap-3">
           <Button
             asChild
             size="lg"
-            className="h-12 min-h-12 min-w-0 flex-1 whitespace-normal px-4 text-sm leading-snug sm:min-w-[9.5rem]"
+            className="h-12 min-w-[11.5rem] shrink-0 whitespace-nowrap px-5 text-sm"
           >
             <Link
               href={primaryHref}
-              className="inline-flex w-full items-center justify-center gap-2 text-center"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap"
             >
-              <span className="min-w-0">{primaryLabel}</span>
+              <span className="whitespace-nowrap">{primaryLabel}</span>
               <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden="true" />
             </Link>
           </Button>
@@ -118,13 +118,13 @@ export function ProviderCard({
             asChild
             variant="outline"
             size="lg"
-            className="h-12 min-h-12 min-w-0 flex-1 whitespace-normal px-4 text-sm leading-snug sm:min-w-[9.5rem]"
+            className="h-12 min-w-[10.5rem] shrink-0 whitespace-nowrap px-5 text-sm"
           >
             <Link
               href={detailHref}
-              className="inline-flex w-full items-center justify-center text-center"
+              className="inline-flex items-center justify-center whitespace-nowrap"
             >
-              <span className="min-w-0">{t.exploreGames}</span>
+              <span className="whitespace-nowrap">{t.exploreGames}</span>
             </Link>
           </Button>
         </div>

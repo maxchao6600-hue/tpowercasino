@@ -31,22 +31,24 @@ export function ProvidersTrust({ dictionary }: ProvidersTrustProps) {
           </p>
         </div>
 
-        <div className="df-grid-3 mt-12">
-          {t.trustPoints.map((point, index) => (
-            <FadeIn key={point.title} delay={index * 0.05}>
-              <article className="h-full rounded-[22px] border border-border/80 bg-card/70 p-6 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/35 hover:shadow-[var(--shadow-lift)]">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/12 text-primary">
-                  <ShieldCheck className="h-5 w-5" aria-hidden="true" />
-                </span>
-                <h3 className="mt-5 text-lg font-semibold text-foreground">
-                  {point.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {point.body}
-                </p>
-              </article>
-            </FadeIn>
-          ))}
+        <div className="df-row-3 mt-12">
+          <div className="df-grid-3">
+            {t.trustPoints.map((point, index) => (
+              <FadeIn key={point.title} delay={index * 0.05}>
+                <article className="h-full rounded-[22px] border border-border/80 bg-card/70 p-6 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/35 hover:shadow-[var(--shadow-lift)]">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/12 text-primary">
+                    <ShieldCheck className="h-5 w-5" aria-hidden="true" />
+                  </span>
+                  <h3 className="mt-5 text-lg font-semibold text-foreground">
+                    {point.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {point.body}
+                  </p>
+                </article>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </Container>
     </section>

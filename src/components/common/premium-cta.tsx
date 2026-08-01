@@ -82,7 +82,7 @@ export function PremiumCta({
                 size="lg"
                 variant={action.variant ?? "default"}
                 className={cn(
-                  "h-8 px-2.5 text-[10px] sm:h-11 sm:px-6 sm:text-sm",
+                  "h-8 whitespace-nowrap px-2.5 text-[10px] sm:h-11 sm:px-6 sm:text-sm",
                   action.variant === "outline"
                     ? "border-white/20 bg-transparent text-white hover:border-white/35 hover:bg-white/10 hover:text-white"
                     : undefined,

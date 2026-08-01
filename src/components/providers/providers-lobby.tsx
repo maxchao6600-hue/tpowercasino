@@ -77,38 +77,45 @@ export function ProvidersLobby({
 
   return (
     <div>
-      <div className="sticky top-[var(--site-header-offset,4.5rem)] z-20 -mx-1 mb-8 space-y-4 rounded-[22px] border border-border/80 bg-[#0b0b0b]/95 px-4 py-4 backdrop-blur-md md:px-5">
-        <div className="grid grid-cols-[1fr_minmax(0,28rem)] items-center gap-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
-            {t.filterLabel}
-          </p>
-          <div className="relative w-full">
-            <Search
-              className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
-              aria-hidden="true"
-            />
-            <Input
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder={t.searchPlaceholder}
-              aria-label={t.searchPlaceholder}
-              className="h-11 border-border/80 bg-card/60 pl-10 pr-10"
-            />
-            {query ? (
-              <button
-                type="button"
-                onClick={() => setQuery("")}
-                className="absolute right-2 top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full text-muted-foreground transition hover:bg-muted hover:text-foreground"
-                aria-label={t.resetFilters}
-              >
-                <X className="h-4 w-4" aria-hidden="true" />
-              </button>
-            ) : null}
+      <div className="sticky top-[var(--navbar-height,5rem)] z-20 mb-8 space-y-3 rounded-[20px] border border-border/80 bg-[#0b0b0b]/95 px-3 py-3 backdrop-blur-md sm:space-y-4 sm:rounded-[22px] sm:px-4 sm:py-4 md:px-5">
+        {/*
+          Never use 1fr for the label — a crushed 1fr column stacks letters vertically.
+          Keep label + search on one row; scroll horizontally on narrow viewports
+          instead of compressing (desktop proportions preserved).
+        */}
+        <div className="df-scroll">
+          <div className="flex w-full min-w-[34rem] items-center gap-3 sm:gap-4 md:min-w-0">
+            <p className="shrink-0 whitespace-nowrap text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+              {t.filterLabel}
+            </p>
+            <div className="relative min-w-[18rem] flex-1 md:min-w-0">
+              <Search
+                className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+                aria-hidden="true"
+              />
+              <Input
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder={t.searchPlaceholder}
+                aria-label={t.searchPlaceholder}
+                className="h-11 w-full min-w-0 border-border/80 bg-card/60 pl-10 pr-10 text-sm"
+              />
+              {query ? (
+                <button
+                  type="button"
+                  onClick={() => setQuery("")}
+                  className="absolute right-2 top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                  aria-label={t.resetFilters}
+                >
+                  <X className="h-4 w-4" aria-hidden="true" />
+                </button>
+              ) : null}
+            </div>
           </div>
         </div>
 
         <div
-          className="df-scroll flex gap-2"
+          className="df-scroll flex gap-2 pb-1"
           role="tablist"
           aria-label={t.filterLabel}
         >
@@ -122,7 +129,7 @@ export function ProvidersLobby({
                 aria-selected={active}
                 onClick={() => setFilter(id)}
                 className={cn(
-                  "shrink-0 rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-200",
+                  "shrink-0 whitespace-nowrap rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-200",
                   active
                     ? "border-primary bg-primary text-primary-foreground shadow-[0_8px_24px_-12px_rgba(229,9,20,0.8)]"
                     : "border-border/80 bg-card/50 text-muted-foreground hover:border-primary/40 hover:text-foreground",
@@ -141,16 +148,18 @@ export function ProvidersLobby({
       </div>
 
       {filtered.length > 0 ? (
-        <div className="df-grid-3">
-          {filtered.map((provider) => (
-            <ProviderCard
-              key={provider.id}
-              locale={locale}
-              dictionary={dictionary}
-              provider={provider}
-              gameCount={gameCounts[provider.slug] ?? 0}
-            />
-          ))}
+        <div className="df-row-3">
+          <div className="df-grid-3">
+            {filtered.map((provider) => (
+              <ProviderCard
+                key={provider.id}
+                locale={locale}
+                dictionary={dictionary}
+                provider={provider}
+                gameCount={gameCounts[provider.slug] ?? 0}
+              />
+            ))}
+          </div>
         </div>
       ) : (
         <div className="rounded-[24px] border border-dashed border-border bg-card/40 px-6 py-16 text-center">

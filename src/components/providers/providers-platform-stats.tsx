@@ -157,32 +157,34 @@ export function ProvidersPlatformStats({
           </p>
         </div>
 
-        <div className="df-grid-4">
-          {stats.map((stat, index) => (
-            <article
-              key={stat.key}
-              className={cn(
-                "rounded-[18px] border border-border/80 bg-gradient-to-b from-[#141414] to-[#0c0c0c] p-6 transition-all duration-300 ease-out",
-                "hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_12px_36px_-12px_rgba(229,9,20,0.45)]",
-                visible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-4 opacity-0",
-              )}
-              style={{
-                transitionDelay: visible ? `${80 + index * 70}ms` : "0ms",
-              }}
-            >
-              <p className="text-[2.75rem] font-bold leading-none tracking-tight text-foreground tabular-nums md:text-[3.25rem]">
-                <AnimatedValue value={stat.value} visible={visible} />
-              </p>
-              <h3 className="mt-4 text-base font-semibold text-foreground md:text-lg">
-                {stat.label}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {stat.description}
-              </p>
-            </article>
-          ))}
+        <div className="df-row-4">
+          <div className="df-grid-4">
+            {stats.map((stat, index) => (
+              <article
+                key={stat.key}
+                className={cn(
+                  "rounded-[18px] border border-border/80 bg-gradient-to-b from-[#141414] to-[#0c0c0c] p-6 transition-all duration-300 ease-out",
+                  "hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_12px_36px_-12px_rgba(229,9,20,0.45)]",
+                  visible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-4 opacity-0",
+                )}
+                style={{
+                  transitionDelay: visible ? `${80 + index * 70}ms` : "0ms",
+                }}
+              >
+                <p className="text-[2.75rem] font-bold leading-none tracking-tight text-foreground tabular-nums md:text-[3.25rem]">
+                  <AnimatedValue value={stat.value} visible={visible} />
+                </p>
+                <h3 className="mt-4 text-base font-semibold text-foreground md:text-lg">
+                  {stat.label}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {stat.description}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>

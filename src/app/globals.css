@@ -333,17 +333,66 @@ html {
   border-radius: 999px;
 }
 
+.df-row-2 {
+  overflow-x: auto;
+  max-width: 100%;
+  padding-bottom: 0.5rem;
+  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  overscroll-behavior-x: contain;
+}
+
+.df-row-2::-webkit-scrollbar {
+  height: 4px;
+}
+
+.df-row-2::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--primary) 45%, transparent);
+  border-radius: 999px;
+}
+
+.df-row-2 > .df-grid-2 {
+  /* ~380px cards × 2 + gap — enough room for the Bonus/Deposit/Expiry pill
+     row to wrap by phrase (never one CJK character per line); row scrolls
+     on narrow viewports instead of compressing the card. */
+  min-width: 800px;
+  width: max(100%, 800px);
+  overflow-x: visible;
+}
+
 .df-row-3 > .df-grid-3 {
-  min-width: min(100%, 720px);
+  /* ~280px cards × 3 + gaps — desktop proportions; row scrolls on narrow viewports */
+  min-width: 960px;
+  width: max(100%, 960px);
+  overflow-x: visible;
 }
 
 .df-row-4 > .df-grid-4 {
-  min-width: min(100%, 860px);
+  min-width: 1120px;
+  width: max(100%, 1120px);
+  overflow-x: visible;
+}
+
+.df-row-2 > .df-grid-2 > * {
+  min-width: 380px;
+}
+
+.df-row-3 > .df-grid-3 > *,
+.df-row-4 > .df-grid-4 > * {
+  min-width: 280px;
 }
 
 @media (min-width: 768px) {
+  .df-row-2 > .df-grid-2,
   .df-row-3 > .df-grid-3,
   .df-row-4 > .df-grid-4 {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .df-row-2 > .df-grid-2 > *,
+  .df-row-3 > .df-grid-3 > *,
+  .df-row-4 > .df-grid-4 > * {
     min-width: 0;
   }
 }
