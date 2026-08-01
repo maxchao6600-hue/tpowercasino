@@ -431,18 +431,18 @@ export function SupportCenter({
       {/* Form + Company */}
       <section
         id="support-form"
-        className="grid min-w-0 grid-cols-[0.95fr_1.05fr] items-start gap-2 sm:gap-6 lg:gap-8"
+        className="grid min-w-0 grid-cols-1 items-start gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8"
       >
-        <aside className="min-w-0 overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-b from-[#141414] to-[#0d0d0d] p-3 shadow-[var(--shadow-soft)] sm:rounded-[28px] sm:p-6">
+        <aside className="min-w-0 overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-b from-[#141414] to-[#0d0d0d] p-5 shadow-[var(--shadow-soft)] sm:rounded-[28px] sm:p-6">
           <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary sm:text-xs">
             {locale === "zh" ? "公司信息" : "Company information"}
           </p>
-          <h2 className="mt-2 text-sm font-bold text-foreground sm:text-xl">
+          <h2 className="mt-2 text-base font-bold text-foreground sm:text-xl">
             {locale === "zh"
               ? "TPOWER 马来西亚支持办公室"
               : "TPOWER Malaysia support office"}
           </h2>
-          <ul className="mt-4 space-y-3 text-[10px] sm:mt-5 sm:space-y-4 sm:text-sm">
+          <ul className="mt-4 space-y-3 text-xs sm:mt-5 sm:space-y-4 sm:text-sm">
             {[
               {
                 icon: MapPin,
@@ -502,11 +502,11 @@ export function SupportCenter({
           </ul>
         </aside>
 
-        <div className="min-w-0 overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-br from-[#161010] to-[#0c0c0c] p-3 shadow-[var(--shadow-soft)] sm:rounded-[28px] sm:p-7">
+        <div className="min-w-0 overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-br from-[#161010] to-[#0c0c0c] p-5 shadow-[var(--shadow-soft)] sm:rounded-[28px] sm:p-7">
           <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary sm:text-xs">
             {locale === "zh" ? "官方支持表单" : "Official support form"}
           </p>
-          <h2 className="mt-2 text-base font-bold text-foreground sm:text-xl">
+          <h2 className="mt-2 text-lg font-bold text-foreground sm:text-xl">
             {locale === "zh"
               ? "联系官方 TPOWER 客服"
               : "Contact official TPOWER support"}
@@ -518,14 +518,14 @@ export function SupportCenter({
           </p>
 
           <form onSubmit={onSubmit} className="mt-5 space-y-4">
-            <div className="grid grid-cols-2 gap-3">
-              <div className="space-y-1.5">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <div className="min-w-0 space-y-1.5">
                 <Label htmlFor="name">
                   {locale === "zh" ? "全名" : "Full Name"}
                 </Label>
-                <Input id="name" name="name" autoComplete="name" required />
+                <Input id="name" name="name" autoComplete="name" required className="w-full" />
               </div>
-              <div className="space-y-1.5">
+              <div className="min-w-0 space-y-1.5">
                 <Label htmlFor="email">
                   {locale === "zh" ? "电子邮箱" : "Email"}
                 </Label>
@@ -535,17 +535,18 @@ export function SupportCenter({
                   type="email"
                   autoComplete="email"
                   required
+                  className="w-full"
                 />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              <div className="space-y-1.5">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <div className="min-w-0 space-y-1.5">
                 <Label htmlFor="phone">
                   {locale === "zh" ? "手机号码" : "Phone Number"}
                 </Label>
-                <Input id="phone" name="phone" autoComplete="tel" />
+                <Input id="phone" name="phone" autoComplete="tel" className="w-full" />
               </div>
-              <div className="space-y-1.5">
+              <div className="min-w-0 space-y-1.5">
                 <Label htmlFor="category">
                   {locale === "zh" ? "支持分类" : "Support Category"}
                 </Label>
@@ -556,7 +557,7 @@ export function SupportCenter({
                   onChange={(e) =>
                     setCategory(e.target.value as SupportCategoryId)
                   }
-                  className="flex h-10 w-full rounded-2xl border border-input bg-background px-3 text-sm text-foreground"
+                  className="flex h-10 w-full min-w-0 rounded-2xl border border-input bg-background px-3 text-sm text-foreground"
                 >
                   {supportCategories.map((item) => (
                     <option key={item.id} value={item.id}>
@@ -566,14 +567,14 @@ export function SupportCenter({
                 </select>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              <div className="space-y-1.5">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <div className="min-w-0 space-y-1.5">
                 <Label htmlFor="subject">
                   {locale === "zh" ? "主题" : "Subject"}
                 </Label>
-                <Input id="subject" name="subject" required />
+                <Input id="subject" name="subject" required className="w-full" />
               </div>
-              <div className="space-y-1.5">
+              <div className="min-w-0 space-y-1.5">
                 <Label htmlFor="language">
                   {locale === "zh" ? "偏好语言" : "Preferred Language"}
                 </Label>
@@ -581,7 +582,7 @@ export function SupportCenter({
                   id="language"
                   name="language"
                   defaultValue={locale === "zh" ? "Chinese" : "English"}
-                  className="flex h-10 w-full rounded-2xl border border-input bg-background px-3 text-sm text-foreground"
+                  className="flex h-10 w-full min-w-0 rounded-2xl border border-input bg-background px-3 text-sm text-foreground"
                 >
                   <option value="English">English</option>
                   <option value="Chinese">中文</option>
