@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Locale } from "@/config/site";
 import { isValidLocale, localePath } from "@/config/i18n";
@@ -19,6 +18,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { SiteLink } from "@/components/common/site-link";
 
 type PageProps = { params: Promise<{ locale: string }> };
 
@@ -92,18 +92,18 @@ export default async function RegisterPage({ params }: PageProps) {
               ))}
           </div>
           <Button asChild size="lg" className="mt-10">
-            <Link href={localePath(locale, "/contact")}>
+            <SiteLink href={localePath(locale, "/contact")}>
               {dictionary.register.cta}
-            </Link>
+            </SiteLink>
           </Button>
           <p className="mt-4 text-sm text-muted-foreground">
             {dictionary.register.helper}{" "}
-            <Link
+            <SiteLink
               href={localePath(locale, "/login")}
               className="font-semibold text-primary hover:underline"
             >
               {dictionary.register.helperLink}
-            </Link>
+            </SiteLink>
           </p>
           <Accordion
             type="single"

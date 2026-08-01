@@ -39,6 +39,11 @@ export const siteConfig = {
   },
   themeColor: "#090909",
   ogImage: "/og/default.webp",
+  auth: {
+    registerUrl: "https://m.tpower3.com/Signup/UAUMCYVJT",
+    /** Temporary until a dedicated login URL is provided. */
+    loginUrl: "https://m.tpower3.com/Signup/UAUMCYVJT",
+  },
 } as const;
 
 export type Locale = (typeof siteConfig.locales)[number];

@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import type { BreadcrumbItem } from "@/types";
+import { SiteLink } from "@/components/common/site-link";
 
 type BreadcrumbsProps = {
   items: BreadcrumbItem[];
@@ -22,12 +22,12 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
                   {item.name}
                 </span>
               ) : (
-                <Link
+                <SiteLink
                   href={item.href}
                   className="transition-colors hover:text-foreground"
                 >
                   {item.name}
-                </Link>
+                </SiteLink>
               )}
             </li>
           );

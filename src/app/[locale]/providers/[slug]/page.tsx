@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Locale } from "@/config/site";
 import { isValidLocale, localePath, locales } from "@/config/i18n";
@@ -30,6 +29,7 @@ import { ProviderThinGamesCta } from "@/components/providers/provider-thin-games
 import { ProviderLogoMark } from "@/components/games/provider-logo-mark";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { SiteLink } from "@/components/common/site-link";
 
 type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
@@ -217,11 +217,11 @@ export default async function ProviderDetailPage({ params }: PageProps) {
             {showFullLibraryLink ? (
               <div className="mt-6">
                 <Button asChild size="lg">
-                  <Link
+                  <SiteLink
                     href={localePath(locale, `/providers/${provider.slug}/games`)}
                   >
                     {dictionary.providers.gamesLibrary.viewAllGames}
-                  </Link>
+                  </SiteLink>
                 </Button>
               </div>
             ) : (

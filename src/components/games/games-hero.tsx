@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Gamepad2, UserPlus } from "lucide-react";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
@@ -9,6 +8,7 @@ import { Breadcrumbs } from "@/components/common/breadcrumbs";
 import { Container } from "@/components/common/container";
 import { TrustBar } from "@/components/common/trust-bar";
 import { Button } from "@/components/ui/button";
+import { SiteLink } from "@/components/common/site-link";
 
 type GamesHeroProps = {
   locale: Locale;
@@ -84,10 +84,10 @@ export function GamesHero({
 
           <div className="df-actions mt-8">
             <Button asChild size="lg">
-              <Link href={localePath(locale, "/register")}>
+              <SiteLink href={localePath(locale, "/register")}>
                 <UserPlus className="h-4 w-4" aria-hidden="true" />
                 {dictionary.nav.register}
-              </Link>
+              </SiteLink>
             </Button>
             <div className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-black/40 px-4 py-3 backdrop-blur">
               <span className="text-2xl font-bold tabular-nums text-primary">

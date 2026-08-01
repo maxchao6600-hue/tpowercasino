@@ -1,8 +1,8 @@
-import Link from "next/link";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
 import type { Dictionary } from "@/lib/dictionary";
 import { Button } from "@/components/ui/button";
+import { SiteLink } from "@/components/common/site-link";
 
 type ProviderThinGamesCtaProps = {
   locale: Locale;
@@ -22,12 +22,12 @@ export function ProviderThinGamesCta({
       </p>
       <div className="df-actions mt-8 justify-center">
         <Button asChild size="lg">
-          <Link href={localePath(locale, "/register")}>
+          <SiteLink href={localePath(locale, "/register")}>
             {dictionary.common.ctaRegister}
-          </Link>
+          </SiteLink>
         </Button>
         <Button asChild size="lg" variant="outline">
-          <Link href={localePath(locale, "/games")}>{t.viewMoreGames}</Link>
+          <SiteLink href={localePath(locale, "/games")}>{t.viewMoreGames}</SiteLink>
         </Button>
       </div>
     </div>

@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import {
   ArrowRight,
   Banknote,
@@ -57,6 +56,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { SiteLink } from "@/components/common/site-link";
 
 type SupportCenterProps = {
   locale: Locale;
@@ -244,7 +244,7 @@ export function SupportCenter({
           {suggestions.length > 0 ? (
             <div className="absolute z-20 mt-2 w-full overflow-hidden rounded-[16px] border border-border/80 bg-[#101010] shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
               {suggestions.map((item) => (
-                <Link
+                <SiteLink
                   key={item.id}
                   href={localePath(locale, item.href)}
                   className="flex flex-col gap-0.5 border-b border-white/5 px-4 py-3 last:border-0 hover:bg-white/5"
@@ -258,7 +258,7 @@ export function SupportCenter({
                   <span className="text-[11px] text-muted-foreground">
                     {item.description[locale]}
                   </span>
-                </Link>
+                </SiteLink>
               ))}
             </div>
           ) : null}
@@ -418,7 +418,7 @@ export function SupportCenter({
                           {card.cta[locale]}
                         </a>
                       ) : (
-                        <Link href={href}>{card.cta[locale]}</Link>
+                        <SiteLink href={href}>{card.cta[locale]}</SiteLink>
                       )}
                     </Button>
                   </article>
@@ -655,14 +655,14 @@ export function SupportCenter({
                     );
                     return (
                       <li key={href}>
-                        <Link
+                        <SiteLink
                           href={localePath(locale, href)}
                           className="text-[11px] font-semibold text-foreground hover:text-primary sm:text-xs"
                         >
                           →{" "}
                           {guide?.title[locale] ??
                             href.replace("/blog/", "").replaceAll("-", " ")}
-                        </Link>
+                        </SiteLink>
                       </li>
                     );
                   })}
@@ -692,9 +692,9 @@ export function SupportCenter({
             </h2>
           </div>
           <Button asChild variant="outline" size="sm">
-            <Link href={localePath(locale, "/faq")}>
+            <SiteLink href={localePath(locale, "/faq")}>
               {locale === "zh" ? "查看全部 FAQ" : "View All FAQ"}
-            </Link>
+            </SiteLink>
           </Button>
         </div>
         <div className="mt-5 rounded-[22px] border border-border/80 bg-[#101010] p-2 sm:rounded-[28px] sm:p-4">
@@ -731,7 +731,7 @@ export function SupportCenter({
         <div className="mt-5 df-grid-3">
             {supportGuideCards.map((guide, index) => (
               <FadeIn key={guide.slug} delay={index * 0.03} className="h-full">
-                <Link
+                <SiteLink
                   href={localePath(locale, `/blog/${guide.slug}`)}
                   className="group flex h-full flex-col overflow-hidden rounded-[18px] border border-border/80 bg-card shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[22px]"
                 >
@@ -760,7 +760,7 @@ export function SupportCenter({
                       {guide.description[locale]}
                     </p>
                   </div>
-                </Link>
+                </SiteLink>
               </FadeIn>
             ))}
         </div>

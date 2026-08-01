@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Locale } from "@/config/site";
 import { isValidLocale, localePath } from "@/config/i18n";
@@ -19,6 +18,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { SiteLink } from "@/components/common/site-link";
 
 type PageProps = { params: Promise<{ locale: string }> };
 
@@ -92,18 +92,18 @@ export default async function LoginPage({ params }: PageProps) {
               ))}
             </ul>
             <Button asChild size="lg" className="mt-8">
-              <Link href={localePath(locale, "/blog/tpower-login-guide")}>
+              <SiteLink href={localePath(locale, "/blog/tpower-login-guide")}>
                 {dictionary.login.cta}
-              </Link>
+              </SiteLink>
             </Button>
             <p className="mt-4 text-sm text-muted-foreground">
               {dictionary.login.helper}{" "}
-              <Link
+              <SiteLink
                 href={localePath(locale, "/contact")}
                 className="font-semibold text-primary hover:underline"
               >
                 {dictionary.login.helperLink}
-              </Link>
+              </SiteLink>
             </p>
           </div>
           <div className="min-w-0 space-y-3 sm:space-y-6">
@@ -120,15 +120,15 @@ export default async function LoginPage({ params }: PageProps) {
               ))}
             </Accordion>
             <div className="flex flex-wrap gap-3 text-sm">
-              <Link href={localePath(locale, "/register")} className="font-semibold text-primary">
+              <SiteLink href={localePath(locale, "/register")} className="font-semibold text-primary">
                 {dictionary.nav.register}
-              </Link>
-              <Link href={localePath(locale, "/faq")} className="font-semibold text-primary">
+              </SiteLink>
+              <SiteLink href={localePath(locale, "/faq")} className="font-semibold text-primary">
                 {dictionary.nav.faq}
-              </Link>
-              <Link href={localePath(locale, "/contact")} className="font-semibold text-primary">
+              </SiteLink>
+              <SiteLink href={localePath(locale, "/contact")} className="font-semibold text-primary">
                 {dictionary.nav.contact}
-              </Link>
+              </SiteLink>
             </div>
           </div>
           <div className="col-span-2">

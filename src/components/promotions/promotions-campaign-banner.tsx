@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Check, Download, UserPlus } from "lucide-react";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
@@ -7,6 +6,7 @@ import type { Dictionary } from "@/lib/dictionary";
 import { Container } from "@/components/common/container";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/common/reveal";
+import { SiteLink } from "@/components/common/site-link";
 
 type PromotionsCampaignBannerProps = {
   locale: Locale;
@@ -49,10 +49,10 @@ export function PromotionsCampaignBanner({
 
               <div className="df-actions mt-4 sm:mt-7">
                 <Button asChild size="lg" className="whitespace-nowrap">
-                  <Link href={localePath(locale, "/register")}>
+                  <SiteLink href={localePath(locale, "/register")}>
                     <UserPlus className="h-4 w-4 shrink-0" aria-hidden="true" />
                     {dictionary.nav.register}
-                  </Link>
+                  </SiteLink>
                 </Button>
                 <Button
                   asChild
@@ -60,10 +60,10 @@ export function PromotionsCampaignBanner({
                   variant="secondary"
                   className="whitespace-nowrap"
                 >
-                  <Link href={localePath(locale, "/download")}>
+                  <SiteLink href={localePath(locale, "/download")}>
                     <Download className="h-4 w-4 shrink-0" aria-hidden="true" />
                     {t.campaignDownload}
-                  </Link>
+                  </SiteLink>
                 </Button>
               </div>
 

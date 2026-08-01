@@ -1,8 +1,8 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { AtmosphereMedia } from "@/components/common/atmosphere-media";
+import { SiteLink } from "@/components/common/site-link";
 
 export type PremiumCtaAction = {
   href: string;
@@ -88,7 +88,7 @@ export function PremiumCta({
                     : undefined,
                 )}
               >
-                <Link href={action.href}>{action.label}</Link>
+                <SiteLink href={action.href}>{action.label}</SiteLink>
               </Button>
             ))}
           </div>

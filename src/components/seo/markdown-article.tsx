@@ -1,7 +1,7 @@
-import Link from "next/link";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
 import { slugifyHeading } from "@/lib/content";
+import { SiteLink } from "@/components/common/site-link";
 
 type MarkdownArticleProps = {
   content: string;
@@ -16,13 +16,13 @@ function renderInline(text: string, locale?: Locale) {
     const match = part.match(/^\[\[(\/[^\]|]+)\|([^\]]+)\]\]$/);
     if (!match) return <span key={index}>{part}</span>;
     return (
-      <Link
+      <SiteLink
         key={index}
         href={localePath(locale, match[1])}
         className="font-semibold text-foreground underline-offset-4 hover:text-primary hover:underline"
       >
         {match[2]}
-      </Link>
+      </SiteLink>
     );
   });
 }

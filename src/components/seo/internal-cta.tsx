@@ -1,7 +1,7 @@
-import Link from "next/link";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
 import { Button } from "@/components/ui/button";
+import { SiteLink } from "@/components/common/site-link";
 
 type InternalCtaProps = {
   locale: Locale;
@@ -28,7 +28,7 @@ export function InternalCta({
       <p className="mt-4 max-w-2xl text-body text-white/75">{description}</p>
       <div className="df-actions mt-8">
         <Button asChild size="lg">
-          <Link href={localePath(locale, primaryHref)}>{primaryLabel}</Link>
+          <SiteLink href={localePath(locale, primaryHref)}>{primaryLabel}</SiteLink>
         </Button>
         {secondaryHref && secondaryLabel ? (
           <Button
@@ -37,7 +37,9 @@ export function InternalCta({
             variant="outline"
             className="border-white/20 bg-transparent text-white hover:bg-card/10 hover:text-white"
           >
-            <Link href={localePath(locale, secondaryHref)}>{secondaryLabel}</Link>
+            <SiteLink href={localePath(locale, secondaryHref)}>
+              {secondaryLabel}
+            </SiteLink>
           </Button>
         ) : null}
       </div>

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
 import type { Dictionary } from "@/lib/dictionary";
@@ -7,6 +6,7 @@ import { blogKnowledgeHub } from "@/data/blog-page-content";
 import { FadeIn } from "@/components/common/fade-in";
 import { PremiumCta } from "@/components/common/premium-cta";
 import { Container } from "@/components/common/container";
+import { SiteLink } from "@/components/common/site-link";
 
 type BlogKnowledgeHubProps = {
   locale: Locale;
@@ -35,7 +35,7 @@ export function BlogKnowledgeHub({
       <div className="df-grid-4">
           {blogKnowledgeHub.map((item, index) => (
             <FadeIn key={item.href} delay={index * 0.03} className="h-full">
-              <Link
+              <SiteLink
                 href={localePath(locale, item.href)}
                 className="group flex h-full flex-col overflow-hidden rounded-[18px] border border-border/80 bg-card shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[22px]"
               >
@@ -64,7 +64,7 @@ export function BlogKnowledgeHub({
                     {item.description[locale]}
                   </p>
                 </div>
-              </Link>
+              </SiteLink>
             </FadeIn>
           ))}
       </div>

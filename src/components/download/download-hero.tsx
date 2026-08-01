@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Apple, Smartphone, UserPlus } from "lucide-react";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
@@ -9,6 +8,7 @@ import { AtmosphereHero } from "@/components/common/atmosphere-hero";
 import { Button } from "@/components/ui/button";
 import { asDownloadCopy } from "@/components/download/download-copy";
 import { PhoneMockup } from "@/components/download/phone-mockup";
+import { SiteLink } from "@/components/common/site-link";
 
 type DownloadHeroProps = {
   locale: Locale;
@@ -46,13 +46,13 @@ export function DownloadHero({
             size="lg"
             className="h-8 px-2.5 text-[10px] sm:h-11 sm:px-6 sm:text-sm"
           >
-            <Link href={localePath(locale, "/apk")}>
+            <SiteLink href={localePath(locale, "/apk")}>
               <Smartphone
                 className="h-3.5 w-3.5 sm:h-4 sm:w-4"
                 aria-hidden="true"
               />
               {t.android}
-            </Link>
+            </SiteLink>
           </Button>
           <Button
             asChild
@@ -60,13 +60,13 @@ export function DownloadHero({
             variant="secondary"
             className="h-8 px-2.5 text-[10px] sm:h-11 sm:px-6 sm:text-sm"
           >
-            <Link href="#install">
+            <SiteLink href="#install">
               <Apple
                 className="h-3.5 w-3.5 sm:h-4 sm:w-4"
                 aria-hidden="true"
               />
               {t.ios}
-            </Link>
+            </SiteLink>
           </Button>
           <Button
             asChild
@@ -74,13 +74,13 @@ export function DownloadHero({
             variant="outline"
             className="h-8 border-white/20 bg-transparent px-2.5 text-[10px] text-white hover:border-white/35 hover:bg-white/10 hover:text-white sm:h-11 sm:px-6 sm:text-sm"
           >
-            <Link href={localePath(locale, "/register")}>
+            <SiteLink href={localePath(locale, "/register")}>
               <UserPlus
                 className="h-3.5 w-3.5 sm:h-4 sm:w-4"
                 aria-hidden="true"
               />
               {dictionary.nav.register}
-            </Link>
+            </SiteLink>
           </Button>
         </div>
       }

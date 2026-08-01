@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Download, Gift, UserPlus } from "lucide-react";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
@@ -7,6 +6,7 @@ import type { BreadcrumbItem } from "@/types";
 import { AtmosphereHero } from "@/components/common/atmosphere-hero";
 import { atmosphereImageFor } from "@/config/page-atmosphere";
 import { Button } from "@/components/ui/button";
+import { SiteLink } from "@/components/common/site-link";
 
 type PromotionsHeroProps = {
   locale: Locale;
@@ -36,10 +36,10 @@ export function PromotionsHero({
         <div className="space-y-6">
           <div className="df-actions">
             <Button asChild size="lg" className="whitespace-nowrap">
-              <Link href={localePath(locale, "/register")}>
+              <SiteLink href={localePath(locale, "/register")}>
                 <UserPlus className="h-4 w-4 shrink-0" aria-hidden="true" />
                 {dictionary.nav.register}
-              </Link>
+              </SiteLink>
             </Button>
             <Button
               asChild
@@ -47,10 +47,10 @@ export function PromotionsHero({
               variant="outline"
               className="whitespace-nowrap border-white/20 bg-transparent text-white hover:border-white/35 hover:bg-white/10 hover:text-white"
             >
-              <Link href={localePath(locale, "/download")}>
+              <SiteLink href={localePath(locale, "/download")}>
                 <Download className="h-4 w-4 shrink-0" aria-hidden="true" />
                 {dictionary.nav.download}
-              </Link>
+              </SiteLink>
             </Button>
           </div>
 

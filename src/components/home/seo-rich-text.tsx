@@ -1,6 +1,6 @@
-import Link from "next/link";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
+import { SiteLink } from "@/components/common/site-link";
 
 type SeoRichTextProps = {
   locale: Locale;
@@ -18,13 +18,13 @@ export function SeoRichText({ locale, text, className }: SeoRichTextProps) {
         const match = part.match(/^\[\[(\/[^\]|]+)\|([^\]]+)\]\]$/);
         if (!match) return <span key={index}>{part}</span>;
         return (
-          <Link
+          <SiteLink
             key={index}
             href={localePath(locale, match[1])}
             className="font-semibold text-foreground underline-offset-4 hover:text-primary hover:underline"
           >
             {match[2]}
-          </Link>
+          </SiteLink>
         );
       })}
     </p>

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { Locale } from "@/config/site";
 import { mainNavigation } from "@/config/navigation";
@@ -12,6 +11,7 @@ import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { MobileDrawer } from "@/components/layout/mobile-drawer";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { SiteLink } from "@/components/common/site-link";
 
 type HeaderProps = {
   locale: Locale;
@@ -64,7 +64,7 @@ export function Header({ locale, dictionary }: HeaderProps) {
                   currentPath.startsWith(`${itemPath}/`);
 
             return (
-              <Link
+              <SiteLink
                 key={item.key}
                 href={localePath(locale, href)}
                 className={cn(
@@ -75,7 +75,7 @@ export function Header({ locale, dictionary }: HeaderProps) {
                 )}
               >
                 {item.label[locale]}
-              </Link>
+              </SiteLink>
             );
           })}
         </nav>
@@ -86,14 +86,14 @@ export function Header({ locale, dictionary }: HeaderProps) {
             label={dictionary.common.language}
           />
           <Button asChild variant="outline" size="sm" className="h-9 px-3 text-xs sm:h-10 sm:px-4 sm:text-sm">
-            <Link href={localePath(locale, "/login")}>
+            <SiteLink href={localePath(locale, "/login")}>
               {dictionary.nav.login}
-            </Link>
+            </SiteLink>
           </Button>
           <Button asChild size="sm" className="h-9 px-3 text-xs sm:h-10 sm:px-4 sm:text-sm">
-            <Link href={localePath(locale, "/register")}>
+            <SiteLink href={localePath(locale, "/register")}>
               {dictionary.nav.register}
-            </Link>
+            </SiteLink>
           </Button>
         </div>
       </div>

@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
 import type { Dictionary } from "@/lib/dictionary";
 import { Logo } from "@/components/layout/logo";
 import { Button } from "@/components/ui/button";
+import { SiteLink } from "@/components/common/site-link";
 
 type MobileDrawerProps = {
   locale: Locale;
@@ -117,34 +117,34 @@ export function MobileDrawer({ locale, dictionary }: MobileDrawerProps) {
 
             <nav className="flex min-h-0 flex-1 flex-col gap-1 overflow-y-auto px-4 py-5">
               {drawerNavigation.map((item) => (
-                <Link
+                <SiteLink
                   key={item.key}
                   href={localePath(locale, item.href === "/" ? "" : item.href)}
                   className="rounded-2xl px-4 py-3.5 text-base font-semibold text-foreground transition-colors hover:bg-white/[0.05] hover:text-primary"
                   onClick={() => setOpen(false)}
                 >
                   {item.label[locale]}
-                </Link>
+                </SiteLink>
               ))}
             </nav>
 
             <div className="shrink-0 border-t border-border/80 bg-[#0c0c0c] p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
               <div className="grid grid-cols-2 gap-3">
                 <Button asChild variant="outline" className="h-12 text-sm">
-                  <Link
+                  <SiteLink
                     href={localePath(locale, "/login")}
                     onClick={() => setOpen(false)}
                   >
                     {dictionary.nav.login}
-                  </Link>
+                  </SiteLink>
                 </Button>
                 <Button asChild className="h-12 text-sm">
-                  <Link
+                  <SiteLink
                     href={localePath(locale, "/register")}
                     onClick={() => setOpen(false)}
                   >
                     {dictionary.nav.register}
-                  </Link>
+                  </SiteLink>
                 </Button>
               </div>
             </div>

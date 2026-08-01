@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   CheckCircle2,
@@ -32,6 +31,7 @@ import { PageFaq } from "@/components/seo/page-faq";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { PromotionCard } from "@/components/promotions/promotion-card";
+import { SiteLink } from "@/components/common/site-link";
 
 type PageProps = {
   params: Promise<{ locale: string; slug: string }>;
@@ -124,10 +124,10 @@ export default async function PromotionDetailPage({ params }: PageProps) {
               </p>
               <div className="df-actions mt-4 sm:mt-8">
                 <Button asChild size="lg" className="whitespace-nowrap">
-                  <Link href={localePath(locale, "/register")}>
+                  <SiteLink href={localePath(locale, "/register")}>
                     <UserPlus className="h-4 w-4 shrink-0" aria-hidden="true" />
                     {dictionary.nav.register}
-                  </Link>
+                  </SiteLink>
                 </Button>
                 <Button
                   asChild
@@ -135,10 +135,10 @@ export default async function PromotionDetailPage({ params }: PageProps) {
                   variant="secondary"
                   className="whitespace-nowrap"
                 >
-                  <Link href={localePath(locale, "/download")}>
+                  <SiteLink href={localePath(locale, "/download")}>
                     <Download className="h-4 w-4 shrink-0" aria-hidden="true" />
                     {dictionary.nav.download}
-                  </Link>
+                  </SiteLink>
                 </Button>
               </div>
             </div>
@@ -282,63 +282,63 @@ export default async function PromotionDetailPage({ params }: PageProps) {
               </p>
               <div className="mt-6 flex flex-col gap-3">
                 <Button asChild>
-                  <Link href={localePath(locale, "/register")}>
+                  <SiteLink href={localePath(locale, "/register")}>
                     {dictionary.nav.register}
-                  </Link>
+                  </SiteLink>
                 </Button>
                 <Button asChild variant="secondary">
-                  <Link href={localePath(locale, "/login")}>
+                  <SiteLink href={localePath(locale, "/login")}>
                     {dictionary.nav.login}
-                  </Link>
+                  </SiteLink>
                 </Button>
                 <Button asChild variant="outline">
-                  <Link href={localePath(locale, "/download")}>
+                  <SiteLink href={localePath(locale, "/download")}>
                     {dictionary.nav.download}
-                  </Link>
+                  </SiteLink>
                 </Button>
                 <Button asChild variant="ghost">
-                  <Link href={localePath(locale, "/promotions")}>
+                  <SiteLink href={localePath(locale, "/promotions")}>
                     {dictionary.common.viewAll}
-                  </Link>
+                  </SiteLink>
                 </Button>
               </div>
               <div className="mt-6 flex flex-wrap gap-3 border-t border-border pt-5 text-sm">
-                <Link
+                <SiteLink
                   href={localePath(locale, "/vip")}
                   className="font-semibold text-foreground underline-offset-4 hover:text-primary hover:underline"
                 >
                   {dictionary.vip.metaTitle}
-                </Link>
-                <Link
+                </SiteLink>
+                <SiteLink
                   href={localePath(locale, "/games")}
                   className="font-semibold text-foreground underline-offset-4 hover:text-primary hover:underline"
                 >
                   {dictionary.nav.games}
-                </Link>
-                <Link
+                </SiteLink>
+                <SiteLink
                   href={localePath(locale, "/providers")}
                   className="font-semibold text-foreground underline-offset-4 hover:text-primary hover:underline"
                 >
                   {dictionary.providers.metaTitle}
-                </Link>
-                <Link
+                </SiteLink>
+                <SiteLink
                   href={localePath(locale, "/responsible-gaming")}
                   className="font-semibold text-foreground underline-offset-4 hover:text-primary hover:underline"
                 >
                   {dictionary.responsible.metaTitle}
-                </Link>
-                <Link
+                </SiteLink>
+                <SiteLink
                   href={localePath(locale, "/news")}
                   className="font-semibold text-foreground underline-offset-4 hover:text-primary hover:underline"
                 >
                   {dictionary.news.metaTitle}
-                </Link>
-                <Link
+                </SiteLink>
+                <SiteLink
                   href={localePath(locale, "/blog")}
                   className="font-semibold text-foreground underline-offset-4 hover:text-primary hover:underline"
                 >
                   {dictionary.nav.blog}
-                </Link>
+                </SiteLink>
               </div>
             </div>
           </aside>

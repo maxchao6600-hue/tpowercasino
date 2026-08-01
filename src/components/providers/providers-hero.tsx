@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Download, Layers, UserPlus } from "lucide-react";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
@@ -7,6 +6,7 @@ import type { BreadcrumbItem } from "@/types";
 import { AtmosphereHero } from "@/components/common/atmosphere-hero";
 import { atmosphereImageFor } from "@/config/page-atmosphere";
 import { Button } from "@/components/ui/button";
+import { SiteLink } from "@/components/common/site-link";
 
 type ProvidersHeroProps = {
   locale: Locale;
@@ -37,10 +37,10 @@ export function ProvidersHero({
       actions={
         <>
           <Button asChild size="lg">
-            <Link href={localePath(locale, "/register")}>
+            <SiteLink href={localePath(locale, "/register")}>
               <UserPlus className="h-4 w-4" aria-hidden="true" />
               {dictionary.nav.register}
-            </Link>
+            </SiteLink>
           </Button>
           <Button
             asChild
@@ -48,10 +48,10 @@ export function ProvidersHero({
             variant="outline"
             className="border-white/20 bg-transparent text-white hover:border-white/35 hover:bg-white/10 hover:text-white"
           >
-            <Link href={localePath(locale, "/download")}>
+            <SiteLink href={localePath(locale, "/download")}>
               <Download className="h-4 w-4" aria-hidden="true" />
               {dictionary.nav.download}
-            </Link>
+            </SiteLink>
           </Button>
           <div className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-black/40 px-5 py-4 backdrop-blur">
             <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/15 text-lg font-bold text-primary">

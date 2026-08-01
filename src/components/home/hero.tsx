@@ -1,10 +1,10 @@
-import Link from "next/link";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
 import type { Dictionary } from "@/lib/dictionary";
 import { AtmosphereHero } from "@/components/common/atmosphere-hero";
 import { atmosphereImageFor } from "@/config/page-atmosphere";
 import { Button } from "@/components/ui/button";
+import { SiteLink } from "@/components/common/site-link";
 
 type HeroProps = {
   locale: Locale;
@@ -29,9 +29,9 @@ export function Hero({ locale, dictionary }: HeroProps) {
       actions={
         <div className="df-actions">
           <Button asChild size="lg">
-            <Link href={localePath(locale, "/register")}>
+            <SiteLink href={localePath(locale, "/register")}>
               {common.ctaPrimary}
-            </Link>
+            </SiteLink>
           </Button>
           <Button
             asChild
@@ -39,9 +39,9 @@ export function Hero({ locale, dictionary }: HeroProps) {
             variant="outline"
             className="border-white/20 bg-transparent text-white hover:border-white/35 hover:bg-white/10 hover:text-white"
           >
-            <Link href={localePath(locale, "/download")}>
+            <SiteLink href={localePath(locale, "/download")}>
               {common.ctaSecondary}
-            </Link>
+            </SiteLink>
           </Button>
         </div>
       }

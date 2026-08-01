@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
 import type { Dictionary } from "@/lib/dictionary";
@@ -20,6 +19,7 @@ import { GameCard } from "@/components/games/game-card";
 import { ProviderLogoMark } from "@/components/games/provider-logo-mark";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { SiteLink } from "@/components/common/site-link";
 
 function categoryHubPath(category: Game["category"]): string {
   switch (category) {
@@ -94,12 +94,12 @@ export function GameDetail({
         actions={
           <div className="df-actions">
             <Button asChild size="lg">
-              <Link href={localePath(locale, "/register")}>{t.playNow}</Link>
+              <SiteLink href={localePath(locale, "/register")}>{t.playNow}</SiteLink>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href={localePath(locale, "/register")}>
+              <SiteLink href={localePath(locale, "/register")}>
                 {dictionary.common.ctaRegister}
-              </Link>
+              </SiteLink>
             </Button>
           </div>
         }

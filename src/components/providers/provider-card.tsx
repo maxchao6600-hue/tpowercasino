@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArrowUpRight, BadgeCheck } from "lucide-react";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
@@ -8,6 +7,7 @@ import type { Provider } from "@/types";
 import { ProviderLogoMark } from "@/components/games/provider-logo-mark";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { SiteLink } from "@/components/common/site-link";
 
 type ProviderCardProps = {
   locale: Locale;
@@ -53,12 +53,12 @@ export function ProviderCard({
         </div>
 
         <h3 className="mt-5 text-xl font-bold tracking-tight text-foreground">
-          <Link
+          <SiteLink
             href={detailHref}
             className="transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
           >
             {provider.name}
-          </Link>
+          </SiteLink>
         </h3>
         <p className="mt-1 text-sm text-muted-foreground">
           {gameCount > 0 ? (
@@ -106,13 +106,13 @@ export function ProviderCard({
             size="lg"
             className="h-12 min-w-[11.5rem] shrink-0 whitespace-nowrap px-5 text-sm"
           >
-            <Link
+            <SiteLink
               href={primaryHref}
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap"
             >
               <span className="whitespace-nowrap">{primaryLabel}</span>
               <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden="true" />
-            </Link>
+            </SiteLink>
           </Button>
           <Button
             asChild
@@ -120,12 +120,12 @@ export function ProviderCard({
             size="lg"
             className="h-12 min-w-[10.5rem] shrink-0 whitespace-nowrap px-5 text-sm"
           >
-            <Link
+            <SiteLink
               href={detailHref}
               className="inline-flex items-center justify-center whitespace-nowrap"
             >
               <span className="whitespace-nowrap">{t.exploreGames}</span>
-            </Link>
+            </SiteLink>
           </Button>
         </div>
       </div>

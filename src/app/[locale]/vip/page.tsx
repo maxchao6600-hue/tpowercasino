@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Locale } from "@/config/site";
 import { isValidLocale, localePath } from "@/config/i18n";
@@ -30,6 +29,7 @@ import { VipExclusivePromos } from "@/components/vip/vip-exclusive-promos";
 import { VipTestimonials } from "@/components/vip/vip-testimonials";
 import { VipHowTo } from "@/components/vip/vip-how-to";
 import { VipFinalCta } from "@/components/vip/vip-final-cta";
+import { SiteLink } from "@/components/common/site-link";
 
 type PageProps = { params: Promise<{ locale: string }> };
 
@@ -87,12 +87,12 @@ export default async function VipPage({ params }: PageProps) {
         actions={
           <div className="flex flex-row flex-wrap gap-2 sm:gap-3">
             <Button asChild size="lg" className="h-9 px-3 text-xs sm:h-11 sm:px-6 sm:text-sm">
-              <Link href={localePath(locale, "/register")}>
+              <SiteLink href={localePath(locale, "/register")}>
                 {t.heroCtaPrimary}
-              </Link>
+              </SiteLink>
             </Button>
             <Button asChild size="lg" variant="secondary" className="h-9 px-3 text-xs sm:h-11 sm:px-6 sm:text-sm">
-              <Link href="#tiers">{t.heroCtaSecondary}</Link>
+              <SiteLink href="#tiers">{t.heroCtaSecondary}</SiteLink>
             </Button>
             <Button
               asChild
@@ -100,7 +100,7 @@ export default async function VipPage({ params }: PageProps) {
               variant="outline"
               className="h-9 border-white/20 bg-transparent px-3 text-xs text-white hover:border-white/35 hover:bg-white/10 hover:text-white sm:h-11 sm:px-6 sm:text-sm"
             >
-              <Link href="#complete-benefits">{t.heroCtaTertiary}</Link>
+              <SiteLink href="#complete-benefits">{t.heroCtaTertiary}</SiteLink>
             </Button>
           </div>
         }
