@@ -25,7 +25,7 @@ export function PhoneMockup({
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto aspect-[9/19.5] w-[72%] max-w-[160px] drop-shadow-[0_28px_64px_rgba(0,0,0,0.65)] sm:w-[80%] sm:max-w-[300px] md:w-[92%] md:max-w-[390px]">
+      <div className="relative mx-auto aspect-[9/19.5] w-[108%] max-w-[220px] drop-shadow-[0_28px_64px_rgba(0,0,0,0.65)] sm:w-[104%] sm:max-w-[320px] md:w-[92%] md:max-w-[390px]">
         <div className="absolute inset-0 rounded-[1.85rem] bg-gradient-to-b from-[#3a3a3c] via-[#1c1c1e] to-[#0a0a0a] p-[2px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)] sm:rounded-[2.6rem] sm:p-[2.5px] md:rounded-[2.85rem]">
           <div className="relative h-full w-full overflow-hidden rounded-[1.7rem] bg-black sm:rounded-[2.45rem] md:rounded-[2.7rem]">
             <div
@@ -45,7 +45,7 @@ export function PhoneMockup({
                 fill
                 priority={priority}
                 quality={priority ? 100 : 75}
-                sizes="(max-width: 640px) 160px, (max-width: 768px) 340px, 390px"
+                sizes="(max-width: 640px) 210px, (max-width: 768px) 320px, 390px"
                 className="object-cover object-top"
               />
             </div>

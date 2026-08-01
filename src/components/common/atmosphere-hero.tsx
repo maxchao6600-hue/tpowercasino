@@ -121,7 +121,7 @@ export function AtmosphereHero({
 
               <h1
                 className={cn(
-                  "h1-display text-white",
+                  "h1-display break-words text-white",
                   brand || eyebrow ? "mt-3" : "",
                 )}
               >
