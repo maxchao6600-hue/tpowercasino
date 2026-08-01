@@ -53,7 +53,7 @@ export function PromotionFilters({
                 : `${localePath(locale, "/promotions")}?category=${item}`
             }
             className={cn(
-              "group inline-flex items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-semibold transition-all duration-300",
+              "group inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full border px-4 py-2.5 text-sm font-semibold transition-all duration-300",
               isActive
                 ? "border-primary bg-primary text-primary-foreground shadow-[0_0_24px_rgba(229,9,20,0.35)]"
                 : "border-border bg-card text-muted-foreground hover:-translate-y-0.5 hover:border-primary/50 hover:bg-surface hover:text-foreground hover:shadow-[var(--shadow-soft)]",

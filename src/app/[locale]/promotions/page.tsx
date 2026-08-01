@@ -112,16 +112,18 @@ export default async function PromotionsPage({ params, searchParams }: PageProps
           />
 
           {filtered.length > 0 ? (
-            <div className="df-grid-2 mt-10">
-              {filtered.map((promo, index) => (
-                <FadeIn key={promo.id} delay={index * 0.04}>
-                  <PromotionCard
-                    locale={locale}
-                    dictionary={dictionary}
-                    promo={promo}
-                  />
-                </FadeIn>
-              ))}
+            <div className="df-row-2 mt-10">
+              <div className="df-grid-2">
+                {filtered.map((promo, index) => (
+                  <FadeIn key={promo.id} delay={index * 0.04}>
+                    <PromotionCard
+                      locale={locale}
+                      dictionary={dictionary}
+                      promo={promo}
+                    />
+                  </FadeIn>
+                ))}
+              </div>
             </div>
           ) : (
             <div className="mt-10 rounded-[28px] border border-border bg-card p-10 text-center">

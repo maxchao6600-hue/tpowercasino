@@ -123,44 +123,49 @@ export default async function PromotionDetailPage({ params }: PageProps) {
                 {promo.summary[locale]}
               </p>
               <div className="df-actions mt-4 sm:mt-8">
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="whitespace-nowrap">
                   <Link href={localePath(locale, "/register")}>
-                    <UserPlus className="h-4 w-4" aria-hidden="true" />
+                    <UserPlus className="h-4 w-4 shrink-0" aria-hidden="true" />
                     {dictionary.nav.register}
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="secondary">
+                <Button
+                  asChild
+                  size="lg"
+                  variant="secondary"
+                  className="whitespace-nowrap"
+                >
                   <Link href={localePath(locale, "/download")}>
-                    <Download className="h-4 w-4" aria-hidden="true" />
+                    <Download className="h-4 w-4 shrink-0" aria-hidden="true" />
                     {dictionary.nav.download}
                   </Link>
                 </Button>
               </div>
             </div>
-            <dl className="grid grid-cols-3 gap-2 sm:gap-3">
-              <div className="min-w-0 rounded-xl border border-border bg-card/80 p-2 sm:rounded-2xl sm:p-4">
-                <dt className="text-[10px] font-semibold uppercase tracking-wide text-muted-foreground sm:text-xs">
+            <dl className="df-scroll flex min-w-0 gap-2 sm:grid sm:grid-cols-3 sm:gap-3 sm:overflow-visible">
+              <div className="min-w-[112px] shrink-0 rounded-xl border border-border bg-card/80 p-2 sm:min-w-0 sm:shrink sm:rounded-2xl sm:p-4">
+                <dt className="text-[10px] font-semibold uppercase tracking-normal text-muted-foreground sm:text-xs sm:tracking-wide">
                   {t.bonusAmountLabel}
                 </dt>
-                <dd className="mt-0.5 text-sm font-bold text-foreground sm:mt-1 sm:text-base">
+                <dd className="mt-0.5 break-words text-sm font-bold leading-snug text-foreground sm:mt-1 sm:text-base">
                   {promo.bonusAmount[locale]}
                 </dd>
               </div>
-              <div className="min-w-0 rounded-xl border border-border bg-card/80 p-2 sm:rounded-2xl sm:p-4">
-                <dt className="flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground sm:text-xs">
-                  <Wallet className="h-3 w-3 sm:h-3.5 sm:w-3.5" aria-hidden="true" />
+              <div className="min-w-[112px] shrink-0 rounded-xl border border-border bg-card/80 p-2 sm:min-w-0 sm:shrink sm:rounded-2xl sm:p-4">
+                <dt className="flex flex-wrap items-center gap-1 text-[10px] font-semibold uppercase tracking-normal text-muted-foreground sm:text-xs sm:tracking-wide">
+                  <Wallet className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" aria-hidden="true" />
                   {t.minDepositLabel}
                 </dt>
-                <dd className="mt-0.5 text-sm font-bold text-foreground sm:mt-1 sm:text-base">
+                <dd className="mt-0.5 break-words text-sm font-bold leading-snug text-foreground sm:mt-1 sm:text-base">
                   {promo.minDeposit[locale]}
                 </dd>
               </div>
-              <div className="min-w-0 rounded-xl border border-border bg-card/80 p-2 sm:rounded-2xl sm:p-4">
-                <dt className="flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground sm:text-xs">
-                  <Clock3 className="h-3 w-3 sm:h-3.5 sm:w-3.5" aria-hidden="true" />
+              <div className="min-w-[112px] shrink-0 rounded-xl border border-border bg-card/80 p-2 sm:min-w-0 sm:shrink sm:rounded-2xl sm:p-4">
+                <dt className="flex flex-wrap items-center gap-1 text-[10px] font-semibold uppercase tracking-normal text-muted-foreground sm:text-xs sm:tracking-wide">
+                  <Clock3 className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" aria-hidden="true" />
                   {dictionary.common.expires}
                 </dt>
-                <dd className="mt-0.5 text-sm font-bold text-foreground sm:mt-1 sm:text-base">
+                <dd className="mt-0.5 break-words text-sm font-bold leading-snug text-foreground sm:mt-1 sm:text-base">
                   {formatDate(promo.expiresAt, locale)}
                 </dd>
               </div>
@@ -344,15 +349,17 @@ export default async function PromotionDetailPage({ params }: PageProps) {
         <section className="section-y border-t border-border bg-card">
           <Container>
             <h2 className="h2-display text-foreground">{t.detailRelated}</h2>
-            <div className="df-grid-2 mt-8">
-              {related.map((item) => (
-                <PromotionCard
-                  key={item.id}
-                  locale={locale}
-                  dictionary={dictionary}
-                  promo={item}
-                />
-              ))}
+            <div className="df-row-2 mt-8">
+              <div className="df-grid-2">
+                {related.map((item) => (
+                  <PromotionCard
+                    key={item.id}
+                    locale={locale}
+                    dictionary={dictionary}
+                    promo={item}
+                  />
+                ))}
+              </div>
             </div>
           </Container>
         </section>

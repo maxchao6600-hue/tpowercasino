@@ -48,15 +48,20 @@ export function PromotionsCampaignBanner({
               </p>
 
               <div className="df-actions mt-4 sm:mt-7">
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="whitespace-nowrap">
                   <Link href={localePath(locale, "/register")}>
-                    <UserPlus className="h-4 w-4" aria-hidden="true" />
+                    <UserPlus className="h-4 w-4 shrink-0" aria-hidden="true" />
                     {dictionary.nav.register}
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="secondary">
+                <Button
+                  asChild
+                  size="lg"
+                  variant="secondary"
+                  className="whitespace-nowrap"
+                >
                   <Link href={localePath(locale, "/download")}>
-                    <Download className="h-4 w-4" aria-hidden="true" />
+                    <Download className="h-4 w-4 shrink-0" aria-hidden="true" />
                     {t.campaignDownload}
                   </Link>
                 </Button>

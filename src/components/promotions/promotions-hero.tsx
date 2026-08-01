@@ -35,9 +35,9 @@ export function PromotionsHero({
       actions={
         <div className="space-y-6">
           <div className="df-actions">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="whitespace-nowrap">
               <Link href={localePath(locale, "/register")}>
-                <UserPlus className="h-4 w-4" aria-hidden="true" />
+                <UserPlus className="h-4 w-4 shrink-0" aria-hidden="true" />
                 {dictionary.nav.register}
               </Link>
             </Button>
@@ -45,10 +45,10 @@ export function PromotionsHero({
               asChild
               size="lg"
               variant="outline"
-              className="border-white/20 bg-transparent text-white hover:border-white/35 hover:bg-white/10 hover:text-white"
+              className="whitespace-nowrap border-white/20 bg-transparent text-white hover:border-white/35 hover:bg-white/10 hover:text-white"
             >
               <Link href={localePath(locale, "/download")}>
-                <Download className="h-4 w-4" aria-hidden="true" />
+                <Download className="h-4 w-4 shrink-0" aria-hidden="true" />
                 {dictionary.nav.download}
               </Link>
             </Button>

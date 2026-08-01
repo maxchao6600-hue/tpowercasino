@@ -57,19 +57,21 @@ export function PromotionsPlaySmarterBanner({
                 {t.playSmarterDescription}
               </p>
 
-              <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-7 sm:gap-3">
+              <div className="df-scroll mt-4 flex gap-2 sm:mt-7 sm:grid sm:grid-cols-2 sm:gap-3 sm:overflow-visible">
                 {t.playSmarterHighlights.map((item, index) => {
                   const Icon = highlightIcons[index] ?? Check;
                   return (
                     <div
                       key={item}
-                      className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 backdrop-blur-sm transition-colors duration-300 hover:border-primary/40 hover:bg-primary/10"
+                      className="min-w-[160px] shrink-0 rounded-2xl border border-white/10 bg-white/[0.04] px-3 py-3 backdrop-blur-sm transition-colors duration-300 hover:border-primary/40 hover:bg-primary/10 sm:min-w-0 sm:shrink sm:px-4 sm:py-4"
                     >
-                      <div className="flex items-center gap-3">
-                        <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/15 text-primary">
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary sm:h-9 sm:w-9">
                           <Icon className="h-4 w-4" aria-hidden="true" />
                         </span>
-                        <p className="text-sm font-semibold text-white">{item}</p>
+                        <p className="text-xs font-semibold leading-snug text-white sm:text-sm">
+                          {item}
+                        </p>
                       </div>
                     </div>
                   );
@@ -77,9 +79,9 @@ export function PromotionsPlaySmarterBanner({
               </div>
 
               <div className="df-actions mt-4 sm:mt-7">
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="whitespace-nowrap">
                   <Link href={localePath(locale, "/register")}>
-                    <UserPlus className="h-4 w-4" aria-hidden="true" />
+                    <UserPlus className="h-4 w-4 shrink-0" aria-hidden="true" />
                     {dictionary.nav.register}
                   </Link>
                 </Button>
@@ -87,10 +89,10 @@ export function PromotionsPlaySmarterBanner({
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                  className="whitespace-nowrap border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white"
                 >
                   <Link href={localePath(locale, "/download")}>
-                    <Download className="h-4 w-4" aria-hidden="true" />
+                    <Download className="h-4 w-4 shrink-0" aria-hidden="true" />
                     {t.playSmarterDownload}
                   </Link>
                 </Button>

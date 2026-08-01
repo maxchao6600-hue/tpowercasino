@@ -47,9 +47,9 @@ export function PromotionCard({
         </div>
       </div>
 
-      <div className="relative space-y-5 p-6">
+      <div className="relative space-y-4 p-4 sm:space-y-5 sm:p-6">
         <div>
-          <h3 className="text-2xl font-bold tracking-tight text-foreground">
+          <h3 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">
             {promo.title[locale]}
           </h3>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -57,39 +57,39 @@ export function PromotionCard({
           </p>
         </div>
 
-        <dl className="grid grid-cols-3 gap-3">
-            <div className="rounded-2xl border border-border bg-surface/80 px-3 py-3">
-              <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+        <dl className="grid grid-cols-3 gap-2 sm:gap-3">
+            <div className="min-w-0 rounded-2xl border border-border bg-surface/80 px-2 py-2.5 sm:px-3 sm:py-3">
+              <dt className="text-[10px] font-semibold uppercase tracking-normal text-muted-foreground sm:text-[11px] sm:tracking-wide">
                 {dictionary.promotions.bonusAmountLabel}
               </dt>
-              <dd className="mt-1 text-sm font-bold text-foreground">
+              <dd className="mt-1 break-words text-xs font-bold leading-snug text-foreground sm:text-sm">
                 {promo.bonusAmount[locale]}
               </dd>
             </div>
-            <div className="rounded-2xl border border-border bg-surface/80 px-3 py-3">
-              <dt className="flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
-                <Wallet className="h-3 w-3" aria-hidden="true" />
+            <div className="min-w-0 rounded-2xl border border-border bg-surface/80 px-2 py-2.5 sm:px-3 sm:py-3">
+              <dt className="flex flex-wrap items-center gap-1 text-[10px] font-semibold uppercase tracking-normal text-muted-foreground sm:text-[11px] sm:tracking-wide">
+                <Wallet className="h-3 w-3 shrink-0" aria-hidden="true" />
                 {dictionary.promotions.minDepositLabel}
               </dt>
-              <dd className="mt-1 text-sm font-bold text-foreground">
+              <dd className="mt-1 break-words text-xs font-bold leading-snug text-foreground sm:text-sm">
                 {promo.minDeposit[locale]}
               </dd>
             </div>
-            <div className="rounded-2xl border border-border bg-surface/80 px-3 py-3">
-              <dt className="flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
-                <Clock3 className="h-3 w-3" aria-hidden="true" />
+            <div className="min-w-0 rounded-2xl border border-border bg-surface/80 px-2 py-2.5 sm:px-3 sm:py-3">
+              <dt className="flex flex-wrap items-center gap-1 text-[10px] font-semibold uppercase tracking-normal text-muted-foreground sm:text-[11px] sm:tracking-wide">
+                <Clock3 className="h-3 w-3 shrink-0" aria-hidden="true" />
                 {dictionary.common.expires}
               </dt>
-              <dd className="mt-1 text-sm font-bold text-foreground">
+              <dd className="mt-1 break-words text-xs font-bold leading-snug text-foreground sm:text-sm">
                 {formatDate(promo.expiresAt, locale)}
               </dd>
             </div>
           </dl>
 
-        <Button asChild className="w-full">
+        <Button asChild className="w-full whitespace-nowrap">
           <Link href={localePath(locale, `/promotions/${promo.slug}`)}>
-            {promo.cta[locale]}
-            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+            <span className="min-w-0 truncate">{promo.cta[locale]}</span>
+            <ArrowRight className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5" />
           </Link>
         </Button>
       </div>
