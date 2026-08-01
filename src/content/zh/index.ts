@@ -146,9 +146,9 @@ export const zh: Dictionary = {
     register: "注册",
   },
   home: {
-    metaTitle: "TPOWER官网 | 马来西亚线上博彩・真人视讯・老虎机",
+    metaTitle: "TPOWER Malaysia｜官方线上博彩平台",
     metaDescription:
-      "TPOWER官方平台：真人视讯、老虎机、体育博彩与捕鱼游戏。支持本地充值、安全提现、TPOWER优惠与手机APP下载。",
+      "TPOWER Malaysia 官方线上博彩平台：老虎机、真人视讯、体育博彩一站式体验。安全支付、快速提现、本地优惠与官方APP，专为马来西亚玩家打造。",
     heroEyebrow: "马来西亚线上博彩官方入口",
     heroH1: "TPOWER线上博彩",
     heroTitle: "真人视讯・老虎机・体育博彩，一个平台搞定",

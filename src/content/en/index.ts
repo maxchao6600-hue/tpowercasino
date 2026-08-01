@@ -147,9 +147,9 @@ export const en = {
     register: "Register",
   },
   home: {
-    metaTitle: "TPOWER Online Casino Malaysia",
+    metaTitle: "TPOWER Malaysia | Official Online Casino Platform",
     metaDescription:
-      "Play TPOWER Online Casino in Malaysia: premium slots, live casino, and sports betting with fast deposits, secure withdrawals, and mobile gaming.",
+      "TPOWER Malaysia official online casino — play slots, live casino, and sports betting with secure banking, fast withdrawals, and premium mobile gaming for Malaysian players.",
     heroEyebrow: "Malaysia's Trusted Online Casino",
     heroH1: "TPOWER Online Casino",
     heroTitle: "Malaysia's Premium Online Casino Platform",

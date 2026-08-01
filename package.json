@@ -13,6 +13,7 @@
     "type-check": "tsc --noEmit",
     "qa": "node scripts/qa-audit.mjs",
     "assets": "node scripts/generate-assets.mjs",
+    "icons:favicons": "node scripts/generate-favicons.mjs",
     "brand:stamp": "node scripts/brand-stamp-images.mjs",
     "brand:restamp": "node scripts/brand-stamp-images.mjs --restamp",
     "games:catalogue": "node scripts/build-games-catalogue.mjs",
