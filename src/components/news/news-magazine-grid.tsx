@@ -21,8 +21,8 @@ export function NewsMagazineGrid({
 
   return (
     <section className="space-y-4 sm:space-y-5">
-      <div className="flex items-end justify-between gap-3">
-        <h2 className="text-lg font-bold tracking-tight text-foreground sm:text-2xl">
+      <div className="flex min-w-0 items-end justify-between gap-3">
+        <h2 className="whitespace-nowrap break-keep text-lg font-bold tracking-tight text-foreground sm:text-2xl">
           {t.latestArticles ??
             (locale === "zh" ? "最新文章" : "Latest articles")}
         </h2>

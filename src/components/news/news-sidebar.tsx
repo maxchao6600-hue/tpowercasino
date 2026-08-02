@@ -71,7 +71,7 @@ export function NewsSidebar({
   const t = asNewsCopy(dictionary.news);
 
   return (
-    <aside className="space-y-4 sm:space-y-5 lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:pr-1">
+    <aside className="w-[280px] shrink-0 space-y-4 sm:space-y-5 lg:sticky lg:top-24 lg:w-auto lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:pr-1">
       <div className="rounded-[18px] border border-border/80 bg-[#101010] p-3.5 sm:rounded-[22px] sm:p-5">
         <h2 className="text-sm font-bold text-foreground sm:text-base">
           {t.sidebarSearch ?? dictionary.common.search}

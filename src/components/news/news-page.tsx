@@ -146,8 +146,9 @@ export function NewsPageContent({
             query={query}
           />
 
-          <div className="grid grid-cols-[1fr_280px] items-start gap-5 lg:grid-cols-[1fr_300px] lg:gap-8 xl:grid-cols-[1fr_320px]">
-            <div className="min-w-0 space-y-10 sm:space-y-12">
+          <div className="df-row-2">
+            <div className="df-news-grid grid grid-cols-[minmax(440px,1fr)_280px] items-start gap-5 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-8 xl:grid-cols-[minmax(0,1fr)_320px]">
+            <div className="min-w-[440px] space-y-10 sm:space-y-12 md:min-w-0">
               {magazineItems.length > 0 ? (
                 <NewsMagazineGrid
                   items={magazineItems}
@@ -193,6 +194,7 @@ export function NewsPageContent({
               query={query}
               statusLine={newsStatusLine[locale]}
             />
+            </div>
           </div>
 
           <NewsTimeline locale={locale} dictionary={dictionary} />
