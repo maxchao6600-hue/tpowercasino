@@ -9,16 +9,22 @@ type BreadcrumbsProps = {
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
     <nav aria-label="Breadcrumb">
-      <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
+      <ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-muted-foreground">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           return (
-            <li key={`${item.href}-${item.name}`} className="inline-flex items-center gap-1.5">
+            <li
+              key={`${item.href}-${item.name}`}
+              className="inline-flex max-w-full min-w-0 items-center gap-1.5"
+            >
               {index > 0 ? (
-                <ChevronRight className="h-3.5 w-3.5 opacity-60" aria-hidden="true" />
+                <ChevronRight className="h-3.5 w-3.5 shrink-0 opacity-60" aria-hidden="true" />
               ) : null}
               {isLast ? (
-                <span aria-current="page" className="font-medium text-foreground">
+                <span
+                  aria-current="page"
+                  className="break-words font-medium text-foreground"
+                >
                   {item.name}
                 </span>
               ) : (

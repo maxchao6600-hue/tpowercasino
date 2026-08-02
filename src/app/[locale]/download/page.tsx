@@ -48,7 +48,7 @@ export default async function DownloadPage({ params }: PageProps) {
   const breadcrumbs = [
     { name: dictionary.common.home, href: localePath(locale) },
     {
-      name: dictionary.download.metaTitle,
+      name: dictionary.nav.download,
       href: localePath(locale, "/download"),
     },
   ];

@@ -39,12 +39,14 @@ export function DownloadHero({
       imageAlt={heroAlt}
       overlay="cinematic"
       showTrustBar
+      relaxed
+      asideGridClassName="grid-cols-[1.55fr_1fr] gap-4 sm:gap-5 md:grid-cols-[1.15fr_0.85fr] md:gap-8 lg:gap-12"
       actions={
-        <div className="flex flex-row flex-wrap gap-2 sm:gap-3">
+        <div className="flex flex-row flex-wrap gap-2.5 sm:gap-3">
           <Button
             asChild
             size="lg"
-            className="h-8 px-2.5 text-[10px] sm:h-11 sm:px-6 sm:text-sm"
+            className="h-9 px-3 text-[11px] sm:h-11 sm:px-6 sm:text-sm"
           >
             <SiteLink href={localePath(locale, "/apk")}>
               <Smartphone
@@ -58,7 +60,7 @@ export function DownloadHero({
             asChild
             size="lg"
             variant="secondary"
-            className="h-8 px-2.5 text-[10px] sm:h-11 sm:px-6 sm:text-sm"
+            className="h-9 px-3 text-[11px] sm:h-11 sm:px-6 sm:text-sm"
           >
             <SiteLink href="#install">
               <Apple
@@ -72,7 +74,7 @@ export function DownloadHero({
             asChild
             size="lg"
             variant="outline"
-            className="h-8 border-white/20 bg-transparent px-2.5 text-[10px] text-white hover:border-white/35 hover:bg-white/10 hover:text-white sm:h-11 sm:px-6 sm:text-sm"
+            className="h-9 border-white/20 bg-transparent px-3 text-[11px] text-white hover:border-white/35 hover:bg-white/10 hover:text-white sm:h-11 sm:px-6 sm:text-sm"
           >
             <SiteLink href={localePath(locale, "/register")}>
               <UserPlus

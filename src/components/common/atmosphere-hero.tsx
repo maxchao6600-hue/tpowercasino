@@ -20,6 +20,10 @@ type AtmosphereHeroProps = {
   compact?: boolean;
   overlay?: "default" | "cinematic";
   showTrustBar?: boolean;
+  /** Wider mobile gaps and copy spacing — desktop md: values unchanged. */
+  relaxed?: boolean;
+  /** Override grid columns when aside is present (mobile/tablet only). */
+  asideGridClassName?: string;
 };
 
 const OVERLAY_STYLES = {
@@ -48,6 +52,8 @@ export function AtmosphereHero({
   compact = false,
   overlay = "default",
   showTrustBar = true,
+  relaxed = false,
+  asideGridClassName,
 }: AtmosphereHeroProps) {
   return (
     <>
@@ -89,19 +95,36 @@ export function AtmosphereHero({
         <Container
           className={cn(
             "relative flex h-full min-h-[inherit] flex-col justify-center",
-            compact ? "py-10 md:py-12" : "py-12 md:py-16 lg:py-20",
+            compact
+              ? "py-10 md:py-12"
+              : relaxed
+                ? "py-14 sm:py-16 md:py-16 lg:py-20"
+                : "py-12 md:py-16 lg:py-20",
           )}
         >
-          {breadcrumbs?.length ? <Breadcrumbs items={breadcrumbs} /> : null}
+          {breadcrumbs?.length ? (
+            <div className="relative z-20 mb-4 w-full min-w-0 sm:mb-5 md:mb-6">
+              <Breadcrumbs items={breadcrumbs} />
+            </div>
+          ) : null}
 
           <div
             className={cn(
-              "grid items-center gap-6 md:gap-8 lg:gap-12",
-              aside ? "grid-cols-[1.15fr_0.85fr]" : "",
-              breadcrumbs?.length ? "mt-6 md:mt-8" : "",
+              "grid items-center",
+              aside
+                ? cn(
+                    asideGridClassName ??
+                      "grid-cols-[1.15fr_0.85fr] gap-3 sm:gap-6 md:gap-8 lg:gap-12",
+                  )
+                : "gap-6 md:gap-8 lg:gap-12",
             )}
           >
-            <div className={cn("min-w-0 max-w-2xl", !aside && "lg:max-w-3xl")}>
+            <div
+              className={cn(
+                "relative z-10 min-w-0 max-w-2xl",
+                !aside && "lg:max-w-3xl",
+              )}
+            >
               {eyebrow ? (
                 <div className="inline-flex items-center gap-2 rounded-full border border-primary/35 bg-primary/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-primary sm:text-xs">
                   {eyebrow}
@@ -122,22 +145,43 @@ export function AtmosphereHero({
               <h1
                 className={cn(
                   "h1-display break-words text-white",
-                  brand || eyebrow ? "mt-3" : "",
+                  brand || eyebrow
+                    ? relaxed
+                      ? "mt-4 sm:mt-3"
+                      : "mt-3"
+                    : "",
                 )}
               >
                 {title}
               </h1>
 
-              <p className="text-lead mt-3 max-w-xl text-white/72 sm:mt-4">
+              <p
+                className={cn(
+                  "text-lead max-w-xl text-white/72",
+                  relaxed ? "mt-4 sm:mt-4" : "mt-3 sm:mt-4",
+                )}
+              >
                 {description}
               </p>
 
               {actions ? (
-                <div className="df-actions mt-6 sm:mt-8">{actions}</div>
+                <div
+                  className={cn(
+                    "min-w-0",
+                    aside ? "" : "df-actions",
+                    relaxed ? "mt-6 sm:mt-7 md:mt-8" : "mt-5 sm:mt-7 md:mt-8",
+                  )}
+                >
+                  {actions}
+                </div>
               ) : null}
             </div>
 
-            {aside ? <div className="relative min-w-0">{aside}</div> : null}
+            {aside ? (
+              <div className="relative z-0 min-w-0 self-center justify-self-stretch">
+                {aside}
+              </div>
+            ) : null}
           </div>
         </Container>
 
