@@ -377,15 +377,50 @@ html {
   min-width: 380px;
 }
 
+/* News hub: main + sidebar — preserve desktop columns; scroll on narrow viewports */
+.df-row-2 > .df-news-grid {
+  min-width: 740px;
+  width: max(100%, 740px);
+  overflow-x: visible;
+}
+
+.df-row-2 > .df-news-grid > aside {
+  min-width: 280px;
+  width: 280px;
+  flex-shrink: 0;
+}
+
 .df-row-3 > .df-grid-3 > *,
 .df-row-4 > .df-grid-4 > * {
   min-width: 280px;
 }
 
+/* Providers directory cards — slightly narrower min before horizontal scroll */
+.providers-card-row > .df-grid-3 {
+  min-width: 640px;
+  width: max(100%, 640px);
+}
+
+.providers-card-row > .df-grid-3 > * {
+  min-width: 200px;
+}
+
+@media (max-width: 767px) {
+  .providers-card-row > .df-grid-3 {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+}
+
 @media (min-width: 768px) {
   .df-row-2 > .df-grid-2,
+  .df-row-2 > .df-news-grid,
   .df-row-3 > .df-grid-3,
   .df-row-4 > .df-grid-4 {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .providers-card-row > .df-grid-3 {
     min-width: 0;
     width: 100%;
   }
@@ -393,6 +428,15 @@ html {
   .df-row-2 > .df-grid-2 > *,
   .df-row-3 > .df-grid-3 > *,
   .df-row-4 > .df-grid-4 > * {
+    min-width: 0;
+  }
+
+  .df-row-2 > .df-news-grid > aside {
+    min-width: 0;
+    width: auto;
+  }
+
+  .providers-card-row > .df-grid-3 > * {
     min-width: 0;
   }
 }

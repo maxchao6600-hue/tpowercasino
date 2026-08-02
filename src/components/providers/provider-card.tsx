@@ -35,7 +35,7 @@ export function ProviderCard({
       : "Play Now";
 
   return (
-    <article className="group flex h-full min-w-[280px] flex-col overflow-visible rounded-[24px] border border-border bg-card shadow-[var(--shadow-soft)] transition-all duration-300 ease-out hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[var(--shadow-lift)]">
+    <article className="group flex h-full min-w-[200px] flex-col overflow-hidden rounded-[24px] border border-border bg-card shadow-[var(--shadow-soft)] transition-all duration-300 ease-out hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[var(--shadow-lift)]">
       <div className="flex flex-1 flex-col p-5 md:p-7">
         <div className="flex items-start justify-between gap-4">
           <div className="flex h-[60px] w-[120px] shrink-0 items-center justify-center rounded-2xl border border-border/80 bg-muted/30 px-3 transition-colors duration-300 group-hover:border-primary/30 group-hover:bg-primary/5">
@@ -100,33 +100,35 @@ export function ProviderCard({
           </ul>
         </div>
 
-        <div className="mt-6 flex w-full flex-nowrap items-center gap-3">
-          <Button
-            asChild
-            size="lg"
-            className="h-12 min-w-[11.5rem] shrink-0 whitespace-nowrap px-5 text-sm"
-          >
-            <SiteLink
-              href={primaryHref}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap"
+        <div className="df-scroll mt-6">
+          <div className="flex w-max min-w-full flex-nowrap items-center gap-3">
+            <Button
+              asChild
+              size="lg"
+              className="h-12 shrink-0 whitespace-nowrap px-4 text-sm sm:min-w-[11.5rem] sm:px-5"
             >
-              <span className="whitespace-nowrap">{primaryLabel}</span>
-              <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden="true" />
-            </SiteLink>
-          </Button>
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="h-12 min-w-[10.5rem] shrink-0 whitespace-nowrap px-5 text-sm"
-          >
-            <SiteLink
-              href={detailHref}
-              className="inline-flex items-center justify-center whitespace-nowrap"
+              <SiteLink
+                href={primaryHref}
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap"
+              >
+                <span className="whitespace-nowrap">{primaryLabel}</span>
+                <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden="true" />
+              </SiteLink>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="h-12 shrink-0 whitespace-nowrap px-4 text-sm sm:min-w-[10.5rem] sm:px-5"
             >
-              <span className="whitespace-nowrap">{t.exploreGames}</span>
-            </SiteLink>
-          </Button>
+              <SiteLink
+                href={detailHref}
+                className="inline-flex items-center justify-center whitespace-nowrap"
+              >
+                <span className="whitespace-nowrap">{t.exploreGames}</span>
+              </SiteLink>
+            </Button>
+          </div>
         </div>
       </div>
     </article>
