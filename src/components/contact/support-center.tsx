@@ -214,7 +214,7 @@ export function SupportCenter({
     .slice(0, 3);
 
   return (
-    <div className="space-y-12 sm:space-y-14 md:space-y-16">
+    <div className="w-full max-w-full min-w-0 space-y-12 sm:space-y-14 md:space-y-16">
       {/* Search */}
       <section className="relative overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-br from-[#161010] to-[#0c0c0c] p-4 shadow-[var(--shadow-soft)] sm:rounded-[28px] sm:p-6 md:p-8">
         <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary sm:text-xs">
@@ -428,12 +428,10 @@ export function SupportCenter({
         </div>
       </section>
 
-      {/* Form + Company */}
-      <section
-        id="support-form"
-        className="grid min-w-0 grid-cols-1 items-start gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8"
-      >
-        <aside className="min-w-0 overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-b from-[#141414] to-[#0d0d0d] p-5 shadow-[var(--shadow-soft)] sm:rounded-[28px] sm:p-6">
+      {/* Form + Company — desktop-first two-column; scroll on narrow viewports */}
+      <section id="support-form" className="df-row-2">
+        <div className="df-grid-2 items-start gap-2 sm:gap-6 lg:gap-8">
+        <aside className="min-w-0 rounded-[22px] border border-border/80 bg-gradient-to-b from-[#141414] to-[#0d0d0d] p-5 shadow-[var(--shadow-soft)] sm:rounded-[28px] sm:p-6">
           <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary sm:text-xs">
             {locale === "zh" ? "公司信息" : "Company information"}
           </p>
@@ -502,7 +500,7 @@ export function SupportCenter({
           </ul>
         </aside>
 
-        <div className="min-w-0 overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-br from-[#161010] to-[#0c0c0c] p-5 shadow-[var(--shadow-soft)] sm:rounded-[28px] sm:p-7">
+        <div className="min-w-0 rounded-[22px] border border-border/80 bg-gradient-to-br from-[#161010] to-[#0c0c0c] p-5 shadow-[var(--shadow-soft)] sm:rounded-[28px] sm:p-7">
           <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary sm:text-xs">
             {locale === "zh" ? "官方支持表单" : "Official support form"}
           </p>
@@ -518,7 +516,7 @@ export function SupportCenter({
           </p>
 
           <form onSubmit={onSubmit} className="mt-5 space-y-4">
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <div className="grid grid-cols-2 gap-3">
               <div className="min-w-0 space-y-1.5">
                 <Label htmlFor="name">
                   {locale === "zh" ? "全名" : "Full Name"}
@@ -539,7 +537,7 @@ export function SupportCenter({
                 />
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <div className="grid grid-cols-2 gap-3">
               <div className="min-w-0 space-y-1.5">
                 <Label htmlFor="phone">
                   {locale === "zh" ? "手机号码" : "Phone Number"}
@@ -567,7 +565,7 @@ export function SupportCenter({
                 </select>
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <div className="grid grid-cols-2 gap-3">
               <div className="min-w-0 space-y-1.5">
                 <Label htmlFor="subject">
                   {locale === "zh" ? "主题" : "Subject"}
@@ -675,6 +673,7 @@ export function SupportCenter({
               </p>
             ) : null}
           </form>
+        </div>
         </div>
       </section>
 
