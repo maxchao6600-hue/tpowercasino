@@ -36,7 +36,7 @@ export default async function ContactPage({ params }: PageProps) {
       content={authoritySupportCenter}
       afterHero={
         <section className="bg-[#070707] py-8 sm:py-10">
-          <Container>
+          <Container className="min-w-0 max-w-full">
             <SupportCenter
               locale={locale}
               dictionary={dictionary}
