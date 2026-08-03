@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Send, Video } from "lucide-react";
+import { MessageCircle, Send } from "lucide-react";
 import type { Locale } from "@/config/site";
 import { siteConfig } from "@/config/site";
 import { footerNavigation } from "@/config/navigation";
@@ -37,18 +37,27 @@ export function Footer({ locale, dictionary }: FooterProps) {
               </a>
               <p className="text-muted-foreground">{siteConfig.phone}</p>
             </div>
-            <div className="mt-5 flex items-center gap-2 sm:mt-8 sm:gap-3">
+            <div className="mt-5 flex flex-wrap items-center gap-2 sm:mt-8 sm:gap-3">
+              <SocialLink
+                href={siteConfig.social.whatsapp}
+                label="WhatsApp Customer Service"
+              >
+                <MessageCircle className="h-4 w-4" />
+              </SocialLink>
+              <SocialLink
+                href={siteConfig.social.telegram}
+                label="Telegram Customer Service"
+              >
+                <Send className="h-4 w-4" />
+              </SocialLink>
               <SocialLink href={siteConfig.social.facebook} label="Facebook">
                 <FacebookIcon />
               </SocialLink>
               <SocialLink href={siteConfig.social.instagram} label="Instagram">
                 <InstagramIcon />
               </SocialLink>
-              <SocialLink href={siteConfig.social.telegram} label="Telegram">
-                <Send className="h-4 w-4" />
-              </SocialLink>
-              <SocialLink href={siteConfig.social.youtube} label="YouTube">
-                <Video className="h-4 w-4" />
+              <SocialLink href={siteConfig.social.threads} label="Threads">
+                <ThreadsIcon />
               </SocialLink>
             </div>
           </div>
@@ -178,6 +187,14 @@ function InstagramIcon() {
       <rect x="3" y="3" width="18" height="18" rx="5" />
       <circle cx="12" cy="12" r="4" />
       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+function ThreadsIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true" fill="currentColor">
+      <path d="M16.5 9.2c-.3-2.1-1.7-3.5-4.2-3.5-2.8 0-4.6 1.8-4.6 4.7 0 3.2 1.8 4.8 4.9 4.8 1.1 0 2.1-.2 2.9-.5-.2.8-.6 1.4-1.2 1.8-.7.5-1.7.7-2.9.7-2.1 0-3.7-.6-4.7-1.8-1-1.1-1.5-2.8-1.5-4.9s.5-3.8 1.5-4.9c1-1.2 2.6-1.8 4.7-1.8 2.4 0 4.1.7 5.1 2.1.6.8 1 1.9 1.1 3.3h-2.1zm-4.1 4.2c-1.6 0-2.5-.9-2.5-2.5s.9-2.5 2.5-2.5 2.4.9 2.5 2.4c-.7.4-1.5.6-2.5.6z" />
     </svg>
   );
 }

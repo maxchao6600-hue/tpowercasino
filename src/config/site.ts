@@ -26,12 +26,11 @@ export const siteConfig = {
     zh: "马来西亚吉隆坡",
   },
   social: {
-    facebook: "https://www.facebook.com/tpowercasino",
-    instagram: "https://www.instagram.com/tpowercasino",
-    telegram: "https://t.me/tpowercasino",
-    twitter: "https://x.com/tpowercasino",
-    youtube: "https://www.youtube.com/@tpowercasino",
-    whatsapp: "https://wa.me/60392128800",
+    whatsapp: "https://tpowercs.wasap.my",
+    telegram: "https://t.me/tpowercs",
+    facebook: "https://www.facebook.com/share/1EasRgVuaH/",
+    instagram: "https://www.instagram.com/tpower0314?igsh=ZTNtcGd4eGY1MHB2",
+    threads: "https://www.threads.com/@tpower0314",
   },
   legal: {
     ageRestriction: 21,

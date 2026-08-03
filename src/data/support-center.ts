@@ -184,6 +184,15 @@ export const supportStatusItems: Array<{
   },
 ];
 
+export type SupportMethodHref =
+  | "whatsapp"
+  | "telegram"
+  | "facebook"
+  | "instagram"
+  | "threads"
+  | "email"
+  | "faq";
+
 export const supportMethodCards: Array<{
   id: string;
   title: LocalizedString;
@@ -191,34 +200,73 @@ export const supportMethodCards: Array<{
   response: LocalizedString;
   description: LocalizedString;
   cta: LocalizedString;
-  href: "chat" | "whatsapp" | "email" | "faq";
+  href: SupportMethodHref;
   icon: string;
 }> = [
   {
-    id: "chat",
-    title: { en: "Live Chat", zh: "在线客服" },
-    availability: { en: "Peak Malaysia hours", zh: "大马高峰时段" },
-    response: { en: "Usually under 5 minutes", zh: "通常 5 分钟内" },
-    description: {
-      en: "Fast TPOWER customer service for active sessions and urgent cashier questions.",
-      zh: "活跃会话与紧急收银问题的快速 TPOWER 客服通道。",
-    },
-    cta: { en: "Start live chat", zh: "开始在线咨询" },
-    href: "whatsapp",
-    icon: "messages-square",
-  },
-  {
     id: "whatsapp",
-    title: { en: "WhatsApp", zh: "WhatsApp" },
+    title: { en: "WhatsApp Customer Service", zh: "WhatsApp 客服" },
     availability: { en: "Daily support desk", zh: "每日客服台" },
     response: { en: "Typically within 15 minutes", zh: "一般 15 分钟内" },
     description: {
       en: "Message the official TPOWER Malaysia support desk on WhatsApp.",
-      zh: "通过 WhatsApp 联系官方 TPOWER 马来西亚客服台。",
+      zh: "通过官方 WhatsApp 联系 TPOWER 马来西亚客服台。",
     },
     cta: { en: "Chat on WhatsApp", zh: "打开 WhatsApp" },
     href: "whatsapp",
     icon: "message-circle",
+  },
+  {
+    id: "telegram",
+    title: { en: "Telegram Customer Service", zh: "Telegram 客服" },
+    availability: { en: "Daily support desk", zh: "每日客服台" },
+    response: { en: "Typically within 15 minutes", zh: "一般 15 分钟内" },
+    description: {
+      en: "Reach official TPOWER customer service on Telegram.",
+      zh: "通过官方 Telegram 联系 TPOWER 客服。",
+    },
+    cta: { en: "Open Telegram", zh: "打开 Telegram" },
+    href: "telegram",
+    icon: "send",
+  },
+  {
+    id: "facebook",
+    title: { en: "Facebook", zh: "Facebook 官方主页" },
+    availability: { en: "Official page", zh: "官方主页" },
+    response: { en: "Follow for updates", zh: "关注最新动态" },
+    description: {
+      en: "Visit the official TPOWER Facebook page for news and announcements.",
+      zh: "访问 TPOWER Facebook 官方主页，获取新闻与公告。",
+    },
+    cta: { en: "Open Facebook", zh: "打开 Facebook" },
+    href: "facebook",
+    icon: "facebook",
+  },
+  {
+    id: "instagram",
+    title: { en: "Instagram", zh: "Instagram 官方主页" },
+    availability: { en: "Official page", zh: "官方主页" },
+    response: { en: "Follow for updates", zh: "关注最新动态" },
+    description: {
+      en: "Follow the official TPOWER Instagram for promotions and highlights.",
+      zh: "关注 TPOWER Instagram 官方主页，查看优惠与精彩内容。",
+    },
+    cta: { en: "Open Instagram", zh: "打开 Instagram" },
+    href: "instagram",
+    icon: "instagram",
+  },
+  {
+    id: "threads",
+    title: { en: "Threads", zh: "Threads 官方主页" },
+    availability: { en: "Official page", zh: "官方主页" },
+    response: { en: "Follow for updates", zh: "关注最新动态" },
+    description: {
+      en: "Follow the official TPOWER Threads account for the latest posts.",
+      zh: "关注 TPOWER Threads 官方主页，查看最新动态。",
+    },
+    cta: { en: "Open Threads", zh: "打开 Threads" },
+    href: "threads",
+    icon: "threads",
   },
   {
     id: "email",

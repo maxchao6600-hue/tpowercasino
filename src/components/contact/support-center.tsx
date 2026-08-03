@@ -20,6 +20,7 @@ import {
   MessageCircle,
   MessagesSquare,
   Search,
+  Send,
   ShieldCheck,
   UserPlus,
   Wallet,
@@ -75,6 +76,7 @@ const iconMap = {
   handshake: Handshake,
   "messages-square": MessagesSquare,
   "message-circle": MessageCircle,
+  send: Send,
   mail: Mail,
   "circle-help": CircleHelp,
   "shield-check": ShieldCheck,
@@ -84,6 +86,63 @@ const iconMap = {
   zap: Zap,
   "building-2": Building2,
 } as const;
+
+const SOCIAL_METHOD_HREFS = new Set([
+  "whatsapp",
+  "telegram",
+  "facebook",
+  "instagram",
+  "threads",
+]);
+
+function resolveSupportMethodHref(
+  href: (typeof supportMethodCards)[number]["href"],
+  locale: Locale,
+): string {
+  if (href === "email") return `mailto:${siteConfig.supportEmail}`;
+  if (href === "faq") return localePath(locale, "/faq");
+  return siteConfig.social[href];
+}
+
+function SupportBrandIcon({
+  name,
+  className,
+}: {
+  name: string;
+  className?: string;
+}) {
+  if (name === "facebook") {
+    return (
+      <svg viewBox="0 0 24 24" className={className} aria-hidden="true" fill="currentColor">
+        <path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v2H6v4h3v7h4v-7h3.1l.9-4H13V9c0-.6.4-1 1-1z" />
+      </svg>
+    );
+  }
+  if (name === "instagram") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        className={className}
+        aria-hidden="true"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      >
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+      </svg>
+    );
+  }
+  if (name === "threads") {
+    return (
+      <svg viewBox="0 0 24 24" className={className} aria-hidden="true" fill="currentColor">
+        <path d="M16.5 9.2c-.3-2.1-1.7-3.5-4.2-3.5-2.8 0-4.6 1.8-4.6 4.7 0 3.2 1.8 4.8 4.9 4.8 1.1 0 2.1-.2 2.9-.5-.2.8-.6 1.4-1.2 1.8-.7.5-1.7.7-2.9.7-2.1 0-3.7-.6-4.7-1.8-1-1.1-1.5-2.8-1.5-4.9s.5-3.8 1.5-4.9c1-1.2 2.6-1.8 4.7-1.8 2.4 0 4.1.7 5.1 2.1.6.8 1 1.9 1.1 3.3h-2.1zm-4.1 4.2c-1.6 0-2.5-.9-2.5-2.5s.9-2.5 2.5-2.5 2.4.9 2.5 2.4c-.7.4-1.5.6-2.5.6z" />
+      </svg>
+    );
+  }
+  return <SupportIcon name={name} className={className} />;
+}
 
 function SupportIcon({
   name,
@@ -366,19 +425,14 @@ export function SupportCenter({
         </h2>
         <div className="mt-5 df-grid-4">
             {supportMethodCards.map((card, index) => {
-              const href =
-                card.href === "whatsapp"
-                  ? siteConfig.social.whatsapp
-                  : card.href === "email"
-                    ? `mailto:${siteConfig.supportEmail}`
-                    : localePath(locale, "/faq");
-              const external =
-                card.href === "whatsapp" || card.href === "email";
+              const href = resolveSupportMethodHref(card.href, locale);
+              const isSocial = SOCIAL_METHOD_HREFS.has(card.href);
+              const external = isSocial || card.href === "email";
               return (
                 <FadeIn key={card.id} delay={index * 0.03} className="h-full">
                   <article className="flex h-full flex-col rounded-[18px] border border-border/80 bg-gradient-to-br from-[#141414] to-[#0c0c0c] p-4 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[24px] sm:p-6">
                     <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/12 text-primary">
-                      <SupportIcon name={card.icon} className="h-5 w-5" />
+                      <SupportBrandIcon name={card.icon} className="h-5 w-5" />
                     </span>
                     <h3 className="mt-4 text-base font-bold text-foreground sm:text-lg">
                       {card.title[locale]}
@@ -408,12 +462,8 @@ export function SupportCenter({
                       {external ? (
                         <a
                           href={href}
-                          target={card.href === "whatsapp" ? "_blank" : undefined}
-                          rel={
-                            card.href === "whatsapp"
-                              ? "noopener noreferrer"
-                              : undefined
-                          }
+                          target={isSocial ? "_blank" : undefined}
+                          rel={isSocial ? "noopener noreferrer" : undefined}
                         >
                           {card.cta[locale]}
                         </a>
@@ -850,16 +900,16 @@ export function SupportCenter({
         actions={[
           {
             href: siteConfig.social.whatsapp,
-            label: locale === "zh" ? "在线客服" : "Live Chat",
+            label: locale === "zh" ? "WhatsApp 客服" : "WhatsApp Customer Service",
+          },
+          {
+            href: siteConfig.social.telegram,
+            label: locale === "zh" ? "Telegram 客服" : "Telegram Customer Service",
+            variant: "outline",
           },
           {
             href: localePath(locale, "/register"),
             label: dictionary.nav.register,
-            variant: "outline",
-          },
-          {
-            href: localePath(locale, "/download"),
-            label: dictionary.nav.download,
             variant: "secondary",
           },
         ]}
