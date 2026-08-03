@@ -13,8 +13,12 @@ type FooterProps = {
   dictionary: Dictionary;
 };
 
-/** Desktop footer track width — scroll on narrower viewports; never compress columns. */
-const FOOTER_TRACK_MIN = "min-w-[1100px] xl:min-w-0";
+/**
+ * Desktop footer track — same 12-col composition as xl.
+ * Narrow viewports scroll horizontally; columns never compress.
+ */
+const FOOTER_TRACK =
+  "grid min-w-[1200px] grid-cols-12 gap-10 xl:min-w-0 xl:gap-12";
 
 export function Footer({ locale, dictionary }: FooterProps) {
   const year = new Date().getFullYear();
@@ -22,14 +26,15 @@ export function Footer({ locale, dictionary }: FooterProps) {
   return (
     <footer className="border-t border-border bg-surface">
       <Container className="section-y min-w-0 max-w-full">
-        {/* Desktop composition: logo (4) + 4 nav columns (2 each). Scroll, never squeeze. */}
+        {/* Desktop composition: logo (4) + About/Games/Support/Legal (2 each). */}
         <div className="df-scroll">
-          <div
-            className={`grid grid-cols-12 gap-8 lg:gap-10 xl:gap-12 ${FOOTER_TRACK_MIN}`}
-          >
+          <div className={FOOTER_TRACK}>
             <div className="col-span-4">
+              {/* Keep desktop column span; constrain copy so the first scroll
+                  paint stays fully readable inside a ~390px viewport. */}
+              <div className="max-w-[20rem]">
               <Logo href={localePath(locale)} />
-              <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground sm:mt-6 sm:text-body">
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:mt-6 sm:text-body">
                 {dictionary.footer.tagline}
               </p>
               <div className="mt-4 space-y-2 text-xs sm:mt-6 sm:text-small">
@@ -67,6 +72,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
                   <ThreadsIcon />
                 </SocialLink>
               </div>
+              </div>
             </div>
 
             <FooterColumn
@@ -94,7 +100,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
 
         <div className="df-scroll mt-8 sm:mt-12 lg:mt-16">
           <div
-            className={`flex flex-row items-center justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:gap-4 sm:pt-8 sm:text-small ${FOOTER_TRACK_MIN}`}
+            className={`flex flex-row items-center justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:pt-8 sm:text-small ${"min-w-[1200px] xl:min-w-0"}`}
           >
             <p className="shrink-0 whitespace-nowrap">
               © {year} {siteConfig.name}. {dictionary.footer.rights}
@@ -154,7 +160,7 @@ function FooterColumn({
           <li key={item.key}>
             <Link
               href={localePath(locale, item.href)}
-              className="inline-flex min-h-11 items-center py-1 text-xs leading-snug text-muted-foreground transition-colors hover:text-foreground sm:min-h-0 sm:py-0 sm:text-sm"
+              className="block w-full py-1.5 text-xs leading-snug text-muted-foreground transition-colors hover:text-foreground sm:py-0 sm:text-sm"
             >
               {item.label[locale]}
             </Link>
