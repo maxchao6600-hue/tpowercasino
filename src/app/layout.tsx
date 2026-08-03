@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import { Inter } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import { defaultLocale, getHtmlLang, isValidLocale } from "@/config/i18n";
+import { MetaPixel } from "@/components/analytics/meta-pixel";
 import "./globals.css";
 
 const inter = Inter({
@@ -104,6 +105,7 @@ export default async function RootLayout({
         />
       </head>
       <body className="min-h-full bg-background font-sans text-foreground antialiased">
+        <MetaPixel />
         {children}
       </body>
     </html>

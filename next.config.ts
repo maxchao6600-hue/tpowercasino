@@ -7,8 +7,8 @@ const isDev = process.env.NODE_ENV === "development";
 // Without 'unsafe-eval' in development, client bundles fail to run and
 // React never hydrates — interactive components (FAQ accordion, etc.) die as static HTML.
 const scriptSrc = isDev
-  ? "script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'"
-  : "script-src 'self' 'unsafe-inline'";
+  ? "script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' https://connect.facebook.net"
+  : "script-src 'self' 'unsafe-inline' https://connect.facebook.net";
 
 const securityHeaders = [
   { key: "X-Frame-Options", value: "DENY" },
@@ -29,9 +29,10 @@ const securityHeaders = [
       "default-src 'self'",
       scriptSrc,
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: blob:",
+      // Meta Pixel PageView beacon + noscript fallback
+      "img-src 'self' data: blob: https://www.facebook.com https://*.facebook.com",
       "font-src 'self' data:",
-      "connect-src 'self'",
+      "connect-src 'self' https://www.facebook.com https://connect.facebook.net https://*.facebook.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self' mailto:",
