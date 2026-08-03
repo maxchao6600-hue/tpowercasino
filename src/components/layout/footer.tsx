@@ -13,106 +13,118 @@ type FooterProps = {
   dictionary: Dictionary;
 };
 
+/** Desktop footer track width — scroll on narrower viewports; never compress columns. */
+const FOOTER_TRACK_MIN = "min-w-[1100px] xl:min-w-0";
+
 export function Footer({ locale, dictionary }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-border bg-surface">
-      <Container className="section-y">
-        <div className="grid min-w-0 grid-cols-12 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
-          <div className="col-span-4 min-w-0">
-            <Logo href={localePath(locale)} />
-            <p className="mt-4 max-w-sm text-body text-muted-foreground sm:mt-6">
-              {dictionary.footer.tagline}
-            </p>
-            <div className="mt-4 space-y-2 text-small sm:mt-6">
-              <p className="font-medium text-foreground">
-                {siteConfig.address[locale]}
+      <Container className="section-y min-w-0 max-w-full">
+        {/* Desktop composition: logo (4) + 4 nav columns (2 each). Scroll, never squeeze. */}
+        <div className="df-scroll">
+          <div
+            className={`grid grid-cols-12 gap-8 lg:gap-10 xl:gap-12 ${FOOTER_TRACK_MIN}`}
+          >
+            <div className="col-span-4">
+              <Logo href={localePath(locale)} />
+              <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground sm:mt-6 sm:text-body">
+                {dictionary.footer.tagline}
               </p>
-              <a
-                href={`mailto:${siteConfig.supportEmail}`}
-                className="text-muted-foreground transition-colors hover:text-primary"
-              >
-                {siteConfig.supportEmail}
-              </a>
-              <p className="text-muted-foreground">{siteConfig.phone}</p>
+              <div className="mt-4 space-y-2 text-xs sm:mt-6 sm:text-small">
+                <p className="font-medium text-foreground">
+                  {siteConfig.address[locale]}
+                </p>
+                <a
+                  href={`mailto:${siteConfig.supportEmail}`}
+                  className="text-muted-foreground transition-colors hover:text-primary"
+                >
+                  {siteConfig.supportEmail}
+                </a>
+                <p className="text-muted-foreground">{siteConfig.phone}</p>
+              </div>
+              <div className="mt-5 flex flex-nowrap items-center gap-2 sm:mt-8 sm:gap-3">
+                <SocialLink
+                  href={siteConfig.social.whatsapp}
+                  label="WhatsApp Customer Service"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                </SocialLink>
+                <SocialLink
+                  href={siteConfig.social.telegram}
+                  label="Telegram Customer Service"
+                >
+                  <Send className="h-4 w-4" />
+                </SocialLink>
+                <SocialLink href={siteConfig.social.facebook} label="Facebook">
+                  <FacebookIcon />
+                </SocialLink>
+                <SocialLink href={siteConfig.social.instagram} label="Instagram">
+                  <InstagramIcon />
+                </SocialLink>
+                <SocialLink href={siteConfig.social.threads} label="Threads">
+                  <ThreadsIcon />
+                </SocialLink>
+              </div>
             </div>
-            <div className="mt-5 flex flex-wrap items-center gap-2 sm:mt-8 sm:gap-3">
-              <SocialLink
-                href={siteConfig.social.whatsapp}
-                label="WhatsApp Customer Service"
-              >
-                <MessageCircle className="h-4 w-4" />
-              </SocialLink>
-              <SocialLink
-                href={siteConfig.social.telegram}
-                label="Telegram Customer Service"
-              >
-                <Send className="h-4 w-4" />
-              </SocialLink>
-              <SocialLink href={siteConfig.social.facebook} label="Facebook">
-                <FacebookIcon />
-              </SocialLink>
-              <SocialLink href={siteConfig.social.instagram} label="Instagram">
-                <InstagramIcon />
-              </SocialLink>
-              <SocialLink href={siteConfig.social.threads} label="Threads">
-                <ThreadsIcon />
-              </SocialLink>
-            </div>
-          </div>
 
-          <FooterColumn
-            title={dictionary.footer.about}
-            locale={locale}
-            items={footerNavigation.about}
-          />
-          <FooterColumn
-            title={dictionary.footer.games}
-            locale={locale}
-            items={footerNavigation.games}
-          />
-          <FooterColumn
-            title={dictionary.footer.support}
-            locale={locale}
-            items={footerNavigation.support}
-          />
-          <FooterColumn
-            title={dictionary.footer.legal}
-            locale={locale}
-            items={footerNavigation.legal}
-          />
+            <FooterColumn
+              title={dictionary.footer.about}
+              locale={locale}
+              items={footerNavigation.about}
+            />
+            <FooterColumn
+              title={dictionary.footer.games}
+              locale={locale}
+              items={footerNavigation.games}
+            />
+            <FooterColumn
+              title={dictionary.footer.support}
+              locale={locale}
+              items={footerNavigation.support}
+            />
+            <FooterColumn
+              title={dictionary.footer.legal}
+              locale={locale}
+              items={footerNavigation.legal}
+            />
+          </div>
         </div>
 
-        <div className="mt-8 flex flex-row flex-wrap items-center justify-between gap-3 border-t border-border pt-6 text-small text-muted-foreground sm:mt-12 sm:gap-4 sm:pt-8 lg:mt-16">
-          <p>
-            © {year} {siteConfig.name}. {dictionary.footer.rights}
-          </p>
-          <div className="flex flex-wrap items-center gap-1 sm:gap-2">
-            <Link
-              href={localePath(locale, "/responsible-gaming")}
-              className="inline-flex min-h-11 items-center px-2 hover:text-foreground"
-            >
-              {dictionary.footer.responsible}
-            </Link>
-            <Link
-              href={localePath(locale, "/privacy-policy")}
-              className="inline-flex min-h-11 items-center px-2 hover:text-foreground"
-            >
-              {dictionary.footer.privacy}
-            </Link>
-            <Link
-              href={localePath(locale, "/terms-and-conditions")}
-              className="inline-flex min-h-11 items-center px-2 hover:text-foreground"
-            >
-              {dictionary.footer.terms}
-            </Link>
-            <Link
-              href={localePath(locale, "/contact")}
-              className="inline-flex min-h-11 items-center px-2 hover:text-foreground"
-            >
-              {dictionary.footer.contact}
-            </Link>
+        <div className="df-scroll mt-8 sm:mt-12 lg:mt-16">
+          <div
+            className={`flex flex-row items-center justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:gap-4 sm:pt-8 sm:text-small ${FOOTER_TRACK_MIN}`}
+          >
+            <p className="shrink-0 whitespace-nowrap">
+              © {year} {siteConfig.name}. {dictionary.footer.rights}
+            </p>
+            <div className="flex flex-nowrap items-center gap-1 sm:gap-2">
+              <Link
+                href={localePath(locale, "/responsible-gaming")}
+                className="inline-flex min-h-11 shrink-0 items-center whitespace-nowrap px-2 hover:text-foreground"
+              >
+                {dictionary.footer.responsible}
+              </Link>
+              <Link
+                href={localePath(locale, "/privacy-policy")}
+                className="inline-flex min-h-11 shrink-0 items-center whitespace-nowrap px-2 hover:text-foreground"
+              >
+                {dictionary.footer.privacy}
+              </Link>
+              <Link
+                href={localePath(locale, "/terms-and-conditions")}
+                className="inline-flex min-h-11 shrink-0 items-center whitespace-nowrap px-2 hover:text-foreground"
+              >
+                {dictionary.footer.terms}
+              </Link>
+              <Link
+                href={localePath(locale, "/contact")}
+                className="inline-flex min-h-11 shrink-0 items-center whitespace-nowrap px-2 hover:text-foreground"
+              >
+                {dictionary.footer.contact}
+              </Link>
+            </div>
           </div>
         </div>
         <p className="mt-3 text-xs text-muted-foreground">
@@ -133,14 +145,16 @@ function FooterColumn({
   items: readonly { key: string; href: string; label: Record<Locale, string> }[];
 }) {
   return (
-    <div className="col-span-2 min-w-0 overflow-hidden">
-      <p className="text-[10px] font-bold text-foreground sm:text-sm">{title}</p>
-      <ul className="mt-2 space-y-1.5 sm:mt-4 sm:space-y-2.5">
+    <div className="col-span-2">
+      <p className="whitespace-nowrap text-xs font-bold text-foreground sm:text-sm">
+        {title}
+      </p>
+      <ul className="mt-3 space-y-2 sm:mt-4 sm:space-y-2.5">
         {items.map((item) => (
-          <li key={item.key} className="min-w-0">
+          <li key={item.key}>
             <Link
               href={localePath(locale, item.href)}
-              className="flex min-h-11 items-center break-words py-1 text-[10px] leading-snug text-muted-foreground transition-colors hover:text-foreground sm:min-h-0 sm:py-0 sm:text-sm"
+              className="inline-flex min-h-11 items-center py-1 text-xs leading-snug text-muted-foreground transition-colors hover:text-foreground sm:min-h-0 sm:py-0 sm:text-sm"
             >
               {item.label[locale]}
             </Link>
@@ -166,7 +180,7 @@ function SocialLink({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-border text-muted-foreground transition-all duration-[250ms] ease-out hover:-translate-y-0.5 hover:border-foreground/20 hover:text-foreground hover:shadow-[var(--shadow-soft)]"
+      className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-border text-muted-foreground transition-all duration-[250ms] ease-out hover:-translate-y-0.5 hover:border-foreground/20 hover:text-foreground hover:shadow-[var(--shadow-soft)]"
     >
       {children}
     </a>
