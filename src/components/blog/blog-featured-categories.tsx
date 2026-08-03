@@ -29,7 +29,8 @@ export function BlogFeaturedCategories({
           {subtitle}
         </p>
       </div>
-      <div className="df-grid-3">
+      <div className="df-row-3">
+        <div className="df-grid-3">
           {blogFeaturedCategories.map((item, index) => (
             <FadeIn key={item.id} delay={index * 0.03} className="h-full">
               <Link
@@ -53,7 +54,7 @@ export function BlogFeaturedCategories({
                     }}
                   />
                 </div>
-                <div className="flex flex-col justify-center p-3 sm:p-4">
+                <div className="flex min-w-0 flex-col justify-center p-3 sm:p-4">
                   <h3 className="text-sm font-bold text-foreground group-hover:text-primary sm:text-base">
                     {item.title[locale]}
                   </h3>
@@ -64,6 +65,7 @@ export function BlogFeaturedCategories({
               </Link>
             </FadeIn>
           ))}
+        </div>
       </div>
     </section>
   );

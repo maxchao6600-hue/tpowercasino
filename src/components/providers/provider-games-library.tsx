@@ -129,7 +129,7 @@ function GameGrid({
   const visible = games.slice(0, visibleCount);
   return (
     <div className="df-scroll">
-      <div className="grid min-w-[960px] grid-cols-6 gap-2.5 md:min-w-0 md:gap-3">
+      <div className="grid min-w-[1080px] grid-cols-6 gap-2.5 xl:min-w-0 md:gap-3">
         {visible.map((game, index) => (
           <GameCard
             key={game.id}
@@ -177,13 +177,14 @@ export function ProviderGamesLibrary({
 
   return (
     <div>
-      <div className="sticky top-16 z-30 -mx-4 space-y-3 border-y border-border/80 bg-[#0a0a0a]/95 px-4 py-4 backdrop-blur-md md:-mx-6 md:px-6 lg:top-[4.5rem]">
-        <div className="flex flex-row flex-wrap items-center justify-between gap-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+      <div className="sticky top-16 z-30 -mx-4 max-w-[100vw] space-y-3 overflow-x-hidden border-y border-border/80 bg-[#0a0a0a]/95 px-4 py-4 backdrop-blur-md md:-mx-6 md:px-6 lg:top-[4.5rem]">
+        <div className="df-scroll">
+        <div className="flex min-w-[560px] flex-row flex-nowrap items-center justify-between gap-3 xl:min-w-0">
+          <p className="shrink-0 text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
             {t.filterLabel}
           </p>
-          <div className="flex flex-row flex-wrap items-center gap-2">
-            <label className="relative min-w-0 w-72 flex-1 lg:w-80">
+          <div className="flex flex-row flex-nowrap items-center gap-2">
+            <label className="relative w-72 shrink-0 lg:w-80">
               <span className="sr-only">{t.searchPlaceholder}</span>
               <Search
                 className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
@@ -207,7 +208,7 @@ export function ProviderGamesLibrary({
               ) : null}
             </label>
 
-            <label className="w-44">
+            <label className="w-44 shrink-0">
               <span className="sr-only">{t.sortLabel}</span>
               <select
                 value={sort}
@@ -222,11 +223,13 @@ export function ProviderGamesLibrary({
             </label>
           </div>
         </div>
+        </div>
 
         <div
-          className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="df-scroll flex gap-2 pb-1"
           role="tablist"
           aria-label={t.filterLabel}
+          data-qa-scroll="true"
         >
           {FILTERS.map((id) => {
             const active = filter === id;

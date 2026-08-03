@@ -24,7 +24,8 @@ export function NewsTrendingShelf({
         {t.trendingArticles ??
           (locale === "zh" ? "热门文章" : "Trending articles")}
       </h2>
-      <div className="df-grid-4">
+      <div className="df-row-4">
+        <div className="df-grid-4">
           {items.slice(0, 4).map((item, index) => (
             <FadeIn key={item.id} delay={index * 0.04} className="h-full">
               <NewsCard
@@ -35,6 +36,7 @@ export function NewsTrendingShelf({
               />
             </FadeIn>
           ))}
+        </div>
       </div>
     </section>
   );
@@ -54,7 +56,8 @@ export function NewsEditorsPicks({
         {t.editorsPicks ??
           (locale === "zh" ? "编辑精选" : "Editor's picks")}
       </h2>
-      <div className="df-grid-2">
+      <div className="df-row-2">
+        <div className="df-grid-2">
           {items.slice(0, 4).map((item, index) => (
             <FadeIn key={item.id} delay={index * 0.04} className="h-full">
               <NewsCard
@@ -65,6 +68,7 @@ export function NewsEditorsPicks({
               />
             </FadeIn>
           ))}
+        </div>
       </div>
     </section>
   );
@@ -84,7 +88,8 @@ export function NewsRecommended({
         {t.recommended ??
           (locale === "zh" ? "为你推荐" : "Recommended for you")}
       </h2>
-      <div className="df-grid-3">
+      <div className="df-row-3">
+        <div className="df-grid-3">
           {items.slice(0, 3).map((item, index) => (
             <FadeIn key={item.id} delay={index * 0.04} className="h-full">
               <NewsCard
@@ -95,6 +100,7 @@ export function NewsRecommended({
               />
             </FadeIn>
           ))}
+        </div>
       </div>
     </section>
   );

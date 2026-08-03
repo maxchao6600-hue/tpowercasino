@@ -108,7 +108,8 @@ export default async function PromotionDetailPage({ params }: PageProps) {
         />
         <Container className="relative py-10 md:py-14">
           <Breadcrumbs items={breadcrumbs} />
-          <div className="mt-8 grid grid-cols-[1.15fr_0.85fr] items-end gap-3 sm:gap-6 lg:gap-8">
+          <div className="mt-8 df-scroll">
+          <div className="grid min-w-[800px] grid-cols-[1.15fr_0.85fr] items-end gap-3 sm:gap-6 lg:gap-8 xl:min-w-0">
             <div>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="accent">
@@ -142,8 +143,8 @@ export default async function PromotionDetailPage({ params }: PageProps) {
                 </Button>
               </div>
             </div>
-            <dl className="df-scroll flex min-w-0 gap-2 sm:grid sm:grid-cols-3 sm:gap-3 sm:overflow-visible">
-              <div className="min-w-[112px] shrink-0 rounded-xl border border-border bg-card/80 p-2 sm:min-w-0 sm:shrink sm:rounded-2xl sm:p-4">
+            <dl className="df-scroll flex min-w-0 gap-2 lg:grid lg:grid-cols-3 lg:gap-3 lg:overflow-visible">
+              <div className="min-w-[112px] shrink-0 rounded-xl border border-border bg-card/80 p-2 lg:min-w-0 lg:shrink lg:rounded-2xl lg:p-4">
                 <dt className="text-[10px] font-semibold uppercase tracking-normal text-muted-foreground sm:text-xs sm:tracking-wide">
                   {t.bonusAmountLabel}
                 </dt>
@@ -151,7 +152,7 @@ export default async function PromotionDetailPage({ params }: PageProps) {
                   {promo.bonusAmount[locale]}
                 </dd>
               </div>
-              <div className="min-w-[112px] shrink-0 rounded-xl border border-border bg-card/80 p-2 sm:min-w-0 sm:shrink sm:rounded-2xl sm:p-4">
+              <div className="min-w-[112px] shrink-0 rounded-xl border border-border bg-card/80 p-2 lg:min-w-0 lg:shrink lg:rounded-2xl lg:p-4">
                 <dt className="flex flex-wrap items-center gap-1 text-[10px] font-semibold uppercase tracking-normal text-muted-foreground sm:text-xs sm:tracking-wide">
                   <Wallet className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" aria-hidden="true" />
                   {t.minDepositLabel}
@@ -160,7 +161,7 @@ export default async function PromotionDetailPage({ params }: PageProps) {
                   {promo.minDeposit[locale]}
                 </dd>
               </div>
-              <div className="min-w-[112px] shrink-0 rounded-xl border border-border bg-card/80 p-2 sm:min-w-0 sm:shrink sm:rounded-2xl sm:p-4">
+              <div className="min-w-[112px] shrink-0 rounded-xl border border-border bg-card/80 p-2 lg:min-w-0 lg:shrink lg:rounded-2xl lg:p-4">
                 <dt className="flex flex-wrap items-center gap-1 text-[10px] font-semibold uppercase tracking-normal text-muted-foreground sm:text-xs sm:tracking-wide">
                   <Clock3 className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" aria-hidden="true" />
                   {dictionary.common.expires}
@@ -171,13 +172,15 @@ export default async function PromotionDetailPage({ params }: PageProps) {
               </div>
             </dl>
           </div>
+          </div>
         </Container>
       </section>
 
       <TrustBar />
 
       <section className="section-y">
-        <Container className="grid grid-cols-[1.2fr_0.8fr] gap-3 sm:gap-6 lg:gap-10">
+        <Container className="df-scroll min-w-0 max-w-full">
+        <div className="grid min-w-[800px] grid-cols-[1.2fr_0.8fr] gap-3 sm:gap-6 lg:gap-10 xl:min-w-0">
           <div className="space-y-10">
             <div className="relative aspect-[16/9] overflow-hidden rounded-[28px] border border-border bg-muted shadow-[0_0_40px_rgba(229,9,20,0.12)]">
               <Image
@@ -342,6 +345,7 @@ export default async function PromotionDetailPage({ params }: PageProps) {
               </div>
             </div>
           </aside>
+        </div>
         </Container>
       </section>
 

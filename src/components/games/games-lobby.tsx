@@ -186,7 +186,7 @@ export function GamesLobby({
       ) : (
         <>
           <div className="df-scroll mt-4">
-            <div className="grid min-w-[960px] grid-cols-6 gap-2.5 md:min-w-0 md:gap-3">
+            <div className="grid min-w-[1080px] grid-cols-6 gap-2.5 xl:min-w-0 md:gap-3">
               {visible.map((game, index) => (
                 <GameCard
                   key={game.id}

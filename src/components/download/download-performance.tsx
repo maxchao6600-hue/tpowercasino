@@ -34,6 +34,7 @@ export function DownloadPerformance({
           : "Lobby speed, adaptive streams, battery, and cashier stability — built for mid-range devices.")
       }
     >
+      <div className="df-row-3">
       <div className="df-grid-3">
           {downloadPerformancePoints.map((point, index) => {
             const Icon = downloadIconMap[point.icon];
@@ -53,6 +54,7 @@ export function DownloadPerformance({
               </FadeIn>
             );
           })}
+      </div>
       </div>
     </Section>
   );

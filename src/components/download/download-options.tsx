@@ -38,6 +38,7 @@ export async function DownloadOptions({
           : "Android APK, iOS guidance, and desktop QR — three official paths in one row.")
       }
     >
+      <div className="df-row-3">
       <div className="df-grid-3">
           <FadeIn className="h-full">
             <article className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-br from-[#1a0a0c] via-[#121212] to-[#0c0c0c] p-4 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-[6px] hover:border-primary/35 hover:shadow-[0_16px_48px_rgba(229,9,20,0.14)] sm:rounded-[26px] sm:p-5 md:p-6">
@@ -144,6 +145,7 @@ export async function DownloadOptions({
               </div>
             </article>
           </FadeIn>
+      </div>
       </div>
     </Section>
   );

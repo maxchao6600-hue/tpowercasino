@@ -47,7 +47,8 @@ export function NewsFeaturedHero({
         }}
       />
       <div className="relative mx-auto flex h-full min-h-[420px] w-full max-w-[1400px] items-end px-4 py-10 sm:min-h-[560px] sm:px-6 sm:py-14 lg:min-h-[700px] lg:px-8 lg:py-16">
-        <div className="grid w-full grid-cols-[0.65fr_0.35fr] items-end gap-4 sm:gap-8 lg:gap-12">
+        <div className="df-scroll w-full">
+          <div className="grid min-w-[720px] w-full grid-cols-[0.65fr_0.35fr] items-end gap-4 sm:gap-8 lg:gap-12 xl:min-w-0">
           <div className="min-w-0 max-w-3xl">
             <div className="flex flex-wrap items-center gap-2">
               <Badge variant="accent">
@@ -82,7 +83,7 @@ export function NewsFeaturedHero({
               </p>
             </div>
           </div>
-          <div className="min-w-0 rounded-[12px] border border-white/10 bg-black/35 p-2.5 backdrop-blur-md sm:rounded-[20px] sm:p-6">
+          <div className="min-w-[220px] rounded-[12px] border border-white/10 bg-black/35 p-2.5 backdrop-blur-md sm:rounded-[20px] sm:p-6">
             <p className="text-[9px] font-semibold uppercase tracking-[0.16em] text-primary sm:text-xs">
               {badgeLabel(item.badge, locale)}
             </p>
@@ -105,6 +106,7 @@ export function NewsFeaturedHero({
                 <dd className="text-white">{updatedLabel(item.updatedAt, locale)}</dd>
               </div>
             </dl>
+          </div>
           </div>
         </div>
       </div>

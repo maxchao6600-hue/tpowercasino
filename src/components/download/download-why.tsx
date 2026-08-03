@@ -38,6 +38,7 @@ export function DownloadWhy({ locale, dictionary }: DownloadWhyProps) {
           : "Eight reasons: official install, local payments, full lobby, and safer habits.")
       }
     >
+      <div className="df-row-4">
       <div className="df-grid-4">
           {downloadWhyFeatures.map((item, index) => (
             <FadeIn key={item.id} delay={index * 0.03} className="h-full">
@@ -49,6 +50,7 @@ export function DownloadWhy({ locale, dictionary }: DownloadWhyProps) {
               />
             </FadeIn>
           ))}
+      </div>
       </div>
     </Section>
   );

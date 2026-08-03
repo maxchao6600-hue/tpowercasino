@@ -31,6 +31,7 @@ export function DownloadReviews({ locale, dictionary }: DownloadReviewsProps) {
           : "Install experiences from common Android and iPhone devices.")
       }
     >
+      <div className="df-row-3">
       <div className="df-grid-3">
           {downloadReviews.map((review, index) => (
             <FadeIn key={review.id} delay={index * 0.03} className="h-full">
@@ -64,6 +65,7 @@ export function DownloadReviews({ locale, dictionary }: DownloadReviewsProps) {
               </article>
             </FadeIn>
           ))}
+      </div>
       </div>
     </Section>
   );

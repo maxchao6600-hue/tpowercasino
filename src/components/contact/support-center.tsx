@@ -349,7 +349,8 @@ export function SupportCenter({
             ? "选择你的 TPOWER 问题类型"
             : "Choose your TPOWER issue type"}
         </h2>
-        <div className="mt-5 df-grid-4">
+        <div className="mt-5 df-row-4">
+        <div className="df-grid-4">
             {supportHubCards.map((card, index) => (
               <FadeIn key={card.id} delay={index * 0.03} className="h-full">
                 <button
@@ -374,6 +375,7 @@ export function SupportCenter({
               </FadeIn>
             ))}
         </div>
+        </div>
       </section>
 
       {/* Platform Status */}
@@ -394,7 +396,7 @@ export function SupportCenter({
           </p>
         </div>
         <div className="df-scroll mt-5">
-          <div className="grid min-w-[720px] grid-cols-5 gap-2 sm:min-w-0 sm:gap-3">
+          <div className="grid min-w-[720px] grid-cols-5 gap-2 xl:min-w-0 sm:gap-3">
             {supportStatusItems.map((item) => (
               <div
                 key={item.id}
@@ -423,7 +425,8 @@ export function SupportCenter({
             ? "官方 TPOWER 客服通道"
             : "Official TPOWER support channels"}
         </h2>
-        <div className="mt-5 df-grid-4">
+        <div className="mt-5 df-row-4">
+        <div className="df-grid-4">
             {supportMethodCards.map((card, index) => {
               const href = resolveSupportMethodHref(card.href, locale);
               const isSocial = SOCIAL_METHOD_HREFS.has(card.href);
@@ -458,7 +461,7 @@ export function SupportCenter({
                     <p className="mt-3 flex-1 text-[11px] leading-relaxed text-muted-foreground sm:text-sm">
                       {card.description[locale]}
                     </p>
-                    <Button asChild className="mt-4 w-full" size="sm">
+                    <Button asChild className="mt-4 w-full min-w-0 whitespace-normal text-center" size="sm">
                       {external ? (
                         <a
                           href={href}
@@ -475,6 +478,7 @@ export function SupportCenter({
                 </FadeIn>
               );
             })}
+        </div>
         </div>
       </section>
 
@@ -663,7 +667,7 @@ export function SupportCenter({
                 type="checkbox"
                 checked={consent}
                 onChange={(e) => setConsent(e.target.checked)}
-                className="mt-0.5"
+                className="mt-0.5 h-4 w-4 shrink-0 accent-primary"
               />
               <span>
                 {locale === "zh"
@@ -777,7 +781,8 @@ export function SupportCenter({
             ? "热门 TPOWER 攻略"
             : "Popular TPOWER Guides"}
         </h2>
-        <div className="mt-5 df-grid-3">
+        <div className="mt-5 df-row-3">
+        <div className="df-grid-3">
             {supportGuideCards.map((guide, index) => (
               <FadeIn key={guide.slug} delay={index * 0.03} className="h-full">
                 <SiteLink
@@ -813,6 +818,7 @@ export function SupportCenter({
               </FadeIn>
             ))}
         </div>
+        </div>
       </section>
 
       {/* Timeline */}
@@ -825,7 +831,8 @@ export function SupportCenter({
             ? "从提交到解决的四步"
             : "Four steps from request to resolution"}
         </h2>
-        <ol className="df-grid-4 mt-6">
+        <div className="df-row-4 mt-6">
+        <ol className="df-grid-4">
           {supportTimeline.map((step, index) => (
             <li key={step.id} className="relative min-w-0">
               <div className="h-full rounded-[18px] border border-border/80 bg-gradient-to-br from-[#141414] to-[#0c0c0c] p-3 shadow-[var(--shadow-soft)] sm:rounded-[22px] sm:p-5">
@@ -848,6 +855,7 @@ export function SupportCenter({
             </li>
           ))}
         </ol>
+        </div>
       </section>
 
       {/* Trust */}
@@ -860,7 +868,8 @@ export function SupportCenter({
             ? "为什么选择官方 TPOWER 支持"
             : "Why use official TPOWER support"}
         </h2>
-        <div className="mt-5 df-grid-3">
+        <div className="mt-5 df-row-3">
+        <div className="df-grid-3">
             {supportTrustCards.map((card, index) => (
               <FadeIn key={card.id} delay={index * 0.03} className="h-full">
                 <article className="flex h-full flex-col rounded-[18px] border border-border/80 bg-[#101010] p-4 shadow-[var(--shadow-soft)] sm:rounded-[22px] sm:p-5">
@@ -876,6 +885,7 @@ export function SupportCenter({
                 </article>
               </FadeIn>
             ))}
+        </div>
         </div>
       </section>
 

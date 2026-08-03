@@ -25,7 +25,8 @@ export function NewsNewsletter({ locale, dictionary }: NewsNewsletterProps) {
             "radial-gradient(ellipse 70% 60% at 85% 20%, rgba(229,9,20,0.28), transparent 55%), radial-gradient(ellipse 50% 40% at 10% 80%, rgba(229,9,20,0.12), transparent 60%)",
         }}
       />
-      <div className="relative grid grid-cols-[1.1fr_0.9fr] items-center gap-4 sm:gap-8">
+      <div className="relative df-scroll">
+      <div className="relative grid min-w-[640px] grid-cols-[1.1fr_0.9fr] items-center gap-4 sm:gap-8 xl:min-w-0">
         <div className="min-w-0">
           <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary sm:text-xs">
             {locale === "zh" ? "订阅动态" : "Newsletter"}
@@ -89,6 +90,7 @@ export function NewsNewsletter({ locale, dictionary }: NewsNewsletterProps) {
                   : "Submitted via official email — no third-party ad lists."))}
           </p>
         </form>
+      </div>
       </div>
     </section>
   );

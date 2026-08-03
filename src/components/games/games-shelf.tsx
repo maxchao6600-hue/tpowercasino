@@ -27,7 +27,7 @@ export function GamesShelf({
         </span>
       </div>
       <div className="df-scroll">
-        <div className="grid min-w-[860px] grid-cols-6 gap-2.5 md:min-w-0 md:gap-3">
+        <div className="grid min-w-[1080px] grid-cols-6 gap-2.5 xl:min-w-0 md:gap-3">
           {games.map((game, index) => (
             <GameCard
               key={game.id}

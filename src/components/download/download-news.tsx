@@ -38,6 +38,7 @@ export function DownloadNews({ locale, dictionary }: DownloadNewsProps) {
           : "Performance, VIP, payments, and live tables — worth following after install.")
       }
     >
+      <div className="df-row-4">
       <div className="df-grid-4">
           {items.map((item, index) => (
             <FadeIn key={item.slug} delay={index * 0.03} className="h-full">
@@ -82,6 +83,7 @@ export function DownloadNews({ locale, dictionary }: DownloadNewsProps) {
               </Link>
             </FadeIn>
           ))}
+      </div>
       </div>
     </Section>
   );

@@ -147,8 +147,9 @@ export function NewsArticlePageContent({
 
       <section className="bg-[#070707] py-8 sm:py-12">
         <Container>
-          <div className="grid grid-cols-[1fr_260px] items-start gap-6 lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-10 xl:grid-cols-[minmax(0,1fr)_300px]">
-            <article id="news-article-body" className="min-w-0">
+          <div className="df-row-2">
+          <div className="df-news-grid grid grid-cols-[minmax(440px,1fr)_280px] items-start gap-6 lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-10 xl:grid-cols-[minmax(0,1fr)_300px]">
+            <article id="news-article-body" className="min-w-[440px] xl:min-w-0">
               <div className="prose-magazine rounded-[20px] border border-border/60 bg-gradient-to-b from-[#121212] to-[#0c0c0c] p-4 shadow-[var(--shadow-soft)] sm:rounded-[28px] sm:p-8 md:p-10">
                   <MarkdownArticle content={item.content[locale]} locale={locale} />
               </div>
@@ -263,6 +264,7 @@ export function NewsArticlePageContent({
               </div>
             </aside>
           </div>
+          </div>
 
           {related.length > 0 ? (
             <section className="mt-12 space-y-4 sm:mt-16 sm:space-y-5">
@@ -270,6 +272,7 @@ export function NewsArticlePageContent({
                 {t.relatedArticles ??
                   (locale === "zh" ? "相关文章" : "Related articles")}
               </h2>
+              <div className="df-row-3">
               <div className="df-grid-3">
                   {related.map((entry) => (
                     <NewsCard
@@ -280,6 +283,7 @@ export function NewsArticlePageContent({
                     />
                   ))}
               </div>
+              </div>
             </section>
           ) : null}
 
@@ -289,6 +293,7 @@ export function NewsArticlePageContent({
                 {t.recommended ??
                   (locale === "zh" ? "为你推荐" : "Recommended for you")}
               </h2>
+              <div className="df-row-3">
               <div className="df-grid-3">
                   {recommended.map((entry) => (
                     <NewsCard
@@ -299,6 +304,7 @@ export function NewsArticlePageContent({
                       variant="large"
                     />
                   ))}
+              </div>
               </div>
             </section>
           ) : null}

@@ -224,10 +224,11 @@ export function IntentLandingHub({
 
           {content.sections.map((section, index) => (
             <FadeIn key={section.title.en}>
+              <div className={section.imageSrc ? "df-scroll" : undefined}>
               <div
                 className={
                   section.imageSrc
-                    ? "grid grid-cols-[1.15fr_0.85fr] items-center gap-4 sm:gap-8 lg:gap-12"
+                    ? "grid min-w-[720px] grid-cols-[1.15fr_0.85fr] items-center gap-4 sm:gap-8 lg:gap-12 xl:min-w-0"
                     : ""
                 }
               >
@@ -265,6 +266,7 @@ export function IntentLandingHub({
                     />
                   </div>
                 ) : null}
+              </div>
               </div>
               {index < content.sections.length - 1 ? (
                 <div

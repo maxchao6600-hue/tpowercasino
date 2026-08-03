@@ -151,8 +151,9 @@ export function BlogIndex({
   }, [posts]);
 
   return (
-    <div className="grid grid-cols-[1fr_280px] items-start gap-5 lg:grid-cols-[1fr_300px] lg:gap-8 xl:grid-cols-[1fr_320px]">
-      <div className="min-w-0 space-y-6">
+    <div className="df-row-2">
+    <div className="df-news-grid grid min-w-[740px] grid-cols-[minmax(440px,1fr)_280px] items-start gap-5 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-8 xl:min-w-0 xl:grid-cols-[minmax(0,1fr)_320px]">
+      <div className="min-w-[440px] space-y-6 xl:min-w-0">
         <div className="relative">
           <Search
             className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
@@ -196,7 +197,8 @@ export function BlogIndex({
           ))}
         </div>
 
-        <div className="grid grid-cols-12 gap-3 sm:gap-4 md:gap-5">
+        <div className="df-scroll">
+        <div className="grid min-w-[720px] grid-cols-12 gap-3 sm:gap-4 md:gap-5 xl:min-w-0">
           {pageItems.map((post, index) => {
             const related = post.relatedSlugs
               .map((slug) => relatedBySlug.get(slug))
@@ -333,6 +335,7 @@ export function BlogIndex({
               </article>
             );
           })}
+        </div>
         </div>
 
         <nav
@@ -492,6 +495,7 @@ export function BlogIndex({
           </div>
         </div>
       </aside>
+    </div>
     </div>
   );
 }

@@ -24,7 +24,7 @@ export function NewsStats({ locale, dictionary }: NewsStatsProps) {
         </h2>
       </div>
       <div className="df-scroll">
-        <div className="grid min-w-[720px] grid-cols-5 gap-2 sm:min-w-0 sm:gap-4 md:gap-4">
+        <div className="grid min-w-[720px] grid-cols-5 gap-2 xl:min-w-0 sm:gap-4 md:gap-4">
           {newsPlatformStats.map((stat, index) => (
             <FadeIn key={stat.id} delay={index * 0.04} className="h-full">
               <div className="flex h-full flex-col rounded-[12px] border border-white/8 bg-black/30 px-1.5 py-3 text-center sm:rounded-[20px] sm:px-4 sm:py-6">

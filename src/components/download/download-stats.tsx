@@ -98,6 +98,7 @@ export function DownloadStats({ locale, dictionary }: DownloadStatsProps) {
           : "Downloads, ratings, install time, and platform coverage.")
       }
     >
+      <div className="df-row-4">
       <div ref={ref} className="df-grid-4">
           {downloadStats.map((stat, index) => {
             const parsed = parseStatValue(stat.value);
@@ -118,6 +119,7 @@ export function DownloadStats({ locale, dictionary }: DownloadStatsProps) {
               </FadeIn>
             );
           })}
+      </div>
       </div>
     </Section>
   );

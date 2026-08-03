@@ -140,9 +140,10 @@ export default async function ProviderGamesPage({ params }: PageProps) {
 
       <section className="section-y pt-8 md:pt-10">
         <Container>
-          <div className="mb-8 grid grid-cols-[1fr_auto] items-center gap-5 rounded-[24px] border border-border bg-card p-5 shadow-[var(--shadow-soft)] md:p-7">
-            <div className="flex items-center gap-4">
-              <div className="flex h-[60px] w-[120px] items-center justify-center rounded-2xl border border-border bg-muted/40 px-3">
+          <div className="mb-8 df-scroll">
+          <div className="grid min-w-[720px] grid-cols-[minmax(300px,1.2fr)_minmax(240px,0.8fr)] items-center gap-5 rounded-[24px] border border-border bg-card p-5 shadow-[var(--shadow-soft)] md:p-7 xl:min-w-0">
+            <div className="flex min-w-[280px] items-center gap-4">
+              <div className="flex h-[60px] w-[120px] shrink-0 items-center justify-center rounded-2xl border border-border bg-muted/40 px-3">
                 <ProviderLogoMark
                   name={provider.name}
                   logo={provider.logo}
@@ -150,7 +151,7 @@ export default async function ProviderGamesPage({ params }: PageProps) {
                   className="h-full w-full [&_img]:h-10 [&_img]:max-h-10 [&_img]:max-w-[100px]"
                 />
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">
                   {t.heroEyebrow}
                 </p>
@@ -174,7 +175,7 @@ export default async function ProviderGamesPage({ params }: PageProps) {
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex min-w-0 flex-wrap items-center gap-2">
               <Badge variant="accent">{dictionary.providers.officialBadge}</Badge>
               {provider.categories.map((category) => (
                 <Badge key={category} variant="outline">
@@ -188,6 +189,7 @@ export default async function ProviderGamesPage({ params }: PageProps) {
                 </Link>
               </Button>
             </div>
+          </div>
           </div>
 
           <ProviderGamesLibrary

@@ -36,6 +36,7 @@ export function DownloadBenefits({
           : "One-tap lobby, optional alerts, dedicated chrome — same rules, smoother habit.")
       }
     >
+      <div className="df-row-4">
       <div className="df-grid-4">
           {downloadAppBenefits.map((item, index) => {
             const Icon = downloadIconMap[item.icon];
@@ -55,6 +56,7 @@ export function DownloadBenefits({
               </FadeIn>
             );
           })}
+      </div>
       </div>
     </Section>
   );

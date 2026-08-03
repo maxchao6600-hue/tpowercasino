@@ -202,7 +202,7 @@ export default async function ProviderDetailPage({ params }: PageProps) {
               </p>
             ) : (
               <div className="df-scroll mt-8">
-                <div className="grid min-w-[480px] grid-cols-3 gap-2.5 md:min-w-0 md:gap-3">
+                <div className="grid min-w-[480px] grid-cols-3 gap-2.5 xl:min-w-0 md:gap-3">
                   {popular.map((game) => (
                     <GameCard
                       key={game.id}

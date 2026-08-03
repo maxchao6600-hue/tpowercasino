@@ -43,9 +43,9 @@ export function ProviderLogoMark({
           title={name}
           width={160}
           height={48}
-          loading="lazy"
+          loading={variant === "marquee" ? "eager" : "lazy"}
           decoding="async"
-          fetchPriority="low"
+          fetchPriority={variant === "marquee" ? "high" : "low"}
           onError={() => setFailed(true)}
           className={cn(
             "w-auto object-contain transition-transform duration-300 ease-out",

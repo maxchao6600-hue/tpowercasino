@@ -278,30 +278,32 @@ html {
   border-radius: 999px;
 }
 
+/* Keep desktop column counts at every width. Track mins force internal
+   horizontal scroll (via overflow-x:auto above) instead of crushing cards.
+   Only drop mins when the viewport can fit a true desktop composition. */
 .df-grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
 }
 
 .df-grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
 }
 
 .df-grid-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(260px, 1fr));
 }
 
-/* Narrow viewports: keep desktop column counts; scroll if cards need room */
-@media (max-width: 767px) {
+@media (min-width: 1280px) {
   .df-grid-2 {
-    grid-template-columns: repeat(2, minmax(160px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .df-grid-3 {
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .df-grid-4 {
-    grid-template-columns: repeat(4, minmax(170px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -411,7 +413,9 @@ html {
   }
 }
 
-@media (min-width: 768px) {
+/* Only drop scroll-track min-widths when the viewport can fit desktop columns.
+   Tablet (768) must keep min-width + horizontal scroll — never compress. */
+@media (min-width: 1280px) {
   .df-row-2 > .df-grid-2,
   .df-row-2 > .df-news-grid,
   .df-row-3 > .df-grid-3,
@@ -473,7 +477,7 @@ html {
   min-width: 860px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .df-scroll-track-3,
   .df-scroll-track-4 {
     min-width: 0;

@@ -204,7 +204,7 @@ export function GameDetail({
                 {t.similarSubtitle}
               </p>
               <div className="df-scroll mt-8">
-                <div className="grid min-w-[960px] grid-cols-6 gap-2.5 md:min-w-0 md:gap-3">
+                <div className="grid min-w-[1080px] grid-cols-6 gap-2.5 xl:min-w-0 md:gap-3">
                   {similarGames.map((item, index) => (
                     <GameCard
                       key={item.id}

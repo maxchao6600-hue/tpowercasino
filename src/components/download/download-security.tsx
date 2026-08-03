@@ -32,6 +32,7 @@ export function DownloadSecurity({
           : "Official sources, lock screens, refuse patched packages — protect every session.")
       }
     >
+      <div className="df-row-4">
       <div className="df-grid-4">
           {downloadSecurityPoints.map((point, index) => {
             const Icon = downloadIconMap[point.icon];
@@ -56,6 +57,7 @@ export function DownloadSecurity({
               </FadeIn>
             );
           })}
+      </div>
       </div>
     </Section>
   );

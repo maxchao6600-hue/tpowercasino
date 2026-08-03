@@ -28,7 +28,8 @@ export function NewsMagazineGrid({
         </h2>
       </div>
 
-      <div className="grid grid-cols-12 gap-3 sm:gap-4 md:gap-5">
+      <div className="df-scroll">
+        <div className="grid min-w-[720px] grid-cols-12 gap-3 sm:gap-4 md:gap-5 xl:min-w-0">
         {a ? (
           <FadeIn className="col-span-7">
             <NewsCard
@@ -104,6 +105,7 @@ export function NewsMagazineGrid({
             />
           </FadeIn>
         ))}
+        </div>
       </div>
     </section>
   );

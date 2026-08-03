@@ -34,6 +34,7 @@ export function DownloadTroubleshooting({
           : "Common errors, why they happen, and concrete fixes.")
       }
     >
+      <div className="df-row-3">
       <div className="df-grid-3">
           {downloadTroubleshooting.map((item, index) => (
             <FadeIn key={item.id} delay={index * 0.03} className="h-full">
@@ -60,6 +61,7 @@ export function DownloadTroubleshooting({
               </article>
             </FadeIn>
           ))}
+      </div>
       </div>
     </Section>
   );

@@ -22,20 +22,22 @@ type BlogHeroStatsProps = {
 export function BlogHeroStats({ locale, dictionary }: BlogHeroStatsProps) {
   return (
     <section className="-mt-2 border-b border-primary/15 bg-gradient-to-b from-[#120808] to-[#070707]">
-      <div className="mx-auto grid max-w-[1400px] grid-cols-4 gap-2 px-4 py-5 sm:gap-4 sm:px-6 sm:py-7 lg:px-8">
-        {blogHubStats.map((stat) => (
-          <div
-            key={stat.id}
-            className="rounded-[14px] border border-white/8 bg-black/35 px-2 py-3 text-center sm:rounded-[18px] sm:px-4 sm:py-5"
-          >
-            <p className="text-sm font-bold tracking-tight text-primary sm:text-xl md:text-2xl">
-              {stat.value}
-            </p>
-            <p className="mt-1 text-[10px] text-muted-foreground sm:text-xs md:text-sm">
-              {stat.label[locale]}
-            </p>
-          </div>
-        ))}
+      <div className="df-scroll mx-auto max-w-[1400px] px-4 py-5 sm:px-6 sm:py-7 lg:px-8">
+        <div className="grid min-w-[720px] grid-cols-4 gap-2 sm:gap-4 xl:min-w-0">
+          {blogHubStats.map((stat) => (
+            <div
+              key={stat.id}
+              className="rounded-[14px] border border-white/8 bg-black/35 px-2 py-3 text-center sm:rounded-[18px] sm:px-4 sm:py-5"
+            >
+              <p className="text-sm font-bold tracking-tight text-primary sm:text-xl md:text-2xl">
+                {stat.value}
+              </p>
+              <p className="mt-1 text-[10px] text-muted-foreground sm:text-xs md:text-sm">
+                {stat.label[locale]}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
       <p className="sr-only">{dictionary.blog.subtitle}</p>
     </section>
@@ -64,7 +66,8 @@ export function BlogFeaturedEditorial({
       <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-primary">
         {dictionary.blog.featured}
       </p>
-      <article className="grid grid-cols-[1.15fr_0.85fr] overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-br from-[#161010] via-[#0f0c0c] to-[#0a0a0a] shadow-[0_20px_60px_rgba(229,9,20,0.1)] sm:rounded-[28px]">
+      <div className="df-scroll">
+      <article className="grid min-w-[720px] grid-cols-[1.15fr_0.85fr] overflow-hidden rounded-[22px] border border-border/80 bg-gradient-to-br from-[#161010] via-[#0f0c0c] to-[#0a0a0a] shadow-[0_20px_60px_rgba(229,9,20,0.1)] sm:rounded-[28px] xl:min-w-0">
         <div className="brand-safe-media relative min-h-[180px] overflow-hidden sm:min-h-[260px] md:min-h-[340px]">
           <Image
             src={post.image}
@@ -84,7 +87,7 @@ export function BlogFeaturedEditorial({
             }}
           />
         </div>
-        <div className="flex min-w-0 flex-col justify-center gap-2 p-3 sm:gap-4 sm:p-8 lg:p-10">
+        <div className="flex min-w-[280px] flex-col justify-center gap-2 p-3 sm:gap-4 sm:p-8 lg:p-10">
           <div className="flex flex-wrap gap-1.5 sm:gap-2">
             <Badge variant="accent">
               {t.officialGuide ??
@@ -140,6 +143,7 @@ export function BlogFeaturedEditorial({
           </div>
         </div>
       </article>
+      </div>
     </section>
   );
 }
