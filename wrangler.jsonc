@@ -6,7 +6,11 @@
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": {
     "directory": ".open-next/assets",
-    "binding": "ASSETS"
+    "binding": "ASSETS",
+    // Asset-first: matching files in assets/ are served WITHOUT running the Worker.
+    // public/sitemap.xml + public/robots.txt are copied into assets at build time
+    // so Googlebot hits static assets (no Worker CPU / no 1102).
+    "run_worker_first": false
   },
   "services": [
     {

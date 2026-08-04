@@ -1,0 +1,12 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /cdn-cgi/
+Disallow: /*/help
+Disallow: /*/payments
+Disallow: /*/privacy
+Disallow: /*/terms
+
+Host: https://tpowermycasino.com
+Sitemap: https://tpowermycasino.com/sitemap.xml
