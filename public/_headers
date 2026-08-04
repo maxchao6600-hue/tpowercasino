@@ -7,14 +7,18 @@
   X-DNS-Prefetch-Control: on
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:
 
-# Static SEO files — edge-cacheable; served from Workers Static Assets (no Worker code)
+# Static SEO files — edge-cacheable; served from Workers Static Assets (no Worker code).
+# X-Served-As is only applied by Assets _headers (never by the OpenNext Worker),
+# so its presence proves /sitemap.xml bypassed the Worker entirely.
 /sitemap.xml
   Content-Type: application/xml; charset=utf-8
   Cache-Control: public, max-age=3600, s-maxage=86400
+  X-Served-As: static-asset
 
 /robots.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600, s-maxage=86400
+  X-Served-As: static-asset
 
 /_next/static/*
   Cache-Control: public,max-age=31536000,immutable
