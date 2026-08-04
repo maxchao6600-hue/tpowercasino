@@ -1,28 +1,39 @@
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/config/site";
-import { locales } from "@/config/i18n";
-import { blogPosts } from "@/data/blog";
-import { promotions } from "@/data/promotions";
-import { newsItems } from "@/data/news";
-import { providers } from "@/data/providers";
-import { games } from "@/data/games";
-import { getGameDetailPath } from "@/lib/game-paths";
-import { categorySeoContent } from "@/data/category-seo";
 
-/** Stable stamp for non-dated static marketing URLs (avoids fake daily freshness). */
+/**
+ * Build-time static sitemap — must stay lightweight for Cloudflare Workers.
+ * Do NOT import games catalogue, image indexes, or artwork filters here.
+ */
+export const dynamic = "force-static";
+
+/** Canonical production origin (sitemap + robots). */
+const BASE_URL = "https://tpowermycasino.com";
+
+const LOCALES = ["en", "zh"] as const;
+
+/** Stable stamp for static marketing URLs. */
 const STATIC_LAST_MODIFIED = new Date("2026-07-01T00:00:00.000Z");
 
-const staticPaths: Array<{ path: string; priority: number }> = [
-  { path: "", priority: 1 },
-  { path: "/download", priority: 0.8 },
-  { path: "/apk", priority: 0.7 },
-  { path: "/promotions", priority: 0.8 },
-  { path: "/games", priority: 0.8 },
-  { path: "/providers", priority: 0.75 },
-  { path: "/live-casino", priority: 0.75 },
-  { path: "/slots", priority: 0.75 },
-  { path: "/sports", priority: 0.7 },
-  { path: "/fishing", priority: 0.7 },
+type Entry = {
+  path: string;
+  priority: number;
+  changeFrequency?: MetadataRoute.Sitemap[number]["changeFrequency"];
+};
+
+/** Locale-prefixed marketing + hub pages (no per-game URLs). */
+const STATIC_PAGES: Entry[] = [
+  { path: "", priority: 1, changeFrequency: "weekly" },
+  { path: "/download", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/apk", priority: 0.8 },
+  { path: "/register", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/login", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/promotions", priority: 0.85, changeFrequency: "weekly" },
+  { path: "/games", priority: 0.85, changeFrequency: "weekly" },
+  { path: "/providers", priority: 0.8 },
+  { path: "/live-casino", priority: 0.8 },
+  { path: "/slots", priority: 0.8 },
+  { path: "/sports", priority: 0.75 },
+  { path: "/fishing", priority: 0.75 },
   { path: "/lottery", priority: 0.7 },
   { path: "/poker", priority: 0.65 },
   { path: "/arcade", priority: 0.65 },
@@ -39,14 +50,14 @@ const staticPaths: Array<{ path: string; priority: number }> = [
   { path: "/fast-withdrawal", priority: 0.7 },
   { path: "/payment-security", priority: 0.7 },
   { path: "/deposit-withdrawal-faq", priority: 0.7 },
-  { path: "/vip", priority: 0.75 },
+  { path: "/vip", priority: 0.8 },
   { path: "/affiliate", priority: 0.6 },
   { path: "/about", priority: 0.7 },
   { path: "/why-choose-tpower", priority: 0.7 },
-  { path: "/contact", priority: 0.7 },
+  { path: "/contact", priority: 0.75 },
   { path: "/faq", priority: 0.7 },
-  { path: "/blog", priority: 0.75 },
-  { path: "/news", priority: 0.75 },
+  { path: "/blog", priority: 0.75, changeFrequency: "weekly" },
+  { path: "/news", priority: 0.75, changeFrequency: "weekly" },
   { path: "/responsible-gaming", priority: 0.7 },
   { path: "/fair-gaming", priority: 0.65 },
   { path: "/security", priority: 0.65 },
@@ -59,84 +70,119 @@ const staticPaths: Array<{ path: string; priority: number }> = [
   { path: "/cookies", priority: 0.5 },
 ];
 
-function priorityForPath(path: string): number {
-  if (path === "") return 1;
-  if (path === "/blog" || path === "/news" || path === "/promotions") return 0.75;
-  if (path === "/download") return 0.8;
-  return 0.7;
+/** Inline slugs only — avoids pulling content modules into the Worker bundle. */
+const PROVIDER_SLUGS = [
+  "pragmatic-play",
+  "pg-soft",
+  "evolution",
+  "jili",
+  "jdb",
+  "sexy-gaming",
+  "dream-gaming",
+  "microgaming",
+  "playn-go",
+  "spribe",
+  "spadegaming",
+  "habanero",
+  "sbo",
+] as const;
+
+const BLOG_SLUGS = [
+  "tpower-login-guide",
+  "how-to-register-tpower",
+  "how-to-download-tpower",
+  "tpower-mobile-app",
+  "how-to-deposit-tpower",
+  "how-to-withdraw-tpower",
+  "responsible-play-basics-malaysia",
+  "malaysia-payment-rails-explained",
+  "how-tpower-selects-game-providers",
+  "vip-service-without-noise",
+] as const;
+
+const NEWS_SLUGS = [
+  "platform-performance-update-july-2026",
+  "new-live-casino-tables",
+  "vip-host-coverage-expanded",
+  "duitnow-and-ewallet-tips",
+  "welcome-bonus-refresh-july",
+  "weekly-reload-how-to-claim",
+  "account-security-best-practices",
+  "weekend-sports-odds-boost",
+  "official-download-checklist-2026",
+  "android-apk-safe-install-guide",
+  "ios-login-and-web-access-tips",
+  "malaysia-online-betting-brief-june",
+  "cashback-programme-clarified",
+  "vip-rewards-calendar-q3-2026",
+  "new-slot-titles-june-lobby",
+  "support-desk-hours-extended",
+] as const;
+
+const PROMO_SLUGS = [
+  "welcome-package",
+  "weekly-reload",
+  "cashback-calm",
+  "vip-accelerated",
+  "merdeka-seasonal",
+] as const;
+
+function urlFor(locale: string, path: string): string {
+  return `${BASE_URL}/${locale}${path}`;
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
-  for (const locale of locales) {
-    for (const item of staticPaths) {
+  for (const locale of LOCALES) {
+    for (const page of STATIC_PAGES) {
       entries.push({
-        url: `${siteConfig.url}/${locale}${item.path}`,
+        url: urlFor(locale, page.path),
         lastModified: STATIC_LAST_MODIFIED,
-        changeFrequency: item.path === "" ? "weekly" : "monthly",
-        priority: item.priority,
+        changeFrequency: page.changeFrequency ?? "monthly",
+        priority: page.priority,
       });
     }
 
-    for (const category of categorySeoContent) {
-      if (!staticPaths.some((item) => item.path === category.path)) {
-        entries.push({
-          url: `${siteConfig.url}/${locale}${category.path}`,
-          lastModified: STATIC_LAST_MODIFIED,
-          changeFrequency: "monthly",
-          priority: priorityForPath(category.path),
-        });
-      }
-    }
-
-    for (const provider of providers) {
+    for (const slug of PROVIDER_SLUGS) {
       entries.push({
-        url: `${siteConfig.url}/${locale}/providers/${provider.slug}`,
+        url: urlFor(locale, `/providers/${slug}`),
         lastModified: STATIC_LAST_MODIFIED,
         changeFrequency: "monthly",
         priority: 0.65,
       });
+      entries.push({
+        url: urlFor(locale, `/providers/${slug}/games`),
+        lastModified: STATIC_LAST_MODIFIED,
+        changeFrequency: "weekly",
+        priority: 0.6,
+      });
     }
 
-    for (const post of blogPosts) {
+    for (const slug of BLOG_SLUGS) {
       entries.push({
-        url: `${siteConfig.url}/${locale}/blog/${post.slug}`,
-        lastModified: new Date(post.updatedAt ?? post.publishedAt),
+        url: urlFor(locale, `/blog/${slug}`),
+        lastModified: STATIC_LAST_MODIFIED,
         changeFrequency: "monthly",
         priority: 0.6,
       });
     }
 
-    for (const item of newsItems) {
+    for (const slug of NEWS_SLUGS) {
       entries.push({
-        url: `${siteConfig.url}/${locale}/news/${item.slug}`,
-        lastModified: new Date(item.updatedAt ?? item.publishedAt),
-        changeFrequency: "weekly",
-        priority: 0.65,
-      });
-    }
-
-    for (const promo of promotions) {
-      const stamp = promo.expiresAt
-        ? new Date(promo.expiresAt)
-        : STATIC_LAST_MODIFIED;
-      entries.push({
-        url: `${siteConfig.url}/${locale}/promotions/${promo.slug}`,
-        lastModified: Number.isNaN(stamp.getTime())
-          ? STATIC_LAST_MODIFIED
-          : stamp,
-        changeFrequency: "weekly",
-        priority: 0.65,
-      });
-    }
-
-    for (const game of games) {
-      entries.push({
-        url: `${siteConfig.url}/${locale}${getGameDetailPath(game)}`,
+        url: urlFor(locale, `/news/${slug}`),
         lastModified: STATIC_LAST_MODIFIED,
-        changeFrequency: "monthly",
-        priority: 0.55,
+        changeFrequency: "weekly",
+        priority: 0.65,
+      });
+    }
+
+    for (const slug of PROMO_SLUGS) {
+      entries.push({
+        url: urlFor(locale, `/promotions/${slug}`),
+        lastModified: STATIC_LAST_MODIFIED,
+        changeFrequency: "weekly",
+        priority: 0.65,
       });
     }
   }

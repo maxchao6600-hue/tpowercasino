@@ -1,5 +1,9 @@
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/config/site";
+
+/** Build-time static robots — keep aligned with sitemap origin. */
+export const dynamic = "force-static";
+
+const BASE_URL = "https://tpowermycasino.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -18,7 +22,7 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: `${siteConfig.url}/sitemap.xml`,
-    host: siteConfig.url,
+    sitemap: `${BASE_URL}/sitemap.xml`,
+    host: BASE_URL,
   };
 }
