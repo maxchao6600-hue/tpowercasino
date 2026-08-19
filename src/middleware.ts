@@ -5,7 +5,9 @@ import { resolveLegacyUrlRedirect } from "@/lib/legacy-url-redirects";
 function permanentRedirect(request: NextRequest, pathname: string) {
   const url = request.nextUrl.clone();
   url.pathname = pathname;
-  return NextResponse.redirect(url, 301);
+  // Explicit ResponseInit — Next may normalize bare 301 to 308 in some paths;
+  // 301 is required for GSC permanent URL healing.
+  return NextResponse.redirect(url, { status: 301 });
 }
 
 export function middleware(request: NextRequest) {
@@ -14,7 +16,10 @@ export function middleware(request: NextRequest) {
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
-    pathname.includes(".")
+    // Only skip real file-like paths (favicon.ico), not legacy title URLs.
+    /\.(?:ico|png|jpe?g|gif|webp|svg|txt|xml|webmanifest|js|css|map|woff2?)$/i.test(
+      pathname,
+    )
   ) {
     return NextResponse.next();
   }
@@ -35,7 +40,12 @@ export function middleware(request: NextRequest) {
   }
 
   // Do not invent locale-prefixed clones of junk paths (e.g. /$ → /en/$).
-  if (pathname === "/$" || /^\/[^/]*\$/.test(pathname)) {
+  if (
+    pathname === "/$" ||
+    pathname === "/%24" ||
+    /^\/(?:en|zh)\/(?:\$|%24)$/.test(pathname) ||
+    /^\/[^/]*\$$/.test(pathname)
+  ) {
     return permanentRedirect(request, `/${defaultLocale}`);
   }
 
@@ -57,5 +67,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|.*\\..*).*)"],
+  // Broad matcher — do not exclude Unicode / percent-encoded legacy title paths.
+  matcher: ["/((?!_next/static|_next/image).*)"],
 };

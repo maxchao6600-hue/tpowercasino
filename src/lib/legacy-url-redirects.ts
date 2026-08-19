@@ -47,7 +47,7 @@ const OFFICIAL_PAGE_SLUGS = new Set([
 
 /** Exact legacy paths Google already discovered → official pathname (no locale). */
 const EXACT_LEGACY_REDIRECTS: Record<string, string> = {
-  "/$": "/",
+  "/$": "/en",
   "/zh-首页": "/zh",
   "/en-Home": "/en",
   "/en-home": "/en",
@@ -59,14 +59,9 @@ function isLocale(value: string): value is Locale {
 
 function looksLikeTitleSuffix(suffix: string): boolean {
   if (!suffix) return false;
-  // CJK / fullwidth punctuation / pipes / spaces → page title or CTA label
-  if (/[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef|\s]/.test(suffix)) {
-    return true;
-  }
-  // English nav/title leftovers: Games, Fishing, Download App, …
-  if (/^[A-Z][A-Za-z0-9]+(?:[ -][A-Za-z0-9]+)*$/.test(suffix)) {
-    return true;
-  }
+  // Official routes never use "/{slug}-{anything}" — nested pages use "/{slug}/{child}".
+  // Any hyphen suffix on an official page slug is therefore a legacy title/label artifact.
+  if (!suffix.includes("/")) return true;
   return false;
 }
 
@@ -75,9 +70,16 @@ function looksLikeTitleSuffix(suffix: string): boolean {
  * legacy bad URL; otherwise null (caller should keep normal routing).
  */
 export function resolveLegacyUrlRedirect(pathname: string): string | null {
-  const raw = pathname.length > 1 && pathname.endsWith("/")
+  let raw = pathname.length > 1 && pathname.endsWith("/")
     ? pathname.slice(0, -1)
     : pathname;
+
+  // Next may pass percent-encoded pathnames; decode so CJK title suffixes match.
+  try {
+    raw = decodeURIComponent(raw);
+  } catch {
+    // keep raw if malformed encoding
+  }
 
   if (EXACT_LEGACY_REDIRECTS[raw]) {
     return EXACT_LEGACY_REDIRECTS[raw];
