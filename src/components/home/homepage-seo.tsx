@@ -65,7 +65,7 @@ export function HomepageSeo({
               {block.relatedLinks && block.relatedLinks.length > 0 ? (
                 <ul className="mt-5 flex flex-wrap gap-x-4 gap-y-2">
                   {block.relatedLinks.map((link) => (
-                    <li key={`${block.id}-${link.href}`}>
+                    <li key={`${block.id}-link-${link.href.replace(/^\//, "")}`}>
                       <Link
                         href={localePath(locale, link.href)}
                         className="text-sm font-semibold text-foreground underline-offset-4 hover:text-primary hover:underline"

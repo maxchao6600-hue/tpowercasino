@@ -14,7 +14,9 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
           const isLast = index === items.length - 1;
           return (
             <li
-              key={`${item.href}-${item.name}`}
+              // Never key as `${href}-${label}` — RSC serializes keys and crawlers
+              // treat path-shaped keys as real URLs (GSC 404s like /zh/blog-Title).
+              key={`bc-${index}`}
               className="inline-flex max-w-full min-w-0 items-center gap-1.5"
             >
               {index > 0 ? (

@@ -75,9 +75,10 @@ export function PremiumCta({
           </p>
           {beforeActions}
           <div className="df-actions mt-3 sm:mt-7">
-            {actions.map((action) => (
+            {actions.map((action, index) => (
               <Button
-                key={`${action.href}-${action.label}`}
+                // Never key as `${href}-${label}` — path-shaped RSC keys become GSC 404s.
+                key={`cta-${index}-${action.href}`}
                 asChild
                 size="lg"
                 variant={action.variant ?? "default"}

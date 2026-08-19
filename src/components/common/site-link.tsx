@@ -1,23 +1,22 @@
 import Link from "next/link";
-import {
-  forwardRef,
-  type ComponentPropsWithoutRef,
-  type MouseEventHandler,
-} from "react";
+import { forwardRef, type ComponentPropsWithoutRef } from "react";
 import { AUTH_LINK_REL } from "@/config/auth";
 import { isHttpUrl, resolveAuthHref } from "@/lib/auth-href";
 
 type SiteLinkProps = ComponentPropsWithoutRef<typeof Link>;
+
+function omitUndefined<T extends Record<string, unknown>>(value: T): Partial<T> {
+  return Object.fromEntries(
+    Object.entries(value).filter(([, v]) => typeof v !== "undefined"),
+  ) as Partial<T>;
+}
 
 /**
  * Drop-in Link that rewrites `/login` + `/register` to the official
  * TPOWER auth URL and opens those destinations in a new tab.
  */
 export const SiteLink = forwardRef<HTMLAnchorElement, SiteLinkProps>(
-  function SiteLink(
-    { href, className, children, onClick, id, style, title, ...rest },
-    ref,
-  ) {
+  function SiteLink({ href, className, children, ...rest }, ref) {
     const hrefString =
       typeof href === "string"
         ? href
@@ -26,8 +25,17 @@ export const SiteLink = forwardRef<HTMLAnchorElement, SiteLinkProps>(
           : String(href);
 
     const resolved = resolveAuthHref(hrefString);
+    const cleanRest = omitUndefined(rest as Record<string, unknown>);
 
     if (isHttpUrl(resolved)) {
+      const {
+        replace: _r,
+        scroll: _s,
+        prefetch: _p,
+        locale: _l,
+        ...anchorRest
+      } = cleanRest;
+
       return (
         <a
           ref={ref}
@@ -35,10 +43,7 @@ export const SiteLink = forwardRef<HTMLAnchorElement, SiteLinkProps>(
           target="_blank"
           rel={AUTH_LINK_REL}
           className={className}
-          onClick={onClick as MouseEventHandler<HTMLAnchorElement> | undefined}
-          id={id}
-          style={style}
-          title={title}
+          {...anchorRest}
         >
           {children}
         </a>
@@ -46,16 +51,7 @@ export const SiteLink = forwardRef<HTMLAnchorElement, SiteLinkProps>(
     }
 
     return (
-      <Link
-        ref={ref}
-        href={resolved}
-        className={className}
-        onClick={onClick}
-        id={id}
-        style={style}
-        title={title}
-        {...rest}
-      >
+      <Link ref={ref} href={resolved} className={className} {...cleanRest}>
         {children}
       </Link>
     );

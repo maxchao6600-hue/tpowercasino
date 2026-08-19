@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]): string {
 }
 
 export function absoluteUrl(path = ""): string {
-  const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tpower.my";
+  const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tpowermycasino.com";
   if (!path || path === "/") return base;
   return `${base}${path.startsWith("/") ? path : `/${path}`}`;
 }

@@ -13,7 +13,8 @@ export const siteConfig = {
     en: "TPOWER Online Casino Malaysia | Official TPOWER Casino, Slots, Live Casino & APK Download",
     zh: "TPOWER线上博彩马来西亚｜官方平台・老虎机・真人视讯・APK下载",
   },
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tpower.my",
+  // Must match sitemap / GSC property (non-www). Override via NEXT_PUBLIC_SITE_URL.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://tpowermycasino.com",
   locale: "en_MY",
   locales: ["en", "zh"] as const,
   defaultLocale: "en" as const,

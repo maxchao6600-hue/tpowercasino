@@ -56,6 +56,38 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
   reactStrictMode: true,
+  /**
+   * Explicit 301s for GSC-discovered legacy URLs caused by path-shaped React
+   * keys (`${href}-${label}`). Middleware also heals Unicode / dynamic variants.
+   * Do not add catch-all 404→home redirects here.
+   */
+  async redirects() {
+    return [
+      { source: "/$", destination: "/en", permanent: true },
+      { source: "/en/$", destination: "/en", permanent: true },
+      { source: "/zh/$", destination: "/zh", permanent: true },
+      {
+        source: "/en/games-Games",
+        destination: "/en/games",
+        permanent: true,
+      },
+      {
+        source: "/en/fishing-Fishing",
+        destination: "/en/fishing",
+        permanent: true,
+      },
+      {
+        source: "/zh/download-%E7%AB%8B%E5%8D%B3%E4%B8%8B%E8%BD%BDAPP",
+        destination: "/zh/download",
+        permanent: true,
+      },
+      {
+        source: "/zh/register-%E7%AB%8B%E5%8D%B3%E6%B3%A8%E5%86%8C",
+        destination: "/zh/register",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

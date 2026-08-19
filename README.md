@@ -39,7 +39,7 @@ Open [http://localhost:3000](http://localhost:3000). Locale routing redirects to
 Copy `.env.example` to `.env.local`:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://www.tpower.my
+NEXT_PUBLIC_SITE_URL=https://tpowermycasino.com
 ```
 
 ## Architecture
