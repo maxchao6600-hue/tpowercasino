@@ -22,8 +22,7 @@ const STATIC_PAGES = [
   { path: "", priority: 1, changefreq: "weekly" },
   { path: "/download", priority: 0.9, changefreq: "weekly" },
   { path: "/apk", priority: 0.8 },
-  { path: "/register", priority: 0.85 },
-  { path: "/login", priority: 0.7 },
+  // /login and /register are noindex — keep out of sitemap
   { path: "/promotions", priority: 0.85, changefreq: "weekly" },
   { path: "/games", priority: 0.85, changefreq: "weekly" },
   { path: "/providers", priority: 0.8 },
