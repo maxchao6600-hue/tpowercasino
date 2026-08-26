@@ -53,13 +53,14 @@ src/
   data/             Games, providers, promotions, blog, FAQ
   lib/              SEO, schema, utils
   types/            Shared TypeScript types
-public/             Images, icons, logos, OG assets
+public/             Images, icons, logos, OG assets, static sitemap.xml
 ```
 
 ## Deployment (Cloudflare)
 
-1. Set `NEXT_PUBLIC_SITE_URL` in your Cloudflare project environment.
-2. Run `npm run deploy` (requires Wrangler auth).
-3. Attach a custom domain in the Cloudflare dashboard.
+1. Set `NEXT_PUBLIC_SITE_URL=https://tpowermycasino.com` in your Cloudflare project environment.
+2. Run `npm run sitemap:generate` after adding/removing indexable routes (writes `public/sitemap.xml`).
+3. Run `npm run deploy` (requires Wrangler auth).
+4. Attach custom domains in the Cloudflare dashboard. Prefer apex `tpowermycasino.com`; middleware also 301s `www` → apex.
 
 This project is configured with `wrangler.jsonc` and `open-next.config.ts` for OpenNext on Cloudflare Workers / Pages-compatible hosting.

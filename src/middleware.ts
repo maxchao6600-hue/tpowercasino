@@ -10,7 +10,18 @@ function permanentRedirect(request: NextRequest, pathname: string) {
   return NextResponse.redirect(url, { status: 301 });
 }
 
+const CANONICAL_HOST = "tpowermycasino.com";
+
 export function middleware(request: NextRequest) {
+  const host = request.headers.get("host")?.split(":")[0]?.toLowerCase();
+  if (host === `www.${CANONICAL_HOST}`) {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.protocol = "https:";
+    redirectUrl.hostname = CANONICAL_HOST;
+    redirectUrl.port = "";
+    return NextResponse.redirect(redirectUrl, 301);
+  }
+
   const { pathname } = request.nextUrl;
 
   if (
@@ -67,6 +78,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Broad matcher — do not exclude Unicode / percent-encoded legacy title paths.
+  // Broad matcher (legacy Unicode paths) + dotted paths for www→apex on sitemap/robots.
   matcher: ["/((?!_next/static|_next/image).*)"],
 };

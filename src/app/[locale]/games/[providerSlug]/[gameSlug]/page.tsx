@@ -53,30 +53,41 @@ export async function generateMetadata({
       ? `${game.name.zh}｜${game.providerName ?? game.providerId}｜TPOWER线上博彩`
       : `${game.name.en} | ${game.providerName ?? game.providerId} | TPOWER`;
 
-  return buildMetadata({
-    locale,
-    title,
-    description: gameDetailMetaDescription(game, locale, categoryLabel),
-    path,
-    image: game.image,
-    imageAlt: game.name[locale],
-    keywords:
-      locale === "zh"
-        ? [
-            game.name.zh,
-            game.providerName ?? game.providerId,
-            "TPOWER线上博彩",
-            categoryLabel,
-            "TPOWER官网",
-          ]
-        : [
-            game.name.en,
-            game.providerName ?? game.providerId,
-            "TPOWER Online Casino",
-            categoryLabel,
-            "Malaysia online casino",
-          ],
-  });
+  // Low-value templated catalogue pages: keep UX + internal follow, block indexing.
+  return {
+    ...buildMetadata({
+      locale,
+      title,
+      description: gameDetailMetaDescription(game, locale, categoryLabel),
+      path,
+      image: game.image,
+      imageAlt: game.name[locale],
+      keywords:
+        locale === "zh"
+          ? [
+              game.name.zh,
+              game.providerName ?? game.providerId,
+              "TPOWER线上博彩",
+              categoryLabel,
+              "TPOWER官网",
+            ]
+          : [
+              game.name.en,
+              game.providerName ?? game.providerId,
+              "TPOWER Online Casino",
+              categoryLabel,
+              "Malaysia online casino",
+            ],
+    }),
+    robots: {
+      index: false,
+      follow: true,
+      googleBot: {
+        index: false,
+        follow: true,
+      },
+    },
+  };
 }
 
 export default async function GameDetailPage({ params }: PageProps) {

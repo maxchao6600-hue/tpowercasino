@@ -12,6 +12,7 @@
     "start": "next start",
     "lint": "eslint . --max-warnings 0",
     "type-check": "tsc --noEmit",
+    "sitemap:generate": "node scripts/generate-sitemap.mjs",
     "qa": "node scripts/qa-audit.mjs",
     "assets": "node scripts/generate-assets.mjs",
     "icons:favicons": "node scripts/generate-favicons.mjs",

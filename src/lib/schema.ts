@@ -222,13 +222,6 @@ export function softwareApplicationSchema(locale: Locale): JsonLdObject {
       price: "0",
       priceCurrency: "MYR",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      bestRating: "5",
-      worstRating: "1",
-      ratingCount: "1280",
-    },
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
@@ -255,34 +248,6 @@ export function howToSchema(input: {
       ...(step.image ? { image: absoluteUrl(step.image) } : {}),
     })),
   };
-}
-
-export function reviewSchemaList(
-  reviews: Array<{
-    author: string;
-    reviewBody: string;
-    ratingValue: number;
-  }>,
-): JsonLdObject[] {
-  return reviews.map((review) => ({
-    "@context": "https://schema.org",
-    "@type": "Review",
-    author: {
-      "@type": "Person",
-      name: review.author,
-    },
-    reviewBody: review.reviewBody,
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: String(review.ratingValue),
-      bestRating: "5",
-      worstRating: "1",
-    },
-    itemReviewed: {
-      "@type": "SoftwareApplication",
-      name: "TPOWER App",
-    },
-  }));
 }
 
 export function offerSchema(input: {

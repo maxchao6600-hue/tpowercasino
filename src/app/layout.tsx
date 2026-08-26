@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     default: siteConfig.title.en,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description.en,
+  // Page-level buildMetadata() owns descriptions — do not emit a global EN fallback.
   applicationName: siteConfig.name,
   manifest: "/manifest.webmanifest",
   icons: {
@@ -95,8 +95,6 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Ensures meta description is present for crawlers / Lighthouse MetaElements */}
-        <meta name="description" content={siteConfig.description.en} />
         <link
           rel="preload"
           as="image"

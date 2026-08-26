@@ -9,14 +9,12 @@ import {
   faqSchema,
   howToSchema,
   organizationSchema,
-  reviewSchemaList,
   softwareApplicationSchema,
   webPageSchema,
 } from "@/lib/schema";
 import {
   downloadFaqs,
   downloadInstallSteps,
-  downloadReviews,
 } from "@/data/download-page-content";
 import { JsonLd } from "@/components/common/json-ld";
 import { DownloadPageContent } from "@/components/download/download-page";
@@ -82,13 +80,6 @@ export default async function DownloadPage({ params }: PageProps) {
             downloadFaqs.map((item) => ({
               question: item.question[locale],
               answer: item.answer[locale],
-            })),
-          ),
-          ...reviewSchemaList(
-            downloadReviews.map((review) => ({
-              author: review.name,
-              reviewBody: review.quote[locale],
-              ratingValue: review.rating,
             })),
           ),
         ]}
