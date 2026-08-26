@@ -639,9 +639,9 @@ export const en = {
       gamesDescription:
         "A constantly expanding collection across all major casino categories.",
       providersValue: "35+",
-      providersLabel: "Official Providers",
+      providersLabel: "Supported Studios",
       providersDescription:
-        "Licensed game studios including Pragmatic Play, PG Soft, Evolution and more.",
+        "Integration partners including Pragmatic Play, PG Soft, Evolution and more.",
       accessValue: "24/7",
       accessLabel: "Platform Access",
       accessDescription:
@@ -908,7 +908,7 @@ export const en = {
       "Browse official gaming partners on TPOWER — Pragmatic Play, PG Soft, Evolution, JILI and more studios available through platform integrations.",
     title: "Official Gaming Partners",
     subtitle:
-      "TPOWER partners with licensed studios so Malaysia players get fair slots, live casino, sports betting, and fishing games in one premium lobby.",
+      "TPOWER works with supported game providers and integration partners so Malaysia players get fair slots, live casino, sports betting, and fishing games in one premium lobby.",
     heroEyebrow: "Platform integration partners",
     heroH1: "Official Gaming Partners",
     heroHeadline: "Supported studios. Fair maths. Premium play.",
@@ -916,7 +916,7 @@ export const en = {
       "Provider quality shapes every spin, live table, and sports market. TPOWER works with trusted integration partners so Malaysia sessions stay fair, stable, and mobile-ready — without claiming ownership of studio brands.",
     heroImageAlt:
       "TPOWER official game providers collage with premium studio brands and casino atmosphere",
-    providersCountLabel: "official studios",
+    providersCountLabel: "supported studios",
     providersCountHint: "Curated partners powering the TPOWER lobby",
     searchPlaceholder: "Search providers, categories, or keywords…",
     filterLabel: "Filter by category",
@@ -930,12 +930,12 @@ export const en = {
     platformStatsEyebrow: "Directory scale",
     platformStatsTitle: "Provider network at a glance",
     platformStatsSubtitle:
-      "A clear snapshot of the official studios, catalogue depth, and always-on access behind TPOWER Online Casino.",
+      "A clear snapshot of supported studios, catalogue depth, and always-on access behind TPOWER Online Casino.",
     platformStats: {
       providersValue: "15+",
-      providersLabel: "Official Providers",
+      providersLabel: "Supported Studios",
       providersDescription:
-        "Licensed and recognised studios curated for Malaysia play — slots, live, sports, and specialty.",
+        "Supported game providers curated for Malaysia play — slots, live, sports, and specialty.",
       gamesValue: "4,800+",
       gamesLabel: "Games Available",
       gamesDescription:

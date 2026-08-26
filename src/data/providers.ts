@@ -109,7 +109,7 @@ export const providers: Provider[] = [
     name: "PG Soft",
     description: {
       en: "Mobile-first slots with beautiful animation and story-driven gameplay — PG Soft is the studio Malaysia players open first on phones.",
-      zh: "手机优先老虎机，动画精致、故事感强——PG电子 是许多马来西亚玩家手机上最先点开的官方厂商。",
+      zh: "手机优先老虎机，动画精致、故事感强——PG电子 是许多马来西亚玩家手机上最先点开的合作厂商。",
     },
     introduction: {
       en: "PG Soft powers many of TPOWER's most played mobile slots. The studio is known for cascading mechanics, culturally resonant themes, and interfaces that feel native on phones. Malaysian players often start with Mahjong-inspired titles before exploring the wider PG Soft catalogue on TPOWER.",

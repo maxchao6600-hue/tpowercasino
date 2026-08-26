@@ -36,6 +36,9 @@ export function generateStaticParams() {
   );
 }
 
+/** Unknown game URLs must hard-404 — do not soft-serve homepage metadata. */
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {

@@ -171,7 +171,7 @@ export const zh: Dictionary = {
       "老虎机、真人视讯、体育博彩、捕鱼游戏分区清楚，按喜好直接进。",
     providersTitle: "TPOWER线上博彩游戏供应商",
     providersSubtitle:
-      "官方合作工作室：PG电子、JILI、Evolution、Pragmatic Play 等，公平与稳定优先。",
+      "游戏合作伙伴：PG电子、JILI、Evolution、Pragmatic Play 等，公平与稳定优先。",
     whyTitle: "为什么选TPOWER线上博彩",
     whySubtitle:
       "提现节奏、账户安全、中英客服、手机APP与VIP奖励，六大理由留得住玩家。",
@@ -612,15 +612,15 @@ export const zh: Dictionary = {
     platformStatsEyebrow: "平台实力",
     platformStatsTitle: "大厅实力一览",
     platformStatsSubtitle:
-      "游戏量、官方游戏商、全天可玩与更新节奏，逛大厅前先心里有数。",
+      "游戏量、支持的游戏供应商、全天可玩与更新节奏，逛大厅前先心里有数。",
     platformStats: {
       gamesValue: "4,800+",
       gamesLabel: "可玩游戏",
       gamesDescription: "老虎机到真人视讯，品类持续扩充。",
       providersValue: "35+",
-      providersLabel: "官方游戏商",
+      providersLabel: "支持的游戏供应商",
       providersDescription:
-        "含Pragmatic Play、PG Soft、Evolution等主流工作室。",
+        "含Pragmatic Play、PG Soft、Evolution等平台对接合作工作室。",
       accessValue: "24/7",
       accessLabel: "全天可玩",
       accessDescription: "桌面、Android与手机浏览器随时进。",
@@ -882,8 +882,8 @@ export const zh: Dictionary = {
     heroDescription:
       "合作伙伴品质影响每一次开转、每一张真人桌、每一个体育盘口。TPOWER线上博彩与官方游戏合作伙伴做平台对接，让马来西亚会话更公平、更稳定、手机也好操作——不宣称拥有工作室品牌。",
     heroImageAlt:
-      "TPOWER线上博彩官方游戏厂商视觉：主流工作室品牌与高端游戏氛围",
-    providersCountLabel: "家官方厂商",
+      "TPOWER线上博彩游戏合作伙伴视觉：主流工作室品牌与高端游戏氛围",
+    providersCountLabel: "家支持的游戏供应商",
     providersCountHint: "驱动 TPOWER 游戏大厅的精选合作伙伴",
     searchPlaceholder: "搜索厂商名称、游戏品类或关键词…",
     filterLabel: "按品类筛选",
@@ -895,14 +895,14 @@ export const zh: Dictionary = {
     resetFilters: "重置筛选",
     resultsLabel: "家厂商",
     platformStatsEyebrow: "目录实力",
-    platformStatsTitle: "官方游戏平台合作一览",
+    platformStatsTitle: "游戏合作伙伴一览",
     platformStatsSubtitle:
-      "一眼看清 TPOWER线上博彩 背后的官方厂商规模、游戏深度与全天候可用性。",
+      "一眼看清 TPOWER线上博彩 背后的支持供应商规模、游戏深度与全天候可用性。",
     platformStats: {
       providersValue: "15+",
-      providersLabel: "官方游戏厂商",
+      providersLabel: "支持的游戏供应商",
       providersDescription:
-        "覆盖老虎机、真人视讯、体育博彩与特色玩法的官方合作工作室。",
+        "覆盖老虎机、真人视讯、体育博彩与特色玩法的平台对接合作工作室。",
       gamesValue: "4,800+",
       gamesLabel: "在线游戏",
       gamesDescription:
@@ -915,13 +915,13 @@ export const zh: Dictionary = {
       playsDescription: "玩家因为厂商品质、直播稳定与手机体验而持续回来。",
     },
     trustEyebrow: "信任与专业",
-    trustTitle: "为什么只选这些官方游戏厂商",
+    trustTitle: "为什么选择这些游戏合作伙伴",
     trustSubtitle:
-      "TPOWER线上博彩只与能强化公平、稳定与玩家信心的官方合作游戏厂商合作。",
+      "TPOWER线上博彩只与能强化公平、稳定与玩家信心的平台对接合作工作室合作。",
     trustPoints: [
       {
-        title: "牌照与正规合作",
-        body: "优先选择有明确牌照背景、商业合作透明的工作室，不做匿名内容堆砌。",
+        title: "透明合作关系",
+        body: "优先选择商业合作透明、可在供应商页核对的工作室，不做匿名内容堆砌。",
       },
       {
         title: "公平性与 RNG 认证",
@@ -944,19 +944,19 @@ export const zh: Dictionary = {
         body: "新品、桌台容量与体育覆盖保持新鲜，同时不把导航做得杂乱难找。",
       },
     ],
-    seoTitle: "TPOWER线上博彩官方游戏厂商完整指南",
+    seoTitle: "TPOWER线上博彩游戏合作伙伴完整指南",
     seoSubtitle:
       "讲清为什么厂商品质重要，老虎机、真人视讯、体育博彩与捕鱼游戏怎么对应不同工作室，以及下一步该去哪逛。",
     seoFaqTitle: "TPOWER线上博彩游戏厂商常见问题",
     finalCtaEyebrow: "精品厂商・官方入口",
-    finalCtaTitle: "用官方游戏厂商，马上开玩",
+    finalCtaTitle: "用平台对接合作工作室，马上开玩",
     finalCtaDescription:
       "立即加入 TPOWER线上博彩，畅玩全球主流工作室上千款热门游戏——先官方注册，再下载官方 APP。",
     finalCtaDownload: "立即下载APP",
     finalCtaImageAlt:
       "TPOWER线上博彩厂商转化视觉：工作室品牌、真人桌与手机游戏氛围",
     finalCtaHighlights: [
-      "老虎机、真人视讯、体育博彩、捕鱼游戏官方厂商齐全",
+      "老虎机、真人视讯、体育博彩、捕鱼游戏合作供应商齐全",
       "入金前先走官方注册与 APP 下载",
       "开玩期间负责任博彩工具随时可用",
     ],

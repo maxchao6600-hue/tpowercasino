@@ -268,8 +268,8 @@ export const officialPartnersCopy = {
     zh: "官方游戏合作伙伴",
   },
   subtitle: {
-    en: "TPOWER works with licensed studios and payment-ready lobbies — partnership and integration, not ownership of provider brands.",
-    zh: "TPOWER 与持牌工作室及可支付大厅对接——关系是合作与集成，并非拥有厂商品牌。",
+    en: "TPOWER works with supported game providers and payment-ready lobbies — partnership and integration, not ownership of provider brands.",
+    zh: "TPOWER 与支持的游戏供应商及可支付大厅对接——关系是合作与集成，并非拥有厂商品牌。",
   },
   viewAll: {
     en: "View all providers",
