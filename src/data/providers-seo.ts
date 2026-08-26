@@ -20,7 +20,7 @@ export const providersSeoBlocks: ProvidersSeoBlock[] = [
       },
       {
         en: "When Malaysia players search for TPOWER providers, PG Soft, Pragmatic Play, Evolution, JILI, or Spadegaming, they usually want three answers: which studios are official, what each studio is best at, and how to move from a provider page into real play. This directory is built as the topical authority page for those intents.",
-        zh: "马来西亚玩家搜 TPOWER游戏厂商、PG电子、Pragmatic Play、Evolution、JILI 或 Spadegaming 时，通常只想快速知道三件事：哪些是官方合作、每家擅长什么、怎样从厂商页进入真的开玩。本页就是围绕这些需求写的官方目录。",
+        zh: "马来西亚玩家搜 TPOWER游戏厂商、PG电子、Pragmatic Play、Evolution、JILI 或 Spadegaming 时，通常只想快速知道三件事：哪些是官方游戏合作伙伴、每家擅长什么、怎样从厂商页进入真的开玩。本页就是围绕这些需求写的官方目录。",
       },
       {
         en: "TPOWER Online Casino organises providers so you can compare by category — slots, live casino, sports betting, fishing games, crash, and arcade — then open a dedicated studio page for overview, popular titles, features, FAQ, and related studios. That structure helps both navigation and search engines understand TPOWER as a coherent Malaysia Online Casino destination.",
@@ -40,7 +40,7 @@ export const providersSeoBlocks: ProvidersSeoBlock[] = [
     },
     paragraphs: [
       {
-        en: "Provider quality decides whether a session feels premium or fragile. A licensed live studio with stable evening broadcasts is not interchangeable with a thin table feed. A mobile-first slot studio with readable features is not interchangeable with a heavy desktop port. Malaysia Online Casino players feel those differences immediately on mid-range phones.",
+        en: "Provider quality decides whether a session feels premium or fragile. A supported live studio with stable evening broadcasts is not interchangeable with a thin table feed. A mobile-first slot studio with readable features is not interchangeable with a heavy desktop port. Malaysia Online Casino players feel those differences immediately on mid-range phones.",
         zh: "厂商品质决定一场游戏是高端还是脆弱。有牌照、晚间直播稳的真人工作室，和薄薄的桌台信号不是同一回事；手机优先、特色清楚的老虎机，和笨重的电脑移植版也不是同一回事。马来西亚玩家用中端手机，一下子就能感觉出来。",
       },
       {
@@ -183,7 +183,7 @@ export const providersSeoBlocks: ProvidersSeoBlock[] = [
       },
       {
         en: "Return whenever a new studio appears in the lobby or a VIP host mentions a provider-led release. The official TPOWER providers page should remain your first verification step before you trust any third-party claim about “exclusive” tables or mirrored APK catalogues.",
-        zh: "大厅上新厂商，或 VIP 管家提到某工作室新品时，都先回这里核实。任何第三方声称的「独家桌台」或镜像 APK 目录，都应以 TPOWER 官方厂商页为第一验证步骤。",
+        zh: "大厅上新厂商，或 VIP 管家提到某工作室新品时，都先回这里核实。任何第三方声称的「独家桌台」或镜像 APK 目录，都应以 TPOWER 供应商页为第一验证步骤。",
       },
     ],
   },
@@ -197,7 +197,7 @@ export const providersSeoFaqs = [
     },
     answer: {
       en: "Casino providers are the studios that build and certify games — slots, live casino, sports feeds, fishing, and specialty titles. On TPOWER Online Casino, providers are listed with official pages so Malaysia players can see strengths, categories, and popular games before playing.",
-      zh: "游戏厂商是设计并认证游戏内容的工作室，涵盖老虎机、真人视讯、体育、捕鱼与特色玩法。TPOWER线上博彩 为每家官方厂商设立介绍页，方便马来西亚玩家先看强项、品类与热门游戏再开玩。",
+      zh: "游戏厂商是设计并认证游戏内容的工作室，涵盖老虎机、真人视讯、体育、捕鱼与特色玩法。TPOWER线上博彩 为每家合作厂商设立介绍页，方便马来西亚玩家先看强项、品类与热门游戏再开玩。",
     },
   },
   {
@@ -227,7 +227,7 @@ export const providersSeoFaqs = [
     },
     answer: {
       en: "All studios listed in this TPOWER providers directory are curated for the Malaysia Online Casino experience on TPOWER — including PG Soft, Pragmatic Play, Evolution, JILI, JDB, Spadegaming, SBO Sports, and more. Availability of individual titles can vary inside the live lobby.",
-      zh: "本目录列出的官方厂商，都是为 TPOWER线上博彩 马来西亚体验精选，包括 PG电子、Pragmatic Play、Evolution、JILI、JDB、Spadegaming、SBO Sports 等。个别游戏是否在线，以游戏大厅实时目录为准。",
+      zh: "本目录列出的合作厂商，都是为 TPOWER线上博彩 马来西亚体验精选，包括 PG电子、Pragmatic Play、Evolution、JILI、JDB、Spadegaming、SBO Sports 等。个别游戏是否在线，以游戏大厅实时目录为准。",
     },
   },
   {
@@ -237,7 +237,7 @@ export const providersSeoFaqs = [
     },
     answer: {
       en: "PG Soft is a mobile-first slot studio known for polished animation, cascading mechanics, and story-driven gameplay. On TPOWER, PG Soft is one of the most requested providers for phone sessions.",
-      zh: "PG电子 是手机优先的老虎机工作室，以精致动画、连消机制与故事驱动玩法著称。在 TPOWER，它是手机玩家最常点的官方厂商之一。",
+      zh: "PG电子 是手机优先的老虎机工作室，以精致动画、连消机制与故事驱动玩法著称。在 TPOWER，它是手机玩家最常点的合作厂商之一。",
     },
   },
   {
