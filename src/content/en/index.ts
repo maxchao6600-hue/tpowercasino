@@ -1,6 +1,6 @@
 export const en = {
   common: {
-    brand: "TPOWER Casino",
+    brand: "TPOWER Online Casino",
     ctaPrimary: "Register",
     ctaSecondary: "Download App",
     ctaLogin: "Login",
@@ -13,7 +13,7 @@ export const en = {
     ageNotice: "Players must be 21 years or older. Play responsibly.",
     ageGate: {
       title: "Age confirmation required",
-      body: "TPOWER Casino is for adults aged 21 and over in eligible jurisdictions. Confirm your age to continue, or leave if you are under 21.",
+      body: "TPOWER Online Casino is for adults aged 21 and over in eligible jurisdictions. Confirm your age to continue, or leave if you are under 21.",
       confirm: "I am 21 or older",
       deny: "I am under 21",
     },
@@ -148,14 +148,20 @@ export const en = {
   },
   home: {
     metaTitle:
-      "TPOWER Online Casino Malaysia | Official TPOWER Casino, Slots, Live Casino & APK Download",
+      "TPOWER Online Casino Malaysia | Official Slots, Live Casino & APK Download",
     metaDescription:
-      "Experience TPOWER Online Casino Malaysia with official APK download, premium slots, live casino, sports betting, secure payments, fast withdrawals, exclusive promotions and mobile gaming for Malaysia players.",
-    heroEyebrow: "Malaysia's Trusted Online Casino",
-    heroH1: "TPOWER Online Casino",
-    heroTitle: "Malaysia's Premium Online Casino Platform",
+      "TPOWER is the official Malaysia gaming platform for slots, live casino, sports, fishing, lottery, secure payments and APK download — with bilingual customer support.",
+    heroEyebrow: "Official Malaysia gaming platform",
+    heroH1: "TPOWER Malaysia",
+    heroTitle: "TPOWER Online Casino Malaysia",
     heroSubtitle:
-      "Experience TPOWER Online Casino with premium slots, live casino, sports betting, fast deposits, secure withdrawals, exclusive promotions and mobile gaming designed for Malaysia players.",
+      "Official TPOWER gaming platform for Malaysia featuring slots, live casino, sports betting, fishing games, lottery and secure APK download.",
+    heroHighlights: [
+      "Trusted provider partnerships.",
+      "Malaysia-friendly payment methods.",
+      "24/7 customer support.",
+      "Official APK download.",
+    ],
     statsTitle: "Trusted by players across Malaysia",
     statsSubtitle: "Clear numbers. Real operational focus. No inflated theatre.",
     promotionsTitle: "Featured promotions",
@@ -166,7 +172,7 @@ export const en = {
       "Explore a focused catalogue designed for clarity across every entertainment style.",
     providersTitle: "Premium game providers",
     providersSubtitle:
-      "Auto-scrolling studios selected for fairness, stability, and production quality.",
+      "Official gaming partners selected for fairness, stability, and production quality.",
     whyTitle: "Why choose TPOWER",
     whySubtitle:
       "Six reasons players stay — speed, security, support, trust, mobile craft, and exclusive rewards.",
@@ -274,24 +280,24 @@ export const en = {
     helperLink: "Open login guide",
   },
   download: {
-    metaTitle: "TPOWER Download | Official App, APK & Malaysia Casino App",
+    metaTitle: "Official TPOWER APK Download Malaysia | Android Installation Guide",
     metaDescription:
-      "Official TPower Download for Android APK and iOS — version 3.2.1, ~48.6 MB, secure install, local Malaysia payments, screenshots, FAQ, and step-by-step guidance.",
+      "Download the official TPOWER APK for Android with secure install steps, Malaysia payment context, screenshots and FAQ — avoid unofficial mirrors.",
     keywords: [
-      "TPower Download",
-      "TPower APK",
-      "TPower App",
-      "TPower Android",
-      "TPower iOS",
-      "Download TPower",
+      "TPOWER Download",
+      "TPOWER APK",
+      "TPOWER App",
+      "TPOWER Android",
+      "TPOWER iOS",
+      "Download TPOWER",
       "Malaysia Casino App",
       "Online Casino App Malaysia",
-      "TPower Official App",
-      "TPower Mobile App",
+      "TPOWER Official App",
+      "TPOWER Mobile App",
     ],
     title: "Download TPOWER App",
     subtitle:
-      "The premium Malaysia Casino App pathway for Android and iOS — documented TPower APK installs, secure sessions, local payments, and the full lobby in your pocket.",
+      "The premium Malaysia gaming app pathway for Android and iOS — documented TPOWER APK installs, secure sessions, local payments, and the full lobby in your pocket.",
     heroImageAlt:
       "Premium TPOWER App smartphone mockup with glowing casino atmosphere",
     featuresTitle: "App features",
@@ -742,9 +748,9 @@ export const en = {
     providerLabel: "Provider",
   },
   promotions: {
-    metaTitle: "TPOWER Promotions Malaysia",
+    metaTitle: "TPOWER Promotions Malaysia | Welcome Bonus, Cashback & Daily Rewards",
     metaDescription:
-      "Explore TPOWER Promotions Malaysia — Welcome Bonus, cashback, reload boosts, and VIP rewards with clear terms, eligibility, and claim steps.",
+      "Review TPOWER promotions for Malaysia — welcome bonus, cashback, reload and VIP rewards with eligibility and claim steps written next to each offer.",
     title: "Promotions with clear terms",
     subtitle:
       "Every offer is written to be understood. Filter by category and review expiry before you activate.",
@@ -822,9 +828,9 @@ export const en = {
     },
   },
   vip: {
-    metaTitle: "TPOWER VIP Club Malaysia | Online Casino VIP Rewards",
+    metaTitle: "TPOWER VIP Program Malaysia | Rewards, Cashback & Member Benefits",
     metaDescription:
-      "Explore the TPOWER VIP Club for Malaysia players — Silver, Gold and Platinum tiers with priority withdrawals, higher cashback, exclusive promotions and dedicated VIP support.",
+      "Learn how the TPOWER VIP program works in Malaysia — tiers, cashback, priority support and member benefits with published progression paths.",
     keywords: [
       "TPOWER VIP",
       "VIP Casino Malaysia",
@@ -897,24 +903,24 @@ export const en = {
       "TPOWER VIP rewards atmosphere with premium casino membership styling",
   },
   providers: {
-    metaTitle: "TPOWER Game Providers Malaysia | Official Studios",
+    metaTitle: "Game Providers | Official TPOWER Online Casino Malaysia",
     metaDescription:
-      "Explore official TPOWER Online Casino game providers in Malaysia — PG Soft, Pragmatic Play, Evolution, JILI, Spadegaming and more trusted studios.",
-    title: "Official Game Providers",
+      "Browse official gaming partners on TPOWER — Pragmatic Play, PG Soft, Evolution, JILI and more studios available through platform integrations.",
+    title: "Official Gaming Partners",
     subtitle:
-      "TPOWER Online Casino partners with licensed studios so Malaysia players get fair slots, live casino, sports betting, and fishing games in one premium lobby.",
-    heroEyebrow: "Official Game Providers",
-    heroH1: "TPOWER Online Casino Providers",
-    heroHeadline: "World-class studios. Licensed content. Premium play.",
+      "TPOWER partners with licensed studios so Malaysia players get fair slots, live casino, sports betting, and fishing games in one premium lobby.",
+    heroEyebrow: "Platform integration partners",
+    heroH1: "Official Gaming Partners",
+    heroHeadline: "Supported studios. Fair maths. Premium play.",
     heroDescription:
-      "Provider quality shapes every spin, live table, and sports market. TPOWER partners with trusted studios so Malaysia Online Casino sessions stay fair, stable, and mobile-ready — not a random logo wall.",
+      "Provider quality shapes every spin, live table, and sports market. TPOWER works with trusted integration partners so Malaysia sessions stay fair, stable, and mobile-ready — without claiming ownership of studio brands.",
     heroImageAlt:
       "TPOWER official game providers collage with premium studio brands and casino atmosphere",
     providersCountLabel: "official studios",
     providersCountHint: "Curated partners powering the TPOWER lobby",
     searchPlaceholder: "Search providers, categories, or keywords…",
     filterLabel: "Filter by category",
-    officialBadge: "Official Provider",
+    officialBadge: "Integration partner",
     viewGames: "View Games",
     exploreGames: "Explore Games",
     popularTypesLabel: "Popular game types",
@@ -1099,12 +1105,12 @@ export const en = {
       "Find clear answers to the questions players ask most — accounts, payments, games, security, and VIP.",
   },
   contact: {
-    metaTitle: "Official TPOWER Support Center | Contact & Help Malaysia",
+    metaTitle: "Official TPOWER Customer Support Malaysia | WhatsApp, Telegram & Help Center",
     metaDescription:
-      "Official TPOWER Support Center for Malaysia. Get TPOWER customer service help with login, deposits, withdrawals, VIP, promotions, and official contact channels.",
-    title: "Official TPOWER Support Center",
+      "Contact official TPOWER customer support in Malaysia via WhatsApp, Telegram, social channels and email — with hours, prep tips and safety notices.",
+    title: "Official TPOWER Customer Support",
     subtitle:
-      "Need help with your TPOWER account, deposits, withdrawals, promotions, VIP service or technical questions? The official Malaysia support team is here to help.",
+      "Need help with your TPOWER account, deposits, withdrawals, promotions, VIP or technical questions? Use official Malaysia channels only.",
     form: {
       name: "Full name",
       email: "Email address",
@@ -1168,7 +1174,7 @@ export const en = {
   },
   footer: {
     tagline:
-      "Premium online gaming for Malaysia — engineered for trust, clarity, and performance.",
+      "TPOWER is an online gaming platform for Malaysia — official support, partner studios, and APK download guidance in one place.",
     about: "About",
     games: "Games",
     support: "Support",

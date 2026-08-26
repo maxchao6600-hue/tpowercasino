@@ -1,13 +1,13 @@
 import { headers } from "next/headers";
 import {
+  Download,
   Gamepad2,
-  Gift,
   Headphones,
+  HeartHandshake,
+  Lock,
   ShieldCheck,
   Smartphone,
-  Star,
   Wallet,
-  Zap,
   type LucideIcon,
 } from "lucide-react";
 import type { Locale } from "@/config/site";
@@ -21,36 +21,36 @@ type TrustItem = {
 
 const TRUST_ITEMS: TrustItem[] = [
   {
-    icon: Zap,
-    label: { en: "Fast Withdrawals", zh: "快速提现" },
+    icon: Download,
+    label: { en: "Official APK Download", zh: "官方 APK 下载" },
   },
   {
-    icon: Wallet,
-    label: { en: "Instant Deposit", zh: "即时存款" },
-  },
-  {
-    icon: Headphones,
-    label: { en: "24/7 Live Support", zh: "全天在线客服" },
-  },
-  {
-    icon: Gift,
-    label: { en: "Daily Promotions", zh: "每日优惠" },
+    icon: Lock,
+    label: { en: "Secure Login", zh: "安全登录" },
   },
   {
     icon: ShieldCheck,
-    label: { en: "Safe & Secure", zh: "安全可靠" },
+    label: { en: "Encrypted Connection", zh: "加密连接" },
+  },
+  {
+    icon: Wallet,
+    label: { en: "Malaysia Payments", zh: "大马友好支付" },
+  },
+  {
+    icon: Headphones,
+    label: { en: "24/7 Support", zh: "全天客服" },
+  },
+  {
+    icon: HeartHandshake,
+    label: { en: "Responsible Gaming", zh: "负责任博彩" },
   },
   {
     icon: Gamepad2,
-    label: { en: "13+ Official Providers", zh: "13+ 官方游戏商" },
+    label: { en: "Official Gaming Partners", zh: "官方游戏合作伙伴" },
   },
   {
     icon: Smartphone,
     label: { en: "Android & iOS Supported", zh: "支持 Android 与 iOS" },
-  },
-  {
-    icon: Star,
-    label: { en: "Trusted by Malaysia Players", zh: "马来西亚玩家信赖" },
   },
 ];
 

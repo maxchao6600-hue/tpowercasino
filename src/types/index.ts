@@ -92,6 +92,8 @@ export type Provider = {
   name: string;
   description: LocalizedString;
   introduction: LocalizedString;
+  /** Why play this studio on TPOWER (partnership/integration framing). */
+  whyOnTpower: LocalizedString;
   features: LocalizedString[];
   gameTypes: LocalizedString[];
   compatibility: LocalizedString;

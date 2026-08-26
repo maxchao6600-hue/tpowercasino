@@ -7,101 +7,37 @@ export const authoritySupportCenter: AuthorityPageContent = {
   schemaType: "ContactPage",
   atmosphere: "contact",
   metaTitle: {
-    en: "Support Center | Channels, Prep, Hours & Safe Contact",
-    zh: "客服中心｜通道、准备、时段与安全联系",
+    en: "Official TPOWER Customer Support Malaysia | WhatsApp, Telegram & Help Center",
+    zh: "TPOWER官方客服马来西亚｜WhatsApp・Telegram・帮助中心",
   },
   metaDescription: {
-    en: "Official TPOWER support channels, what to prepare before contact, hours orientation, and why agents never need your password.",
-    zh: "TPOWER线上博彩 官方客服通道、联系前准备、时段导向，以及客服为何从不需要你的密码。",
+    en: "Reach official TPOWER customer support in Malaysia via WhatsApp, Telegram, social channels or email — daily hours 10:00–02:00 MYT, prep tips, and password safety.",
+    zh: "联系TPOWER线上博彩官方客服：WhatsApp、Telegram、社交主页与邮件；服务时段每日 10:00–02:00（马来西亚时间），附准备提示与密码安全须知。",
   },
   heroTitle: {
-    en: "Support Center",
-    zh: "TPOWER线上博彩 客服中心",
+    en: "Official Customer Support",
+    zh: "TPOWER官方客服",
   },
   heroSubtitle: {
-    en: "Official channels, smarter prep, safer conversations — passwords stay yours.",
-    zh: "官方通道、更聪明的准备、更安全的对话——密码只属于你。",
+    en: "WhatsApp, Telegram, social updates, email and FAQ — one official help center for Malaysia players.",
+    zh: "WhatsApp、Telegram、官方社交、邮件与 FAQ——马来西亚玩家的官方帮助中心。",
   },
   introduction: {
-    en: `Support Center is the official doorway for Malaysia players who need human help with TPOWER accounts, payments, downloads, VIP questions, or responsible-play controls. If a stranger messages first claiming to be support, slow down and come here instead.
+    en: `This is the official TPOWER customer support hub for Malaysia players who need help with accounts, payments, downloads, VIP questions, or responsible-play controls. If a stranger messages first claiming to be support, stop and start here instead.
 
-Channels may include live chat, email, on-site forms, and FAQ deflection for common how-tos. Exact widgets and hours can evolve; treat on-page channel listings and in-product entry points as live truth. This authority page teaches how to use those channels well.
+Use each channel for the right job. WhatsApp is for urgent account or payment blockers. Telegram reaches the same desk as an alternate chat path. Facebook, Instagram and Threads are for updates and announcements — not password resets or cashier disputes. Email suits detailed cases with attachments. Start with [[/faq|FAQ]] when the question is a generic how-to.
 
-Preparation saves rounds. Bring account identifiers, timestamps, transaction references, game IDs when relevant, and screenshots that omit passwords. Read [[/faq|FAQ]] and [[/blog|Knowledge Center]] first for self-serve steps when the issue is generic.
+Official live chat hours for WhatsApp and Telegram are Daily 10:00–02:00 MYT. Peak evenings can queue; clear evidence still speeds resolution. For install problems, pair this page with [[/download|Download]].
 
-Security of support is non-negotiable. Official agents never need your password, PIN, or remote-desktop access. Pair this page with [[/security|Platform Security]], [[/customer-commitment|Customer Commitment]], [[/aml-kyc|AML & KYC]], and [[/responsible-gaming|Responsible Gaming]] depending on your case type.
-
-Support Center quality is a player skill as much as a desk skill. Adults who arrive with a clean timeline get clearer answers. Adults who arrive with passwords ready to paste get steered back to security basics — because that instinct is how takeovers happen.
-
-Use this page as the habit loop: self-serve when possible, prepare evidence, initiate officially, stay on one thread, escalate cleanly if stuck. That loop is how Malaysia players turn a frustrating cashier moment into a resolvable case.
-
-Make Support Center your default reflex. Not search ads, not group admins, not cold DMs. The reflex takes a week to build and prevents years of account grief. This page is the training ground for that reflex.
-
-Support Center is where policy becomes a conversation. Security rules become “we will never ask for your password.” Responsible Gaming becomes “tell me which control you need.” AML/KYC education becomes “here is the official upload checklist.” Customer Commitment becomes “here is your case reference and next update.”
-
-Treat the desk as a professional service. Arrive with a timeline. Stay on one thread. Use bilingual help without inventing vocabulary. Escalate cleanly when stuck. Report impersonators. Never install files from people who messaged you first.
-
-Hours and queues are real. Peak Malaysia evenings can be busy. Fast acknowledgement and clear next steps matter more than theatrical instant miracles. If you use the wait to prepare better evidence, you accelerate your own resolution. If you open five incomplete chats, you decelerate it.
-
-Practise one clean support contact while nothing is wrong. Open Support Center, find the channels, read the prep tips, and bookmark the page. Muscle memory built on a calm day is what you will need on a chaotic night. Do not wait for a stolen account to learn where the official door is.
-
-When a real case arrives, lead with the outcome you need and the evidence you have. “Withdrawal pending since time T, reference R, screenshot attached without secrets” is a complete opening. Agents can work with that. Novels without references cannot.
-
-If someone contacts you first, end that thread. Start here. Report the impersonation. The highest-leverage security rule on this page is also the simplest customer-service rule: you initiate from the official desk, or you assume risk.
-
-Revisit Support Center whenever a stranger messages first or a cashier state confuses you. The reflex is the product: initiate officially, prepare a linear evidence pack, never share passwords, stay on one thread, escalate cleanly if stuck. Practise finding the channels on a calm day so chaotic nights do not depend on search ads. That is how Malaysia players turn stress into resolvable cases on TPOWER without feeding impersonators.
-
-Bookmark Support Center now, before you need it — calm-day bookmarks beat chaotic-night search ads every time for Malaysia players on TPOWER.
-
-Official initiation is the whole security of support — bookmark this official desk before a chaotic night forces a risky search-ad gamble.
-
-Bookmark this official desk now — calm-day bookmarks beat chaotic-night search ads for every Malaysia player on TPOWER.
-
-Save this contact URL in your browser now so the next urgent message cannot redirect you to a mirror.
-
-A final contact habit: bookmark this desk, prepare evidence before you type, initiate yourself, and treat stranger-first outreach as hostile until proven official. That habit is the security of support.
-
-You initiate contact, you prepare evidence, you never share passwords — that is official support on TPOWER.
+Only channels listed on this page and in-product menus are valid. Official agents never need your password, PIN, one-time code, or remote-desktop access. Read [[/security|Security]] before you share anything sensitive, and never install files from people who contacted you first.
 `,
-    zh: `客服中心是马来西亚玩家就 TPOWER线上博彩 账户、支付、下载、VIP 问题或负责任控制寻求人工协助的官方门口。若陌生人先发消息自称客服，请先减速，改从这里进入。
+    zh: `这里是 TPOWER线上博彩 面向马来西亚玩家的官方客服入口，处理账户、支付、下载、VIP 或负责任控制相关协助。若陌生人先发消息自称客服，请立刻停下，改从本页发起。
 
-通道可能包括即时聊天、邮件、站内表单，以及把常见操作导流到 FAQ。具体控件与时段可能调整；请以页面上的通道列表与产品内入口为现场真相。本权威页教你如何用好这些通道。
+按场景选通道：WhatsApp 适合账户或支付紧急阻断；Telegram 是同一台席的备用聊天路径；Facebook、Instagram、Threads 用于公告与动态，不适合改密或收银台争议；邮件适合可附资料的详细个案。通用操作问题请先查 [[/faq|常见问题]]。
 
-准备能减少来回。带上账户识别信息、时间戳、交易参考、相关时的游戏编号，以及去掉密码的截图。若问题通用，先读 [[/faq|常见问题]] 与 [[/blog|知识中心]] 自助。
+WhatsApp 与 Telegram 官方服务时段为每日 10:00–02:00（马来西亚时间）。晚间高峰可能排队，材料齐全仍能加快处理。安装问题请搭配 [[/download|下载]]。
 
-客服安全不可商量。官方人员从不需要你的密码、PIN 或远程桌面。按个案类型搭配 [[/security|平台安全]]、[[/customer-commitment|客户承诺]]、[[/aml-kyc|AML与KYC]]、[[/responsible-gaming|负责任博彩]]。
-
-客服中心质量既是台席能力，也是玩家技能。带着干净时间线到来的成年人，更容易得到清楚答案；准备把密码粘贴出去的人，会被导回安全基础——因为那种直觉正是盗号路径。
-
-请把本页当成习惯闭环：能自助先自助、准备证据、官方发起、留在一条线程、卡住再干净升级。大马玩家靠这个闭环，把令人挫败的收银台时刻变成可解决的个案。
-
-让客服中心成为你的默认反射。不是搜索广告，不是群管理员，不是陌生私信。反射花一周养成，却能避免多年账户悲剧。本页就是训练场。
-
-客服中心是政策变成对话的地方。安全规则变成「我们永远不会要你的密码」。负责任博彩变成「告诉我你需要哪项控制」。AML/KYC 教育变成「这是官方上传清单」。客户承诺变成「这是你的个案参考号与下次更新」。
-
-把台席当作专业服务。带着时间线到来。留在一条线程。使用双语协助时不要自创词汇。卡住时干净升级。举报假冒者。绝不安装先联系你的人发来的文件。
-
-时段与排队是真实的。大马晚间高峰可能忙碌。迅速确认与清楚的下一步，胜过表演式瞬时奇迹。若你用等待准备更好证据，你就加速自己的解决；若你开五条不完整聊天，你就减速。
-
-在没事时练习一次干净的客服联系。打开客服中心，找到通道，阅读准备提示，收藏页面。平静日练出的肌肉记忆，才是混乱夜你需要的。不要等账户被盗才学习官方门口在哪。
-
-真正个案到来时，先说明你需要的结果与你有的证据。「提现自时间 T 起待处理，参考号 R，附不含机密截图」就是完整开场。客服能据此工作。没有参考号的长篇故事不能。
-
-若有人先联系你，结束该线程。从这里开始。举报假冒。本页杠杆最高的安全规则，也是最简单的客服规则：由你从官方台席发起，否则假设有风险。
-
-每当陌生人先发消息或收银台状态让你困惑时，重访客服中心。反射就是产品：官方发起、准备线性证据包、永不分享密码、留在一条线程、卡住再干净升级。在平静日练习找通道，混乱夜才不必依赖搜索广告。大马玩家靠这样把压力变成可解决个案，而不喂养假冒者。
-
-现在就收藏客服中心，而不是等到需要时——对 TPOWER线上博彩 的大马玩家而言，平静日的收藏每次都胜过混乱夜的搜索广告。
-
-官方发起就是客服安全的全部关键——在混乱夜逼你赌搜索广告之前，先收藏这个台席。
-
-现在就收藏这个官方台席——对 TPOWER线上博彩 的每位大马玩家，平静日收藏都胜过混乱夜搜索广告。
-
-现在就把本联系网址存进浏览器，好让下一则紧迫消息无法把你导向镜像站。
-
-最后一个联系习惯：收藏本台席、输入前准备证据、由自己发起，并把陌生人先联系当作敌意直到证明官方。这习惯就是客服安全。
-
-由你发起、由你准备、永不分享密码——那才是官方客服。
+只认本页与产品内菜单列出的官方通道。官方客服从不需要密码、PIN、一次性验证码或远程桌面。分享敏感信息前请先读 [[/security|安全]]，也绝不安装先联系你的人发来的文件。
 `,
   },
   stats: [

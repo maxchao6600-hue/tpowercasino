@@ -4,38 +4,64 @@ import { absoluteUrl } from "@/lib/utils";
 import type { BreadcrumbItem } from "@/types";
 
 export function organizationSchema(locale: Locale): JsonLdObject {
+  const sameAs = [
+    siteConfig.social.facebook,
+    siteConfig.social.instagram,
+    siteConfig.social.threads,
+    siteConfig.social.telegram,
+  ];
+
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: siteConfig.name,
-    alternateName: [
-      "TPOWER",
-      "TPOWER Online Casino",
-      "TPOWER Casino Malaysia",
-    ],
+    name: "TPOWER",
+    alternateName:
+      locale === "zh"
+        ? [
+            "TPOWER线上博彩",
+            "TPOWER官网",
+            "TPOWER官方平台",
+            "TPOWER Malaysia",
+          ]
+        : [
+            "TPOWER Online Casino Malaysia",
+            "TPOWER Malaysia",
+            "TPOWER Online Casino",
+          ],
     url: siteConfig.url,
     logo: absoluteUrl("/logo/tpower-logo.png"),
     description: siteConfig.description[locale],
     email: siteConfig.supportEmail,
     telephone: siteConfig.phone,
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "customer support",
-      email: siteConfig.supportEmail,
-      telephone: siteConfig.phone,
-      areaServed: "MY",
-      availableLanguage: ["English", "Chinese"],
-    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: siteConfig.supportEmail,
+        telephone: siteConfig.phone,
+        areaServed: "MY",
+        availableLanguage: ["English", "Chinese"],
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        name: "WhatsApp Support",
+        url: siteConfig.social.whatsapp,
+        areaServed: "MY",
+        availableLanguage: ["English", "Chinese"],
+      },
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Kuala Lumpur",
       addressCountry: "MY",
     },
-    sameAs: Object.values(siteConfig.social),
+    sameAs,
     areaServed: {
       "@type": "Country",
       name: "Malaysia",
     },
+    availableLanguage: ["English", "Chinese"],
   };
 }
 
@@ -43,13 +69,19 @@ export function websiteSchema(locale: Locale): JsonLdObject {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: siteConfig.name,
+    name: "TPOWER",
+    alternateName:
+      locale === "zh"
+        ? ["TPOWER线上博彩", "TPOWER官网"]
+        : ["TPOWER Online Casino Malaysia", "TPOWER Malaysia"],
     url: siteConfig.url,
     description: siteConfig.description[locale],
     inLanguage: locale === "zh" ? "zh-CN" : "en-MY",
     publisher: {
       "@type": "Organization",
-      name: siteConfig.name,
+      name: "TPOWER",
+      url: siteConfig.url,
+      logo: absoluteUrl("/logo/tpower-logo.png"),
     },
   };
 }
@@ -102,18 +134,28 @@ export function contactPageSchema(input: {
     "@type": "ContactPage",
     mainEntity: {
       "@type": "Organization",
-      name: siteConfig.name,
+      name: "TPOWER",
       email: siteConfig.supportEmail,
       telephone: siteConfig.phone,
       url: siteConfig.url,
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "customer support",
-        email: siteConfig.supportEmail,
-        telephone: siteConfig.phone,
-        areaServed: "MY",
-        availableLanguage: ["English", "Chinese"],
-      },
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          contactType: "customer support",
+          email: siteConfig.supportEmail,
+          telephone: siteConfig.phone,
+          areaServed: "MY",
+          availableLanguage: ["English", "Chinese"],
+        },
+        {
+          "@type": "ContactPoint",
+          contactType: "customer support",
+          name: "WhatsApp Support",
+          url: siteConfig.social.whatsapp,
+          areaServed: "MY",
+          availableLanguage: ["English", "Chinese"],
+        },
+      ],
     },
   };
 }

@@ -67,8 +67,12 @@ export const providers: Provider[] = [
       zh: "高人气老虎机、真人视讯与高频上新——Pragmatic Play 适合看重数学模型与晚间高峰稳定性的 TPOWER 玩家。",
     },
     introduction: {
-      en: "Pragmatic Play is one of the most requested studios on TPOWER Casino Malaysia. Players come for polished slot mathematics, frequent feature drops, and live tables that stay stable during peak evening hours. On TPOWER, Pragmatic titles are curated for mobile performance first — so sessions feel smooth on mid-range devices as well as flagship phones.",
+      en: "Pragmatic Play is one of the most requested studios on TPOWER Online Casino Malaysia. Players come for polished slot mathematics, frequent feature drops, and live tables that stay stable during peak evening hours. On TPOWER, Pragmatic titles are curated for mobile performance first — so sessions feel smooth on mid-range devices as well as flagship phones.",
       zh: "Pragmatic Play 是 TPOWER线上博彩 最常点的厂商之一。玩家冲着精致的老虎机数学、频繁的特色功能，以及晚上高峰仍稳定的真人桌而来。TPOWER 优先收录手机跑得顺的版本，中端机也能流畅开转。",
+    },
+    whyOnTpower: {
+      en: "Play Pragmatic Play on TPOWER for curated mobile performance, Malaysia peak-hour table stability, and cashier continuity with the same official account — as a platform integration partner, not a studio-owned site.",
+      zh: "在 TPOWER 玩 Pragmatic Play：手机表现经筛选、大马晚间高峰桌台更稳，并与同一官方账户收银台连贯——关系是平台对接合作，并非厂商标识官网。",
     },
     features: [
       { en: "High-performing video slots with clear feature rules", zh: "热门视频老虎机，特色规则清楚" },
@@ -111,6 +115,10 @@ export const providers: Provider[] = [
       en: "PG Soft powers many of TPOWER's most played mobile slots. The studio is known for cascading mechanics, culturally resonant themes, and interfaces that feel native on phones. Malaysian players often start with Mahjong-inspired titles before exploring the wider PG Soft catalogue on TPOWER.",
       zh: "PG电子 驱动着 TPOWER 许多最常玩的手游老虎机。连消机制、亚洲文化主题、手机原生感界面都是招牌。马来西亚玩家往往从麻将风热门款起步，再探索更多 PG 目录。",
     },
+    whyOnTpower: {
+      en: "Choose PG Soft on TPOWER when you want mobile-first cascading slots with local payment context and bilingual support beside the lobby — partnership access, not ownership of the PG Soft brand.",
+      zh: "在 TPOWER 选 PG电子，是为了手游连消老虎机搭配本地支付语境与双语客服——这是合作接入，不代表拥有 PG Soft 品牌。",
+    },
     features: [
       { en: "Mobile-first slot UX", zh: "手机优先的老虎机体验" },
       { en: "Cascading and cluster-style mechanics", zh: "连消与集群式特色玩法" },
@@ -133,7 +141,7 @@ export const providers: Provider[] = [
     featured: true,
     metaTitle: { en: "PG Soft Games on TPOWER", zh: "PG电子｜TPOWER 热门手游老虎机" },
     metaDescription: {
-      en: "Explore PG Soft slots on TPOWER Casino Malaysia — mobile-first titles, popular games, features, and player FAQs.",
+      en: "Explore PG Soft slots on TPOWER Online Casino Malaysia — mobile-first titles, popular games, features, and player FAQs.",
       zh: "TPOWER线上博彩 PG电子 专区：手游热门老虎机、特色玩法、人气作品与玩家常见问题。",
     },
   },
@@ -148,6 +156,10 @@ export const providers: Provider[] = [
     introduction: {
       en: "Evolution remains the reference standard for live casino production. On TPOWER, Evolution tables cover baccarat, blackjack, and cinematic game shows with broadcast quality designed for evening peak demand in Malaysia.",
       zh: "Evolution 仍是真人视讯的行业标杆。在 TPOWER，Evolution 桌台涵盖百家乐、二十一点和电影级游戏秀，直播品质针对马来西亚晚间高峰优化。",
+    },
+    whyOnTpower: {
+      en: "Evolution on TPOWER brings broadcast-grade live casino into the same Malaysia journey as payments, VIP and official download — via live-casino partnership integration.",
+      zh: "TPOWER 上的 Evolution 把广播级真人视讯放进与支付、VIP、官方下载同一套大马旅程——通过真人视讯合作对接实现。",
     },
     features: [
       { en: "Cinematic live studio production", zh: "电影级真人演播制作" },
@@ -190,6 +202,10 @@ export const providers: Provider[] = [
       en: "JILI brings pace. On TPOWER, JILI titles suit players who prefer short rounds, fishing action, and crash-style specialty games without a cluttered lobby experience.",
       zh: "JILI 主打快。在 TPOWER，JILI 适合喜欢短回合、捕鱼对战和爆点类玩法的玩家，大厅精选不杂乱。",
     },
+    whyOnTpower: {
+      en: "JILI titles on TPOWER suit short mobile sessions with arcade energy, while staying inside official support and responsible-play rails.",
+      zh: "TPOWER 上的 JILI 适合短时手机场次与街机节奏，同时仍落在官方客服与负责任博彩轨道内。",
+    },
     features: [
       { en: "Fast specialty and fishing titles", zh: "快节奏特色与捕鱼游戏" },
       { en: "Crash-style session rhythm", zh: "爆点式紧凑回合节奏" },
@@ -228,6 +244,10 @@ export const providers: Provider[] = [
       en: "JDB is recognised across Asia for fishing rooms and arcade-leaning slots. TPOWER lists JDB for players who want energetic multiplayer fishing and approachable slot themes with clear controls.",
       zh: "JDB 在亚洲以捕鱼厅和街机风老虎机闻名。TPOWER 收录 JDB，服务想要多人捕鱼对战、上手简单、操作清楚的玩家。",
     },
+    whyOnTpower: {
+      en: "JDB fishing and feature slots on TPOWER sit next to Malaysia-friendly cashier paths so entertainment and funding stay on one brand surface.",
+      zh: "TPOWER 上的 JDB 捕鱼与特色老虎机，紧挨大马友好收银台路径，让娱乐与资金留在同一品牌表面。",
+    },
     features: [
       { en: "Arcade-style fishing rooms", zh: "街机风多人捕鱼厅" },
       { en: "Approachable slot themes", zh: "主题好懂，新手友好" },
@@ -265,7 +285,11 @@ export const providers: Provider[] = [
       en: "Sexy Gaming (AE Sexy) focuses on live baccarat streams that many Malaysian players already recognise. TPOWER presents these tables with clear seating states and stable video so sessions stay readable on phones.",
       zh: "Sexy Gaming（AE Sexy）专注许多马来西亚玩家已认识的真人百家乐直播。TPOWER 以清晰座位状态和稳定画面呈现，手机上看牌面也轻松。",
     },
-    features: [
+        whyOnTpower: {
+      en: "Sexy Gaming rooms on TPOWER are framed as partner live content — open them through the official lobby, not third-party mirrors claiming studio ownership.",
+      zh: "TPOWER 上的 Sexy Gaming 厅作为合作真人内容呈现——请从官方大厅进入，勿信声称拥有厂商的第三方镜像。",
+    },
+features: [
       { en: "Live baccarat focus", zh: "主打真人百家乐" },
       { en: "Multi-table browsing", zh: "多桌切换浏览方便" },
       { en: "Stable mobile streams", zh: "手机直播稳定流畅" },
@@ -300,6 +324,10 @@ export const providers: Provider[] = [
     introduction: {
       en: "Dream Gaming serves players who want straightforward live baccarat with regional production style. On TPOWER, Dream Gaming complements Evolution and Sexy Gaming so live fans have meaningful choice without a noisy lobby.",
       zh: "Dream Gaming 服务想要直接、东南亚本地风格真人百家乐的玩家。在 TPOWER，它与 Evolution、Sexy Gaming 互补，让真人爱好者有更多桌型可选，大厅也不吵。",
+    },
+    whyOnTpower: {
+      en: "Dream Gaming multi-table baccarat on TPOWER is for players who want dense live lobbies with the same security and support habits as the rest of the platform.",
+      zh: "TPOWER 上的 Dream Gaming 多桌百家乐，适合想要密集真人大厅、又要同一套安全与客服习惯的玩家。",
     },
     features: [
       { en: "Regional live baccarat production", zh: "区域风格真人百家乐" },
@@ -338,6 +366,10 @@ export const providers: Provider[] = [
       en: "Microgaming brings catalogue depth. TPOWER selects Microgaming titles that remain readable and performant, favouring clarity over an inflated library dump.",
       zh: "Microgaming 胜在目录深度。TPOWER 只精选规则清楚、运行稳定的作品，不为了数量而堆库。",
     },
+    whyOnTpower: {
+      en: "Microgaming on TPOWER offers a legacy progressive catalogue inside a Malaysia-focused product — studio maths stay with the provider; TPOWER supplies access and support.",
+      zh: "TPOWER 上的 Microgaming 把经典累进目录放进面向大马的产品里——数学模型归厂商，TPOWER 提供入口与客服。",
+    },
     features: [
       { en: "Deep slot heritage", zh: "深厚老虎机品牌底蕴" },
       { en: "Classic and modern formats", zh: "经典与现代玩法并存" },
@@ -375,6 +407,10 @@ export const providers: Provider[] = [
       en: "Play'n GO is valued for inventive slot systems and strong thematic storytelling. TPOWER lists Play'n GO for players who want variety beyond the most repeated lobby staples.",
       zh: "Play'n GO 以创新老虎机机制和强主题叙事著称。TPOWER 收录该厂商，给想换口味、不想只玩大厅常客的玩家里更多选择。",
     },
+    whyOnTpower: {
+      en: "Play'n GO character-driven slots on TPOWER keep feature rules readable while you fund and withdraw through documented Malaysia rails.",
+      zh: "TPOWER 上的 Play'n GO 角色老虎机把特色规则讲清楚，同时你可按成文大马通道完成存提。",
+    },
     features: [
       { en: "Inventive slot mechanics", zh: "创新老虎机特色机制" },
       { en: "Strong thematic presentation", zh: "主题呈现有故事感" },
@@ -411,6 +447,10 @@ export const providers: Provider[] = [
     introduction: {
       en: "Spribe specialises in instant and crash-style games with transparent multiplier curves. On TPOWER, Spribe complements JILI crash titles for players who want short, readable specialty sessions.",
       zh: "Spribe 专注倍率透明的即时与爆点类游戏。在 TPOWER，它与 JILI 爆点作品互补，适合喜欢短局、想自己掌控收手的玩家。",
+    },
+    whyOnTpower: {
+      en: "Spribe crash formats on TPOWER fit quick evening sessions, with official APK/download guidance instead of sideloaded shortcuts.",
+      zh: "TPOWER 上的 Spribe 爆点玩法适合晚间短局，并配合官方 APK/下载指引，而不是侧载捷径。",
     },
     features: [
       { en: "Transparent crash-style rounds", zh: "爆点回合，倍率公开透明" },
@@ -453,6 +493,10 @@ export const providers: Provider[] = [
       en: "Spadegaming is a familiar name for Malaysian players seeking fishing and slot variety with Asian theme density. TPOWER curates Spadegaming for quality sessions rather than catalogue inflation.",
       zh: "想找亚洲主题丰富的捕鱼和老虎机，马来西亚玩家对 Spadegaming 并不陌生。TPOWER 精选上架，重质量不重数量。",
     },
+    whyOnTpower: {
+      en: "Spadegaming on TPOWER is curated for Southeast Asia mobile habits — slots and fishing with partnership disclosure, never fake official studio website claims.",
+      zh: "TPOWER 上的 Spadegaming 按东南亚手机习惯筛选——老虎机与捕鱼会标明合作关系，绝不冒充厂商官网。",
+    },
     features: [
       { en: "Asia-focused themes", zh: "亚洲文化主题浓郁" },
       { en: "Fishing and slots coverage", zh: "捕鱼与老虎机双线覆盖" },
@@ -490,6 +534,10 @@ export const providers: Provider[] = [
       en: "Habanero offers straightforward slot experiences with readable rules. TPOWER includes Habanero for players who value clarity and consistent mathematics over spectacle.",
       zh: "Habanero 提供规则直截了当的老虎机体验。TPOWER 收录该厂商，服务重视清楚规则和稳定数学、不追求花哨表演的玩家。",
     },
+    whyOnTpower: {
+      en: "Habanero feature slots on TPOWER pair Asia-facing themes with bilingual help when mechanics questions arise.",
+      zh: "TPOWER 上的 Habanero 特色老虎机搭配亚洲向题材；玩法有疑问时可走双语客服。",
+    },
     features: [
       { en: "Clear rule presentation", zh: "规则说明清楚易懂" },
       { en: "Consistent math models", zh: "数学模型稳定一致" },
@@ -526,6 +574,10 @@ export const providers: Provider[] = [
     introduction: {
       en: "SBO Sports powers TPOWER's sportsbook experience with football-first markets and regional coverage Malaysian fans expect. Odds presentation stays clear so decisions remain readable on mobile.",
       zh: "SBO Sports 驱动 TPOWER 体育博彩体验，以足球盘口为主，覆盖马来西亚球迷关注的区域赛事。赔率展示简洁，手机上看盘做决定都轻松。",
+    },
+    whyOnTpower: {
+      en: "SBO sports markets on TPOWER sit beside the same account used for slots and live — one ecosystem partner surface for Malaysia players.",
+      zh: "TPOWER 上的 SBO 体育盘口与老虎机、真人共用同一账户——面向大马玩家的同一生态合作表面。",
     },
     features: [
       { en: "Football-first market depth", zh: "足球盘口深度领先" },

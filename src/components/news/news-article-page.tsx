@@ -23,11 +23,55 @@ import { Button } from "@/components/ui/button";
 import { NewsCard } from "@/components/news/news-card";
 import { NewsNewsletter } from "@/components/news/news-newsletter";
 import { ReadingProgress } from "@/components/news/reading-progress";
+import { RelatedLinks } from "@/components/seo/related-links";
 import {
   asNewsCopy,
   badgeLabel,
   updatedLabel,
 } from "@/components/news/news-copy";
+
+const NEWS_ENTITY_LINKS = [
+  {
+    href: "/providers",
+    label: { en: "Game providers", zh: "游戏供应商" },
+    description: {
+      en: "Official gaming partners available on TPOWER.",
+      zh: "TPOWER 官方游戏合作伙伴目录。",
+    },
+  },
+  {
+    href: "/games",
+    label: { en: "Games lobby", zh: "游戏大厅" },
+    description: {
+      en: "Slots, live casino, sports, fishing and more.",
+      zh: "老虎机、真人视讯、体育、捕鱼等品类入口。",
+    },
+  },
+  {
+    href: "/promotions",
+    label: { en: "Promotions", zh: "优惠专区" },
+    description: {
+      en: "Welcome bonus, cashback and daily rewards.",
+      zh: "首存、返水与每日奖励。",
+    },
+  },
+  {
+    href: "/blog",
+    label: { en: "Guides", zh: "攻略中心" },
+    description: {
+      en: "How-to articles for register, download and payments.",
+      zh: "注册、下载与支付操作攻略。",
+    },
+  },
+  {
+    href: "/payment-methods",
+    label: { en: "Payment methods", zh: "支付方式" },
+    description: {
+      en: "Malaysia-friendly deposit and withdrawal rails.",
+      zh: "大马友好的存提通道说明。",
+    },
+  },
+] as const;
 
 type NewsArticlePageContentProps = {
   locale: Locale;
@@ -286,6 +330,22 @@ export function NewsArticlePageContent({
               </div>
             </section>
           ) : null}
+
+          <div className="mt-10 sm:mt-12">
+            <RelatedLinks
+              locale={locale}
+              title={
+                locale === "zh"
+                  ? "相关平台入口"
+                  : "Related TPOWER destinations"
+              }
+              items={NEWS_ENTITY_LINKS.map((link) => ({
+                href: link.href,
+                label: link.label[locale],
+                description: link.description[locale],
+              }))}
+            />
+          </div>
 
           {recommended.length > 0 ? (
             <section className="mt-10 space-y-4 sm:mt-14 sm:space-y-5">

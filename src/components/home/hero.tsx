@@ -15,8 +15,8 @@ export function Hero({ locale, dictionary }: HeroProps) {
   const { home, common } = dictionary;
   const imageAlt =
     locale === "zh"
-      ? "TPOWER Online Casino 高端体育与娱乐平台氛围视觉"
-      : "TPOWER Online Casino premium sports and casino atmosphere";
+      ? "TPOWER线上博彩马来西亚官方平台氛围视觉"
+      : "TPOWER Online Casino Malaysia premium gaming atmosphere";
 
   return (
     <AtmosphereHero
@@ -24,6 +24,7 @@ export function Hero({ locale, dictionary }: HeroProps) {
       brand={home.heroH1}
       title={home.heroTitle}
       description={home.heroSubtitle}
+      highlights={home.heroHighlights}
       imageSrc={atmosphereImageFor("home")}
       imageAlt={imageAlt}
       actions={

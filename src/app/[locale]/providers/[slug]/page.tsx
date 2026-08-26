@@ -159,6 +159,17 @@ export default async function ProviderDetailPage({ params }: PageProps) {
 
           <article>
             <h2 className="h2-display text-foreground">
+              {locale === "zh"
+                ? `为什么在 TPOWER 玩 ${provider.name}`
+                : `Why play ${provider.name} on TPOWER`}
+            </h2>
+            <p className="mt-5 text-body leading-relaxed text-muted-foreground">
+              {provider.whyOnTpower[locale]}
+            </p>
+          </article>
+
+          <article>
+            <h2 className="h2-display text-foreground">
               {dictionary.seo.features}
             </h2>
             <ul className="df-grid-2 mt-6">
@@ -235,6 +246,48 @@ export default async function ProviderDetailPage({ params }: PageProps) {
             locale={locale}
             title={dictionary.seo.faqHeading}
             items={provider.faqs}
+          />
+
+          <RelatedLinks
+            locale={locale}
+            title={
+              locale === "zh" ? "相关优惠・攻略・资讯" : "Related promotions, guides & news"
+            }
+            items={[
+              {
+                href: "/promotions",
+                label:
+                  locale === "zh" ? "TPOWER优惠专区" : "TPOWER Promotions",
+                description:
+                  locale === "zh"
+                    ? "查看可能适用本厂商品类的欢迎礼、返水与每日优惠。"
+                    : "Review welcome, cashback and daily offers that may apply to this studio’s categories.",
+              },
+              {
+                href: "/blog",
+                label: locale === "zh" ? "知识中心攻略" : "Knowledge Center guides",
+                description:
+                  locale === "zh"
+                    ? "注册、下载、支付与负责任博彩攻略，帮助你在开玩前先读懂路径。"
+                    : "Guides on register, download, payments and responsible play before you open a title.",
+              },
+              {
+                href: "/news",
+                label: locale === "zh" ? "TPOWER新闻室" : "TPOWER Newsroom",
+                description:
+                  locale === "zh"
+                    ? "平台更新、厂商与产品公告，优先查官方新闻室。"
+                    : "Platform updates and product notices — check the official newsroom first.",
+              },
+              {
+                href: "/payment-methods",
+                label: locale === "zh" ? "支付方式" : "Payment methods",
+                description:
+                  locale === "zh"
+                    ? "大马友好入金与提现通道说明。"
+                    : "Malaysia-friendly deposit and withdrawal orientation.",
+              },
+            ]}
           />
 
           <RelatedLinks

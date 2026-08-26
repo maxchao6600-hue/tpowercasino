@@ -70,6 +70,7 @@ export const footerNavigation = {
       href: "/customer-commitment",
       label: { en: "Customer Commitment", zh: "客户承诺" },
     },
+    { key: "providers", href: "/providers", label: { en: "Providers", zh: "供应商" } },
     { key: "affiliate", href: "/affiliate", label: { en: "Affiliate", zh: "联盟计划" } },
     { key: "vip", href: "/vip", label: { en: "VIP Club", zh: "VIP 俱乐部" } },
     { key: "news", href: "/news", label: { en: "News", zh: "新闻" } },
@@ -116,7 +117,6 @@ export const footerNavigation = {
       href: "/deposit-withdrawal-faq",
       label: { en: "Deposit & Withdrawal FAQ", zh: "存提款常见问题" },
     },
-    { key: "providers", href: "/providers", label: { en: "Providers", zh: "供应商" } },
   ],
   legal: [
     {

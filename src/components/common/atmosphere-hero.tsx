@@ -15,6 +15,8 @@ type AtmosphereHeroProps = {
   imageSrc: string;
   imageAlt: string;
   actions?: ReactNode;
+  /** Short trust bullets under the hero description (optional). */
+  highlights?: string[];
   aside?: ReactNode;
   className?: string;
   compact?: boolean;
@@ -47,6 +49,7 @@ export function AtmosphereHero({
   imageSrc,
   imageAlt,
   actions,
+  highlights,
   aside,
   className,
   compact = false,
@@ -163,6 +166,25 @@ export function AtmosphereHero({
               >
                 {description}
               </p>
+
+              {highlights?.length ? (
+                <ul
+                  className={cn(
+                    "max-w-xl space-y-2 text-sm text-white/78",
+                    relaxed ? "mt-4" : "mt-3 sm:mt-4",
+                  )}
+                >
+                  {highlights.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span
+                        className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
+                        aria-hidden="true"
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
 
               {actions ? (
                 <div

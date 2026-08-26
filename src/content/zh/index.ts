@@ -147,14 +147,20 @@ export const zh: Dictionary = {
   },
   home: {
     metaTitle:
-      "TPOWER线上博彩马来西亚｜官方平台・老虎机・真人视讯・APK下载",
+      "TPOWER线上博彩马来西亚｜官方老虎机・真人视讯・APK下载",
     metaDescription:
-      "体验TPOWER线上博彩马来西亚官方平台：官方APK下载、热门老虎机、真人视讯、体育博彩、安全支付、快速提现、独家优惠与手机博彩，专为马来西亚玩家打造。",
-    heroEyebrow: "马来西亚线上博彩官方入口",
-    heroH1: "TPOWER线上博彩",
-    heroTitle: "真人视讯・老虎机・体育博彩，一个平台搞定",
+      "TPOWER线上博彩是马来西亚官方平台：老虎机、真人视讯、体育博彩、捕鱼、彩票、本地支付与官方APK下载，中英客服协助账户与资金问题。",
+    heroEyebrow: "马来西亚官方线上博彩平台",
+    heroH1: "TPOWER官方平台",
+    heroTitle: "TPOWER线上博彩马来西亚",
     heroSubtitle:
-      "想找靠谱的马来西亚网上博彩？TPOWER官网把热门老虎机、真人娱乐城、体育盘口与手机博彩装进同一大厅，充值提现路径清楚，马上就能开玩。",
+      "TPOWER官网提供老虎机、真人视讯、体育博彩、捕鱼游戏、彩票与安全APK下载，对接合作游戏厂商与大马友好支付。",
+    heroHighlights: [
+      "可信的游戏厂商合作。",
+      "大马友好支付方式。",
+      "全天客服协助。",
+      "官方APK下载指引。",
+    ],
     statsTitle: "马来西亚玩家常问的实力指标",
     statsSubtitle: "数据看得见，玩法讲清楚，不玩虚的噱头。",
     promotionsTitle: "TPOWER线上博彩优惠",
@@ -165,7 +171,7 @@ export const zh: Dictionary = {
       "老虎机、真人视讯、体育博彩、捕鱼游戏分区清楚，按喜好直接进。",
     providersTitle: "TPOWER线上博彩游戏供应商",
     providersSubtitle:
-      "PG电子、JILI、Evolution、Pragmatic Play等主流工作室，公平与稳定优先。",
+      "官方合作工作室：PG电子、JILI、Evolution、Pragmatic Play 等，公平与稳定优先。",
     whyTitle: "为什么选TPOWER线上博彩",
     whySubtitle:
       "提现节奏、账户安全、中英客服、手机APP与VIP奖励，六大理由留得住玩家。",
@@ -273,9 +279,9 @@ export const zh: Dictionary = {
     helperLink: "看登录指引",
   },
   download: {
-    metaTitle: "TPOWER线上博彩APP下载｜官方APP・APK・手机版",
+    metaTitle: "TPOWER官方APK下载马来西亚｜Android安装指引",
     metaDescription:
-      "TPOWER官方APP下载与APK指引：Android 3.2.1（约48.6MB）、iOS安装说明、安全核验、本地支付、截图、FAQ与逐步安装，专为马来西亚手机博彩。",
+      "从TPOWER线上博彩官网下载官方APK：Android安装步骤、安全核验、本地支付与FAQ写清楚，避开非官方镜像，专为马来西亚手机玩家。",
     keywords: [
       "TPOWER下载",
       "TPOWER APK",
@@ -716,9 +722,9 @@ export const zh: Dictionary = {
     providerLabel: "游戏商",
   },
   promotions: {
-    metaTitle: "TPOWER线上博彩优惠｜首存・返水・每日优惠・VIP",
+    metaTitle: "TPOWER线上博彩优惠马来西亚｜首存・返水・每日奖励",
     metaDescription:
-      "TPOWER线上博彩优惠：注册奖金、首存优惠、返水、每日优惠与VIP奖励，资格与领取步骤写清楚。",
+      "查看TPOWER线上博彩现行优惠：欢迎礼、首存、返水、续存与VIP奖励，资格、最低存款与领取步骤都写在活动旁。",
     title: "TPOWER线上博彩优惠",
     subtitle:
       "条款写给人看。按分类筛，领之前先看截止日。",
@@ -796,9 +802,9 @@ export const zh: Dictionary = {
     },
   },
   vip: {
-    metaTitle: "TPOWER线上博彩VIP｜马来西亚VIP奖励与优先提现",
+    metaTitle: "TPOWER线上博彩VIP计划马来西亚｜奖励・返水・会员权益",
     metaDescription:
-      "了解TPOWER线上博彩VIP俱乐部：白银、黄金、铂金等级，优先提现、更高返水、专属优惠与专属管家支持，专为马来西亚玩家写清规则。",
+      "搞懂TPOWER线上博彩VIP怎么升级：白银、黄金、铂金等级，返水、优先提现、专属优惠与管家支持，规则写给马来西亚玩家看。",
     keywords: [
       "TPOWER VIP",
       "TPOWER线上博彩VIP",
@@ -864,24 +870,24 @@ export const zh: Dictionary = {
     finalCtaImageAlt: "TPOWER线上博彩VIP奖励氛围：高端会员礼遇视觉",
   },
   providers: {
-    metaTitle: "TPOWER线上博彩游戏供应商｜官方合作游戏厂商",
+    metaTitle: "官方游戏合作伙伴｜TPOWER线上博彩平台对接",
     metaDescription:
-      "TPOWER线上博彩官方游戏平台合作厂商：PG电子、Pragmatic Play、Evolution、JILI、Spadegaming等，覆盖老虎机、真人视讯、体育博彩与捕鱼游戏。",
-    title: "TPOWER线上博彩游戏供应商",
+      "浏览TPOWER线上博彩官方游戏合作伙伴：PG电子、Pragmatic Play、Evolution、JILI等工作室经平台对接进大厅，覆盖老虎机、真人视讯、体育与捕鱼。",
+    title: "官方游戏合作伙伴",
     subtitle:
-      "TPOWER线上博彩只与官方合作游戏厂商合作，让马来西亚玩家在同一大厅畅玩老虎机、真人视讯、体育博彩与捕鱼游戏。",
-    heroEyebrow: "官方合作游戏厂商",
-    heroH1: "TPOWER线上博彩游戏供应商",
-    heroHeadline: "官方游戏平台・可信工作室・精品内容",
+      "TPOWER线上博彩通过平台对接接入官方游戏合作伙伴，让马来西亚玩家在同一大厅畅玩老虎机、真人视讯、体育博彩与捕鱼游戏。",
+    heroEyebrow: "平台对接合作伙伴",
+    heroH1: "官方游戏合作伙伴",
+    heroHeadline: "平台对接工作室・公平玩法・稳定体验",
     heroDescription:
-      "厂商品质决定每一次开转、每一张真人桌、每一个体育盘口。TPOWER线上博彩精选官方合作游戏厂商，让马来西亚玩家玩得公平、稳定、手机也好操作——不是随便贴一排商标。",
+      "合作伙伴品质影响每一次开转、每一张真人桌、每一个体育盘口。TPOWER线上博彩与官方游戏合作伙伴做平台对接，让马来西亚会话更公平、更稳定、手机也好操作——不宣称拥有工作室品牌。",
     heroImageAlt:
       "TPOWER线上博彩官方游戏厂商视觉：主流工作室品牌与高端游戏氛围",
     providersCountLabel: "家官方厂商",
     providersCountHint: "驱动 TPOWER 游戏大厅的精选合作伙伴",
     searchPlaceholder: "搜索厂商名称、游戏品类或关键词…",
     filterLabel: "按品类筛选",
-    officialBadge: "官方厂商",
+    officialBadge: "平台对接合作",
     viewGames: "查看游戏",
     exploreGames: "探索游戏",
     popularTypesLabel: "热门游戏类型",
@@ -1014,7 +1020,7 @@ export const zh: Dictionary = {
     },
   },
   payments: {
-    metaTitle: "TPower支付方式｜FPX、DuitNow、电子钱包与银行",
+    metaTitle: "TPOWER支付方式｜FPX、DuitNow、电子钱包与银行",
     metaDescription:
       "TPOWER线上博彩支付方式中心：比较 FPX、DuitNow、Touch 'n Go、GrabPay 与网上银行，并链到存款、提款与支付安全深度指南。",
     title: "TPOWER线上博彩 支付方式",
@@ -1060,12 +1066,12 @@ export const zh: Dictionary = {
       "玩家最常卡的点——账户、支付、游戏、安全与VIP——答案集中在这里。",
   },
   contact: {
-    metaTitle: "TPOWER官方客服中心｜联系客服・存款提现协助",
+    metaTitle: "TPOWER官方客服马来西亚｜WhatsApp・Telegram・帮助中心",
     metaDescription:
-      "TPOWER官方客服中心：马来西亚本地团队协助登录、注册、存款、提现、VIP、优惠与APP下载。官方联系渠道与帮助中心。",
+      "联系TPOWER线上博彩官方客服：WhatsApp、Telegram、社交主页与邮件协助账户、存款、提现与下载；附时段、准备提示与安全须知。",
     title: "TPOWER官方客服中心",
     subtitle:
-      "账户、存款、提现、优惠、VIP或技术问题需要协助？马来西亚官方客服团队随时为你处理。",
+      "账户、存款、提现、优惠、VIP或技术问题？请只走马来西亚官方通道——WhatsApp、Telegram 与帮助中心。",
     form: {
       name: "姓名",
       email: "电子邮箱",
@@ -1128,7 +1134,7 @@ export const zh: Dictionary = {
   },
   footer: {
     tagline:
-      "马来西亚线上博彩官方气质——信任、清楚、性能，一样都不能少。",
+      "TPOWER线上博彩是面向马来西亚的官方平台——合作游戏伙伴、官方客服与APK下载指引集中一处。",
     about: "关于",
     games: "游戏",
     support: "支持",

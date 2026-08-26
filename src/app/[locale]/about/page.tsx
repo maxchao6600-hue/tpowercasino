@@ -5,6 +5,7 @@ import { isValidLocale } from "@/config/i18n";
 import { getDictionary } from "@/lib/dictionary";
 import { buildMetadata } from "@/lib/seo";
 import { AuthorityHub } from "@/components/authority/authority-hub";
+import { OfficialGamingPartners } from "@/components/common/official-gaming-partners";
 import { authorityAbout } from "@/data/authority/about";
 
 type PageProps = { params: Promise<{ locale: string }> };
@@ -31,6 +32,7 @@ export default async function AboutPage({ params }: PageProps) {
       locale={locale}
       dictionary={dictionary}
       content={authorityAbout}
+      afterHero={<OfficialGamingPartners locale={locale} showViewAll />}
     />
   );
 }

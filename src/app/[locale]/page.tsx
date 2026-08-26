@@ -21,6 +21,8 @@ import { FeatureGrid } from "@/components/home/feature-grid";
 import { DownloadApp } from "@/components/home/download-app";
 import { VipBenefits } from "@/components/home/vip-benefits";
 import { LatestNews } from "@/components/home/latest-news";
+import { OfficialGamingPartners } from "@/components/common/official-gaming-partners";
+import { TrustSignals } from "@/components/common/trust-signals";
 import { HomepageSeo } from "@/components/home/homepage-seo";
 
 const FaqSection = dynamic(() =>
@@ -69,7 +71,9 @@ export default async function HomePage({ params }: PageProps) {
       <PromotionGrid locale={locale} dictionary={dictionary} />
       <GameCategories locale={locale} dictionary={dictionary} />
       <ProviderSlider locale={locale} dictionary={dictionary} />
+      <OfficialGamingPartners locale={locale} limit={10} />
       <FeatureGrid dictionary={dictionary} />
+      <TrustSignals locale={locale} />
       <DownloadApp locale={locale} dictionary={dictionary} />
       <VipBenefits locale={locale} dictionary={dictionary} />
       <LatestNews locale={locale} dictionary={dictionary} />

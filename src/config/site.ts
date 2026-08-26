@@ -1,17 +1,17 @@
 export const siteConfig = {
-  name: "TPOWER Malaysia",
+  name: "TPOWER",
   shortName: "TPOWER",
   tagline: {
-    en: "Official Online Casino Platform",
-    zh: "官方线上博彩平台",
+    en: "Official Online Gaming Platform for Malaysia",
+    zh: "马来西亚官方线上博彩平台",
   },
   description: {
-    en: "Experience TPOWER Online Casino Malaysia with official APK download, premium slots, live casino, sports betting, secure payments, fast withdrawals, exclusive promotions and mobile gaming for Malaysia players.",
-    zh: "体验TPOWER线上博彩马来西亚官方平台：官方APK下载、热门老虎机、真人视讯、体育博彩、安全支付、快速提现、独家优惠与手机博彩，专为马来西亚玩家打造。",
+    en: "TPOWER is an online gaming platform for Malaysia, integrating licensed studio partners for slots, live casino, sports, fishing, lottery and promotions — with official customer support and APK download guidance.",
+    zh: "TPOWER线上博彩是面向马来西亚的官方平台，通过合作游戏厂商提供老虎机、真人视讯、体育博彩、捕鱼、彩票与优惠，并提供官方客服与APK下载指引。",
   },
   title: {
-    en: "TPOWER Online Casino Malaysia | Official TPOWER Casino, Slots, Live Casino & APK Download",
-    zh: "TPOWER线上博彩马来西亚｜官方平台・老虎机・真人视讯・APK下载",
+    en: "TPOWER Online Casino Malaysia | Official Slots, Live Casino & APK Download",
+    zh: "TPOWER线上博彩马来西亚｜官方老虎机・真人视讯・APK下载",
   },
   // Must match sitemap / GSC property (non-www). Override via NEXT_PUBLIC_SITE_URL.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://tpowermycasino.com",
@@ -32,6 +32,10 @@ export const siteConfig = {
     facebook: "https://www.facebook.com/share/1EasRgVuaH/",
     instagram: "https://www.instagram.com/tpower0314?igsh=ZTNtcGd4eGY1MHB2",
     threads: "https://www.threads.com/@tpower0314",
+  },
+  supportHours: {
+    en: "Daily 10:00–02:00 (MYT). Peak evenings may queue longer.",
+    zh: "每日 10:00–02:00（马来西亚时间）。晚间高峰可能排队较长。",
   },
   legal: {
     ageRestriction: 21,

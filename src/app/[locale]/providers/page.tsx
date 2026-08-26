@@ -21,6 +21,7 @@ import { ProvidersTrust } from "@/components/providers/providers-trust";
 import { ProvidersSeo } from "@/components/providers/providers-seo";
 import { ProvidersFinalCta } from "@/components/providers/providers-final-cta";
 import { ProvidersRelated } from "@/components/providers/providers-related";
+import { OfficialGamingPartners } from "@/components/common/official-gaming-partners";
 
 type PageProps = { params: Promise<{ locale: string }> };
 
@@ -145,6 +146,7 @@ export default async function ProvidersPage({ params }: PageProps) {
       </section>
 
       <ProvidersTrust dictionary={dictionary} />
+      <OfficialGamingPartners locale={locale} showViewAll={false} />
       <ProvidersSeo locale={locale} dictionary={dictionary} />
       <ProvidersFinalCta locale={locale} dictionary={dictionary} />
       <ProvidersRelated locale={locale} dictionary={dictionary} />
