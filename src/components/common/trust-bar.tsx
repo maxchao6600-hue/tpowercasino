@@ -46,7 +46,7 @@ const TRUST_ITEMS: TrustItem[] = [
   },
   {
     icon: Gamepad2,
-    label: { en: "Official Gaming Partners", zh: "官方游戏合作伙伴" },
+    label: { en: "Gaming Partners", zh: "游戏合作伙伴" },
   },
   {
     icon: Smartphone,

@@ -9,17 +9,14 @@ import {
   collectionPageSchema,
   organizationSchema,
 } from "@/lib/schema";
-import {
-  countGamesByCategory,
-  games,
-  getFeaturedGames,
-  getNewGames,
-} from "@/data/games";
 import type { GameCategory } from "@/types";
 import {
+  getGamesLobbyCategoryCounts,
   getGamesLobbyProviderOptions,
+  getGamesLobbyTotalCount,
+  getLobbyMosaicImages,
+  getLobbyShelfItems,
   queryGamesLobby,
-  toGameLobbyItem,
 } from "@/lib/games-lobby";
 import { JsonLd } from "@/components/common/json-ld";
 import { Container } from "@/components/common/container";
@@ -57,13 +54,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!isValidLocale(raw)) return {};
   const locale = raw as Locale;
   const dictionary = getDictionary(locale);
-  const featured = getFeaturedGames()[0];
+  const mosaic = getLobbyMosaicImages(1);
   return buildMetadata({
     locale,
     title: dictionary.games.metaTitle,
     description: dictionary.games.metaDescription,
     path: "/games",
-    image: featured?.image ?? "/logo/tpower-logo.png",
+    image: mosaic[0] ?? "/logo/tpower-logo.png",
   });
 }
 
@@ -77,13 +74,13 @@ export default async function GamesPage({ params, searchParams }: PageProps) {
     ? (rawCategory as GameCategory | "all")
     : "all";
 
-  const featured = getFeaturedGames().slice(0, 18);
-  const newest = getNewGames(12).map((game) => toGameLobbyItem(game, locale));
-  const hot = featured
-    .slice(0, 12)
-    .map((game) => toGameLobbyItem(game, locale));
-  const mosaic = featured.length >= 8 ? featured : games.slice(0, 16);
-  const counts = countGamesByCategory();
+  const hot = getLobbyShelfItems(locale, "featured", 12);
+  const newest = getLobbyShelfItems(locale, "new", 12);
+  const mosaic = getLobbyMosaicImages(16).map((image, index) => ({
+    id: `mosaic-${index}`,
+    image,
+  }));
+  const counts = getGamesLobbyCategoryCounts();
   const providerOptions = getGamesLobbyProviderOptions();
   const lobby = queryGamesLobby({
     locale,
@@ -116,7 +113,7 @@ export default async function GamesPage({ params, searchParams }: PageProps) {
         locale={locale}
         dictionary={dictionary}
         breadcrumbs={breadcrumbs}
-        totalGames={games.length}
+        totalGames={getGamesLobbyTotalCount()}
         mosaic={mosaic}
       />
 

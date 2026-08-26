@@ -36,7 +36,7 @@ const NEWS_ENTITY_LINKS = [
     label: { en: "Game providers", zh: "游戏供应商" },
     description: {
       en: "Official gaming partners available on TPOWER.",
-      zh: "TPOWER 官方游戏合作伙伴目录。",
+      zh: "TPOWER 游戏合作伙伴目录。",
     },
   },
   {

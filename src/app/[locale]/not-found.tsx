@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { headers } from "next/headers";
@@ -5,6 +6,25 @@ import { Button } from "@/components/ui/button";
 import { defaultLocale, isValidLocale, localePath } from "@/config/i18n";
 import type { Locale } from "@/config/site";
 import { getDictionary } from "@/lib/dictionary";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const headerList = await headers();
+  const raw = headerList.get("x-locale") ?? defaultLocale;
+  const locale: Locale = isValidLocale(raw) ? raw : defaultLocale;
+  const dictionary = getDictionary(locale);
+  return {
+    title:
+      locale === "zh"
+        ? "找不到页面｜TPOWER线上博彩"
+        : "Page Not Found | TPOWER Online Casino",
+    description: dictionary.common.notFoundBody,
+    robots: {
+      index: false,
+      follow: true,
+      googleBot: { index: false, follow: true },
+    },
+  };
+}
 
 export default async function LocaleNotFound() {
   const headerList = await headers();

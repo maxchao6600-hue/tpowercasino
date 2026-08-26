@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
 import {
@@ -30,12 +29,16 @@ function PartnerCard({
     <>
       <div className="flex h-14 items-center justify-center rounded-xl border border-border/80 bg-muted/30 px-3">
         {partner.logo ? (
-          <Image
+          // Static local PNGs — avoid /_next/image Worker 1101 on provider logos.
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
             src={partner.logo}
             alt={`${partner.name} logo`}
             width={120}
             height={40}
             className="h-8 w-auto max-w-[110px] object-contain"
+            loading="lazy"
+            decoding="async"
           />
         ) : (
           <span className="text-sm font-bold tracking-wide text-foreground">

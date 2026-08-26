@@ -702,7 +702,7 @@ export const en = {
     seoSubtitle:
       "Long-form guidance for Slots Malaysia, Live Casino Malaysia, Sports Betting Malaysia, Fishing Games Malaysia, RTP Games literacy, and Mobile Casino play — written to support the live lobby above.",
     seoFaqTitle: "Games FAQ for Malaysia Players",
-    marqueeTitle: "Official Gaming Partners",
+    marqueeTitle: "Gaming Partners",
     marqueeSubtitle:
       "Thousands of games powered by the world's leading casino studios.",
     categories: {
@@ -903,14 +903,14 @@ export const en = {
       "TPOWER VIP rewards atmosphere with premium casino membership styling",
   },
   providers: {
-    metaTitle: "Game Providers | Official TPOWER Online Casino Malaysia",
+    metaTitle: "Game Providers | TPOWER Online Casino Malaysia",
     metaDescription:
-      "Browse official gaming partners on TPOWER — Pragmatic Play, PG Soft, Evolution, JILI and more studios available through platform integrations.",
-    title: "Official Gaming Partners",
+      "Browse supported gaming partners on TPOWER — Pragmatic Play, PG Soft, Evolution, JILI and more studios available through platform integrations.",
+    title: "Supported Gaming Partners",
     subtitle:
       "TPOWER works with supported game providers and integration partners so Malaysia players get fair slots, live casino, sports betting, and fishing games in one premium lobby.",
     heroEyebrow: "Platform integration partners",
-    heroH1: "Official Gaming Partners",
+    heroH1: "Supported Gaming Partners",
     heroHeadline: "Supported studios. Fair maths. Premium play.",
     heroDescription:
       "Provider quality shapes every spin, live table, and sports market. TPOWER works with trusted integration partners so Malaysia sessions stay fair, stable, and mobile-ready — without claiming ownership of studio brands.",
@@ -956,7 +956,7 @@ export const en = {
     trustPoints: [
       {
         title: "Licensing & legitimacy",
-        body: "Studios are selected for recognised licensing footprints and transparent commercial partnerships — not anonymous content dumps.",
+        body: "Studios are selected for transparent commercial partnerships and established provider footprints — not anonymous content dumps.",
       },
       {
         title: "Fairness & RNG certification",

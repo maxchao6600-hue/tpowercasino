@@ -46,7 +46,7 @@ export async function generateMetadata({
   if (!isValidLocale(raw)) return {};
   const locale = raw as Locale;
   const game = getGameByProviderAndSlug(providerSlug, gameSlug);
-  if (!game) return {};
+  if (!game) notFound();
 
   const dictionary = getDictionary(locale);
   const categoryLabel = dictionary.games.categories[game.category];

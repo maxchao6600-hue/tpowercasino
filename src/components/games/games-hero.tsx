@@ -3,19 +3,24 @@ import { Gamepad2, UserPlus } from "lucide-react";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
 import type { Dictionary } from "@/lib/dictionary";
-import type { BreadcrumbItem, Game } from "@/types";
+import type { BreadcrumbItem } from "@/types";
 import { Breadcrumbs } from "@/components/common/breadcrumbs";
 import { Container } from "@/components/common/container";
 import { TrustBar } from "@/components/common/trust-bar";
 import { Button } from "@/components/ui/button";
 import { SiteLink } from "@/components/common/site-link";
 
+type GamesHeroMosaicItem = {
+  id: string;
+  image: string;
+};
+
 type GamesHeroProps = {
   locale: Locale;
   dictionary: Dictionary;
   breadcrumbs: BreadcrumbItem[];
   totalGames: number;
-  mosaic: Game[];
+  mosaic: GamesHeroMosaicItem[];
 };
 
 /** Canonical Games-page hero — global visual benchmark for the site. */

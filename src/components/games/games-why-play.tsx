@@ -1,7 +1,10 @@
 import { Gamepad2, Headphones, Smartphone, Store } from "lucide-react";
 import type { Locale } from "@/config/site";
 import type { Dictionary } from "@/lib/dictionary";
-import { games } from "@/data/games";
+import {
+  getGamesLobbyProviderOptions,
+  getGamesLobbyTotalCount,
+} from "@/lib/games-lobby";
 import { providers } from "@/data/providers";
 
 type GamesWhyPlayProps = {
@@ -11,12 +14,12 @@ type GamesWhyPlayProps = {
 
 export function GamesWhyPlay({ locale, dictionary }: GamesWhyPlayProps) {
   const t = dictionary.games;
-  const providerCount = new Set(games.map((game) => game.providerId)).size;
+  const providerCount = getGamesLobbyProviderOptions().length;
 
   const stats = [
     {
       key: "games",
-      value: String(games.length),
+      value: String(getGamesLobbyTotalCount()),
       label: t.whyStats.games,
       hint: t.whyStats.gamesHint,
       icon: Gamepad2,

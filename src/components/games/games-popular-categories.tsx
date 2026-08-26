@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
 import type { Dictionary } from "@/lib/dictionary";
-import { games } from "@/data/games";
+import lobbyIndexFile from "@/data/games-lobby-index.json";
 import type { GameCategory } from "@/types";
 
 type GamesPopularCategoriesProps = {
@@ -23,10 +23,17 @@ const CATEGORY_LINKS: Array<{
   { category: "crash", href: "/crash" },
 ];
 
+type LobbyRow = {
+  category: string;
+  featured?: boolean;
+  image: string;
+};
+
 function bannerFor(category: GameCategory): string {
+  const items = (lobbyIndexFile as { items: LobbyRow[] }).items;
   const match =
-    games.find((game) => game.category === category && game.featured) ||
-    games.find((game) => game.category === category);
+    items.find((game) => game.category === category && game.featured) ||
+    items.find((game) => game.category === category);
   return match?.image ?? "/images/hero.webp";
 }
 

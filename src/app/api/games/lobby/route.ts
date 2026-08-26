@@ -20,28 +20,44 @@ const CATEGORIES: Array<GameCategory | "all"> = [
   "arcade",
 ];
 
+const CACHE_NAME = "tpower-games-lobby-v1";
+
 /**
  * Progressive Games lobby batches.
- * Returns slim DTOs only — never full Game records / descriptions.
+ * Uses slim lobby index only — never loads full Game descriptions into this path.
+ * Responses are cacheable (public catalogue) via Cache API when available.
  */
 export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const rawLocale = searchParams.get("locale") ?? "en";
+  const url = new URL(request.url);
+  const cacheKey = new Request(url.toString(), {
+    method: "GET",
+    headers: { Accept: "application/json" },
+  });
 
+  try {
+    // Cloudflare Workers Cache API — skip quietly when unavailable (local Node).
+    const cache = await caches.open(CACHE_NAME);
+    const hit = await cache.match(cacheKey);
+    if (hit) return hit;
+  } catch {
+    /* no-op */
+  }
+
+  const rawLocale = url.searchParams.get("locale") ?? "en";
   if (!isValidLocale(rawLocale)) {
     return NextResponse.json({ error: "Invalid locale" }, { status: 400 });
   }
 
   const locale = rawLocale as Locale;
-  const rawCategory = searchParams.get("category") ?? "all";
+  const rawCategory = url.searchParams.get("category") ?? "all";
   const category = CATEGORIES.includes(rawCategory as GameCategory | "all")
     ? (rawCategory as GameCategory | "all")
     : "all";
-  const providerId = searchParams.get("provider") ?? "all";
-  const query = searchParams.get("q") ?? "";
-  const offset = Number.parseInt(searchParams.get("offset") ?? "0", 10);
+  const providerId = url.searchParams.get("provider") ?? "all";
+  const query = url.searchParams.get("q") ?? "";
+  const offset = Number.parseInt(url.searchParams.get("offset") ?? "0", 10);
   const limit = Number.parseInt(
-    searchParams.get("limit") ?? String(GAMES_LOBBY_PAGE_SIZE),
+    url.searchParams.get("limit") ?? String(GAMES_LOBBY_PAGE_SIZE),
     10,
   );
 
@@ -59,9 +75,20 @@ export async function GET(request: Request) {
     ? "public, max-age=30, s-maxage=60, stale-while-revalidate=300"
     : "public, max-age=60, s-maxage=300, stale-while-revalidate=3600";
 
-  return NextResponse.json(result, {
+  const response = NextResponse.json(result, {
     headers: {
       "Cache-Control": cacheControl,
+      "CDN-Cache-Control": cacheControl,
+      Vary: "Accept-Encoding",
     },
   });
+
+  try {
+    const cache = await caches.open(CACHE_NAME);
+    await cache.put(cacheKey, response.clone());
+  } catch {
+    /* no-op */
+  }
+
+  return response;
 }

@@ -1,8 +1,6 @@
 import type { Locale } from "@/config/site";
-import { games } from "@/data/games";
-import { providers } from "@/data/providers";
-import { getGameProviderUrlSlug } from "@/lib/game-paths";
-import type { Game, GameCategory } from "@/types";
+import lobbyIndexFile from "@/data/games-lobby-index.json";
+import type { GameCategory } from "@/types";
 
 /** Initial / "Load more" page size for the Games lobby grid. */
 export const GAMES_LOBBY_PAGE_SIZE = 120;
@@ -46,48 +44,70 @@ export type GamesLobbyResult = {
   limit: number;
 };
 
-export function toGameLobbyItem(game: Game, locale: Locale): GameLobbyItem {
+type LobbyIndexRow = {
+  id: string;
+  slug: string;
+  nameEn: string;
+  nameZh: string;
+  providerId: string;
+  providerName: string;
+  providerSlug: string;
+  category: GameCategory;
+  image: string;
+  search: string;
+  featured?: boolean;
+  new?: boolean;
+  rtp?: string;
+};
+
+type LobbyIndexFile = {
+  count: number;
+  items: LobbyIndexRow[];
+  providerOptions: GamesLobbyProviderOption[];
+  categoryCounts: Record<string, number>;
+};
+
+const lobbyIndex = lobbyIndexFile as LobbyIndexFile;
+
+function toLobbyItem(row: LobbyIndexRow, locale: Locale): GameLobbyItem {
   const item: GameLobbyItem = {
-    id: game.id,
-    slug: game.slug,
-    name: game.name[locale],
-    providerId: game.providerId,
-    providerName: game.providerName || game.providerId,
-    providerSlug: getGameProviderUrlSlug(game),
-    category: game.category,
-    image: game.image,
+    id: row.id,
+    slug: row.slug,
+    name: locale === "zh" ? row.nameZh : row.nameEn,
+    providerId: row.providerId,
+    providerName: row.providerName,
+    providerSlug: row.providerSlug,
+    category: row.category,
+    image: row.image,
   };
-
-  if (game.featured) item.featured = true;
-  if (game.new) item.new = true;
-  if (game.rtp) item.rtp = game.rtp;
-
+  if (row.featured) item.featured = true;
+  if (row.new) item.new = true;
+  if (row.rtp) item.rtp = row.rtp;
   return item;
 }
 
-function filterLobbyGames(
+function filterLobbyRows(
   category: GameCategory | "all",
   providerId: string,
   query: string,
-): Game[] {
+): LobbyIndexRow[] {
   const q = query.trim().toLowerCase();
 
-  return games.filter((game) => {
-    if (category !== "all" && game.category !== category) return false;
-    if (providerId !== "all" && game.providerId !== providerId) return false;
+  return lobbyIndex.items.filter((row) => {
+    if (category !== "all" && row.category !== category) return false;
+    if (providerId !== "all" && row.providerId !== providerId) return false;
     if (!q) return true;
-    const haystack =
-      `${game.name.en} ${game.name.zh} ${game.providerId} ${game.providerName ?? ""}`.toLowerCase();
-    return haystack.includes(q);
+    return row.search.includes(q);
   });
 }
 
-/** Server-side filter + paginate → slim lobby DTOs. */
+/** Server-side filter + paginate → slim lobby DTOs (no full Game catalogue). */
 export function queryGamesLobby(params: GamesLobbyQuery): GamesLobbyResult {
   const category = params.category ?? "all";
-  const providerId = params.providerId && params.providerId.length > 0
-    ? params.providerId
-    : "all";
+  const providerId =
+    params.providerId && params.providerId.length > 0
+      ? params.providerId
+      : "all";
   const query = params.query ?? "";
   const offset = Math.max(0, params.offset ?? 0);
   const limit = Math.min(
@@ -95,11 +115,11 @@ export function queryGamesLobby(params: GamesLobbyQuery): GamesLobbyResult {
     Math.max(1, params.limit ?? GAMES_LOBBY_PAGE_SIZE),
   );
 
-  const filtered = filterLobbyGames(category, providerId, query);
+  const filtered = filterLobbyRows(category, providerId, query);
   const slice = filtered.slice(offset, offset + limit);
 
   return {
-    items: slice.map((game) => toGameLobbyItem(game, params.locale)),
+    items: slice.map((row) => toLobbyItem(row, params.locale)),
     total: filtered.length,
     offset,
     limit,
@@ -108,19 +128,32 @@ export function queryGamesLobby(params: GamesLobbyQuery): GamesLobbyResult {
 
 /** Unique providers present in the lobby catalogue (for the filter select). */
 export function getGamesLobbyProviderOptions(): GamesLobbyProviderOption[] {
-  const map = new Map<string, string>();
+  return lobbyIndex.providerOptions;
+}
 
-  for (const game of games) {
-    if (map.has(game.providerId)) continue;
-    map.set(
-      game.providerId,
-      game.providerName ||
-        providers.find((item) => item.id === game.providerId)?.name ||
-        game.providerId,
-    );
-  }
+export function getGamesLobbyCategoryCounts(): Record<string, number> {
+  return lobbyIndex.categoryCounts;
+}
 
-  return [...map.entries()]
-    .map(([id, name]) => ({ id, name }))
-    .sort((a, b) => a.name.localeCompare(b.name));
+export function getGamesLobbyTotalCount(): number {
+  return lobbyIndex.count;
+}
+
+/** Featured / new shelves from the slim index (avoids full Game[] on the hub). */
+export function getLobbyShelfItems(
+  locale: Locale,
+  kind: "featured" | "new",
+  limit = 12,
+): GameLobbyItem[] {
+  const rows = lobbyIndex.items.filter((row) =>
+    kind === "featured" ? row.featured : row.new,
+  );
+  return rows.slice(0, limit).map((row) => toLobbyItem(row, locale));
+}
+
+export function getLobbyMosaicImages(limit = 16): string[] {
+  const featured = lobbyIndex.items.filter((row) => row.featured);
+  const source =
+    featured.length >= 8 ? featured : lobbyIndex.items.slice(0, limit);
+  return source.slice(0, limit).map((row) => row.image);
 }

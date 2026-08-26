@@ -18,7 +18,11 @@ export async function generateMetadata({
   return {
     title: dictionary.common.notFoundTitle,
     description: dictionary.common.notFoundBody,
-    robots: { index: false, follow: false },
+    robots: {
+      index: false,
+      follow: true,
+      googleBot: { index: false, follow: true },
+    },
   };
 }
 

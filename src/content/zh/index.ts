@@ -678,7 +678,7 @@ export const zh: Dictionary = {
     seoSubtitle:
       "老虎机、真人视讯、体育博彩、捕鱼游戏、RTP常识与手机博彩——写给真的会搜的马来西亚玩家。",
     seoFaqTitle: "线上博彩游戏常见问题",
-    marqueeTitle: "官方游戏合作伙伴",
+    marqueeTitle: "游戏合作伙伴",
     marqueeSubtitle: "全球主流游戏工作室驱动，上千款游戏随时开。",
     categories: {
       all: "全部",
@@ -870,17 +870,17 @@ export const zh: Dictionary = {
     finalCtaImageAlt: "TPOWER线上博彩VIP奖励氛围：高端会员礼遇视觉",
   },
   providers: {
-    metaTitle: "官方游戏合作伙伴｜TPOWER线上博彩平台对接",
+    metaTitle: "游戏合作伙伴｜TPOWER线上博彩平台对接",
     metaDescription:
-      "浏览TPOWER线上博彩官方游戏合作伙伴：PG电子、Pragmatic Play、Evolution、JILI等工作室经平台对接进大厅，覆盖老虎机、真人视讯、体育与捕鱼。",
-    title: "官方游戏合作伙伴",
+      "浏览TPOWER线上博彩游戏合作伙伴：PG电子、Pragmatic Play、Evolution、JILI等工作室经平台对接进大厅，覆盖老虎机、真人视讯、体育与捕鱼。",
+    title: "游戏合作伙伴",
     subtitle:
-      "TPOWER线上博彩通过平台对接接入官方游戏合作伙伴，让马来西亚玩家在同一大厅畅玩老虎机、真人视讯、体育博彩与捕鱼游戏。",
+      "TPOWER线上博彩通过平台对接接入游戏合作伙伴，让马来西亚玩家在同一大厅畅玩老虎机、真人视讯、体育博彩与捕鱼游戏。",
     heroEyebrow: "平台对接合作伙伴",
-    heroH1: "官方游戏合作伙伴",
+    heroH1: "游戏合作伙伴",
     heroHeadline: "平台对接工作室・公平玩法・稳定体验",
     heroDescription:
-      "合作伙伴品质影响每一次开转、每一张真人桌、每一个体育盘口。TPOWER线上博彩与官方游戏合作伙伴做平台对接，让马来西亚会话更公平、更稳定、手机也好操作——不宣称拥有工作室品牌。",
+      "合作伙伴品质影响每一次开转、每一张真人桌、每一个体育盘口。TPOWER线上博彩与游戏合作伙伴做平台对接，让马来西亚会话更公平、更稳定、手机也好操作——不宣称拥有工作室品牌。",
     heroImageAlt:
       "TPOWER线上博彩游戏合作伙伴视觉：主流工作室品牌与高端游戏氛围",
     providersCountLabel: "家支持的游戏供应商",

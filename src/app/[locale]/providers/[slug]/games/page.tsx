@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         ? [
             `${provider.name} 游戏`,
             "TPOWER线上博彩",
-            "官方游戏合作伙伴",
+            "游戏合作伙伴",
             "老虎机",
             "真人视讯",
             "捕鱼游戏",

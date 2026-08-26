@@ -264,8 +264,8 @@ export const officialPartnersCopy = {
     zh: "平台对接合作厂商",
   },
   title: {
-    en: "Official Gaming Partners",
-    zh: "官方游戏合作伙伴",
+    en: "Gaming Partners",
+    zh: "游戏合作伙伴",
   },
   subtitle: {
     en: "TPOWER works with supported game providers and payment-ready lobbies — partnership and integration, not ownership of provider brands.",
