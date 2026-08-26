@@ -6,16 +6,29 @@ import Link from "next/link";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
 import type { Dictionary } from "@/lib/dictionary";
+import type { GameLobbyItem } from "@/lib/games-lobby";
 import type { Game } from "@/types";
 import { getProviderById } from "@/data/providers";
 import { getGameDetailPath } from "@/lib/game-paths";
 
+/** Card model: full Game or slim lobby DTO. */
+export type GameCardModel = Game | GameLobbyItem;
 type GameCardProps = {
   locale: Locale;
   dictionary: Dictionary;
-  game: Game;
+  game: GameCardModel;
   priority?: boolean;
 };
+
+function displayName(game: GameCardModel, locale: Locale): string {
+  return typeof game.name === "string" ? game.name : game.name[locale];
+}
+
+function providerSlugForPath(game: GameCardModel): string | undefined {
+  if ("providerSlug" in game && game.providerSlug) return game.providerSlug;
+  if ("providerFolder" in game) return game.providerFolder;
+  return undefined;
+}
 
 /**
  * Thumbnail = artwork + NEW/HOT only.
@@ -29,8 +42,16 @@ export function GameCard({
 }: GameCardProps) {
   const provider = getProviderById(game.providerId);
   const providerLabel = game.providerName || provider?.name || game.providerId;
+  const title = displayName(game, locale);
   const [imageFailed, setImageFailed] = useState(false);
-  const detailHref = localePath(locale, getGameDetailPath(game));
+  const detailHref = localePath(
+    locale,
+    getGameDetailPath({
+      slug: game.slug,
+      providerId: game.providerId,
+      providerFolder: providerSlugForPath(game),
+    }),
+  );
 
   useEffect(() => {
     setImageFailed(false);
@@ -43,13 +64,13 @@ export function GameCard({
       <Link
         href={detailHref}
         className="block"
-        aria-label={`${dictionary.games.playNow}: ${game.name[locale]}`}
+        aria-label={`${dictionary.games.playNow}: ${title}`}
       >
         <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-border/80 bg-[#111111] shadow-[var(--shadow-soft)] transition-all duration-300 group-hover:-translate-y-1 group-hover:border-primary/50 group-hover:shadow-[0_0_28px_rgba(229,9,20,0.22)]">
           <Image
             src={game.image}
-            alt={game.name[locale]}
-            title={game.name[locale]}
+            alt={title}
+            title={title}
             fill
             priority={priority}
             loading={priority ? undefined : "lazy"}
@@ -82,7 +103,7 @@ export function GameCard({
             href={detailHref}
             className="transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
           >
-            {game.name[locale]}
+            {title}
           </Link>
         </h3>
         <div className="mt-1.5 flex min-w-0 items-center gap-2">

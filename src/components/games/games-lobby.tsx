@@ -1,12 +1,24 @@
 "use client";
 
-import { useDeferredValue, useEffect, useMemo, useState } from "react";
+import {
+  useDeferredValue,
+  useEffect,
+  useRef,
+  useState,
+  useTransition,
+} from "react";
 import Link from "next/link";
 import { Search, X } from "lucide-react";
 import type { Locale } from "@/config/site";
 import { localePath } from "@/config/i18n";
 import type { Dictionary } from "@/lib/dictionary";
-import type { Game, GameCategory } from "@/types";
+import type { GameCategory } from "@/types";
+import {
+  GAMES_LOBBY_PAGE_SIZE,
+  type GameLobbyItem,
+  type GamesLobbyProviderOption,
+  type GamesLobbyResult,
+} from "@/lib/games-lobby";
 import { GameCard } from "@/components/games/game-card";
 import { cn } from "@/lib/utils";
 
@@ -23,24 +35,51 @@ const CATEGORIES: Array<GameCategory | "all"> = [
   "arcade",
 ];
 
-type ProviderOption = {
-  id: string;
-  name: string;
-};
-
 type GamesLobbyProps = {
   locale: Locale;
   dictionary: Dictionary;
-  games: Game[];
-  providers: ProviderOption[];
+  /** First page of slim lobby DTOs only — never the full catalogue. */
+  initialGames: GameLobbyItem[];
+  initialTotal: number;
+  providers: GamesLobbyProviderOption[];
   initialCategory?: GameCategory | "all";
   categoryCounts: Record<string, number>;
 };
 
+async function fetchLobbyPage(params: {
+  locale: Locale;
+  category: GameCategory | "all";
+  providerId: string;
+  query: string;
+  offset: number;
+  signal?: AbortSignal;
+}): Promise<GamesLobbyResult> {
+  const search = new URLSearchParams({
+    locale: params.locale,
+    category: params.category,
+    provider: params.providerId,
+    offset: String(params.offset),
+    limit: String(GAMES_LOBBY_PAGE_SIZE),
+  });
+  if (params.query) search.set("q", params.query);
+
+  const response = await fetch(`/api/games/lobby?${search.toString()}`, {
+    signal: params.signal,
+    headers: { Accept: "application/json" },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Lobby fetch failed (${response.status})`);
+  }
+
+  return (await response.json()) as GamesLobbyResult;
+}
+
 export function GamesLobby({
   locale,
   dictionary,
-  games,
+  initialGames,
+  initialTotal,
   providers,
   initialCategory = "all",
   categoryCounts,
@@ -48,26 +87,115 @@ export function GamesLobby({
   const [category, setCategory] = useState<GameCategory | "all">(initialCategory);
   const [providerId, setProviderId] = useState("all");
   const [query, setQuery] = useState("");
-  const [visibleCount, setVisibleCount] = useState(120);
-  const deferredQuery = useDeferredValue(query.trim().toLowerCase());
+  const deferredQuery = useDeferredValue(query.trim());
 
-  const filtered = useMemo(() => {
-    return games.filter((game) => {
-      if (category !== "all" && game.category !== category) return false;
-      if (providerId !== "all" && game.providerId !== providerId) return false;
-      if (!deferredQuery) return true;
-      const haystack = `${game.name.en} ${game.name.zh} ${game.providerId} ${game.providerName ?? ""}`.toLowerCase();
-      return haystack.includes(deferredQuery);
-    });
-  }, [games, category, providerId, deferredQuery]);
+  const [items, setItems] = useState<GameLobbyItem[]>(initialGames);
+  const [total, setTotal] = useState(initialTotal);
+  const [loading, setLoading] = useState(false);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [, startTransition] = useTransition();
 
-  const visible = filtered.slice(0, visibleCount);
+  const abortRef = useRef<AbortController | null>(null);
+  const requestIdRef = useRef(0);
+  const skipInitialFetchRef = useRef(true);
 
   useEffect(() => {
-    setVisibleCount(120);
-  }, [category, providerId, deferredQuery]);
+    // SSR already delivered the first page for initialCategory + all providers + empty query.
+    if (skipInitialFetchRef.current) {
+      skipInitialFetchRef.current = false;
+      if (
+        category === initialCategory &&
+        providerId === "all" &&
+        deferredQuery.length === 0
+      ) {
+        return;
+      }
+    }
+
+    abortRef.current?.abort();
+    const controller = new AbortController();
+    abortRef.current = controller;
+    const requestId = ++requestIdRef.current;
+
+    setLoading(true);
+    setError(null);
+
+    void fetchLobbyPage({
+      locale,
+      category,
+      providerId,
+      query: deferredQuery,
+      offset: 0,
+      signal: controller.signal,
+    })
+      .then((result) => {
+        if (requestId !== requestIdRef.current) return;
+        startTransition(() => {
+          setItems(result.items);
+          setTotal(result.total);
+          setLoading(false);
+        });
+      })
+      .catch((err: unknown) => {
+        if (controller.signal.aborted) return;
+        if (requestId !== requestIdRef.current) return;
+        setLoading(false);
+        setError(
+          locale === "zh"
+            ? "加载游戏失败，请重试。"
+            : "Failed to load games. Please try again.",
+        );
+        console.error(err);
+      });
+
+    return () => {
+      controller.abort();
+    };
+  }, [
+    locale,
+    category,
+    providerId,
+    deferredQuery,
+    initialCategory,
+  ]);
+
+  async function handleLoadMore() {
+    if (loadingMore || loading || items.length >= total) return;
+
+    setLoadingMore(true);
+    setError(null);
+
+    try {
+      const result = await fetchLobbyPage({
+        locale,
+        category,
+        providerId,
+        query: deferredQuery,
+        offset: items.length,
+      });
+      startTransition(() => {
+        setItems((prev) => {
+          const seen = new Set(prev.map((game) => game.id));
+          const appended = result.items.filter((game) => !seen.has(game.id));
+          return [...prev, ...appended];
+        });
+        setTotal(result.total);
+      });
+    } catch (err) {
+      setError(
+        locale === "zh"
+          ? "加载更多失败，请重试。"
+          : "Failed to load more games. Please try again.",
+      );
+      console.error(err);
+    } finally {
+      setLoadingMore(false);
+    }
+  }
 
   const t = dictionary.games;
+  const canLoadMore = items.length < total;
 
   return (
     <div>
@@ -163,11 +291,17 @@ export function GamesLobby({
           {t.catalogueTitle}
         </h2>
         <p className="text-xs font-semibold tabular-nums text-muted-foreground md:text-sm">
-          {filtered.length} {t.resultsLabel}
+          {loading ? "…" : total} {t.resultsLabel}
         </p>
       </div>
 
-      {filtered.length === 0 ? (
+      {error ? (
+        <p className="mt-3 text-sm font-medium text-primary" role="alert">
+          {error}
+        </p>
+      ) : null}
+
+      {!loading && total === 0 ? (
         <div className="mt-6 rounded-2xl border border-border bg-card px-6 py-14 text-center">
           <p className="text-sm text-muted-foreground">{t.emptyState}</p>
           <button
@@ -177,7 +311,6 @@ export function GamesLobby({
               setCategory("all");
               setProviderId("all");
               setQuery("");
-              setVisibleCount(120);
             }}
           >
             {t.resetFilters}
@@ -185,9 +318,12 @@ export function GamesLobby({
         </div>
       ) : (
         <>
-          <div className="df-scroll mt-4">
+          <div
+            className={cn("df-scroll mt-4", loading ? "opacity-50" : undefined)}
+            aria-busy={loading}
+          >
             <div className="grid min-w-[1080px] grid-cols-6 gap-2.5 xl:min-w-0 md:gap-3">
-              {visible.map((game, index) => (
+              {items.map((game, index) => (
                 <GameCard
                   key={game.id}
                   locale={locale}
@@ -198,16 +334,23 @@ export function GamesLobby({
               ))}
             </div>
           </div>
-          {visibleCount < filtered.length ? (
+          {canLoadMore ? (
             <div className="mt-8 flex justify-center">
               <button
                 type="button"
-                onClick={() => setVisibleCount((count) => count + 120)}
-                className="rounded-full border border-border bg-card px-6 py-2.5 text-sm font-bold text-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                disabled={loadingMore || loading}
+                onClick={() => {
+                  void handleLoadMore();
+                }}
+                className="rounded-full border border-border bg-card px-6 py-2.5 text-sm font-bold text-foreground transition-colors hover:border-primary/50 hover:text-primary disabled:cursor-not-allowed disabled:opacity-60"
               >
-                {locale === "zh"
-                  ? `加载更多（${visible.length}/${filtered.length}）`
-                  : `Load more (${visible.length}/${filtered.length})`}
+                {loadingMore
+                  ? locale === "zh"
+                    ? "加载中…"
+                    : "Loading…"
+                  : locale === "zh"
+                    ? `加载更多（${items.length}/${total}）`
+                    : `Load more (${items.length}/${total})`}
               </button>
             </div>
           ) : null}

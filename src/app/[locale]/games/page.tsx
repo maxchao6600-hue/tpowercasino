@@ -15,8 +15,12 @@ import {
   getFeaturedGames,
   getNewGames,
 } from "@/data/games";
-import { providers } from "@/data/providers";
 import type { GameCategory } from "@/types";
+import {
+  getGamesLobbyProviderOptions,
+  queryGamesLobby,
+  toGameLobbyItem,
+} from "@/lib/games-lobby";
 import { JsonLd } from "@/components/common/json-ld";
 import { Container } from "@/components/common/container";
 import { GamesHero } from "@/components/games/games-hero";
@@ -74,27 +78,20 @@ export default async function GamesPage({ params, searchParams }: PageProps) {
     : "all";
 
   const featured = getFeaturedGames().slice(0, 18);
-  const newest = getNewGames(12);
-  const hot = featured.slice(0, 12);
+  const newest = getNewGames(12).map((game) => toGameLobbyItem(game, locale));
+  const hot = featured
+    .slice(0, 12)
+    .map((game) => toGameLobbyItem(game, locale));
   const mosaic = featured.length >= 8 ? featured : games.slice(0, 16);
   const counts = countGamesByCategory();
-
-  const providerOptions = (() => {
-    const map = new Map<string, string>();
-    for (const game of games) {
-      if (!map.has(game.providerId)) {
-        map.set(
-          game.providerId,
-          game.providerName ||
-            providers.find((item) => item.id === game.providerId)?.name ||
-            game.providerId,
-        );
-      }
-    }
-    return [...map.entries()]
-      .map(([id, name]) => ({ id, name }))
-      .sort((a, b) => a.name.localeCompare(b.name));
-  })();
+  const providerOptions = getGamesLobbyProviderOptions();
+  const lobby = queryGamesLobby({
+    locale,
+    category,
+    providerId: "all",
+    query: "",
+    offset: 0,
+  });
 
   const breadcrumbs = [
     { name: dictionary.common.home, href: localePath(locale) },
@@ -146,7 +143,8 @@ export default async function GamesPage({ params, searchParams }: PageProps) {
             key={category}
             locale={locale}
             dictionary={dictionary}
-            games={games}
+            initialGames={lobby.items}
+            initialTotal={lobby.total}
             providers={providerOptions}
             initialCategory={category}
             categoryCounts={counts}

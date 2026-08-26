@@ -1,15 +1,14 @@
 import type { Locale } from "@/config/site";
 import type { Dictionary } from "@/lib/dictionary";
-import type { Game } from "@/types";
+import type { GameCardModel } from "@/components/games/game-card";
 import { GameCard } from "@/components/games/game-card";
 
 type GamesShelfProps = {
   locale: Locale;
   dictionary: Dictionary;
   title: string;
-  games: Game[];
+  games: GameCardModel[];
 };
-
 export function GamesShelf({
   locale,
   dictionary,
