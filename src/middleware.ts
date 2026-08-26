@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { defaultLocale, isValidLocale, locales } from "@/config/i18n";
 import { resolveLegacyUrlRedirect } from "@/lib/legacy-url-redirects";
+import { isKnownGameDetailRoute } from "@/lib/known-game-routes";
 
 function permanentRedirect(request: NextRequest, pathname: string) {
   const url = request.nextUrl.clone();
@@ -11,6 +12,7 @@ function permanentRedirect(request: NextRequest, pathname: string) {
 }
 
 const CANONICAL_HOST = "tpowermycasino.com";
+const GAME_DETAIL_RE = /^\/(en|zh)\/games\/([^/]+)\/([^/]+)\/?$/i;
 
 export function middleware(request: NextRequest) {
   const host = request.headers.get("host")?.split(":")[0]?.toLowerCase();
@@ -39,6 +41,19 @@ export function middleware(request: NextRequest) {
   const legacyTarget = resolveLegacyUrlRedirect(pathname);
   if (legacyTarget && legacyTarget !== pathname) {
     return permanentRedirect(request, legacyTarget);
+  }
+
+  // Unknown game-detail URLs must hard-404 (OpenNext soft-serves notFound() as 200).
+  const gameDetail = pathname.match(GAME_DETAIL_RE);
+  if (gameDetail) {
+    const locale = gameDetail[1].toLowerCase();
+    const providerSlug = gameDetail[2];
+    const gameSlug = gameDetail[3];
+    if (!isKnownGameDetailRoute(providerSlug, gameSlug)) {
+      const notFoundUrl = request.nextUrl.clone();
+      notFoundUrl.pathname = `/${locale}/missing`;
+      return NextResponse.rewrite(notFoundUrl, { status: 404 });
+    }
   }
 
   const segment = pathname.split("/")[1];
