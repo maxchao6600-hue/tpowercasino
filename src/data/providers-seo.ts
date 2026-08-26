@@ -11,15 +11,15 @@ export const providersSeoBlocks: ProvidersSeoBlock[] = [
     id: "what-are-providers",
     title: {
       en: "What Are Casino Game Providers on TPOWER Online Casino?",
-      zh: "TPOWER线上博彩的官方游戏厂商是什么？",
+      zh: "TPOWER线上博彩的官方游戏合作伙伴是什么？",
     },
     paragraphs: [
       {
         en: "Casino game providers are the studios that design, certify, and continuously update the titles you open inside [[/games|TPOWER Games]]. On TPOWER Online Casino Malaysia, a provider is never just a logo. It is the source of slot mathematics, live dealer production, fishing room rules, crash curves, and sports market feeds that players actually trust.",
-        zh: "官方游戏厂商，是负责设计、认证并持续更新游戏内容的工作室。在 [[/games|TPOWER游戏大厅]] 里，厂商不只是一排商标，而是老虎机数学、真人视讯制作、捕鱼厅规则、爆点曲线与体育盘口数据的真正来源。",
+        zh: "游戏合作伙伴，是负责设计、认证并持续更新游戏内容的工作室。在 [[/games|TPOWER游戏大厅]] 里，厂商不只是一排商标，而是老虎机数学、真人视讯制作、捕鱼厅规则、爆点曲线与体育盘口数据的真正来源。",
       },
       {
-        en: "When Malaysia players search for TPOWER providers, PG Soft, Pragmatic Play, Evolution, JILI, or Spadegaming, they usually want three answers: which studios are official, what each studio is best at, and how to move from a provider page into real play. This directory is built as the topical authority page for those intents.",
+        en: "When Malaysia players search for TPOWER providers, PG Soft, Pragmatic Play, Evolution, JILI, or Spadegaming, they usually want three answers: which studios are integration partners, what each studio is best at, and how to move from a provider page into real play. This directory is built as the topical authority page for those intents.",
         zh: "马来西亚玩家搜 TPOWER游戏厂商、PG电子、Pragmatic Play、Evolution、JILI 或 Spadegaming 时，通常只想快速知道三件事：哪些是官方游戏合作伙伴、每家擅长什么、怎样从厂商页进入真的开玩。本页就是围绕这些需求写的官方目录。",
       },
       {
@@ -44,8 +44,8 @@ export const providersSeoBlocks: ProvidersSeoBlock[] = [
         zh: "厂商品质决定一场游戏是高端还是脆弱。有牌照、晚间直播稳的真人工作室，和薄薄的桌台信号不是同一回事；手机优先、特色清楚的老虎机，和笨重的电脑移植版也不是同一回事。马来西亚玩家用中端手机，一下子就能感觉出来。",
       },
       {
-        en: "That is why TPOWER partners with world-class providers instead of inflating an anonymous grid. Official Game Providers such as Pragmatic Play, PG Soft, Evolution, JILI, JDB, Spadegaming, Microgaming, Play’n GO, Habanero, Spribe, and SBO Sports each bring a distinct player experience — high RTP slot catalogues, immersive baccarat, Asian fishing energy, crash rounds, or football-first sports markets.",
-        zh: "所以 TPOWER线上博彩 选择与世界级官方合作游戏厂商合作，而不是堆匿名列表。Pragmatic Play、PG电子、Evolution、JILI、JDB、Spadegaming、Microgaming、Play’n GO、Habanero、Spribe 与 SBO Sports 各有强项：高人气老虎机、沉浸式百家乐、亚洲捕鱼、爆点回合或足球优先的体育盘口。",
+        en: "That is why TPOWER partners with world-class providers instead of inflating an anonymous grid. Supported Game Providers such as Pragmatic Play, PG Soft, Evolution, JILI, JDB, Spadegaming, Microgaming, Play’n GO, Habanero, Spribe, and SBO Sports each bring a distinct player experience — high RTP slot catalogues, immersive baccarat, Asian fishing energy, crash rounds, or football-first sports markets.",
+        zh: "所以 TPOWER线上博彩 选择与世界级官方游戏合作伙伴合作，而不是堆匿名列表。Pragmatic Play、PG电子、Evolution、JILI、JDB、Spadegaming、Microgaming、Play’n GO、Habanero、Spribe 与 SBO Sports 各有强项：高人气老虎机、沉浸式百家乐、亚洲捕鱼、爆点回合或足球优先的体育盘口。",
       },
       {
         en: "Quality also protects withdrawals and trust later. When game outcomes stay under the provider’s published rules, and when account journeys stay on official [[/register|Register]], [[/login|Login]], and [[/payment-methods|Payment Methods]] pages, players can evaluate entertainment without guessing whether content is altered or mirrored.",
@@ -128,8 +128,8 @@ export const providersSeoBlocks: ProvidersSeoBlock[] = [
     },
     paragraphs: [
       {
-        en: "Most Malaysia Online Casino sessions now start on a phone. That is why TPOWER prioritises Mobile Casino readiness when selecting Official Game Providers. PG Soft’s mobile-first UX, Evolution’s stream stability, and lightweight crash titles from Spribe are examples of studios that respect portrait play.",
-        zh: "马来西亚线上博彩多数从手机开始。因此 TPOWER 挑选官方合作游戏厂商时，特别看重手机体验：PG电子 的手游交互、Evolution 的直播稳定、Spribe 的轻量爆点，都是尊重竖屏开玩的例子。",
+        en: "Most Malaysia Online Casino sessions now start on a phone. That is why TPOWER prioritises Mobile Casino readiness when selecting Supported Game Providers. PG Soft’s mobile-first UX, Evolution’s stream stability, and lightweight crash titles from Spribe are examples of studios that respect portrait play.",
+        zh: "马来西亚线上博彩多数从手机开始。因此 TPOWER 挑选官方游戏合作伙伴时，特别看重手机体验：PG电子 的手游交互、Evolution 的直播稳定、Spribe 的轻量爆点，都是尊重竖屏开玩的例子。",
       },
       {
         en: "Install through official [[/download|Download]] or [[/apk|APK]] guidance only. Provider quality cannot protect an account entered through a lookalike mirror. Once you are on the official APP, studio pages and the games lobby remain the same topical map you see on desktop.",
@@ -165,12 +165,12 @@ export const providersSeoBlocks: ProvidersSeoBlock[] = [
   {
     id: "eeat-authority",
     title: {
-      en: "Why TPOWER Only Partners With Official Game Providers",
-      zh: "为什么 TPOWER线上博彩只与官方游戏厂商合作",
+      en: "Why TPOWER Only Partners With Supported Game Providers",
+      zh: "为什么 TPOWER线上博彩只与官方游戏合作伙伴合作",
     },
     paragraphs: [
       {
-        en: "TPOWER’s provider policy is an EEAT decision. Licensed Content, RNG certification, game stability, security, mobile optimisation, and continuous updates are not marketing ornaments — they are the reasons a Malaysia Online Casino page can deserve trust in search results and in a player’s bookmark bar.",
+        en: "TPOWER’s provider policy is an EEAT decision. Supported content quality, RNG certification, game stability, security, mobile optimisation, and continuous updates are not marketing ornaments — they are the reasons a Malaysia Online Casino page can deserve trust in search results and in a player’s bookmark bar.",
         zh: "TPOWER 的厂商政策是信任决策。正版内容、RNG 认证、游戏稳定、安全、手机优化与持续更新，不是装饰口号，而是马来西亚官方游戏平台值得被收藏、也被搜索引擎信任的原因。",
       },
       {
@@ -178,8 +178,8 @@ export const providersSeoBlocks: ProvidersSeoBlock[] = [
         zh: "这里列出的每家工作室，都用真实合作、清楚强项与可玩游戏链接，强化 TPOWER线上博彩 的品牌权威。厂商着陆页才不会变成空壳联盟文：玩家有路可走，搜索引擎也看得到主题深度。",
       },
       {
-        en: "Bookmark this hub beside [[/games|Games]], [[/promotions|Promotions]], [[/vip|VIP]], [[/download|Download]], [[/news|News]], [[/blog|Blog]], and [[/responsible-gaming|Responsible Gaming]]. Together they form the practical map around Official Game Providers: discover studios, choose titles, claim clear offers, and keep safer-play controls active.",
-        zh: "请把本页与 [[/games|游戏大厅]]、[[/promotions|优惠]]、[[/vip|VIP]]、[[/download|下载]]、[[/news|资讯]]、[[/blog|攻略]]、[[/responsible-gaming|负责任博彩]] 一起收藏。发现厂商、选定游戏、领取清楚优惠、保持理性娱乐——这才是官方游戏厂商周围的完整地图。",
+        en: "Bookmark this hub beside [[/games|Games]], [[/promotions|Promotions]], [[/vip|VIP]], [[/download|Download]], [[/news|News]], [[/blog|Blog]], and [[/responsible-gaming|Responsible Gaming]]. Together they form the practical map around Supported Game Providers: discover studios, choose titles, claim clear offers, and keep safer-play controls active.",
+        zh: "请把本页与 [[/games|游戏大厅]]、[[/promotions|优惠]]、[[/vip|VIP]]、[[/download|下载]]、[[/news|资讯]]、[[/blog|攻略]]、[[/responsible-gaming|负责任博彩]] 一起收藏。发现厂商、选定游戏、领取清楚优惠、保持理性娱乐——这才是官方游戏合作伙伴周围的完整地图。",
       },
       {
         en: "Return whenever a new studio appears in the lobby or a VIP host mentions a provider-led release. The official TPOWER providers page should remain your first verification step before you trust any third-party claim about “exclusive” tables or mirrored APK catalogues.",

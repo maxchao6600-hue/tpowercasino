@@ -7,7 +7,7 @@ export type MarqueeProvider = {
 };
 
 /**
- * Static Official Game Providers marquee data.
+ * Static Official Gaming Partners marquee data.
  * No filesystem access — safe for client components.
  */
 export const providerMarqueeItems: MarqueeProvider[] = [

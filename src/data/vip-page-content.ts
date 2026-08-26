@@ -60,7 +60,7 @@ export const vipTrustItems: VipTrustItem[] = [
   { icon: "shield", label: { en: "Secure Platform", zh: "安全平台" } },
   {
     icon: "trophy",
-    label: { en: "13+ Official Providers", zh: "13+ 官方游戏商" },
+    label: { en: "13+ Supported Studios", zh: "13+ 支持供应商" },
   },
   {
     icon: "smartphone",

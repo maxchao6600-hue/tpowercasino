@@ -11,7 +11,7 @@ type ProvidersMarqueeProps = {
 };
 
 /**
- * Site-wide Official Game Providers marquee (Games-page benchmark).
+ * Site-wide Official Gaming Partners marquee (Games-page benchmark).
  * Single row, always-visible colored logos, infinite scroll.
  */
 export function ProvidersMarquee({

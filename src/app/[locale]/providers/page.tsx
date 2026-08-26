@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           "TPOWER Online Casino",
           "TPOWER providers",
           "Malaysia Online Casino",
-          "Official Game Providers",
+          "Official Gaming Partners",
           "PG Soft",
           "Pragmatic Play",
           "Evolution",

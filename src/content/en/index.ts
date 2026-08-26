@@ -702,7 +702,7 @@ export const en = {
     seoSubtitle:
       "Long-form guidance for Slots Malaysia, Live Casino Malaysia, Sports Betting Malaysia, Fishing Games Malaysia, RTP Games literacy, and Mobile Casino play — written to support the live lobby above.",
     seoFaqTitle: "Games FAQ for Malaysia Players",
-    marqueeTitle: "Official Game Providers",
+    marqueeTitle: "Official Gaming Partners",
     marqueeSubtitle:
       "Thousands of games powered by the world's leading casino studios.",
     categories: {
@@ -915,7 +915,7 @@ export const en = {
     heroDescription:
       "Provider quality shapes every spin, live table, and sports market. TPOWER works with trusted integration partners so Malaysia sessions stay fair, stable, and mobile-ready — without claiming ownership of studio brands.",
     heroImageAlt:
-      "TPOWER official game providers collage with premium studio brands and casino atmosphere",
+      "TPOWER supported game providers collage with premium studio brands and casino atmosphere",
     providersCountLabel: "supported studios",
     providersCountHint: "Curated partners powering the TPOWER lobby",
     searchPlaceholder: "Search providers, categories, or keywords…",
@@ -952,7 +952,7 @@ export const en = {
     trustEyebrow: "EEAT & trust",
     trustTitle: "Why we choose these providers",
     trustSubtitle:
-      "TPOWER only partners with official game providers that strengthen fairness, stability, and player confidence across Malaysia Online Casino sessions.",
+      "TPOWER only partners with supported game providers that strengthen fairness, stability, and player confidence across Malaysia Online Casino sessions.",
     trustPoints: [
       {
         title: "Licensing & legitimacy",
@@ -979,7 +979,7 @@ export const en = {
         body: "Fresh releases, table capacity, and sports coverage keep the lobby current without cluttering navigation.",
       },
     ],
-    seoTitle: "Official Game Providers Guide for TPOWER Online Casino Malaysia",
+    seoTitle: "Supported Game Providers Guide for TPOWER Online Casino Malaysia",
     seoSubtitle:
       "Understand why provider quality matters, how studios map to slots, live casino, sports betting, and fishing games, and where to browse next on TPOWER.",
     seoFaqTitle: "TPOWER game providers FAQ",
@@ -991,7 +991,7 @@ export const en = {
     finalCtaImageAlt:
       "TPOWER premium providers CTA with studio brands, live tables, and mobile gaming atmosphere",
     finalCtaHighlights: [
-      "Official providers for slots, live casino, sports, and fishing",
+      "Supported providers for slots, live casino, sports, and fishing",
       "Clear register and download paths before you fund",
       "Responsible gaming tools stay available while you play",
     ],

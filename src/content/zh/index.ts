@@ -678,7 +678,7 @@ export const zh: Dictionary = {
     seoSubtitle:
       "老虎机、真人视讯、体育博彩、捕鱼游戏、RTP常识与手机博彩——写给真的会搜的马来西亚玩家。",
     seoFaqTitle: "线上博彩游戏常见问题",
-    marqueeTitle: "官方游戏供应商",
+    marqueeTitle: "官方游戏合作伙伴",
     marqueeSubtitle: "全球主流游戏工作室驱动，上千款游戏随时开。",
     categories: {
       all: "全部",
