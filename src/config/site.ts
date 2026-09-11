@@ -27,8 +27,8 @@ export const siteConfig = {
     zh: "马来西亚吉隆坡",
   },
   social: {
-    whatsapp: "https://tpowercs.wasap.my",
-    telegram: "https://t.me/tpowercs",
+    whatsapp: "https://tpowercs1.wasap.my",
+    telegram: "http://t.me/Customerservice3179",
     facebook: "https://www.facebook.com/share/1EasRgVuaH/",
     instagram: "https://www.instagram.com/tpower0314?igsh=ZTNtcGd4eGY1MHB2",
     threads: "https://www.threads.com/@tpower0314",
